@@ -1,0 +1,5 @@
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache

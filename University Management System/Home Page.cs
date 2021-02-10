@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Home_Page : Form
     {
-        public Form1()
+        public Home_Page()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
