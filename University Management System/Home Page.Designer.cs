@@ -70,7 +70,7 @@ namespace University_Management_System
             // library
             // 
             this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.library.Location = new System.Drawing.Point(697, 88);
+            this.library.Location = new System.Drawing.Point(745, 88);
             this.library.Name = "library";
             this.library.Size = new System.Drawing.Size(75, 23);
             this.library.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace University_Management_System
             // student
             // 
             this.student.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.student.Location = new System.Drawing.Point(530, 88);
+            this.student.Location = new System.Drawing.Point(578, 88);
             this.student.Name = "student";
             this.student.Size = new System.Drawing.Size(75, 23);
             this.student.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace University_Management_System
             // teacher
             // 
             this.teacher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.teacher.Location = new System.Drawing.Point(383, 88);
+            this.teacher.Location = new System.Drawing.Point(431, 88);
             this.teacher.Name = "teacher";
             this.teacher.Size = new System.Drawing.Size(75, 23);
             this.teacher.TabIndex = 2;
@@ -99,9 +99,9 @@ namespace University_Management_System
             // 
             // admin
             // 
-            this.admin.Location = new System.Drawing.Point(198, 89);
+            this.admin.Location = new System.Drawing.Point(240, 88);
             this.admin.Name = "admin";
-            this.admin.Size = new System.Drawing.Size(118, 23);
+            this.admin.Size = new System.Drawing.Size(73, 22);
             this.admin.TabIndex = 1;
             this.admin.Text = "Admin";
             this.admin.UseVisualStyleBackColor = true;
