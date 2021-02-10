@@ -134,9 +134,9 @@ namespace University_Management_System
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(130, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(734, 73);
+            this.label2.Size = new System.Drawing.Size(343, 73);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Amra Git er Bal o pari na";
+            this.label2.Text = "Rahat abal";
             // 
             // Home_Page
             // 
