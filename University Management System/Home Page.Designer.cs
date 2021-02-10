@@ -30,12 +30,12 @@ namespace University_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.library = new System.Windows.Forms.Button();
+            this.student = new System.Windows.Forms.Button();
+            this.teacher = new System.Windows.Forms.Button();
+            this.admin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,16 +44,67 @@ namespace University_Management_System
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.library);
+            this.panel1.Controls.Add(this.student);
+            this.panel1.Controls.Add(this.teacher);
+            this.panel1.Controls.Add(this.admin);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 141);
+            this.panel1.Size = new System.Drawing.Size(1042, 138);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(235, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(537, 28);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Bangladesh University of Business & Technology";
+            // 
+            // library
+            // 
+            this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.library.Location = new System.Drawing.Point(697, 88);
+            this.library.Name = "library";
+            this.library.Size = new System.Drawing.Size(75, 23);
+            this.library.TabIndex = 4;
+            this.library.Text = "Library";
+            this.library.UseVisualStyleBackColor = true;
+            // 
+            // student
+            // 
+            this.student.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.student.Location = new System.Drawing.Point(530, 88);
+            this.student.Name = "student";
+            this.student.Size = new System.Drawing.Size(75, 23);
+            this.student.TabIndex = 3;
+            this.student.Text = "Student ";
+            this.student.UseVisualStyleBackColor = true;
+            // 
+            // teacher
+            // 
+            this.teacher.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.teacher.Location = new System.Drawing.Point(383, 88);
+            this.teacher.Name = "teacher";
+            this.teacher.Size = new System.Drawing.Size(75, 23);
+            this.teacher.TabIndex = 2;
+            this.teacher.Text = "Teacher";
+            this.teacher.UseVisualStyleBackColor = true;
+            // 
+            // admin
+            // 
+            this.admin.Location = new System.Drawing.Point(198, 89);
+            this.admin.Name = "admin";
+            this.admin.Size = new System.Drawing.Size(75, 23);
+            this.admin.TabIndex = 1;
+            this.admin.Text = "Admin";
+            this.admin.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -64,57 +115,6 @@ namespace University_Management_System
             this.pictureBox1.Size = new System.Drawing.Size(109, 138);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(198, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(383, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(530, 89);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(697, 89);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(235, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(537, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Bangladesh University of Business & Technology";
             // 
             // panel2
             // 
@@ -146,10 +146,10 @@ namespace University_Management_System
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button library;
+        private System.Windows.Forms.Button student;
+        private System.Windows.Forms.Button teacher;
+        private System.Windows.Forms.Button admin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
     }
