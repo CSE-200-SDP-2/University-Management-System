@@ -35,11 +35,11 @@ namespace University_Management_System
             this.student = new System.Windows.Forms.Button();
             this.teacher = new System.Windows.Forms.Button();
             this.admin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bubtlogo = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.loginpanel = new System.Windows.Forms.Panel();
             this.navpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bubtlogo)).BeginInit();
             this.SuspendLayout();
             // 
             // navpanel
@@ -50,7 +50,7 @@ namespace University_Management_System
             this.navpanel.Controls.Add(this.student);
             this.navpanel.Controls.Add(this.teacher);
             this.navpanel.Controls.Add(this.admin);
-            this.navpanel.Controls.Add(this.pictureBox1);
+            this.navpanel.Controls.Add(this.bubtlogo);
             this.navpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navpanel.Location = new System.Drawing.Point(0, 0);
             this.navpanel.Name = "navpanel";
@@ -129,17 +129,19 @@ namespace University_Management_System
             this.admin.TabIndex = 1;
             this.admin.Text = "Admin";
             this.admin.UseVisualStyleBackColor = true;
+            this.admin.Click += new System.EventHandler(this.admin_Click);
             // 
-            // pictureBox1
+            // bubtlogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
-            this.pictureBox1.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 138);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.bubtlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.bubtlogo.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
+            this.bubtlogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bubtlogo.Location = new System.Drawing.Point(0, 0);
+            this.bubtlogo.Name = "bubtlogo";
+            this.bubtlogo.Size = new System.Drawing.Size(109, 138);
+            this.bubtlogo.TabIndex = 0;
+            this.bubtlogo.TabStop = false;
+            this.bubtlogo.Click += new System.EventHandler(this.bubtlogo_Click);
             // 
             // panel
             // 
@@ -171,10 +173,11 @@ namespace University_Management_System
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Page_Load);
             this.navpanel.ResumeLayout(false);
             this.navpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bubtlogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +197,7 @@ namespace University_Management_System
         private System.Windows.Forms.Button Teacherbtn;
         private System.Windows.Forms.Button Adminbtn;
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox bubtlogo;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel loginpanel;
     }
