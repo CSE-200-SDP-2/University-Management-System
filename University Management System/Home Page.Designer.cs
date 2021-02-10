@@ -63,9 +63,9 @@ namespace University_Management_System
             this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(235, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(537, 28);
+            this.label1.Size = new System.Drawing.Size(585, 28);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Bangladesh University of Business & Technology";
+            this.label1.Text = "Bangladesh University of Business  and Technology";
             // 
             // library
             // 
@@ -103,7 +103,7 @@ namespace University_Management_System
             this.admin.Name = "admin";
             this.admin.Size = new System.Drawing.Size(118, 23);
             this.admin.TabIndex = 1;
-            this.admin.Text = "Fahad cudir vai";
+            this.admin.Text = "Admin";
             this.admin.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
