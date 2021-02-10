@@ -30,12 +30,12 @@ namespace University_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Librarybtn = new System.Windows.Forms.Button();
+            this.Studentbtn = new System.Windows.Forms.Button();
+            this.Teacherbtn = new System.Windows.Forms.Button();
+            this.Adminbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,65 +44,16 @@ namespace University_Management_System
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Librarybtn);
+            this.panel1.Controls.Add(this.Studentbtn);
+            this.panel1.Controls.Add(this.Teacherbtn);
+            this.panel1.Controls.Add(this.Adminbtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1042, 141);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 138);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(198, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(383, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(530, 89);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(697, 89);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -115,6 +66,55 @@ namespace University_Management_System
             this.label1.Size = new System.Drawing.Size(537, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Bangladesh University of Business & Technology";
+            // 
+            // Librarybtn
+            // 
+            this.Librarybtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Librarybtn.Location = new System.Drawing.Point(697, 89);
+            this.Librarybtn.Name = "Librarybtn";
+            this.Librarybtn.Size = new System.Drawing.Size(75, 23);
+            this.Librarybtn.TabIndex = 4;
+            this.Librarybtn.Text = "library";
+            this.Librarybtn.UseVisualStyleBackColor = true;
+            // 
+            // Studentbtn
+            // 
+            this.Studentbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Studentbtn.Location = new System.Drawing.Point(530, 89);
+            this.Studentbtn.Name = "Studentbtn";
+            this.Studentbtn.Size = new System.Drawing.Size(75, 23);
+            this.Studentbtn.TabIndex = 3;
+            this.Studentbtn.Text = "Student ";
+            this.Studentbtn.UseVisualStyleBackColor = true;
+            // 
+            // Teacherbtn
+            // 
+            this.Teacherbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Teacherbtn.Location = new System.Drawing.Point(383, 89);
+            this.Teacherbtn.Name = "Teacherbtn";
+            this.Teacherbtn.Size = new System.Drawing.Size(75, 23);
+            this.Teacherbtn.TabIndex = 2;
+            this.Teacherbtn.Text = "Teacher";
+            this.Teacherbtn.UseVisualStyleBackColor = true;
+            // 
+            // Adminbtn
+            // 
+            this.Adminbtn.Location = new System.Drawing.Point(198, 89);
+            this.Adminbtn.Name = "Adminbtn";
+            this.Adminbtn.Size = new System.Drawing.Size(75, 23);
+            this.Adminbtn.TabIndex = 1;
+            this.Adminbtn.Text = "Admin";
+            this.Adminbtn.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 138);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -146,10 +146,10 @@ namespace University_Management_System
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Librarybtn;
+        private System.Windows.Forms.Button Studentbtn;
+        private System.Windows.Forms.Button Teacherbtn;
+        private System.Windows.Forms.Button Adminbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
     }
