@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Login.Designer.cs">
+      <DependentUpon>Admin Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Login.resx">
+      <DependentUpon>Admin Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home Page.resx">
       <DependentUpon>Home Page.cs</DependentUpon>
     </EmbeddedResource>
