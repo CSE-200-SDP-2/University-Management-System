@@ -37,7 +37,7 @@ namespace University_Management_System
             this.admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.loginpanel = new System.Windows.Forms.Panel();
             this.navpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -151,20 +151,20 @@ namespace University_Management_System
             this.panel.Size = new System.Drawing.Size(1042, 5);
             this.panel.TabIndex = 1;
             // 
-            // panel1
+            // loginpanel
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 143);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 554);
-            this.panel1.TabIndex = 2;
+            this.loginpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginpanel.Location = new System.Drawing.Point(0, 143);
+            this.loginpanel.Name = "loginpanel";
+            this.loginpanel.Size = new System.Drawing.Size(1042, 554);
+            this.loginpanel.TabIndex = 2;
             // 
             // Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 697);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.loginpanel);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.navpanel);
             this.MinimumSize = new System.Drawing.Size(1058, 736);
@@ -196,6 +196,6 @@ namespace University_Management_System
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel loginpanel;
     }
 }
