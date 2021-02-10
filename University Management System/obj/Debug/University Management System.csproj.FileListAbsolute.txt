@@ -9,3 +9,14 @@ R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Manageme
 R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University Management System.exe
 R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University Management System.pdb
 R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Login.resources
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\bin\Debug\University Management System.exe.config
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\bin\Debug\University Management System.exe
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\bin\Debug\University Management System.pdb
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Login.resources
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.exe
+C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.pdb
