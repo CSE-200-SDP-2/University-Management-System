@@ -71,7 +71,7 @@ namespace University_Management_System
             // library
             // 
             this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.library.Location = new System.Drawing.Point(745, 87);
+            this.library.Location = new System.Drawing.Point(745, 88);
             this.library.Name = "library";
             this.library.Size = new System.Drawing.Size(75, 23);
             this.library.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace University_Management_System
             // 
             // admin
             // 
-            this.admin.Location = new System.Drawing.Point(240, 88);
+            this.admin.Location = new System.Drawing.Point(240, 87);
             this.admin.Name = "admin";
             this.admin.Size = new System.Drawing.Size(73, 22);
             this.admin.TabIndex = 1;
