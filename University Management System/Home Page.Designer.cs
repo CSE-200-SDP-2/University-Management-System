@@ -131,10 +131,10 @@ namespace University_Management_System
             this.ClientSize = new System.Drawing.Size(1042, 717);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(1058, 756);
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -146,17 +146,17 @@ namespace University_Management_System
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
+//<<<<<<< HEAD
         private System.Windows.Forms.Button library;
         private System.Windows.Forms.Button student;
         private System.Windows.Forms.Button teacher;
         private System.Windows.Forms.Button admin;
-=======
+//=======
         private System.Windows.Forms.Button Librarybtn;
         private System.Windows.Forms.Button Studentbtn;
         private System.Windows.Forms.Button Teacherbtn;
         private System.Windows.Forms.Button Adminbtn;
->>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
+//>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
     }
