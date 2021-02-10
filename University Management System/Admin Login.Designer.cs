@@ -32,8 +32,8 @@ namespace University_Management_System
             this.loginbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.aname = new System.Windows.Forms.TextBox();
+            this.apass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,37 +83,38 @@ namespace University_Management_System
             this.label2.TabIndex = 2;
             this.label2.Text = "Password  :";
             // 
-            // textBox1
+            // aname
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(166, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 24);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Tag = "";
+            this.aname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.aname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.aname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.aname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aname.ForeColor = System.Drawing.Color.White;
+            this.aname.Location = new System.Drawing.Point(166, 62);
+            this.aname.Name = "aname";
+            this.aname.Size = new System.Drawing.Size(275, 24);
+            this.aname.TabIndex = 3;
+            this.aname.Tag = "";
             // 
-            // textBox2
+            // apass
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(166, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 24);
-            this.textBox2.TabIndex = 4;
+            this.apass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.apass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.apass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.apass.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apass.ForeColor = System.Drawing.Color.White;
+            this.apass.Location = new System.Drawing.Point(166, 112);
+            this.apass.Name = "apass";
+            this.apass.Size = new System.Drawing.Size(275, 24);
+            this.apass.TabIndex = 4;
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.aname);
+            this.panel1.Controls.Add(this.apass);
             this.panel1.Controls.Add(this.loginbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -124,6 +125,7 @@ namespace University_Management_System
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(54, 91);
             this.panel2.Name = "panel2";
@@ -133,6 +135,7 @@ namespace University_Management_System
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(54, 141);
             this.panel3.Name = "panel3";
@@ -161,8 +164,8 @@ namespace University_Management_System
         private System.Windows.Forms.Button loginbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox aname;
+        private System.Windows.Forms.TextBox apass;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
