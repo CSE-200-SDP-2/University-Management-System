@@ -37,14 +37,13 @@ namespace University_Management_System
             this.admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(229)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.library);
             this.panel1.Controls.Add(this.student);
@@ -72,6 +71,10 @@ namespace University_Management_System
             // library
             // 
             this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.library.FlatAppearance.BorderSize = 0;
+            this.library.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.library.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.library.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.library.Location = new System.Drawing.Point(745, 88);
             this.library.Name = "library";
             this.library.Size = new System.Drawing.Size(75, 23);
@@ -83,6 +86,10 @@ namespace University_Management_System
             // student
             // 
             this.student.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.student.FlatAppearance.BorderSize = 0;
+            this.student.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.student.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student.Location = new System.Drawing.Point(578, 88);
             this.student.Name = "student";
             this.student.Size = new System.Drawing.Size(75, 23);
@@ -93,6 +100,10 @@ namespace University_Management_System
             // teacher
             // 
             this.teacher.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.teacher.FlatAppearance.BorderSize = 0;
+            this.teacher.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.teacher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.teacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.teacher.Location = new System.Drawing.Point(431, 88);
             this.teacher.Name = "teacher";
             this.teacher.Size = new System.Drawing.Size(75, 23);
@@ -102,6 +113,10 @@ namespace University_Management_System
             // 
             // admin
             // 
+            this.admin.FlatAppearance.BorderSize = 0;
+            this.admin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.admin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admin.Location = new System.Drawing.Point(240, 88);
             this.admin.Name = "admin";
             this.admin.Size = new System.Drawing.Size(73, 22);
@@ -121,22 +136,11 @@ namespace University_Management_System
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 136);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1042, 581);
             this.panel2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(130, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 73);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Rahat abal";
             // 
             // Home_Page
             // 
@@ -153,8 +157,6 @@ namespace University_Management_System
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +178,5 @@ namespace University_Management_System
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
     }
 }
