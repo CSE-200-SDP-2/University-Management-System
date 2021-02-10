@@ -76,6 +76,7 @@ namespace University_Management_System
             this.library.TabIndex = 4;
             this.library.Text = "Library";
             this.library.UseVisualStyleBackColor = true;
+            this.library.Click += new System.EventHandler(this.library_Click);
             // 
             // student
             // 
@@ -135,6 +136,7 @@ namespace University_Management_System
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";
+            this.Load += new System.EventHandler(this.Home_Page_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -16,5 +16,15 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
+
+        private void Home_Page_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void library_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
