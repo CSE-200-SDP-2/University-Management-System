@@ -29,32 +29,33 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.navpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.library = new System.Windows.Forms.Button();
             this.student = new System.Windows.Forms.Button();
             this.teacher = new System.Windows.Forms.Button();
             this.admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.navpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // navpanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.library);
-            this.panel1.Controls.Add(this.student);
-            this.panel1.Controls.Add(this.teacher);
-            this.panel1.Controls.Add(this.admin);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 138);
-            this.panel1.TabIndex = 0;
+            this.navpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.navpanel.Controls.Add(this.label1);
+            this.navpanel.Controls.Add(this.library);
+            this.navpanel.Controls.Add(this.student);
+            this.navpanel.Controls.Add(this.teacher);
+            this.navpanel.Controls.Add(this.admin);
+            this.navpanel.Controls.Add(this.pictureBox1);
+            this.navpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navpanel.Location = new System.Drawing.Point(0, 0);
+            this.navpanel.Name = "navpanel";
+            this.navpanel.Size = new System.Drawing.Size(1042, 138);
+            this.navpanel.TabIndex = 0;
             // 
             // label1
             // 
@@ -116,6 +117,7 @@ namespace University_Management_System
             // 
             // admin
             // 
+            this.admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.admin.FlatAppearance.BorderSize = 0;
             this.admin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
             this.admin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -139,28 +141,39 @@ namespace University_Management_System
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // panel
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 136);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 581);
-            this.panel2.TabIndex = 1;
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel.Location = new System.Drawing.Point(0, 138);
+            this.panel.Name = "panel";
+            this.panel.Padding = new System.Windows.Forms.Padding(4);
+            this.panel.Size = new System.Drawing.Size(1042, 5);
+            this.panel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 143);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1042, 554);
+            this.panel1.TabIndex = 2;
             // 
             // Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 717);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1042, 697);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.navpanel);
             this.MinimumSize = new System.Drawing.Size(1058, 736);
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";
             this.Load += new System.EventHandler(this.Home_Page_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.navpanel.ResumeLayout(false);
+            this.navpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -168,7 +181,7 @@ namespace University_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel navpanel;
         private System.Windows.Forms.Label label1;
 //<<<<<<< HEAD
         private System.Windows.Forms.Button library;
@@ -182,6 +195,7 @@ namespace University_Management_System
         private System.Windows.Forms.Button Adminbtn;
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
