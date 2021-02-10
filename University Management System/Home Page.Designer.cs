@@ -37,8 +37,10 @@ namespace University_Management_System
             this.admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,11 +121,22 @@ namespace University_Management_System
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 136);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1042, 581);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(348, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(279, 42);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Amra git pari na";
             // 
             // Home_Page
             // 
@@ -140,6 +153,8 @@ namespace University_Management_System
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +176,6 @@ namespace University_Management_System
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }
