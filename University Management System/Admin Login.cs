@@ -16,5 +16,10 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
+
+        private void loginbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
