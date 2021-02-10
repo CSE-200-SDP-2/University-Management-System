@@ -31,17 +31,10 @@ namespace University_Management_System
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.library = new System.Windows.Forms.Button();
             this.student = new System.Windows.Forms.Button();
             this.teacher = new System.Windows.Forms.Button();
             this.admin = new System.Windows.Forms.Button();
-=======
-            this.Librarybtn = new System.Windows.Forms.Button();
-            this.Studentbtn = new System.Windows.Forms.Button();
-            this.Teacherbtn = new System.Windows.Forms.Button();
-            this.Adminbtn = new System.Windows.Forms.Button();
->>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -51,17 +44,10 @@ namespace University_Management_System
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-<<<<<<< HEAD
             this.panel1.Controls.Add(this.library);
             this.panel1.Controls.Add(this.student);
             this.panel1.Controls.Add(this.teacher);
             this.panel1.Controls.Add(this.admin);
-=======
-            this.panel1.Controls.Add(this.Librarybtn);
-            this.panel1.Controls.Add(this.Studentbtn);
-            this.panel1.Controls.Add(this.Teacherbtn);
-            this.panel1.Controls.Add(this.Adminbtn);
->>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -81,7 +67,6 @@ namespace University_Management_System
             this.label1.TabIndex = 5;
             this.label1.Text = "Bangladesh University of Business & Technology";
             // 
-<<<<<<< HEAD
             // library
             // 
             this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -116,50 +101,10 @@ namespace University_Management_System
             // 
             this.admin.Location = new System.Drawing.Point(198, 89);
             this.admin.Name = "admin";
-            this.admin.Size = new System.Drawing.Size(75, 23);
+            this.admin.Size = new System.Drawing.Size(118, 23);
             this.admin.TabIndex = 1;
-            this.admin.Text = "Admin";
+            this.admin.Text = "Fahad cudir vai";
             this.admin.UseVisualStyleBackColor = true;
-=======
-            // Librarybtn
-            // 
-            this.Librarybtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Librarybtn.Location = new System.Drawing.Point(697, 89);
-            this.Librarybtn.Name = "Librarybtn";
-            this.Librarybtn.Size = new System.Drawing.Size(75, 23);
-            this.Librarybtn.TabIndex = 4;
-            this.Librarybtn.Text = "library";
-            this.Librarybtn.UseVisualStyleBackColor = true;
-            // 
-            // Studentbtn
-            // 
-            this.Studentbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Studentbtn.Location = new System.Drawing.Point(530, 89);
-            this.Studentbtn.Name = "Studentbtn";
-            this.Studentbtn.Size = new System.Drawing.Size(75, 23);
-            this.Studentbtn.TabIndex = 3;
-            this.Studentbtn.Text = "Student ";
-            this.Studentbtn.UseVisualStyleBackColor = true;
-            // 
-            // Teacherbtn
-            // 
-            this.Teacherbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Teacherbtn.Location = new System.Drawing.Point(383, 89);
-            this.Teacherbtn.Name = "Teacherbtn";
-            this.Teacherbtn.Size = new System.Drawing.Size(75, 23);
-            this.Teacherbtn.TabIndex = 2;
-            this.Teacherbtn.Text = "Teacher";
-            this.Teacherbtn.UseVisualStyleBackColor = true;
-            // 
-            // Adminbtn
-            // 
-            this.Adminbtn.Location = new System.Drawing.Point(198, 89);
-            this.Adminbtn.Name = "Adminbtn";
-            this.Adminbtn.Size = new System.Drawing.Size(75, 23);
-            this.Adminbtn.TabIndex = 1;
-            this.Adminbtn.Text = "Admin";
-            this.Adminbtn.UseVisualStyleBackColor = true;
->>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
             // 
             // pictureBox1
             // 
