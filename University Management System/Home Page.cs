@@ -49,16 +49,48 @@ namespace University_Management_System
 
         private void bubtlogo_Click(object sender, EventArgs e)
         {
-            try
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Admin_Login" || x.Name == "Teacher_Login" || x.Name == "Student_Login").ToArray();
+            foreach (Form openForm in formsList)
             {
-                Admin_Login Al = (Admin_Login)Application.OpenForms["Admin_Login"];
-                //Teacher_Login Tl = (Teacher_Login)Application.OpenForms["Teacher_Login"];
-                Al.Close(); //Tl.Close();
+                openForm.Close();
             }
-            catch (NullReferenceException ne)
-            {
-                //One of the forms is not opened
-            }
+            /* try
+             {
+                 Admin_Login Al = (Admin_Login)Application.OpenForms["Admin_Login"];
+                 //Teacher_Login Tl = (Teacher_Login)Application.OpenForms["Teacher_Login"];
+                 Al.Close();  //Tl.Close();
+             }
+             catch (NullReferenceException ne)
+             {
+                 //One of the forms is not opened
+
+
+             }
+         }*/
+            // private void button1_Click(object sender, EventArgs e)
+            /* foreach (Form f in Application.OpenForms)
+             {
+                 if (f is Admin_Login)
+                 {
+                     //Form2 is activated. Close it
+                     f.Close();
+                 }
+                else if (f is Teacher_Login)
+                 {
+                     //Form3 is activated. Close it
+                     f.Close();
+                 }
+             }*/
+        }
+
+        private void teacher_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Teacher_Login());
+        }
+
+        private void student_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Student_Login());
         }
     }
 }

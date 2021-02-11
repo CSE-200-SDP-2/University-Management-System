@@ -35,9 +35,9 @@ namespace University_Management_System
             this.student = new System.Windows.Forms.Button();
             this.teacher = new System.Windows.Forms.Button();
             this.admin = new System.Windows.Forms.Button();
-            this.bubtlogo = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.loginpanel = new System.Windows.Forms.Panel();
+            this.bubtlogo = new System.Windows.Forms.PictureBox();
             this.navpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bubtlogo)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +99,7 @@ namespace University_Management_System
             this.student.TabIndex = 3;
             this.student.Text = "Student ";
             this.student.UseVisualStyleBackColor = true;
+            this.student.Click += new System.EventHandler(this.student_Click);
             // 
             // teacher
             // 
@@ -114,6 +115,7 @@ namespace University_Management_System
             this.teacher.TabIndex = 2;
             this.teacher.Text = "Teacher";
             this.teacher.UseVisualStyleBackColor = true;
+            this.teacher.Click += new System.EventHandler(this.teacher_Click);
             // 
             // admin
             // 
@@ -130,18 +132,6 @@ namespace University_Management_System
             this.admin.Text = "Admin";
             this.admin.UseVisualStyleBackColor = true;
             this.admin.Click += new System.EventHandler(this.admin_Click);
-            // 
-            // bubtlogo
-            // 
-            this.bubtlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
-            this.bubtlogo.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
-            this.bubtlogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bubtlogo.Location = new System.Drawing.Point(0, 0);
-            this.bubtlogo.Name = "bubtlogo";
-            this.bubtlogo.Size = new System.Drawing.Size(109, 138);
-            this.bubtlogo.TabIndex = 0;
-            this.bubtlogo.TabStop = false;
-            this.bubtlogo.Click += new System.EventHandler(this.bubtlogo_Click);
             // 
             // panel
             // 
@@ -160,6 +150,18 @@ namespace University_Management_System
             this.loginpanel.Name = "loginpanel";
             this.loginpanel.Size = new System.Drawing.Size(1042, 554);
             this.loginpanel.TabIndex = 2;
+            // 
+            // bubtlogo
+            // 
+            this.bubtlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.bubtlogo.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
+            this.bubtlogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bubtlogo.Location = new System.Drawing.Point(0, 0);
+            this.bubtlogo.Name = "bubtlogo";
+            this.bubtlogo.Size = new System.Drawing.Size(109, 138);
+            this.bubtlogo.TabIndex = 0;
+            this.bubtlogo.TabStop = false;
+            this.bubtlogo.Click += new System.EventHandler(this.bubtlogo_Click);
             // 
             // Home_Page
             // 

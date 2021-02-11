@@ -29,7 +29,7 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.loginbtn = new System.Windows.Forms.Button();
+            this.aloginbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.aname = new System.Windows.Forms.TextBox();
@@ -40,22 +40,22 @@ namespace University_Management_System
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // loginbtn
+            // aloginbtn
             // 
-            this.loginbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loginbtn.BackColor = System.Drawing.Color.Transparent;
-            this.loginbtn.FlatAppearance.BorderSize = 0;
-            this.loginbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginbtn.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.ForeColor = System.Drawing.Color.White;
-            this.loginbtn.Location = new System.Drawing.Point(342, 165);
-            this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(99, 45);
-            this.loginbtn.TabIndex = 0;
-            this.loginbtn.Text = "Login";
-            this.loginbtn.UseVisualStyleBackColor = false;
-            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
+            this.aloginbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.aloginbtn.BackColor = System.Drawing.Color.Transparent;
+            this.aloginbtn.FlatAppearance.BorderSize = 0;
+            this.aloginbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.aloginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aloginbtn.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aloginbtn.ForeColor = System.Drawing.Color.White;
+            this.aloginbtn.Location = new System.Drawing.Point(342, 165);
+            this.aloginbtn.Name = "aloginbtn";
+            this.aloginbtn.Size = new System.Drawing.Size(99, 45);
+            this.aloginbtn.TabIndex = 0;
+            this.aloginbtn.Text = "Login";
+            this.aloginbtn.UseVisualStyleBackColor = false;
+            this.aloginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // label1
             // 
@@ -116,7 +116,7 @@ namespace University_Management_System
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.aname);
             this.panel1.Controls.Add(this.apass);
-            this.panel1.Controls.Add(this.loginbtn);
+            this.panel1.Controls.Add(this.aloginbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(265, 122);
@@ -162,7 +162,7 @@ namespace University_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Button loginbtn;
+        private System.Windows.Forms.Button aloginbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox aname;
