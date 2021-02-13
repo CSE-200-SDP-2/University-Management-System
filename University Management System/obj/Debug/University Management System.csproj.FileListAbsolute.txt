@@ -20,5 +20,4 @@ C:\Users\HP\Documents\GitHub\University-Management-System\University Management 
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.exe
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.pdb
-R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Teacher_Login.resources
-R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Student_Login.resources
+R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources

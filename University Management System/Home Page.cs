@@ -83,16 +83,6 @@ namespace University_Management_System
              }*/
         }
 
-        private void teacher_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Teacher_Login());
-        }
-
-        private void student_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Student_Login());
-        }
-
         private void loginbtn_Click(object sender, EventArgs e)
         {
             openChildForm(new Admin_Login());
