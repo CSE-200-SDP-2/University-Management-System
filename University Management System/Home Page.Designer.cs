@@ -31,13 +31,10 @@ namespace University_Management_System
         {
             this.navpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.library = new System.Windows.Forms.Button();
-            this.student = new System.Windows.Forms.Button();
-            this.teacher = new System.Windows.Forms.Button();
-            this.admin = new System.Windows.Forms.Button();
+            this.bubtlogo = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.loginpanel = new System.Windows.Forms.Panel();
-            this.bubtlogo = new System.Windows.Forms.PictureBox();
+            this.loginbtn = new System.Windows.Forms.Button();
             this.navpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bubtlogo)).BeginInit();
             this.SuspendLayout();
@@ -45,11 +42,8 @@ namespace University_Management_System
             // navpanel
             // 
             this.navpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.navpanel.Controls.Add(this.loginbtn);
             this.navpanel.Controls.Add(this.label1);
-            this.navpanel.Controls.Add(this.library);
-            this.navpanel.Controls.Add(this.student);
-            this.navpanel.Controls.Add(this.teacher);
-            this.navpanel.Controls.Add(this.admin);
             this.navpanel.Controls.Add(this.bubtlogo);
             this.navpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navpanel.Location = new System.Drawing.Point(0, 0);
@@ -69,69 +63,17 @@ namespace University_Management_System
             this.label1.TabIndex = 5;
             this.label1.Text = "Bangladesh University of Business  and Technology";
             // 
-            // library
+            // bubtlogo
             // 
-            this.library.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.library.FlatAppearance.BorderSize = 0;
-            this.library.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.library.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.library.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.library.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.library.Location = new System.Drawing.Point(769, 72);
-            this.library.Name = "library";
-            this.library.Size = new System.Drawing.Size(96, 48);
-            this.library.TabIndex = 4;
-            this.library.Text = "Library";
-            this.library.UseVisualStyleBackColor = true;
-            this.library.Click += new System.EventHandler(this.library_Click);
-            // 
-            // student
-            // 
-            this.student.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.student.FlatAppearance.BorderSize = 0;
-            this.student.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.student.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.student.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student.Location = new System.Drawing.Point(566, 73);
-            this.student.Name = "student";
-            this.student.Size = new System.Drawing.Size(96, 48);
-            this.student.TabIndex = 3;
-            this.student.Text = "Student ";
-            this.student.UseVisualStyleBackColor = true;
-            this.student.Click += new System.EventHandler(this.student_Click);
-            // 
-            // teacher
-            // 
-            this.teacher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.teacher.FlatAppearance.BorderSize = 0;
-            this.teacher.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.teacher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.teacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teacher.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teacher.Location = new System.Drawing.Point(379, 73);
-            this.teacher.Name = "teacher";
-            this.teacher.Size = new System.Drawing.Size(96, 48);
-            this.teacher.TabIndex = 2;
-            this.teacher.Text = "Teacher";
-            this.teacher.UseVisualStyleBackColor = true;
-            this.teacher.Click += new System.EventHandler(this.teacher_Click);
-            // 
-            // admin
-            // 
-            this.admin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.admin.FlatAppearance.BorderSize = 0;
-            this.admin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.admin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.admin.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin.Location = new System.Drawing.Point(203, 73);
-            this.admin.Name = "admin";
-            this.admin.Size = new System.Drawing.Size(94, 47);
-            this.admin.TabIndex = 1;
-            this.admin.Text = "Admin";
-            this.admin.UseVisualStyleBackColor = true;
-            this.admin.Click += new System.EventHandler(this.admin_Click);
+            this.bubtlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.bubtlogo.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
+            this.bubtlogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bubtlogo.Location = new System.Drawing.Point(0, 0);
+            this.bubtlogo.Name = "bubtlogo";
+            this.bubtlogo.Size = new System.Drawing.Size(109, 138);
+            this.bubtlogo.TabIndex = 0;
+            this.bubtlogo.TabStop = false;
+            this.bubtlogo.Click += new System.EventHandler(this.bubtlogo_Click);
             // 
             // panel
             // 
@@ -151,17 +93,19 @@ namespace University_Management_System
             this.loginpanel.Size = new System.Drawing.Size(1042, 554);
             this.loginpanel.TabIndex = 2;
             // 
-            // bubtlogo
+            // loginbtn
             // 
-            this.bubtlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
-            this.bubtlogo.BackgroundImage = global::University_Management_System.Properties.Resources.BUBT_Logo;
-            this.bubtlogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bubtlogo.Location = new System.Drawing.Point(0, 0);
-            this.bubtlogo.Name = "bubtlogo";
-            this.bubtlogo.Size = new System.Drawing.Size(109, 138);
-            this.bubtlogo.TabIndex = 0;
-            this.bubtlogo.TabStop = false;
-            this.bubtlogo.Click += new System.EventHandler(this.bubtlogo_Click);
+            this.loginbtn.BackColor = System.Drawing.Color.Transparent;
+            this.loginbtn.FlatAppearance.BorderSize = 0;
+            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginbtn.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbtn.Location = new System.Drawing.Point(948, 94);
+            this.loginbtn.Name = "loginbtn";
+            this.loginbtn.Size = new System.Drawing.Size(82, 38);
+            this.loginbtn.TabIndex = 6;
+            this.loginbtn.Text = "Login";
+            this.loginbtn.UseVisualStyleBackColor = false;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // Home_Page
             // 
@@ -188,11 +132,6 @@ namespace University_Management_System
 
         private System.Windows.Forms.Panel navpanel;
         private System.Windows.Forms.Label label1;
-//<<<<<<< HEAD
-        private System.Windows.Forms.Button library;
-        private System.Windows.Forms.Button student;
-        private System.Windows.Forms.Button teacher;
-        private System.Windows.Forms.Button admin;
 //=======
         private System.Windows.Forms.Button Librarybtn;
         private System.Windows.Forms.Button Studentbtn;
@@ -202,5 +141,6 @@ namespace University_Management_System
         private System.Windows.Forms.PictureBox bubtlogo;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel loginpanel;
+        private System.Windows.Forms.Button loginbtn;
     }
 }

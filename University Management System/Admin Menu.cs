@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
-    public partial class Teacher_Login : Form
+    public partial class Admin_Menu : Form
     {
-        public Teacher_Login()
+        public Admin_Menu()
         {
             InitializeComponent();
-        }
-
-        private void tloginbtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

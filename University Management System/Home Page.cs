@@ -92,5 +92,10 @@ namespace University_Management_System
         {
             openChildForm(new Student_Login());
         }
+
+        private void loginbtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Admin_Login());
+        }
     }
 }
