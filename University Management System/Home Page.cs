@@ -15,7 +15,8 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
-           // customizedesign();
+            openChildForm(new Teacher_Menu());
+            // customizedesign();
         }
 
         private Form activeForm = null;
