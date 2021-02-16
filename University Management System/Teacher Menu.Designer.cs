@@ -112,7 +112,7 @@ namespace University_Management_System
             this.course.Controls.Add(this.tabControl3);
             this.course.Location = new System.Drawing.Point(4, 30);
             this.course.Name = "course";
-            this.course.Size = new System.Drawing.Size(941, 529);
+            this.course.Size = new System.Drawing.Size(1326, 382);
             this.course.TabIndex = 0;
             this.course.Text = "Courses";
             // 
@@ -124,7 +124,7 @@ namespace University_Management_System
             this.tabControl3.Location = new System.Drawing.Point(0, 0);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(941, 529);
+            this.tabControl3.Size = new System.Drawing.Size(1326, 382);
             this.tabControl3.TabIndex = 1;
             // 
             // courselist
@@ -144,7 +144,7 @@ namespace University_Management_System
             this.stulist.Controls.Add(this.panel4);
             this.stulist.Location = new System.Drawing.Point(4, 30);
             this.stulist.Name = "stulist";
-            this.stulist.Size = new System.Drawing.Size(933, 495);
+            this.stulist.Size = new System.Drawing.Size(1318, 348);
             this.stulist.TabIndex = 1;
             this.stulist.Text = "Student List";
             // 
@@ -197,7 +197,7 @@ namespace University_Management_System
             this.result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
             this.result.Location = new System.Drawing.Point(4, 30);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(941, 529);
+            this.result.Size = new System.Drawing.Size(1326, 382);
             this.result.TabIndex = 2;
             this.result.Text = "Result";
             // 
@@ -206,7 +206,7 @@ namespace University_Management_System
             this.settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
             this.settings.Location = new System.Drawing.Point(4, 30);
             this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(941, 529);
+            this.settings.Size = new System.Drawing.Size(1326, 382);
             this.settings.TabIndex = 3;
             this.settings.Text = "Settings";
             // 
@@ -246,16 +246,16 @@ namespace University_Management_System
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(933, 140);
+            this.panel4.Size = new System.Drawing.Size(1318, 140);
             this.panel4.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 246);
+            this.panel5.Location = new System.Drawing.Point(0, 99);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(933, 249);
+            this.panel5.Size = new System.Drawing.Size(1318, 249);
             this.panel5.TabIndex = 1;
             // 
             // dataGridView2
@@ -264,7 +264,7 @@ namespace University_Management_System
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(933, 249);
+            this.dataGridView2.Size = new System.Drawing.Size(1318, 249);
             this.dataGridView2.TabIndex = 0;
             // 
             // textBox44
@@ -273,7 +273,7 @@ namespace University_Management_System
             this.textBox44.BackColor = System.Drawing.Color.Azure;
             this.textBox44.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox44.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox44.Location = new System.Drawing.Point(384, 57);
+            this.textBox44.Location = new System.Drawing.Point(577, 57);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(227, 24);
             this.textBox44.TabIndex = 20;
@@ -284,7 +284,7 @@ namespace University_Management_System
             this.label67.AutoSize = true;
             this.label67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(245, 58);
+            this.label67.Location = new System.Drawing.Point(438, 58);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(105, 21);
             this.label67.TabIndex = 19;
@@ -299,7 +299,7 @@ namespace University_Management_System
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Image = global::University_Management_System.Properties.Resources.Refresh;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(645, 73);
+            this.button13.Location = new System.Drawing.Point(838, 73);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(43, 31);
             this.button13.TabIndex = 39;
@@ -314,7 +314,7 @@ namespace University_Management_System
             this.button18.ForeColor = System.Drawing.Color.White;
             this.button18.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
             this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.Location = new System.Drawing.Point(645, 36);
+            this.button18.Location = new System.Drawing.Point(838, 36);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(43, 31);
             this.button18.TabIndex = 40;
