@@ -25,7 +25,7 @@ namespace University_Management_System
         }
 
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;

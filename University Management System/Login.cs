@@ -21,29 +21,36 @@ namespace University_Management_System
         private void loginbtn_Click(object sender, EventArgs e)
         {
             DBAccess con = new DBAccess();
-            string table = loginas.SelectedItem.ToString();
-            //'"+table+"'
-            if (table == "Admin")
-            {
-                con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
-                                                                                                                //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            string table = "";
+            table += loginas.Text;
+            
+            //string check = loginas.Items.Add((string)["Table_Name"]);
+            con.dataGet("Select * from "+ table +" where id='" + aname.Text + "' and pass='" + apass.Text + "'");         //  '" +  +"'
+                                                                                                                
                 DataTable dt = new DataTable();
                 con.sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    this.Hide();
-                    Admin_Menu frm = new Admin_Menu();
-                    frm.Show();
-                    foreach (Form frm1 in Application.OpenForms)
-                    {
-                        if (frm1.Name != "Admin_Menu")
-                            frm1.Hide();
-                    }
+                //this.Hide();
+                //Admin_Menu frm = new Admin_Menu();
+                //frm.Show();
+                /*foreach (Form frm1 in Application.OpenForms)
+                {
+                    if (frm1.Name != "Admin_Menu")
+                        frm1.Hide();
+                }*/
+                this.Hide();
+                //Home_Page frm = new Home_Page();
+                // frm.openChildForm(new Admin_Menu());
+
+                //frm.Show();
+                ActiveForm = Home_Page();
+                    
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username or Password...!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } }
+                } //}
         }
 
         public void loginas_SelectedIndexChanged(object sender, EventArgs e)
