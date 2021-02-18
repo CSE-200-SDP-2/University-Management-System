@@ -1,7 +1,7 @@
 ﻿
 namespace University_Management_System
 {
-    partial class Admin_Login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -35,10 +35,10 @@ namespace University_Management_System
             this.aname = new System.Windows.Forms.TextBox();
             this.apass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.loginas = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@ namespace University_Management_System
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.loginas);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.aname);
@@ -127,6 +127,34 @@ namespace University_Management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 271);
             this.panel1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(238, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Login As";
+            // 
+            // loginas
+            // 
+            this.loginas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.loginas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginas.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginas.ForeColor = System.Drawing.SystemColors.Window;
+            this.loginas.FormattingEnabled = true;
+            this.loginas.Items.AddRange(new object[] {
+            "Admin ",
+            "Teacher",
+            "Student"});
+            this.loginas.Location = new System.Drawing.Point(320, 165);
+            this.loginas.Name = "loginas";
+            this.loginas.Size = new System.Drawing.Size(121, 24);
+            this.loginas.TabIndex = 7;
+            this.loginas.SelectedIndexChanged += new System.EventHandler(this.loginas_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -148,34 +176,7 @@ namespace University_Management_System
             this.panel3.Size = new System.Drawing.Size(390, 4);
             this.panel3.TabIndex = 6;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Admin ",
-            "Teacher",
-            "Student"});
-            this.comboBox1.Location = new System.Drawing.Point(320, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(238, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Login As";
-            // 
-            // Admin_Login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,8 +184,8 @@ namespace University_Management_System
             this.ClientSize = new System.Drawing.Size(1026, 515);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1042, 554);
-            this.Name = "Admin_Login";
-            this.Text = "Admin_Login";
+            this.Name = "Login";
+            this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,6 +203,6 @@ namespace University_Management_System
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox loginas;
     }
 }

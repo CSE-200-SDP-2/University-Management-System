@@ -40,42 +40,43 @@ namespace University_Management_System
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.textBox44 = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.marks = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.insertmarks = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.modifymarks = new System.Windows.Forms.TabPage();
-            this.result = new System.Windows.Forms.TabPage();
-            this.settings = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,30 +86,34 @@ namespace University_Management_System
             this.label9 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.result = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.settings = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.stuname = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -130,22 +135,26 @@ namespace University_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel6.SuspendLayout();
             this.modifymarks.SuspendLayout();
-            this.result.SuspendLayout();
-            this.settings.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.result.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.settings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.stuname);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -255,6 +264,36 @@ namespace University_Management_System
             this.panel4.Size = new System.Drawing.Size(1318, 140);
             this.panel4.TabIndex = 0;
             // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.Location = new System.Drawing.Point(838, 73);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(43, 31);
+            this.button13.TabIndex = 39;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button18.Location = new System.Drawing.Point(838, 36);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(43, 31);
+            this.button18.TabIndex = 40;
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // textBox44
             // 
             this.textBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -333,6 +372,112 @@ namespace University_Management_System
             this.panel8.Size = new System.Drawing.Size(1312, 68);
             this.panel8.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::University_Management_System.Properties.Resources.insert;
+            this.button3.Location = new System.Drawing.Point(1247, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(43, 38);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Location = new System.Drawing.Point(1051, 24);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(167, 20);
+            this.textBox6.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(950, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 21);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Attendence :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Location = new System.Drawing.Point(774, 24);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(167, 20);
+            this.textBox5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(692, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Out of 30 :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(514, 24);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(167, 20);
+            this.textBox4.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(461, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Final :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(281, 24);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(167, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(234, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Mid :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(58, 24);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(167, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(22, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ID :";
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.panel10);
@@ -394,6 +539,36 @@ namespace University_Management_System
             this.panel6.Size = new System.Drawing.Size(1312, 78);
             this.panel6.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(835, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 31);
+            this.button1.TabIndex = 43;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(835, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 31);
+            this.button2.TabIndex = 44;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -429,201 +604,23 @@ namespace University_Management_System
             this.modifymarks.TabIndex = 1;
             this.modifymarks.Text = "Modify Marks";
             // 
-            // result
+            // panel12
             // 
-            this.result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.result.Controls.Add(this.panel14);
-            this.result.Controls.Add(this.panel13);
-            this.result.Location = new System.Drawing.Point(4, 30);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(1326, 382);
-            this.result.TabIndex = 2;
-            this.result.Text = "Result";
+            this.panel12.Controls.Add(this.dataGridView5);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 142);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1312, 203);
+            this.panel12.TabIndex = 1;
             // 
-            // settings
+            // dataGridView5
             // 
-            this.settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.settings.Controls.Add(this.groupBox1);
-            this.settings.Location = new System.Drawing.Point(4, 30);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(1326, 382);
-            this.settings.TabIndex = 3;
-            this.settings.Text = "Settings";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 131);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1334, 416);
-            this.panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(58, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(234, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mid :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(281, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(461, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Final :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(514, 24);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 20);
-            this.textBox4.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(692, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Out of 30 :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(774, 24);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 20);
-            this.textBox5.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(950, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Attendence :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(1051, 24);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 20);
-            this.textBox6.TabIndex = 1;
-            // 
-            // button13
-            // 
-            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(838, 73);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(43, 31);
-            this.button13.TabIndex = 39;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.Location = new System.Drawing.Point(838, 36);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(43, 31);
-            this.button18.TabIndex = 40;
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::University_Management_System.Properties.Resources.insert;
-            this.button3.Location = new System.Drawing.Point(1247, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 38);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(835, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 31);
-            this.button1.TabIndex = 43;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(835, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 31);
-            this.button2.TabIndex = 44;
-            this.button2.UseVisualStyleBackColor = true;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(1312, 203);
+            this.dataGridView5.TabIndex = 0;
             // 
             // panel11
             // 
@@ -646,23 +643,54 @@ namespace University_Management_System
             this.panel11.Size = new System.Drawing.Size(1312, 139);
             this.panel11.TabIndex = 0;
             // 
-            // panel12
+            // button5
             // 
-            this.panel12.Controls.Add(this.dataGridView5);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 142);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1312, 203);
-            this.panel12.TabIndex = 1;
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(745, 54);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(43, 31);
+            this.button5.TabIndex = 45;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // dataGridView5
+            // button6
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(1312, 203);
-            this.dataGridView5.TabIndex = 0;
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(745, 17);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(43, 31);
+            this.button6.TabIndex = 46;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Location = new System.Drawing.Point(561, 39);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(167, 20);
+            this.textBox11.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(525, 39);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 21);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "ID :";
             // 
             // button4
             // 
@@ -751,66 +779,16 @@ namespace University_Management_System
             this.label10.TabIndex = 6;
             this.label10.Text = "Mid :";
             // 
-            // textBox11
+            // result
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(561, 39);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(167, 20);
-            this.textBox11.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(525, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 21);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "ID :";
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(745, 54);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(43, 31);
-            this.button5.TabIndex = 45;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(745, 17);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 31);
-            this.button6.TabIndex = 46;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.button7);
-            this.panel13.Controls.Add(this.button8);
-            this.panel13.Controls.Add(this.textBox12);
-            this.panel13.Controls.Add(this.label12);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1326, 105);
-            this.panel13.TabIndex = 0;
+            this.result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.result.Controls.Add(this.panel14);
+            this.result.Controls.Add(this.panel13);
+            this.result.Location = new System.Drawing.Point(4, 30);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(1326, 382);
+            this.result.TabIndex = 2;
+            this.result.Text = "Result";
             // 
             // panel14
             // 
@@ -829,6 +807,18 @@ namespace University_Management_System
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(1326, 277);
             this.dataGridView6.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.button7);
+            this.panel13.Controls.Add(this.button8);
+            this.panel13.Controls.Add(this.textBox12);
+            this.panel13.Controls.Add(this.label12);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1326, 105);
+            this.panel13.TabIndex = 0;
             // 
             // button7
             // 
@@ -883,35 +873,15 @@ namespace University_Management_System
             this.label12.TabIndex = 45;
             this.label12.Text = "Course Code";
             // 
-            // label13
+            // settings
             // 
-            this.label13.AutoSize = true;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Location = new System.Drawing.Point(25, 53);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 21);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Old Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Location = new System.Drawing.Point(25, 93);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 21);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "New Password";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Location = new System.Drawing.Point(25, 129);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 21);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Confirm Password";
+            this.settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.settings.Controls.Add(this.groupBox1);
+            this.settings.Location = new System.Drawing.Point(4, 30);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(1326, 382);
+            this.settings.TabIndex = 3;
+            this.settings.Text = "Settings";
             // 
             // groupBox1
             // 
@@ -943,48 +913,17 @@ namespace University_Management_System
             this.panel15.Size = new System.Drawing.Size(417, 238);
             this.panel15.TabIndex = 1;
             // 
-            // panel16
+            // button9
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Location = new System.Drawing.Point(28, 73);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(362, 4);
-            this.panel16.TabIndex = 1;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.Location = new System.Drawing.Point(28, 117);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(362, 4);
-            this.panel17.TabIndex = 1;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(169, 129);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(214, 20);
-            this.textBox13.TabIndex = 2;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Location = new System.Drawing.Point(149, 92);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(234, 20);
-            this.textBox14.TabIndex = 2;
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(143, 49);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(240, 20);
-            this.textBox15.TabIndex = 2;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(282, 191);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(108, 31);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "Confirm";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -997,6 +936,36 @@ namespace University_Management_System
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.ForeColor = System.Drawing.Color.White;
+            this.textBox15.Location = new System.Drawing.Point(143, 49);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(240, 20);
+            this.textBox15.TabIndex = 2;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.ForeColor = System.Drawing.Color.White;
+            this.textBox14.Location = new System.Drawing.Point(149, 92);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(234, 20);
+            this.textBox14.TabIndex = 2;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.ForeColor = System.Drawing.Color.White;
+            this.textBox13.Location = new System.Drawing.Point(169, 129);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(214, 20);
+            this.textBox13.TabIndex = 2;
+            // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.White;
@@ -1005,17 +974,108 @@ namespace University_Management_System
             this.panel18.Size = new System.Drawing.Size(362, 4);
             this.panel18.TabIndex = 1;
             // 
-            // button9
+            // panel17
             // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(282, 191);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(108, 31);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Confirm";
-            this.button9.UseVisualStyleBackColor = true;
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Location = new System.Drawing.Point(28, 117);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(362, 4);
+            this.panel17.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Location = new System.Drawing.Point(28, 73);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(362, 4);
+            this.panel16.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Location = new System.Drawing.Point(25, 53);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 21);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Old Password";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Location = new System.Drawing.Point(25, 93);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 21);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "New Password";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Location = new System.Drawing.Point(25, 129);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(146, 21);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Confirm Password";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1334, 416);
+            this.panel2.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(847, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 23);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Position";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(847, 72);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 23);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Department";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(371, 72);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(132, 23);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Teacher Code";
+            // 
+            // stuname
+            // 
+            this.stuname.AutoSize = true;
+            this.stuname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuname.ForeColor = System.Drawing.Color.White;
+            this.stuname.Location = new System.Drawing.Point(371, 35);
+            this.stuname.Name = "stuname";
+            this.stuname.Size = new System.Drawing.Size(63, 23);
+            this.stuname.TabIndex = 4;
+            this.stuname.Text = "Name";
             // 
             // Teacher_Menu
             // 
@@ -1029,6 +1089,8 @@ namespace University_Management_System
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Teacher_Menu";
             this.Text = "Teacher_Menu";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.course.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
@@ -1053,20 +1115,20 @@ namespace University_Management_System
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.modifymarks.ResumeLayout(false);
-            this.result.ResumeLayout(false);
-            this.settings.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.result.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.settings.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1153,5 +1215,9 @@ namespace University_Management_System
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label stuname;
     }
 }

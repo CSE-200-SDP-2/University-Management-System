@@ -33,7 +33,7 @@ namespace University_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.bubtlogo = new System.Windows.Forms.PictureBox();
             this.loginbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.loginpanel = new System.Windows.Forms.Panel();
             this.navpanel.SuspendLayout();
@@ -46,11 +46,11 @@ namespace University_Management_System
             this.navpanel.Controls.Add(this.label1);
             this.navpanel.Controls.Add(this.bubtlogo);
             this.navpanel.Controls.Add(this.loginbtn);
-            this.navpanel.Controls.Add(this.button1);
+            this.navpanel.Controls.Add(this.logoutbtn);
             this.navpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navpanel.Location = new System.Drawing.Point(0, 0);
             this.navpanel.Name = "navpanel";
-            this.navpanel.Size = new System.Drawing.Size(1350, 138);
+            this.navpanel.Size = new System.Drawing.Size(1284, 138);
             this.navpanel.TabIndex = 0;
             // 
             // label1
@@ -59,7 +59,7 @@ namespace University_Management_System
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(249, 9);
+            this.label1.Location = new System.Drawing.Point(216, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(837, 42);
             this.label1.TabIndex = 5;
@@ -79,12 +79,12 @@ namespace University_Management_System
             // 
             // loginbtn
             // 
-            this.loginbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.loginbtn.BackColor = System.Drawing.Color.Transparent;
             this.loginbtn.FlatAppearance.BorderSize = 0;
+            this.loginbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(1256, 94);
+            this.loginbtn.Location = new System.Drawing.Point(1133, 80);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(82, 38);
             this.loginbtn.TabIndex = 6;
@@ -92,20 +92,19 @@ namespace University_Management_System
             this.loginbtn.UseVisualStyleBackColor = false;
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
-            // button1
+            // logoutbtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1256, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.loginbtn_Click);
+            this.logoutbtn.FlatAppearance.BorderSize = 0;
+            this.logoutbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.logoutbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutbtn.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.Location = new System.Drawing.Point(1133, 80);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(82, 38);
+            this.logoutbtn.TabIndex = 7;
+            this.logoutbtn.Text = "Logout";
+            this.logoutbtn.UseVisualStyleBackColor = true;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
             // 
             // panel
             // 
@@ -114,7 +113,7 @@ namespace University_Management_System
             this.panel.Location = new System.Drawing.Point(0, 138);
             this.panel.Name = "panel";
             this.panel.Padding = new System.Windows.Forms.Padding(4);
-            this.panel.Size = new System.Drawing.Size(1350, 5);
+            this.panel.Size = new System.Drawing.Size(1284, 5);
             this.panel.TabIndex = 1;
             // 
             // loginpanel
@@ -122,14 +121,14 @@ namespace University_Management_System
             this.loginpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginpanel.Location = new System.Drawing.Point(0, 143);
             this.loginpanel.Name = "loginpanel";
-            this.loginpanel.Size = new System.Drawing.Size(1350, 586);
+            this.loginpanel.Size = new System.Drawing.Size(1284, 586);
             this.loginpanel.TabIndex = 2;
             // 
             // Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(1284, 729);
             this.Controls.Add(this.loginpanel);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.navpanel);
@@ -160,6 +159,6 @@ namespace University_Management_System
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel loginpanel;
         private System.Windows.Forms.Button loginbtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutbtn;
     }
 }

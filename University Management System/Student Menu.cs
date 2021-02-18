@@ -15,9 +15,21 @@ namespace University_Management_System
         public Student_Menu()
         {
             InitializeComponent();
+            //string a = "Md Asfakur Rahat";
+            //stuname.Text = "Name : " + a +"";
         }
 
         private void Student_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
         {
 
         }

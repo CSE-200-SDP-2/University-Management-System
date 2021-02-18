@@ -15,8 +15,13 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
-            openChildForm(new Teacher_Menu());
+
+            //openChildForm(new Student_Menu());
             // customizedesign();
+            logoutbtn.Hide();
+            //string a =;
+            
+            
         }
 
         private Form activeForm = null;
@@ -37,20 +42,11 @@ namespace University_Management_System
           
         }
 
-        private void library_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void admin_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Admin_Login());
-
-        }
-
         private void bubtlogo_Click(object sender, EventArgs e)
         {
-            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Admin_Login" || x.Name == "Teacher_Login" || x.Name == "Student_Login").ToArray();
+            logoutbtn.Hide();
+            loginbtn.Show();
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Teacher_Login" || x.Name == "Student_Login").ToArray();
             foreach (Form openForm in formsList)
             {
                 openForm.Close();
@@ -86,7 +82,20 @@ namespace University_Management_System
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            openChildForm(new Admin_Login());
+            openChildForm(new Login());
+            loginbtn.Hide();
+            logoutbtn.Show();
+        }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Admin_Menu" || x.Name == "Student_Menu" || x.Name == "Teacher_Menu").ToArray();
+            foreach (Form openForm in formsList)
+            {
+                openForm.Close();
+            }
+            logoutbtn.Hide();
+            loginbtn.Show();
         }
     }
 }

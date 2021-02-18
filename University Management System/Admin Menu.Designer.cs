@@ -788,7 +788,7 @@ namespace University_Management_System
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(824, 364);
+            this.button2.Location = new System.Drawing.Point(824, 369);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 35);
             this.button2.TabIndex = 44;
@@ -801,7 +801,7 @@ namespace University_Management_System
             this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Azure;
             this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(239, 274);
+            this.dateTimePicker2.Location = new System.Drawing.Point(239, 279);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(256, 27);
             this.dateTimePicker2.TabIndex = 43;
@@ -820,7 +820,7 @@ namespace University_Management_System
             "Professor",
             "Chairman",
             "Dean"});
-            this.comboBox7.Location = new System.Drawing.Point(692, 232);
+            this.comboBox7.Location = new System.Drawing.Point(692, 237);
             this.comboBox7.MaxDropDownItems = 4;
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(255, 28);
@@ -845,7 +845,7 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.comboBox5.Location = new System.Drawing.Point(692, 275);
+            this.comboBox5.Location = new System.Drawing.Point(692, 280);
             this.comboBox5.MaxDropDownItems = 4;
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(255, 28);
@@ -862,7 +862,7 @@ namespace University_Management_System
             "Male",
             "Female",
             "Others"});
-            this.comboBox6.Location = new System.Drawing.Point(693, 98);
+            this.comboBox6.Location = new System.Drawing.Point(693, 103);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(255, 28);
             this.comboBox6.TabIndex = 42;
@@ -882,7 +882,7 @@ namespace University_Management_System
             "O-",
             "AB+",
             "AB-"});
-            this.comboBox8.Location = new System.Drawing.Point(241, 319);
+            this.comboBox8.Location = new System.Drawing.Point(241, 324);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(255, 28);
             this.comboBox8.TabIndex = 40;
@@ -893,7 +893,7 @@ namespace University_Management_System
             this.textBox6.BackColor = System.Drawing.Color.Azure;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(693, 318);
+            this.textBox6.Location = new System.Drawing.Point(693, 323);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(255, 24);
             this.textBox6.TabIndex = 38;
@@ -904,7 +904,7 @@ namespace University_Management_System
             this.label17.AutoSize = true;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(578, 324);
+            this.label17.Location = new System.Drawing.Point(578, 329);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 23);
             this.label17.TabIndex = 36;
@@ -916,7 +916,7 @@ namespace University_Management_System
             this.label21.AutoSize = true;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(578, 237);
+            this.label21.Location = new System.Drawing.Point(578, 242);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(78, 23);
             this.label21.TabIndex = 34;
@@ -929,7 +929,7 @@ namespace University_Management_System
             this.label18.AutoSize = true;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(578, 103);
+            this.label18.Location = new System.Drawing.Point(578, 108);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 23);
             this.label18.TabIndex = 35;
@@ -941,7 +941,7 @@ namespace University_Management_System
             this.label19.AutoSize = true;
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(578, 280);
+            this.label19.Location = new System.Drawing.Point(578, 285);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 23);
             this.label19.TabIndex = 34;
@@ -954,7 +954,7 @@ namespace University_Management_System
             this.label20.AutoSize = true;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(102, 320);
+            this.label20.Location = new System.Drawing.Point(102, 325);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(120, 23);
             this.label20.TabIndex = 33;
@@ -966,7 +966,7 @@ namespace University_Management_System
             this.label22.AutoSize = true;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(102, 277);
+            this.label22.Location = new System.Drawing.Point(102, 282);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(119, 23);
             this.label22.TabIndex = 31;
@@ -978,7 +978,7 @@ namespace University_Management_System
             this.textBox12.BackColor = System.Drawing.Color.Azure;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(241, 228);
+            this.textBox12.Location = new System.Drawing.Point(241, 233);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(255, 24);
             this.textBox12.TabIndex = 30;
@@ -989,7 +989,7 @@ namespace University_Management_System
             this.label24.AutoSize = true;
             this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(102, 232);
+            this.label24.Location = new System.Drawing.Point(102, 237);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(141, 23);
             this.label24.TabIndex = 27;
@@ -1001,7 +1001,7 @@ namespace University_Management_System
             this.textBox16.BackColor = System.Drawing.Color.Azure;
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox16.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(241, 185);
+            this.textBox16.Location = new System.Drawing.Point(241, 190);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(255, 24);
             this.textBox16.TabIndex = 25;
@@ -1012,7 +1012,7 @@ namespace University_Management_System
             this.label26.AutoSize = true;
             this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(98, 187);
+            this.label26.Location = new System.Drawing.Point(98, 192);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(134, 23);
             this.label26.TabIndex = 23;
@@ -1024,7 +1024,7 @@ namespace University_Management_System
             this.textBox17.BackColor = System.Drawing.Color.Azure;
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox17.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(693, 191);
+            this.textBox17.Location = new System.Drawing.Point(693, 196);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(255, 24);
             this.textBox17.TabIndex = 21;
@@ -1035,7 +1035,7 @@ namespace University_Management_System
             this.textBox18.BackColor = System.Drawing.Color.Azure;
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox18.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(241, 142);
+            this.textBox18.Location = new System.Drawing.Point(241, 147);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(255, 24);
             this.textBox18.TabIndex = 20;
@@ -1046,7 +1046,7 @@ namespace University_Management_System
             this.label27.AutoSize = true;
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(578, 196);
+            this.label27.Location = new System.Drawing.Point(578, 201);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(108, 23);
             this.label27.TabIndex = 19;
@@ -1058,7 +1058,7 @@ namespace University_Management_System
             this.label28.AutoSize = true;
             this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(102, 147);
+            this.label28.Location = new System.Drawing.Point(102, 152);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 23);
             this.label28.TabIndex = 18;
@@ -1070,7 +1070,7 @@ namespace University_Management_System
             this.textBox19.BackColor = System.Drawing.Color.Azure;
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox19.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(693, 148);
+            this.textBox19.Location = new System.Drawing.Point(693, 153);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(254, 24);
             this.textBox19.TabIndex = 16;
@@ -1081,7 +1081,7 @@ namespace University_Management_System
             this.label29.AutoSize = true;
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(578, 151);
+            this.label29.Location = new System.Drawing.Point(578, 156);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(82, 23);
             this.label29.TabIndex = 15;
@@ -1093,7 +1093,7 @@ namespace University_Management_System
             this.textBox20.BackColor = System.Drawing.Color.Azure;
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox20.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(241, 99);
+            this.textBox20.Location = new System.Drawing.Point(241, 104);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(254, 24);
             this.textBox20.TabIndex = 17;
@@ -1104,7 +1104,7 @@ namespace University_Management_System
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(102, 102);
+            this.label30.Location = new System.Drawing.Point(102, 107);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 23);
             this.label30.TabIndex = 14;
@@ -1366,7 +1366,7 @@ namespace University_Management_System
             this.aassigncourse.Controls.Add(this.panel15);
             this.aassigncourse.Location = new System.Drawing.Point(4, 32);
             this.aassigncourse.Name = "aassigncourse";
-            this.aassigncourse.Size = new System.Drawing.Size(1036, 442);
+            this.aassigncourse.Size = new System.Drawing.Size(1036, 432);
             this.aassigncourse.TabIndex = 1;
             this.aassigncourse.Text = "Assign Course";
             // 
@@ -1376,7 +1376,7 @@ namespace University_Management_System
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(417, 442);
+            this.panel16.Size = new System.Drawing.Size(417, 432);
             this.panel16.TabIndex = 1;
             // 
             // panel17
@@ -1389,7 +1389,7 @@ namespace University_Management_System
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(417, 442);
+            this.panel17.Size = new System.Drawing.Size(417, 432);
             this.panel17.TabIndex = 0;
             // 
             // button15
@@ -1399,7 +1399,7 @@ namespace University_Management_System
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(264, 264);
+            this.button15.Location = new System.Drawing.Point(264, 259);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(118, 33);
             this.button15.TabIndex = 24;
@@ -1413,7 +1413,7 @@ namespace University_Management_System
             this.textBox46.BackColor = System.Drawing.Color.Azure;
             this.textBox46.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox46.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox46.Location = new System.Drawing.Point(173, 145);
+            this.textBox46.Location = new System.Drawing.Point(173, 140);
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(209, 24);
             this.textBox46.TabIndex = 20;
@@ -1424,7 +1424,7 @@ namespace University_Management_System
             this.label69.AutoSize = true;
             this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label69.ForeColor = System.Drawing.Color.White;
-            this.label69.Location = new System.Drawing.Point(34, 148);
+            this.label69.Location = new System.Drawing.Point(34, 143);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(126, 23);
             this.label69.TabIndex = 19;
@@ -1436,7 +1436,7 @@ namespace University_Management_System
             this.textBox45.BackColor = System.Drawing.Color.Azure;
             this.textBox45.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox45.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox45.Location = new System.Drawing.Point(173, 199);
+            this.textBox45.Location = new System.Drawing.Point(173, 194);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(209, 24);
             this.textBox45.TabIndex = 20;
@@ -1447,7 +1447,7 @@ namespace University_Management_System
             this.label68.AutoSize = true;
             this.label68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(34, 200);
+            this.label68.Location = new System.Drawing.Point(34, 195);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(118, 23);
             this.label68.TabIndex = 19;
@@ -1459,7 +1459,7 @@ namespace University_Management_System
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel15.Location = new System.Drawing.Point(417, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(619, 442);
+            this.panel15.Size = new System.Drawing.Size(619, 432);
             this.panel15.TabIndex = 0;
             // 
             // dataGridView7
@@ -1468,7 +1468,7 @@ namespace University_Management_System
             this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView7.Location = new System.Drawing.Point(0, 0);
             this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(619, 442);
+            this.dataGridView7.Size = new System.Drawing.Size(619, 432);
             this.dataGridView7.TabIndex = 0;
             // 
             // search
@@ -2904,7 +2904,7 @@ namespace University_Management_System
             this.panel12.Controls.Add(this.label73);
             this.panel12.Controls.Add(this.label71);
             this.panel12.ForeColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(3, 124);
+            this.panel12.Location = new System.Drawing.Point(3, 129);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1037, 126);
             this.panel12.TabIndex = 2;
