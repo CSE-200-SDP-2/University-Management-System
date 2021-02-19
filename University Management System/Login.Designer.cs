@@ -123,7 +123,7 @@ namespace University_Management_System
             this.panel1.Controls.Add(this.aloginbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(265, 122);
+            this.panel1.Location = new System.Drawing.Point(419, 138);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 271);
             this.panel1.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace University_Management_System
             this.loginas.ForeColor = System.Drawing.SystemColors.Window;
             this.loginas.FormattingEnabled = true;
             this.loginas.Items.AddRange(new object[] {
-            "Admin ",
+            "Admin",
             "Teacher",
             "Student"});
             this.loginas.Location = new System.Drawing.Point(320, 165);
@@ -181,9 +181,9 @@ namespace University_Management_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(1026, 515);
+            this.ClientSize = new System.Drawing.Size(1334, 547);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1042, 554);
+            this.MinimumSize = new System.Drawing.Size(1278, 586);
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);

@@ -16,7 +16,12 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
-
+        public Home_Page mainForm = null;
+        public Admin_Menu(Form callingForm)
+        {
+            mainForm = callingForm as Home_Page;
+            InitializeComponent();
+        }
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 

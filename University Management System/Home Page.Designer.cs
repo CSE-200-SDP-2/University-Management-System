@@ -50,7 +50,7 @@ namespace University_Management_System
             this.navpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navpanel.Location = new System.Drawing.Point(0, 0);
             this.navpanel.Name = "navpanel";
-            this.navpanel.Size = new System.Drawing.Size(1284, 138);
+            this.navpanel.Size = new System.Drawing.Size(1350, 138);
             this.navpanel.TabIndex = 0;
             // 
             // label1
@@ -59,7 +59,7 @@ namespace University_Management_System
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(216, 9);
+            this.label1.Location = new System.Drawing.Point(249, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(837, 42);
             this.label1.TabIndex = 5;
@@ -113,7 +113,7 @@ namespace University_Management_System
             this.panel.Location = new System.Drawing.Point(0, 138);
             this.panel.Name = "panel";
             this.panel.Padding = new System.Windows.Forms.Padding(4);
-            this.panel.Size = new System.Drawing.Size(1284, 5);
+            this.panel.Size = new System.Drawing.Size(1350, 5);
             this.panel.TabIndex = 1;
             // 
             // loginpanel
@@ -121,18 +121,18 @@ namespace University_Management_System
             this.loginpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginpanel.Location = new System.Drawing.Point(0, 143);
             this.loginpanel.Name = "loginpanel";
-            this.loginpanel.Size = new System.Drawing.Size(1284, 586);
+            this.loginpanel.Size = new System.Drawing.Size(1350, 586);
             this.loginpanel.TabIndex = 2;
             // 
             // Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 729);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.loginpanel);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.navpanel);
-            this.MinimumSize = new System.Drawing.Size(1058, 736);
+            this.MinimumSize = new System.Drawing.Size(1278, 768);
             this.Name = "Home_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Page";

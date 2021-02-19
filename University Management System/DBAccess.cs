@@ -19,16 +19,16 @@ namespace University_Management_System
         public string pkk;
 
         //Raihan:"Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True"
-        //Rahat:"
+        //Rahat:"Data Source=DESKTOP-90O69VH\Localhost;Initial Catalog=University;Integrated Security=True"
         //Fahad:"
         public void connection()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\Localhost;Initial Catalog=University;Integrated Security=True");
             con.Open();
         }
         public static string connectionDatabase()
         {
-            return "Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True";
+            return "Data Source=DESKTOP-90O69VH\\Localhost;Initial Catalog=University;Integrated Security=True";
         }
 
         public void dataSend(string SQL)

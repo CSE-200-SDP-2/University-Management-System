@@ -18,39 +18,62 @@ namespace University_Management_System
             InitializeComponent();
         }
 
+        private Home_Page mainForm = null;
+        public Login(Form callingForm)
+        {
+            mainForm = callingForm as Home_Page;
+            InitializeComponent();
+        }
+
         private void loginbtn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(loginas.Text);
             DBAccess con = new DBAccess();
-            string table = "";
+            string table="";
             table += loginas.Text;
-            
-            //string check = loginas.Items.Add((string)["Table_Name"]);
-            con.dataGet("Select * from "+ table +" where id='" + aname.Text + "' and pass='" + apass.Text + "'");         //  '" +  +"'
-                                                                                                                
+
+            //'"+table+"'
+            //if (table == "Admin")
+            //{
+            /*if (table == "Admin")
+           // {*/
+                con.dataGet("Select * from "+ table +" where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
                 DataTable dt = new DataTable();
                 con.sda.Fill(dt);
+
+
                 if (dt.Rows.Count > 0)
                 {
-                //this.Hide();
-                //Admin_Menu frm = new Admin_Menu();
-                //frm.Show();
-                /*foreach (Form frm1 in Application.OpenForms)
-                {
-                    if (frm1.Name != "Admin_Menu")
-                        frm1.Hide();
-                }*/
-                this.Hide();
-                //Home_Page frm = new Home_Page();
-                // frm.openChildForm(new Admin_Menu());
+                    this.Hide();
+                    //this.mainForm.openChildForm(new Admin_Menu());
+                    /*Admin_Menu frm = new Admin_Menu();
+                    frm.Show();
+                    foreach (Form frm1 in Application.OpenForms)
+                    {
+                        if (frm1.Name != "Admin_Menu")
+                            frm1.Hide();
+                    }*/
 
-                //frm.Show();
-                ActiveForm = Home_Page();
-                    
+                    if(table == "Admin")
+                    {
+                        this.mainForm.openChildForm(new Admin_Menu(mainForm));
+                    }
+                    else if(table =="Teacher")
+                    {
+                        this.mainForm.openChildForm(new Teacher_Menu(mainForm));
+                    }
+                    else if(table == "Student")
+                    {
+                        this.mainForm.openChildForm(new Student_Menu(mainForm));
+                    }
+                
+
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username or Password...!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } //}
+                }// }
         }
 
         public void loginas_SelectedIndexChanged(object sender, EventArgs e)
