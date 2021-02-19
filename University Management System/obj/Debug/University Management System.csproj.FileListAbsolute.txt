@@ -21,15 +21,45 @@ C:\Users\HP\Documents\GitHub\University-Management-System\University Management 
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.exe
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University Management System.pdb
 R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
-E:\SDP-2\University-Management-System\University Management System\bin\Debug\University Management System.exe.config
-E:\SDP-2\University-Management-System\University Management System\bin\Debug\University Management System.exe
-E:\SDP-2\University-Management-System\University Management System\bin\Debug\University Management System.pdb
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Login.resources
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University_Management_System.Home_Page.resources
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University Management System.exe
-E:\SDP-2\University-Management-System\University Management System\obj\Debug\University Management System.pdb
+F:\Main project 1\University Management System\bin\Debug\University Management System.exe.config
+F:\Main project 1\University Management System\bin\Debug\University Management System.exe
+F:\Main project 1\University Management System\bin\Debug\University Management System.pdb
+F:\Main project 1\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Admin_Login.resources
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Student_Menu.resources
+F:\Main project 1\University Management System\obj\Debug\University_Management_System.Teacher_Menu.resources
+F:\Main project 1\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+F:\Main project 1\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
+F:\Main project 1\University Management System\obj\Debug\University Management System.exe
+F:\Main project 1\University Management System\obj\Debug\University Management System.pdb
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\bin\Debug\University Management System.exe.config
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\bin\Debug\University Management System.exe
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\bin\Debug\University Management System.pdb
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Student_Menu.resources
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Teacher_Menu.resources
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University Management System.exe
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University Management System.pdb
+F:\SDP 2\Main Project 1\University Management System\bin\Debug\University Management System.exe.config
+F:\SDP 2\Main Project 1\University Management System\bin\Debug\University Management System.exe
+F:\SDP 2\Main Project 1\University Management System\bin\Debug\University Management System.pdb
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Student_Menu.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Teacher_Menu.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.exe
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.pdb
+R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Login.resources
+F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Login.resources
