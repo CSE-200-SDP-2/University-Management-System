@@ -63,3 +63,17 @@ F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Manage
 F:\SDP 2\Main Project 1\University Management System\obj\Debug\University Management System.pdb
 R:\CLASS\Software Development Projects\University Management System\Main project 1\University Management System\obj\Debug\University_Management_System.Login.resources
 F:\SDP 2\Main Project 1\University Management System\obj\Debug\University_Management_System.Login.resources
+D:\SDP\University-Management-System\University Management System\bin\Debug\University Management System.exe.config
+D:\SDP\University-Management-System\University Management System\bin\Debug\University Management System.exe
+D:\SDP\University-Management-System\University Management System\bin\Debug\University Management System.pdb
+D:\SDP\University-Management-System\University Management System\obj\Debug\University Management System.csprojAssemblyReference.cache
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Admin_Menu.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Login.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Home_Page.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Properties.Resources.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Student_Menu.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Teacher_Menu.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University Management System.csproj.GenerateResource.cache
+D:\SDP\University-Management-System\University Management System\obj\Debug\University Management System.csproj.CoreCompileInputs.cache
+D:\SDP\University-Management-System\University Management System\obj\Debug\University Management System.exe
+D:\SDP\University-Management-System\University Management System\obj\Debug\University Management System.pdb

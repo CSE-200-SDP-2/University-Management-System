@@ -30,46 +30,46 @@ namespace University_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.stuname = new System.Windows.Forms.Label();
+            this.stuIanke = new System.Windows.Forms.Label();
+            this.stuSection = new System.Windows.Forms.Label();
+            this.stuId = new System.Windows.Forms.Label();
+            this.stuName = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.course = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.selectcourse = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.stu_SelectedCgrid = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.stu_Availablegrid = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.stu_Deletebtn = new System.Windows.Forms.Button();
+            this.stu_Clearbtn = new System.Windows.Forms.Button();
+            this.stu_Selectbtn = new System.Windows.Forms.Button();
+            this.stu_Srchbtn = new System.Windows.Forms.Button();
+            this.stu_Ccode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.stu_Cdept = new System.Windows.Forms.ComboBox();
+            this.stu_Cprogram = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.viewcourse = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.stu_ViewCgrid = new System.Windows.Forms.DataGridView();
             this.result = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.stu_Viewresgrid = new System.Windows.Forms.DataGridView();
             this.settings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.stu_Setbtn = new System.Windows.Forms.Button();
+            this.stu_Showpass = new System.Windows.Forms.CheckBox();
+            this.stu_Oldpass = new System.Windows.Forms.TextBox();
+            this.stu_Newpass = new System.Windows.Forms.TextBox();
+            this.stu_Conpass = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -84,16 +84,16 @@ namespace University_Management_System
             this.selectcourse.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_SelectedCgrid)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_Availablegrid)).BeginInit();
             this.panel3.SuspendLayout();
             this.viewcourse.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_ViewCgrid)).BeginInit();
             this.result.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_Viewresgrid)).BeginInit();
             this.settings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -102,63 +102,63 @@ namespace University_Management_System
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.stuname);
+            this.panel1.Controls.Add(this.stuIanke);
+            this.panel1.Controls.Add(this.stuSection);
+            this.panel1.Controls.Add(this.stuId);
+            this.panel1.Controls.Add(this.stuName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1334, 131);
             this.panel1.TabIndex = 0;
             // 
-            // label7
+            // stuIanke
             // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(828, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Intake";
+            this.stuIanke.AutoSize = true;
+            this.stuIanke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuIanke.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuIanke.ForeColor = System.Drawing.Color.White;
+            this.stuIanke.Location = new System.Drawing.Point(828, 35);
+            this.stuIanke.Name = "stuIanke";
+            this.stuIanke.Size = new System.Drawing.Size(67, 23);
+            this.stuIanke.TabIndex = 0;
+            this.stuIanke.Text = "Intake";
             // 
-            // label6
+            // stuSection
             // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(828, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Section";
+            this.stuSection.AutoSize = true;
+            this.stuSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuSection.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuSection.ForeColor = System.Drawing.Color.White;
+            this.stuSection.Location = new System.Drawing.Point(828, 72);
+            this.stuSection.Name = "stuSection";
+            this.stuSection.Size = new System.Drawing.Size(75, 23);
+            this.stuSection.TabIndex = 0;
+            this.stuSection.Text = "Section";
             // 
-            // label5
+            // stuId
             // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(352, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 23);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "ID";
+            this.stuId.AutoSize = true;
+            this.stuId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuId.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuId.ForeColor = System.Drawing.Color.White;
+            this.stuId.Location = new System.Drawing.Point(352, 72);
+            this.stuId.Name = "stuId";
+            this.stuId.Size = new System.Drawing.Size(33, 23);
+            this.stuId.TabIndex = 0;
+            this.stuId.Text = "ID";
             // 
-            // stuname
+            // stuName
             // 
-            this.stuname.AutoSize = true;
-            this.stuname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stuname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuname.ForeColor = System.Drawing.Color.White;
-            this.stuname.Location = new System.Drawing.Point(352, 35);
-            this.stuname.Name = "stuname";
-            this.stuname.Size = new System.Drawing.Size(63, 23);
-            this.stuname.TabIndex = 0;
-            this.stuname.Text = "Name";
+            this.stuName.AutoSize = true;
+            this.stuName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuName.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuName.ForeColor = System.Drawing.Color.White;
+            this.stuName.Location = new System.Drawing.Point(352, 35);
+            this.stuName.Name = "stuName";
+            this.stuName.Size = new System.Drawing.Size(63, 23);
+            this.stuName.TabIndex = 0;
+            this.stuName.Text = "Name";
             // 
             // tabControl1
             // 
@@ -219,51 +219,51 @@ namespace University_Management_System
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel7.Controls.Add(this.dataGridView3);
+            this.panel7.Controls.Add(this.stu_SelectedCgrid);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(576, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(742, 239);
             this.panel7.TabIndex = 1;
             // 
-            // dataGridView3
+            // stu_SelectedCgrid
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(742, 239);
-            this.dataGridView3.TabIndex = 0;
+            this.stu_SelectedCgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_SelectedCgrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stu_SelectedCgrid.Location = new System.Drawing.Point(0, 0);
+            this.stu_SelectedCgrid.Name = "stu_SelectedCgrid";
+            this.stu_SelectedCgrid.Size = new System.Drawing.Size(742, 239);
+            this.stu_SelectedCgrid.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.stu_Availablegrid);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(607, 239);
             this.panel6.TabIndex = 0;
             // 
-            // dataGridView1
+            // stu_Availablegrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 239);
-            this.dataGridView1.TabIndex = 0;
+            this.stu_Availablegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_Availablegrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stu_Availablegrid.Location = new System.Drawing.Point(0, 0);
+            this.stu_Availablegrid.Name = "stu_Availablegrid";
+            this.stu_Availablegrid.Size = new System.Drawing.Size(607, 239);
+            this.stu_Availablegrid.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.stu_Deletebtn);
+            this.panel3.Controls.Add(this.stu_Clearbtn);
+            this.panel3.Controls.Add(this.stu_Selectbtn);
+            this.panel3.Controls.Add(this.stu_Srchbtn);
+            this.panel3.Controls.Add(this.stu_Ccode);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.comboBox4);
-            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.stu_Cdept);
+            this.panel3.Controls.Add(this.stu_Cprogram);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label2);
@@ -274,78 +274,78 @@ namespace University_Management_System
             this.panel3.Size = new System.Drawing.Size(1318, 109);
             this.panel3.TabIndex = 0;
             // 
-            // button4
+            // stu_Deletebtn
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::University_Management_System.Properties.Resources.Delete;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1082, 57);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 31);
-            this.button4.TabIndex = 45;
-            this.button4.UseVisualStyleBackColor = true;
+            this.stu_Deletebtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Deletebtn.FlatAppearance.BorderSize = 0;
+            this.stu_Deletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Deletebtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Deletebtn.Image = global::University_Management_System.Properties.Resources.Delete;
+            this.stu_Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Deletebtn.Location = new System.Drawing.Point(1082, 57);
+            this.stu_Deletebtn.Name = "stu_Deletebtn";
+            this.stu_Deletebtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Deletebtn.TabIndex = 45;
+            this.stu_Deletebtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // stu_Clearbtn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1018, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 31);
-            this.button1.TabIndex = 45;
-            this.button1.UseVisualStyleBackColor = true;
+            this.stu_Clearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Clearbtn.FlatAppearance.BorderSize = 0;
+            this.stu_Clearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Clearbtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Clearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.stu_Clearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Clearbtn.Location = new System.Drawing.Point(1018, 57);
+            this.stu_Clearbtn.Name = "stu_Clearbtn";
+            this.stu_Clearbtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Clearbtn.TabIndex = 45;
+            this.stu_Clearbtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // stu_Selectbtn
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::University_Management_System.Properties.Resources.Select;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1082, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 31);
-            this.button3.TabIndex = 46;
-            this.button3.UseVisualStyleBackColor = true;
+            this.stu_Selectbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Selectbtn.FlatAppearance.BorderSize = 0;
+            this.stu_Selectbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Selectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Selectbtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Selectbtn.Image = global::University_Management_System.Properties.Resources.Select;
+            this.stu_Selectbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Selectbtn.Location = new System.Drawing.Point(1082, 20);
+            this.stu_Selectbtn.Name = "stu_Selectbtn";
+            this.stu_Selectbtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Selectbtn.TabIndex = 46;
+            this.stu_Selectbtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // stu_Srchbtn
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1018, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 31);
-            this.button2.TabIndex = 46;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.stu_Srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Srchbtn.FlatAppearance.BorderSize = 0;
+            this.stu_Srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Srchbtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.stu_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Srchbtn.Location = new System.Drawing.Point(1018, 20);
+            this.stu_Srchbtn.Name = "stu_Srchbtn";
+            this.stu_Srchbtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Srchbtn.TabIndex = 46;
+            this.stu_Srchbtn.UseVisualStyleBackColor = true;
+            this.stu_Srchbtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // stu_Ccode
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.Azure;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(839, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 24);
-            this.textBox1.TabIndex = 44;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.stu_Ccode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Ccode.BackColor = System.Drawing.Color.Azure;
+            this.stu_Ccode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stu_Ccode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stu_Ccode.Location = new System.Drawing.Point(839, 41);
+            this.stu_Ccode.Name = "stu_Ccode";
+            this.stu_Ccode.Size = new System.Drawing.Size(154, 24);
+            this.stu_Ccode.TabIndex = 44;
+            this.stu_Ccode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -359,14 +359,14 @@ namespace University_Management_System
             this.label3.TabIndex = 43;
             this.label3.Text = "Course Code";
             // 
-            // comboBox4
+            // stu_Cdept
             // 
-            this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox4.BackColor = System.Drawing.Color.Azure;
-            this.comboBox4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 20;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.stu_Cdept.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Cdept.BackColor = System.Drawing.Color.Azure;
+            this.stu_Cdept.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stu_Cdept.FormattingEnabled = true;
+            this.stu_Cdept.ItemHeight = 20;
+            this.stu_Cdept.Items.AddRange(new object[] {
             "CSE",
             "CSIT",
             "EEE",
@@ -378,27 +378,27 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.comboBox4.Location = new System.Drawing.Point(545, 40);
-            this.comboBox4.MaxDropDownItems = 5;
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(154, 28);
-            this.comboBox4.TabIndex = 13;
+            this.stu_Cdept.Location = new System.Drawing.Point(545, 40);
+            this.stu_Cdept.MaxDropDownItems = 5;
+            this.stu_Cdept.Name = "stu_Cdept";
+            this.stu_Cdept.Size = new System.Drawing.Size(154, 28);
+            this.stu_Cdept.TabIndex = 13;
             // 
-            // comboBox3
+            // stu_Cprogram
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.BackColor = System.Drawing.Color.Azure;
-            this.comboBox3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.stu_Cprogram.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Cprogram.BackColor = System.Drawing.Color.Azure;
+            this.stu_Cprogram.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stu_Cprogram.FormattingEnabled = true;
+            this.stu_Cprogram.Items.AddRange(new object[] {
             "B.Sc.",
             "BBA",
             "M.Sc.",
             "MBA"});
-            this.comboBox3.Location = new System.Drawing.Point(279, 40);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(139, 28);
-            this.comboBox3.TabIndex = 16;
+            this.stu_Cprogram.Location = new System.Drawing.Point(279, 40);
+            this.stu_Cprogram.Name = "stu_Cprogram";
+            this.stu_Cprogram.Size = new System.Drawing.Size(139, 28);
+            this.stu_Cprogram.TabIndex = 16;
             // 
             // label12
             // 
@@ -461,21 +461,21 @@ namespace University_Management_System
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.dataGridView4);
+            this.panel8.Controls.Add(this.stu_ViewCgrid);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1318, 348);
             this.panel8.TabIndex = 0;
             // 
-            // dataGridView4
+            // stu_ViewCgrid
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(1318, 348);
-            this.dataGridView4.TabIndex = 0;
+            this.stu_ViewCgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_ViewCgrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stu_ViewCgrid.Location = new System.Drawing.Point(0, 0);
+            this.stu_ViewCgrid.Name = "stu_ViewCgrid";
+            this.stu_ViewCgrid.Size = new System.Drawing.Size(1318, 348);
+            this.stu_ViewCgrid.TabIndex = 0;
             // 
             // result
             // 
@@ -489,21 +489,21 @@ namespace University_Management_System
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView2);
+            this.panel4.Controls.Add(this.stu_Viewresgrid);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1326, 382);
             this.panel4.TabIndex = 1;
             // 
-            // dataGridView2
+            // stu_Viewresgrid
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1326, 382);
-            this.dataGridView2.TabIndex = 0;
+            this.stu_Viewresgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_Viewresgrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stu_Viewresgrid.Location = new System.Drawing.Point(0, 0);
+            this.stu_Viewresgrid.Name = "stu_Viewresgrid";
+            this.stu_Viewresgrid.Size = new System.Drawing.Size(1326, 382);
+            this.stu_Viewresgrid.TabIndex = 0;
             // 
             // settings
             // 
@@ -528,11 +528,11 @@ namespace University_Management_System
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.button9);
-            this.panel15.Controls.Add(this.checkBox1);
-            this.panel15.Controls.Add(this.textBox15);
-            this.panel15.Controls.Add(this.textBox14);
-            this.panel15.Controls.Add(this.textBox13);
+            this.panel15.Controls.Add(this.stu_Setbtn);
+            this.panel15.Controls.Add(this.stu_Showpass);
+            this.panel15.Controls.Add(this.stu_Oldpass);
+            this.panel15.Controls.Add(this.stu_Newpass);
+            this.panel15.Controls.Add(this.stu_Conpass);
             this.panel15.Controls.Add(this.panel18);
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel16);
@@ -545,59 +545,59 @@ namespace University_Management_System
             this.panel15.Size = new System.Drawing.Size(417, 238);
             this.panel15.TabIndex = 1;
             // 
-            // button9
+            // stu_Setbtn
             // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(282, 191);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(108, 31);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Confirm";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.stu_Setbtn.FlatAppearance.BorderSize = 0;
+            this.stu_Setbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.stu_Setbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Setbtn.Location = new System.Drawing.Point(282, 191);
+            this.stu_Setbtn.Name = "stu_Setbtn";
+            this.stu_Setbtn.Size = new System.Drawing.Size(108, 31);
+            this.stu_Setbtn.TabIndex = 4;
+            this.stu_Setbtn.Text = "Confirm";
+            this.stu_Setbtn.UseVisualStyleBackColor = true;
+            this.stu_Setbtn.Click += new System.EventHandler(this.button9_Click);
             // 
-            // checkBox1
+            // stu_Showpass
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(282, 163);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(113, 21);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.stu_Showpass.AutoSize = true;
+            this.stu_Showpass.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stu_Showpass.Location = new System.Drawing.Point(282, 163);
+            this.stu_Showpass.Name = "stu_Showpass";
+            this.stu_Showpass.Size = new System.Drawing.Size(113, 21);
+            this.stu_Showpass.TabIndex = 3;
+            this.stu_Showpass.Text = "Show Password";
+            this.stu_Showpass.UseVisualStyleBackColor = true;
             // 
-            // textBox15
+            // stu_Oldpass
             // 
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.ForeColor = System.Drawing.Color.White;
-            this.textBox15.Location = new System.Drawing.Point(143, 49);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(240, 20);
-            this.textBox15.TabIndex = 2;
+            this.stu_Oldpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.stu_Oldpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stu_Oldpass.ForeColor = System.Drawing.Color.White;
+            this.stu_Oldpass.Location = new System.Drawing.Point(143, 49);
+            this.stu_Oldpass.Name = "stu_Oldpass";
+            this.stu_Oldpass.Size = new System.Drawing.Size(240, 20);
+            this.stu_Oldpass.TabIndex = 2;
             // 
-            // textBox14
+            // stu_Newpass
             // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.ForeColor = System.Drawing.Color.White;
-            this.textBox14.Location = new System.Drawing.Point(149, 92);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(234, 20);
-            this.textBox14.TabIndex = 2;
+            this.stu_Newpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.stu_Newpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stu_Newpass.ForeColor = System.Drawing.Color.White;
+            this.stu_Newpass.Location = new System.Drawing.Point(149, 92);
+            this.stu_Newpass.Name = "stu_Newpass";
+            this.stu_Newpass.Size = new System.Drawing.Size(234, 20);
+            this.stu_Newpass.TabIndex = 2;
             // 
-            // textBox13
+            // stu_Conpass
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.ForeColor = System.Drawing.Color.White;
-            this.textBox13.Location = new System.Drawing.Point(169, 129);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(214, 20);
-            this.textBox13.TabIndex = 2;
+            this.stu_Conpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.stu_Conpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stu_Conpass.ForeColor = System.Drawing.Color.White;
+            this.stu_Conpass.Location = new System.Drawing.Point(169, 129);
+            this.stu_Conpass.Name = "stu_Conpass";
+            this.stu_Conpass.Size = new System.Drawing.Size(214, 20);
+            this.stu_Conpass.TabIndex = 2;
             // 
             // panel18
             // 
@@ -682,17 +682,17 @@ namespace University_Management_System
             this.selectcourse.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_SelectedCgrid)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_Availablegrid)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.viewcourse.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_ViewCgrid)).EndInit();
             this.result.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stu_Viewresgrid)).EndInit();
             this.settings.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -714,16 +714,16 @@ namespace University_Management_System
         private System.Windows.Forms.TabPage selectcourse;
         private System.Windows.Forms.TabPage viewcourse;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView stu_Viewresgrid;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button stu_Setbtn;
+        private System.Windows.Forms.CheckBox stu_Showpass;
+        private System.Windows.Forms.TextBox stu_Oldpass;
+        private System.Windows.Forms.TextBox stu_Newpass;
+        private System.Windows.Forms.TextBox stu_Conpass;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel16;
@@ -732,25 +732,25 @@ namespace University_Management_System
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView stu_SelectedCgrid;
+        private System.Windows.Forms.DataGridView stu_Availablegrid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox stu_Cdept;
+        private System.Windows.Forms.ComboBox stu_Cprogram;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox stu_Ccode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button stu_Deletebtn;
+        private System.Windows.Forms.Button stu_Clearbtn;
+        private System.Windows.Forms.Button stu_Selectbtn;
+        private System.Windows.Forms.Button stu_Srchbtn;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label stuname;
+        private System.Windows.Forms.DataGridView stu_ViewCgrid;
+        private System.Windows.Forms.Label stuIanke;
+        private System.Windows.Forms.Label stuSection;
+        private System.Windows.Forms.Label stuId;
+        private System.Windows.Forms.Label stuName;
     }
 }

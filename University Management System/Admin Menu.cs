@@ -52,11 +52,6 @@ namespace University_Management_System
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
 
@@ -195,6 +190,11 @@ namespace University_Management_System
         private void button15_MouseHover(object sender, EventArgs e)
         {
            
+        }
+
+        private void stuid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
