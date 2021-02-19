@@ -23,12 +23,16 @@ namespace University_Management_System
         //Fahad:"
         public void connection()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\Localhost;Initial Catalog=University;Integrated Security=True");
+       /*Raihan*/      con = new SqlConnection(@"Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True");
+      /*RahatAbal*/   //con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\Localhost;Initial Catalog=University;Integrated Security=True");
+     /*Fahad*/       //con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\Localhost;Initial Catalog=University;Integrated Security=True");
             con.Open();
         }
         public static string connectionDatabase()
         {
-            return "Data Source=DESKTOP-90O69VH\\Localhost;Initial Catalog=University;Integrated Security=True";
+        /*Raihan*/     return "Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True";
+       /*RahatAbal*/  //return "Data Source=DESKTOP-90O69VH\\Localhost;Initial Catalog=University;Integrated Security=True";
+      /*Fahad*/      //return "Data Source=DESKTOP-90O69VH\\Localhost;Initial Catalog=University;Integrated Security=True";
         }
 
         public void dataSend(string SQL)

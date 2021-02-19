@@ -44,9 +44,9 @@ namespace University_Management_System
 
         private void bubtlogo_Click(object sender, EventArgs e)
         {
-            //logoutbtn.Hide();
-            //loginbtn.Show();
-            /*Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Teacher_Login" || x.Name == "Student_Login").ToArray();
+            logoutbtn.Hide();
+            loginbtn.Show();
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login").ToArray();
             foreach (Form openForm in formsList)
             {
                 openForm.Close();
@@ -84,10 +84,10 @@ namespace University_Management_System
         {
             openChildForm(new Login(this));
             loginbtn.Hide();
-            logoutbtn.Show();
+            //logoutbtn.Show();
         }
 
-        private void logoutbtn_Click(object sender, EventArgs e)
+        public void logoutbtn_Click(object sender, EventArgs e)
         {
             Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Admin_Menu" || x.Name == "Student_Menu" || x.Name == "Teacher_Menu").ToArray();
             foreach (Form openForm in formsList)

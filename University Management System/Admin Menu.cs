@@ -12,6 +12,7 @@ namespace University_Management_System
 {
     public partial class Admin_Menu : Form
     {
+        DBAccess con = new DBAccess();
         public Admin_Menu()
         {
             InitializeComponent();
@@ -94,9 +95,10 @@ namespace University_Management_System
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -195,6 +197,33 @@ namespace University_Management_System
         private void stuid_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void stuRegbtn_Click(object sender, EventArgs e)
+        {
+            string stuPass = "" + stuId.Text + "bubt";
+            string variables = "id,sname,sfname,smname,sdob,sbg,sgender,sreligion,snationality,sintake,ssection,sprog,sdept,smobile,pass";
+            string values = "'" + stuId.Text + "','" + stuName.Text + "','" + stuFname.Text + "','" + stuMname.Text + "','" + stuDob.Text + "','" + stuBg.Text + "','" + stuGender.Text + "','" + stuReligion.Text + "','" + stuNationality.Text + "','" + stuIntake.Text + "','" + stuSection.Text + "','" + stuProgram.Text + "','" + stuDept.Text + "','" + stuMobile.Text + "','"+stuPass+"'";
+            con.dataSend("Insert into Student(" + variables + ") values(" + values + ")");
+            MessageBox.Show("Student information Registered Successfully");
+            ClearData();
+        }
+        private void ClearData()
+        {
+            stuId.Clear();
+            stuName.Clear();
+            stuFname.Clear();
+            stuMname.Clear();
+            stuDob.ResetText();
+            stuBg.ResetText();
+            stuGender.ResetText();
+            stuReligion.Clear();
+            stuNationality.Clear();
+            stuIntake.Clear();
+            stuSection.Clear();
+            stuProgram.ResetText();
+            stuDept.ResetText();
+            stuMobile.Clear();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace University_Management_System
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private Home_Page mainForm = null;
@@ -27,7 +28,7 @@ namespace University_Management_System
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(loginas.Text);
+            //MessageBox.Show(loginas.Text);
             DBAccess con = new DBAccess();
             string table="";
             table += loginas.Text;
@@ -46,6 +47,7 @@ namespace University_Management_System
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide();
+                this.mainForm.logoutbtn.Show();
                     //this.mainForm.openChildForm(new Admin_Menu());
                     /*Admin_Menu frm = new Admin_Menu();
                     frm.Show();
