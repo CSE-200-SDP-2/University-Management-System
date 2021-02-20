@@ -246,6 +246,16 @@ namespace University_Management_System
             this.ccreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cproggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label71 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.assignserialno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigntchname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigntchcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigncname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignctype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignccredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.register.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -292,6 +302,8 @@ namespace University_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.res_srchGrid)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1362,7 +1374,8 @@ namespace University_Management_System
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.cReggrid);
+            this.panel13.Controls.Add(this.panel19);
+            this.panel13.Controls.Add(this.panel18);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel13.Location = new System.Drawing.Point(640, 0);
             this.panel13.Name = "panel13";
@@ -1386,7 +1399,7 @@ namespace University_Management_System
             this.cReggrid.Location = new System.Drawing.Point(0, 0);
             this.cReggrid.Name = "cReggrid";
             this.cReggrid.ReadOnly = true;
-            this.cReggrid.Size = new System.Drawing.Size(620, 439);
+            this.cReggrid.Size = new System.Drawing.Size(620, 411);
             this.cReggrid.TabIndex = 0;
             this.cReggrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cReggrid_CellContentClick);
             // 
@@ -1436,6 +1449,7 @@ namespace University_Management_System
             this.cAssignbtn.TabIndex = 24;
             this.cAssignbtn.Text = "Assign";
             this.cAssignbtn.UseVisualStyleBackColor = true;
+            this.cAssignbtn.Click += new System.EventHandler(this.cAssignbtn_Click);
             this.cAssignbtn.MouseHover += new System.EventHandler(this.button15_MouseHover);
             // 
             // tchCode2
@@ -1495,12 +1509,23 @@ namespace University_Management_System
             // 
             // cassigngrid
             // 
+            this.cassigngrid.AllowUserToDeleteRows = false;
             this.cassigngrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cassigngrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.assignserialno,
+            this.assigntchname,
+            this.assigntchcode,
+            this.assignccode,
+            this.assigncname,
+            this.assignctype,
+            this.assignccredit});
             this.cassigngrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cassigngrid.Location = new System.Drawing.Point(0, 0);
             this.cassigngrid.Name = "cassigngrid";
+            this.cassigngrid.ReadOnly = true;
             this.cassigngrid.Size = new System.Drawing.Size(619, 439);
             this.cassigngrid.TabIndex = 0;
+            this.cassigngrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cassigngrid_CellContentClick);
             // 
             // search
             // 
@@ -3151,6 +3176,80 @@ namespace University_Management_System
             this.cdeptgrid.Name = "cdeptgrid";
             this.cdeptgrid.ReadOnly = true;
             // 
+            // label71
+            // 
+            this.label71.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(256, 3);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(109, 23);
+            this.label71.TabIndex = 1;
+            this.label71.Text = "Course List";
+            this.label71.Click += new System.EventHandler(this.label71_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label71);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(620, 28);
+            this.panel18.TabIndex = 2;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.cReggrid);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(0, 28);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(620, 411);
+            this.panel19.TabIndex = 3;
+            // 
+            // assignserialno
+            // 
+            this.assignserialno.HeaderText = "Sl. No.";
+            this.assignserialno.Name = "assignserialno";
+            this.assignserialno.ReadOnly = true;
+            // 
+            // assigntchname
+            // 
+            this.assigntchname.HeaderText = "Teacher Name";
+            this.assigntchname.Name = "assigntchname";
+            this.assigntchname.ReadOnly = true;
+            // 
+            // assigntchcode
+            // 
+            this.assigntchcode.HeaderText = "Teacher Code";
+            this.assigntchcode.Name = "assigntchcode";
+            this.assigntchcode.ReadOnly = true;
+            // 
+            // assignccode
+            // 
+            this.assignccode.HeaderText = "Course Code";
+            this.assignccode.Name = "assignccode";
+            this.assignccode.ReadOnly = true;
+            // 
+            // assigncname
+            // 
+            this.assigncname.HeaderText = "Course Name";
+            this.assigncname.Name = "assigncname";
+            this.assigncname.ReadOnly = true;
+            // 
+            // assignctype
+            // 
+            this.assignctype.HeaderText = "Course Type";
+            this.assignctype.Name = "assignctype";
+            this.assignctype.ReadOnly = true;
+            // 
+            // assignccredit
+            // 
+            this.assignccredit.HeaderText = "Credit";
+            this.assignccredit.Name = "assignccredit";
+            this.assignccredit.ReadOnly = true;
+            this.assignccredit.ToolTipText = "Course Credit";
+            // 
             // Admin_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3220,6 +3319,9 @@ namespace University_Management_System
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3443,5 +3545,15 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn ccreditgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cproggrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdeptgrid;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignserialno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigncname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignctype;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignccredit;
     }
 }

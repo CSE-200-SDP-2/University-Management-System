@@ -14,6 +14,8 @@ namespace University_Management_System
     {
         DBAccess con = new DBAccess();
         string sn;
+        //string assignid="";
+        //string assigncoursecode="";
         public Admin_Menu()
         {
             InitializeComponent();
@@ -97,6 +99,7 @@ namespace University_Management_System
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
             Course_LoadData();
+            Assign_LoadData();
         }
 
         
@@ -255,12 +258,24 @@ namespace University_Management_System
 
         private void cRegbtn_Click(object sender, EventArgs e)
         {
-            string variables = "ccode,ctitle,ccredit,cprogram,cdept,ctype";
-            string values = "'" + cCode.Text + "','" + cTitle.Text + "','" + cCredit.Text + "','" + cProgram.Text + "','" + cDept.Text + "','" + cType.Text + "'";
-            con.dataSend("Insert into Course(" + variables + ") values(" + values + ")");
-            MessageBox.Show("Course information Registered Successfully");
-            Course_ClearData();
-            Course_LoadData();
+            con.dataGet("Select Course.ccode from Course where Course.ccode='" + cCode.Text + "'"); //  '" +  +"'                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtcourse= new DataTable();
+            con.sda.Fill(dtcourse);
+
+
+            if (dtcourse.Rows.Count > 0)
+            {
+                MessageBox.Show("Course Already Exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string variables = "ccode,ctitle,ccredit,cprogram,cdept,ctype";
+                string values = "'" + cCode.Text + "','" + cTitle.Text + "','" + cCredit.Text + "','" + cProgram.Text + "','" + cDept.Text + "','" + cType.Text + "'";
+                con.dataSend("Insert into Course(" + variables + ") values(" + values + ")");
+                MessageBox.Show("Course information Registered Successfully");
+                Course_ClearData();
+                Course_LoadData();
+            }
         }
         private void Course_ClearData()
         {
@@ -306,6 +321,80 @@ namespace University_Management_System
         private void Admin_Menu_Activated(object sender, EventArgs e)
         {
             //Course_LoadData();
+        }
+
+        private void label71_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cAssignbtn_Click(object sender, EventArgs e)
+        {
+            //string check;
+            //con.dataGet("select id from [Teacher]");
+            con.dataGet("Select Teacher.id,Course.ccode from Teacher,Course where Teacher.id='" + tchCode2.Text + "'and Course.ccode='" + cCode2.Text + "'"); //  '" +  +"'
+                                                                                                                    //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dt = new DataTable();
+            con.sda.Fill(dt);
+
+
+            if (dt.Rows.Count > 0)
+            {
+                con.dataGet("Select * from Teacher_Course where id='" + tchCode2.Text + "' and ccode='" + cCode2.Text + "'");
+                DataTable dt2 = new DataTable();
+                con.sda.Fill(dt2);
+                if (dt2.Rows.Count > 0)
+                {
+                    MessageBox.Show("Teacher Already Assigned to Course!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //assignid += tchCode2.Text;
+                    //assigncoursecode += cCode2.Text;
+                    //check = con.dataGet("Select id from Teacher where id='" + tchCode2.Text + "'");
+                    string variables = "id,ccode";
+                    string values = "'" + tchCode2.Text + "','" + cCode2.Text + "'";  //'"++"'
+                    con.dataSend("Insert into Teacher_Course(" + variables + ") values(" + values + ")");
+                    MessageBox.Show("Teacher Assigned To Course");
+                    //Assign_ClearData();
+                    Assign_LoadData();
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Teacher or Course info doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Assign_ClearData()
+        {
+            tchCode2.Clear();
+            cCode2.Clear();
+        }
+
+        private void Assign_LoadData()
+        {
+             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' or Course.ccode='" + cCode2.Text + "'"); //Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'
+             DataTable dtassign = new DataTable();
+             con.sda.Fill(dtassign);
+             cassigngrid.Rows.Clear();
+             foreach(DataRow row in dtassign.Rows)
+             {
+                 int n = cassigngrid.Rows.Add();
+                 cassigngrid.Rows[n].Cells["assignserialno"].Value = n + 1;
+                 cassigngrid.Rows[n].Cells["assigntchname"].Value = row["tname"].ToString();
+                 cassigngrid.Rows[n].Cells["assigntchcode"].Value = row["id"].ToString();
+                 cassigngrid.Rows[n].Cells["assignccode"].Value = row["ccode"].ToString();
+                 cassigngrid.Rows[n].Cells["assigncname"].Value = row["ctitle"].ToString();
+                 cassigngrid.Rows[n].Cells["assignctype"].Value = row["ctype"].ToString();
+                 cassigngrid.Rows[n].Cells["assignccredit"].Value = row["ccredit"].ToString();
+             }  
+            Assign_ClearData();
+        }
+
+        private void cassigngrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
