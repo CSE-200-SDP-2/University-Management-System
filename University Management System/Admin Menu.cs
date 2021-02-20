@@ -99,23 +99,23 @@ namespace University_Management_System
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
-            Auto();
+            Auto_ccode();
             Course_LoadData();
             Assign_LoadData();
         }
-        public void Auto()
+        public void Auto_ccode()
         {
             con.dataGet("Select ccode from Course"); //  '" +  +"'
                                                                                                                                                               //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
-            DataTable dtsuggest = new DataTable();
-            con.sda.Fill(dtsuggest);
+            DataTable dtsuggestccode = new DataTable();
+            con.sda.Fill(dtsuggestccode);
 
 
-            if (dtsuggest.Rows.Count > 0)
+            if (dtsuggestccode.Rows.Count > 0)
             {
-                for(int i=0;i<dtsuggest.Rows.Count;i++)
+                for(int i=0;i<dtsuggestccode.Rows.Count;i++)
                 {
-                    coll.Add(dtsuggest.Rows[i]["ccode"].ToString());
+                    coll.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
                 }
             }
             else
@@ -229,12 +229,24 @@ namespace University_Management_System
 
         private void stuRegbtn_Click(object sender, EventArgs e)
         {
-            string stuPass = "" + stuId.Text + "bubt";
-            string variables = "id,sname,sfname,smname,sdob,sbg,sgender,sreligion,snationality,sintake,ssection,sprog,sdept,smobile,pass";
-            string values = "'" + stuId.Text + "','" + stuName.Text + "','" + stuFname.Text + "','" + stuMname.Text + "','" + stuDob.Text + "','" + stuBg.Text + "','" + stuGender.Text + "','" + stuReligion.Text + "','" + stuNationality.Text + "','" + stuIntake.Text + "','" + stuSection.Text + "','" + stuProgram.Text + "','" + stuDept.Text + "','" + stuMobile.Text + "','"+stuPass+"'";
-            con.dataSend("Insert into Student(" + variables + ") values(" + values + ")");
-            MessageBox.Show("Student information Registered Successfully");
-            Student_ClearData();
+            con.dataGet("Select Student.id from Student where Student.id='" + stuId.Text + "'");                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtstudent = new DataTable();
+            con.sda.Fill(dtstudent);
+
+
+            if (dtstudent.Rows.Count > 0)
+            {
+                MessageBox.Show("Student Information Already Exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string stuPass = "" + stuId.Text + "bubt";
+                string variables = "id,sname,sfname,smname,sdob,sbg,sgender,sreligion,snationality,sintake,ssection,sprog,sdept,smobile,pass";
+                string values = "'" + stuId.Text + "','" + stuName.Text + "','" + stuFname.Text + "','" + stuMname.Text + "','" + stuDob.Text + "','" + stuBg.Text + "','" + stuGender.Text + "','" + stuReligion.Text + "','" + stuNationality.Text + "','" + stuIntake.Text + "','" + stuSection.Text + "','" + stuProgram.Text + "','" + stuDept.Text + "','" + stuMobile.Text + "','" + stuPass + "'";
+                con.dataSend("Insert into Student(" + variables + ") values(" + values + ")");
+                MessageBox.Show("Student information Registered Successfully");
+                Student_ClearData();
+            }
         }
         private void Student_ClearData()
         {
@@ -257,12 +269,24 @@ namespace University_Management_System
         
         private void tchRegbtn_Click(object sender, EventArgs e)
         {
-            string tchPass = "" + tchCode.Text + "bubt";
-            string variables = "id,tname,tfname,tmname,tdob,tbg,tgender,treligion,tnationality,tposition,tdept,tmobile,pass";
-            string values = "'" + tchCode.Text + "','" + tchName.Text + "','" + tchFname.Text + "','" + tchMname.Text + "','" + tchDob.Text + "','" + tchBg.Text + "','" + tchGender.Text + "','" + tchReligion.Text + "','" + tchNationality.Text + "','" + tchPosition.Text + "','" + tchDept.Text + "','" + tchMobile.Text + "','" + tchPass + "'";
-            con.dataSend("Insert into Teacher(" + variables + ") values(" + values + ")");
-            MessageBox.Show("Teacher information Registered Successfully");
-            Teacher_ClearData();
+            con.dataGet("Select Teacher.id from Teacher where Teacher.id='" + tchCode.Text + "'");                                                                                                                                                        //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtteacher = new DataTable();
+            con.sda.Fill(dtteacher);
+
+
+            if (dtteacher.Rows.Count > 0)
+            {
+                MessageBox.Show("Teacher Information Already Exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string tchPass = "" + tchCode.Text + "bubt";
+                string variables = "id,tname,tfname,tmname,tdob,tbg,tgender,treligion,tnationality,tposition,tdept,tmobile,pass";
+                string values = "'" + tchCode.Text + "','" + tchName.Text + "','" + tchFname.Text + "','" + tchMname.Text + "','" + tchDob.Text + "','" + tchBg.Text + "','" + tchGender.Text + "','" + tchReligion.Text + "','" + tchNationality.Text + "','" + tchPosition.Text + "','" + tchDept.Text + "','" + tchMobile.Text + "','" + tchPass + "'";
+                con.dataSend("Insert into Teacher(" + variables + ") values(" + values + ")");
+                MessageBox.Show("Teacher information Registered Successfully");
+                Teacher_ClearData();
+            }
         }
         private void Teacher_ClearData()
         {
@@ -387,7 +411,7 @@ namespace University_Management_System
             }
             else
             {
-                MessageBox.Show("Teacher or Course info doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Teacher or Course Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Assign_ClearData()
@@ -398,8 +422,8 @@ namespace University_Management_System
 
         private void Assign_LoadData()
         {
-             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' or Course.ccode='" + cCode2.Text + "'"); //Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'
-             DataTable dtassign = new DataTable();
+             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'
+            DataTable dtassign = new DataTable();
              con.sda.Fill(dtassign);
              cassigngrid.Rows.Clear();
              foreach(DataRow row in dtassign.Rows)
