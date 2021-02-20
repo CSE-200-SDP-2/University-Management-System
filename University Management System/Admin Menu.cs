@@ -12,6 +12,7 @@ namespace University_Management_System
 {
     public partial class Admin_Menu : Form
     {
+        AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
         DBAccess con = new DBAccess();
         string sn;
         //string assignid="";
@@ -98,10 +99,33 @@ namespace University_Management_System
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
+            Auto();
             Course_LoadData();
             Assign_LoadData();
         }
+        public void Auto()
+        {
+            con.dataGet("Select ccode from Course"); //  '" +  +"'
+                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggest = new DataTable();
+            con.sda.Fill(dtsuggest);
 
+
+            if (dtsuggest.Rows.Count > 0)
+            {
+                for(int i=0;i<dtsuggest.Rows.Count;i++)
+                {
+                    coll.Add(dtsuggest.Rows[i]["ccode"].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Course not found");
+            }
+            cCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cCode2.AutoCompleteCustomSource = coll;
+            }
         
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -393,6 +417,10 @@ namespace University_Management_System
         }
 
         private void cassigngrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void cCode2_TextChanged(object sender, EventArgs e)
         {
 
         }

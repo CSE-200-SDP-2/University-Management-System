@@ -1485,6 +1485,7 @@ namespace University_Management_System
             this.cCode2.Name = "cCode2";
             this.cCode2.Size = new System.Drawing.Size(209, 24);
             this.cCode2.TabIndex = 20;
+            this.cCode2.TextChanged += new System.EventHandler(this.cCode2_TextChanged);
             // 
             // label68
             // 
