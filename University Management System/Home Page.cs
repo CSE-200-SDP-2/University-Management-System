@@ -39,7 +39,8 @@ namespace University_Management_System
         }
         private void Home_Page_Load(object sender, EventArgs e)
         {
-          
+            //Admin_Menu_Load();
+            //Course_LoadData();
         }
 
         private void bubtlogo_Click(object sender, EventArgs e)

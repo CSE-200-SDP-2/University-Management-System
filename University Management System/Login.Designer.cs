@@ -142,6 +142,7 @@ namespace University_Management_System
             // loginas
             // 
             this.loginas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.loginas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.loginas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginas.Font = new System.Drawing.Font("Book Antiqua", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginas.ForeColor = System.Drawing.SystemColors.Window;

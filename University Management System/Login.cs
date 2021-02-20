@@ -74,7 +74,7 @@ namespace University_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Username or Password...!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Username or Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }// }
         }
 

@@ -363,6 +363,7 @@ namespace University_Management_System
             // 
             this.stu_Cdept.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stu_Cdept.BackColor = System.Drawing.Color.Azure;
+            this.stu_Cdept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stu_Cdept.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stu_Cdept.FormattingEnabled = true;
             this.stu_Cdept.ItemHeight = 20;
@@ -388,6 +389,7 @@ namespace University_Management_System
             // 
             this.stu_Cprogram.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stu_Cprogram.BackColor = System.Drawing.Color.Azure;
+            this.stu_Cprogram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stu_Cprogram.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stu_Cprogram.FormattingEnabled = true;
             this.stu_Cprogram.Items.AddRange(new object[] {
