@@ -252,10 +252,7 @@ namespace University_Management_System
         private System.Windows.Forms.Panel navpanel;
         private System.Windows.Forms.Label label1;
 //=======
-        private System.Windows.Forms.Button Librarybtn;
-        private System.Windows.Forms.Button Studentbtn;
-        private System.Windows.Forms.Button Teacherbtn;
-        private System.Windows.Forms.Button Adminbtn;
+        
 //>>>>>>> 9f1d8c665ad665b8bcae7933d1858fce98d969c2
         private System.Windows.Forms.PictureBox bubtlogo;
         private System.Windows.Forms.Panel panel;

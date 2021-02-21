@@ -15,6 +15,7 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
+            //timer1.Start();
             //timer1.Enabled = true;
             //openChildForm(new Student_Menu());
             // customizedesign();
