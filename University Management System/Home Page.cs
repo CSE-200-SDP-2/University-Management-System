@@ -42,6 +42,7 @@ namespace University_Management_System
         {
             //Admin_Menu_Load();
             //Course_LoadData();
+            timer1.Start();
         }
 
         private void bubtlogo_Click(object sender, EventArgs e)

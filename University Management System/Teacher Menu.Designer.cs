@@ -1091,6 +1091,7 @@ namespace University_Management_System
             this.MinimumSize = new System.Drawing.Size(1278, 586);
             this.Name = "Teacher_Menu";
             this.Text = "Teacher_Menu";
+            this.Load += new System.EventHandler(this.Teacher_Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

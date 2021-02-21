@@ -99,9 +99,11 @@ namespace University_Management_System
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
-            Auto_ccode();
             Course_LoadData();
             Assign_LoadData();
+            Auto_ccode();
+            Auto_modstuid();
+            Auto_tchcode();
         }
         public void Auto_ccode()
         {
@@ -126,7 +128,53 @@ namespace University_Management_System
             cCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cCode2.AutoCompleteCustomSource = coll;
             }
-        
+
+
+        public void Auto_modstuid()
+        {
+            con.dataGet("Select id from Student"); //  '" +  +"'
+                                                   //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestmodstuid = new DataTable();
+            con.sda.Fill(dtsuggestmodstuid);
+            if (dtsuggestmodstuid.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestmodstuid.Rows.Count; i++)
+                {
+                    coll.Add(dtsuggestmodstuid.Rows[i]["id"].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Student ID not found");
+            }
+            mod_stuId.AutoCompleteMode = AutoCompleteMode.Suggest;
+            mod_stuId.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            mod_stuId.AutoCompleteCustomSource = coll;
+        }
+        public void Auto_tchcode()
+        {
+            con.dataGet("Select id from Teacher"); //  '" +  +"'
+                                                   //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggesttchcode = new DataTable();
+            con.sda.Fill(dtsuggesttchcode);
+
+
+            if (dtsuggesttchcode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggesttchcode.Rows.Count; i++)
+                {
+                    coll.Add(dtsuggesttchcode.Rows[i]["id"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            tchCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
+            tchCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            tchCode2.AutoCompleteCustomSource = coll;
+        }
+
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -555,6 +603,36 @@ namespace University_Management_System
                 MessageBox.Show("Student Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        public void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 0)
+            {
+                MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 1)
+            {
+                MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        /*private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }*/
+
+        public void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl4.SelectedIndex == 0)
+            {
+                MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (tabControl4.SelectedIndex == 1)
+            {
+                MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
