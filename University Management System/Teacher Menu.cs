@@ -33,5 +33,10 @@ namespace University_Management_System
         {
 
         }
+
+        private void Teacher_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
