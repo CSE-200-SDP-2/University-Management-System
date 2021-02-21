@@ -470,7 +470,7 @@ namespace University_Management_System
 
         private void Assign_LoadData()
         {
-             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "'
+             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where  Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' ---> Teacher.id='" + tchCode2.Text + "' or
             DataTable dtassign = new DataTable();
              con.sda.Fill(dtassign);
              cassigngrid.Rows.Clear();
@@ -615,7 +615,6 @@ namespace University_Management_System
             {
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         /*private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -633,6 +632,146 @@ namespace University_Management_System
             {
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        public void Clear_Tchdata()
+        {
+            srch_tchCode.Clear();
+            srch_tchName.Clear();
+            srch_tchPosition.SelectedIndex=-1;
+            srch_tchDept.SelectedIndex = -1;
+        }
+        private void srch_tchSrchbtn_Click(object sender, EventArgs e)
+        {
+            string id, name, position, department;
+            id = srch_tchCode.Text;
+            name = srch_tchName.Text;
+            position = srch_tchPosition.Text;
+            department = srch_tchDept.Text;
+
+            if (id != "" && name != "" && position != "" && department != "")//____
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tname = '" + name + "' and tposition = '" + position + "' and tdept = '" + department + "'");
+            }
+            else if (id == "" && name != "" && position != "" && department != "")//_BCD
+            {
+                con.dataGet("Select * from Teacher Where tname = '" + name + "' and tposition = '" + position + "' and tdept = '" + department + "'");
+            }
+            else if (id != "" && name == "" && position != "" && department != "")//A_CD
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and  tposition = '" + position + "' and tdept = '" + department + "'");
+            }
+            else if (id != "" && name != "" && position == "" && department != "")//AB_D
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tname = '" + name + "' and  tdept = '" + department + "'");
+            }
+            else if (id != "" && name != "" && position != "" && department == "")//ABC_
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tname = '" + name + "' and tposition = '" + position + "'");
+            }
+            // edit korte hobe-------<<<<<<<<<<<<<<<<
+            else if (id == "" && name == "" && position != "" && department != "")//__CD
+            {
+                con.dataGet("Select * from Teacher Where  tposition = '" + position + "' and tdept = '" + department + "'");
+            }
+            else if (id == "" && name != "" && position == "" && department != "")//_B_D
+            {
+                con.dataGet("Select * from Teacher Where tname = '" + name + "' and tdept = '" + department + "'");
+            }
+            else if (id == "" && name != "" && position != "" && department == "")//_BC_
+            {
+                con.dataGet("Select * from Teacher Where  tname = '" + name + "' and tposition = '" + position + "'");
+            }
+            else if (id != "" && name == "" && position == "" && department != "")//A__D
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tdept = '" + department + "'");
+            }
+            else if (id != "" && name == "" && position != "" && department == "")//A_C_
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tposition = '" + position + "'");
+            }
+            else if (id != "" && name != "" && position == "" && department == "")//AB__
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "' and tname = '" + name + "'");
+            }
+            //-----<<<<<<<<<<<<<<<<<<<
+            else if (id == "" && name == "" && position == "" && department != "")//___D
+            {
+                con.dataGet("Select * from Teacher Where tdept = '" + department + "'");
+            }
+            else if (id == "" && name == "" && position != "" && department == "")//__C_
+            {
+                con.dataGet("Select * from Teacher Where tposition = '" + position + "'");
+            }
+            else if (id == "" && name != "" && position == "" && department == "")//_B__
+            {
+                con.dataGet("Select * from Teacher Where tname = '" + name + "'");
+            }
+            else if (id != "" && name == "" && position == "" && department == "")//A___
+            {
+                con.dataGet("Select * from Teacher Where id = '" + id + "'");
+            }
+            else
+            {
+                MessageBox.Show("Please Enter at least 1 Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            DataTable tchinfo = new DataTable();
+            con.sda.Fill(tchinfo);
+            srch_tchGrid.Rows.Clear();
+
+            if (tchinfo.Rows.Count > 0)
+            {
+                foreach (DataRow row in tchinfo.Rows)
+                {
+                    int n = srch_tchGrid.Rows.Add();
+                    srch_tchGrid.Rows[n].Cells["srchtchslgrid"].Value = n + 1;
+                    srch_tchGrid.Rows[n].Cells["srchtchnamegrid"].Value = row["tname"].ToString();
+                    srch_tchGrid.Rows[n].Cells["srchtchidgrid"].Value = row["id"].ToString();
+                    srch_tchGrid.Rows[n].Cells["srchtchpositiongrid"].Value = row["tposition"].ToString();
+                    srch_tchGrid.Rows[n].Cells["srchtchdeptgrid"].Value = row["tdept"].ToString();
+                    srch_tchGrid.Rows[n].Cells["srchtchmobilegrid"].Value = row["tmobile"].ToString();
+                }
+                Clear_Tchdata();
+            }
+            else
+            {
+                MessageBox.Show("Teacher Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void res_srchbtn_Click(object sender, EventArgs e)
+        {
+            string id = res_srchId.Text;
+            con.dataGet("select * from Student where id = '" + id + "'");
+
+            DataTable Stuinfo = new DataTable();
+            con.sda.Fill(Stuinfo);
+            string id2, name, intake, section;
+            name = "Name : ";
+            id2 = "ID : ";
+            intake = "Intake : ";
+            section = "Section : ";
+            if (Stuinfo.Rows.Count > 0)
+            {
+                foreach (DataRow row in Stuinfo.Rows)
+                {
+                    name+= row["id"].ToString();
+                    id2 += row["sname"].ToString();
+                    intake += row["sintake"].ToString(); 
+                    section += row["ssection"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("The Result isn't publish yet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            res_srchStuid.Text = id2;
+            res_srchStuname.Text = name;
+            res_srchStuintake.Text = intake;
+            res_srchStusection.Text = section;
+
+
         }
     }
 }
