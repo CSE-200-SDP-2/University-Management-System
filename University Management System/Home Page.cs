@@ -15,7 +15,7 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
-
+            //timer1.Enabled = true;
             //openChildForm(new Student_Menu());
             // customizedesign();
             logoutbtn.Hide();
@@ -45,12 +45,13 @@ namespace University_Management_System
 
         private void bubtlogo_Click(object sender, EventArgs e)
         {
-            logoutbtn.Hide();
-            loginbtn.Show();
+            
             Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login").ToArray();
             foreach (Form openForm in formsList)
             {
                 openForm.Close();
+                logoutbtn.Hide();
+                loginbtn.Show();
             }
             /* try
              {
@@ -98,5 +99,75 @@ namespace University_Management_System
             logoutbtn.Hide();
             loginbtn.Show();
         }
+
+        private void loginpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            if (lastpic.Visible == true)
+            {
+                lastpic.Visible = false;
+                firstpic.Visible = true;
+            }
+            else if (sixthpic.Visible == true)
+            {
+                sixthpic.Visible = false;
+                lastpic.Visible = true;
+            }
+            else if (fifthpic.Visible == true)
+            {
+                fifthpic.Visible = false;
+                sixthpic.Visible = true;
+            }
+            else if (thirdpic.Visible == true)
+            {
+                thirdpic.Visible = false;
+                fifthpic.Visible = true;
+            }
+            else if (secondpic.Visible == true)
+            {
+                secondpic.Visible = false;
+                thirdpic.Visible = true;
+            }
+            else if (firstpic.Visible == true)
+            {
+                firstpic.Visible = false;
+                secondpic.Visible = true;
+            }
+        }
+        /* if(lastpic.Visible==true)
+    {
+        lastpic.Visible = false;
+        sixthpic.Visible = true;
+    }
+    else if(sixthpic.Visible==true)
+    {
+        sixthpic.Visible = false;
+        fifthpic.Visible = true;
+    }
+    else if (fifthpic.Visible == true)
+{
+fifthpic.Visible = false;
+thirdpic.Visible = true;
+}
+else if (thirdpic.Visible == true)
+{
+thirdpic.Visible = false;
+secondpic.Visible = true;
+}
+else if (secondpic.Visible == true)
+{
+secondpic.Visible = false;
+firstpic.Visible = true;
+}
+else if (firstpic.Visible == true)
+{
+firstpic.Visible = false;
+lastpic.Visible = true;
+}*/
     }
 }

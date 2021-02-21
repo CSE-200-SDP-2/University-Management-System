@@ -118,10 +118,10 @@ namespace University_Management_System
                     coll.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
                 }
             }
-            else
+            /*else
             {
                 MessageBox.Show("Course not found");
-            }
+            }*/
             cCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
             cCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cCode2.AutoCompleteCustomSource = coll;
