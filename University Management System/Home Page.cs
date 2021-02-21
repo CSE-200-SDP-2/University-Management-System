@@ -15,7 +15,7 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
-            //timer1.Start();
+            
             //timer1.Enabled = true;
             //openChildForm(new Student_Menu());
             // customizedesign();
@@ -42,6 +42,7 @@ namespace University_Management_System
         {
             //Admin_Menu_Load();
             //Course_LoadData();
+            timer1.Start();
         }
 
         private void bubtlogo_Click(object sender, EventArgs e)
@@ -105,8 +106,13 @@ namespace University_Management_System
         {
 
         }
-
-
+        /*private void loginpanel_Load(object sender, EventArgs e)
+        {
+            //Admin_Menu_Load();
+            //Course_LoadData();
+            timer1.Start();
+        }
+        */
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             if (lastpic.Visible == true)
