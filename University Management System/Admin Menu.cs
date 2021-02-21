@@ -448,5 +448,113 @@ namespace University_Management_System
         {
 
         }
+        public void Clear_Studata()
+        {
+            srch_stuId.Clear();
+            srch_stuName.Clear();
+            srch_stuIntake.Clear();
+            srch_stuSection.Clear();
+        }
+        private void srch_stubtn_Click(object sender, EventArgs e)
+        {
+            string id, name, intake, section;
+            id = srch_stuId.Text;
+            name = srch_stuName.Text;
+            intake = srch_stuIntake.Text;
+            section = srch_stuSection.Text;
+
+            if (id != "" && name != "" && intake != "" && section != "")//____
+            {
+                con.dataGet("Select * from Student Where id = '"+id+"' and sname = '"+name+"' and sintake = '"+intake+"' and ssection = '"+section+"'");
+            }
+            else if (id == "" && name != "" && intake != "" && section != "")//_BCD
+            {
+                con.dataGet("Select * from Student Where sname = '" + name + "' and sintake = '" + intake + "' and ssection = '" + section + "'");
+            }
+            else if(id != "" && name == "" && intake != "" && section != "")//A_CD
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and  sintake = '" + intake + "' and ssection = '" + section + "'");
+            }
+            else if(id != "" && name != "" && intake == "" && section != "")//AB_D
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "' and  ssection = '" + section + "'");
+            }
+            else if(id != "" && name != "" && intake != "" && section == "")//ABC_
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "' and sintake = '" + intake + "'");
+            }
+            // edit korte hobe-------<<<<<<<<<<<<<<<<
+            else if (id == "" && name == "" && intake != "" && section != "")//__CD
+            {
+                con.dataGet("Select * from Student Where  sintake = '" + intake + "' and ssection = '" + section + "'");
+            }
+            else if (id == "" && name != "" && intake == "" && section != "")//_B_D
+            {
+                con.dataGet("Select * from Student Where sname = '" + name + "' and ssection = '" + section + "'");
+            }
+            else if (id == "" && name != "" && intake != "" && section == "")//_BC_
+            {
+                con.dataGet("Select * from Student Where  sname = '" + name + "' and sintake = '" + intake + "'");
+            }
+            else if (id != "" && name == "" && intake == "" && section != "")//A__D
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and ssection = '" + section + "'");
+            }
+            else if (id != "" && name == "" && intake != "" && section == "")//A_C_
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and sintake = '" + intake + "'");
+            }
+            else if (id != "" && name != "" && intake == "" && section == "")//AB__
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "'");
+            }
+            //-----<<<<<<<<<<<<<<<<<<<
+            else if (id == "" && name == "" && intake == "" && section != "")//___D
+            {
+                con.dataGet("Select * from Student Where ssection = '" + section + "'");
+            }
+            else if (id == "" && name == "" && intake != "" && section == "")//__C_
+            {
+                con.dataGet("Select * from Student Where sintake = '" + intake + "'");
+            }
+            else if (id == "" && name != "" && intake == "" && section == "")//_B__
+            {
+                con.dataGet("Select * from Student Where sname = '" + name + "'");
+            }
+            else if (id != "" && name == "" && intake == "" && section == "")//A___
+            {
+                con.dataGet("Select * from Student Where id = '" + id + "'");
+            }
+            else
+            {
+                MessageBox.Show("Please Enter at least 1 Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            DataTable Stuinfo = new DataTable();
+            con.sda.Fill(Stuinfo);
+            srch_stuGrid.Rows.Clear();
+
+            if (Stuinfo.Rows.Count > 0)
+            {
+                foreach(DataRow row in Stuinfo.Rows)
+                {
+                    int n = srch_stuGrid.Rows.Add();
+                    srch_stuGrid.Rows[n].Cells["stuslgrid"].Value = n + 1;
+                    srch_stuGrid.Rows[n].Cells["stunamegrid"].Value = row["sname"].ToString();
+                    srch_stuGrid.Rows[n].Cells["stuidgrid"].Value = row["id"].ToString();
+                    srch_stuGrid.Rows[n].Cells["stuintakegrid"].Value = row["sintake"].ToString();
+                    srch_stuGrid.Rows[n].Cells["stusectiongrid"].Value = row["ssection"].ToString();
+                    srch_stuGrid.Rows[n].Cells["stuproggrid"].Value = row["sprog"].ToString();
+                    srch_stuGrid.Rows[n].Cells["studeptgrid"].Value = row["sdept"].ToString();
+                    srch_stuGrid.Rows[n].Cells["stumobilegrid"].Value = row["smobile"].ToString();
+                }
+                Clear_Studata();
+            }
+            else
+            {
+                MessageBox.Show("Student Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }
