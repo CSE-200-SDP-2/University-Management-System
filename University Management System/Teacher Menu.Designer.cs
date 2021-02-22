@@ -29,7 +29,7 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tchinfopanel = new System.Windows.Forms.Panel();
             this.tchPosition = new System.Windows.Forms.Label();
             this.tchDept = new System.Windows.Forms.Label();
             this.tchCode = new System.Windows.Forms.Label();
@@ -113,7 +113,14 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.tchCserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCproggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -148,18 +155,19 @@ namespace University_Management_System
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // tchinfopanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.panel1.Controls.Add(this.tchPosition);
-            this.panel1.Controls.Add(this.tchDept);
-            this.panel1.Controls.Add(this.tchCode);
-            this.panel1.Controls.Add(this.tchName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1334, 131);
-            this.panel1.TabIndex = 1;
+            this.tchinfopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.tchinfopanel.Controls.Add(this.tchPosition);
+            this.tchinfopanel.Controls.Add(this.tchDept);
+            this.tchinfopanel.Controls.Add(this.tchCode);
+            this.tchinfopanel.Controls.Add(this.tchName);
+            this.tchinfopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tchinfopanel.Location = new System.Drawing.Point(0, 0);
+            this.tchinfopanel.Name = "tchinfopanel";
+            this.tchinfopanel.Size = new System.Drawing.Size(1334, 131);
+            this.tchinfopanel.TabIndex = 1;
+            this.tchinfopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tchinfopanel_Paint);
             // 
             // tchPosition
             // 
@@ -221,6 +229,7 @@ namespace University_Management_System
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1334, 416);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // course
             // 
@@ -242,6 +251,7 @@ namespace University_Management_System
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(1326, 382);
             this.tabControl3.TabIndex = 1;
+            this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged);
             // 
             // courselist
             // 
@@ -264,12 +274,26 @@ namespace University_Management_System
             // 
             // tchClist
             // 
+            this.tchClist.AllowUserToAddRows = false;
+            this.tchClist.AllowUserToDeleteRows = false;
+            this.tchClist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tchClist.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tchClist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tchClist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tchCserialnogrid,
+            this.tchCcodegrid,
+            this.tchCtitlegrid,
+            this.tchCtypegrid,
+            this.tchCcreditgrid,
+            this.tchCdeptgrid,
+            this.tchCproggrid});
             this.tchClist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tchClist.Location = new System.Drawing.Point(0, 0);
             this.tchClist.Name = "tchClist";
+            this.tchClist.ReadOnly = true;
             this.tchClist.Size = new System.Drawing.Size(1318, 348);
             this.tchClist.TabIndex = 0;
+            this.tchClist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tchClist_CellContentClick);
             // 
             // stulist
             // 
@@ -1078,6 +1102,55 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 0;
             // 
+            // tchCserialnogrid
+            // 
+            this.tchCserialnogrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCserialnogrid.HeaderText = "Sl. No.";
+            this.tchCserialnogrid.Name = "tchCserialnogrid";
+            this.tchCserialnogrid.ReadOnly = true;
+            // 
+            // tchCcodegrid
+            // 
+            this.tchCcodegrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCcodegrid.HeaderText = "Course Code";
+            this.tchCcodegrid.Name = "tchCcodegrid";
+            this.tchCcodegrid.ReadOnly = true;
+            // 
+            // tchCtitlegrid
+            // 
+            this.tchCtitlegrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCtitlegrid.HeaderText = "Course Title";
+            this.tchCtitlegrid.Name = "tchCtitlegrid";
+            this.tchCtitlegrid.ReadOnly = true;
+            // 
+            // tchCtypegrid
+            // 
+            this.tchCtypegrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCtypegrid.HeaderText = "Course Type";
+            this.tchCtypegrid.Name = "tchCtypegrid";
+            this.tchCtypegrid.ReadOnly = true;
+            // 
+            // tchCcreditgrid
+            // 
+            this.tchCcreditgrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCcreditgrid.HeaderText = "Course Credit";
+            this.tchCcreditgrid.Name = "tchCcreditgrid";
+            this.tchCcreditgrid.ReadOnly = true;
+            // 
+            // tchCdeptgrid
+            // 
+            this.tchCdeptgrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCdeptgrid.HeaderText = "Department";
+            this.tchCdeptgrid.Name = "tchCdeptgrid";
+            this.tchCdeptgrid.ReadOnly = true;
+            // 
+            // tchCproggrid
+            // 
+            this.tchCproggrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCproggrid.HeaderText = "Program";
+            this.tchCproggrid.Name = "tchCproggrid";
+            this.tchCproggrid.ReadOnly = true;
+            // 
             // Teacher_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -1085,15 +1158,15 @@ namespace University_Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(27)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(1334, 547);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tchinfopanel);
             this.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(1278, 586);
             this.Name = "Teacher_Menu";
             this.Text = "Teacher_Menu";
             this.Load += new System.EventHandler(this.Teacher_Menu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tchinfopanel.ResumeLayout(false);
+            this.tchinfopanel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.course.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
@@ -1138,7 +1211,7 @@ namespace University_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel tchinfopanel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage course;
         private System.Windows.Forms.TabPage marks;
@@ -1222,5 +1295,12 @@ namespace University_Management_System
         private System.Windows.Forms.Label tchDept;
         private System.Windows.Forms.Label tchCode;
         private System.Windows.Forms.Label tchName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCserialnogrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCtitlegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCtypegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCcreditgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCdeptgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCproggrid;
     }
 }

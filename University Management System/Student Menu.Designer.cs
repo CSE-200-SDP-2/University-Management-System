@@ -29,8 +29,8 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.stuIanke = new System.Windows.Forms.Label();
+            this.stumenuinfopanel = new System.Windows.Forms.Panel();
+            this.stuIntake = new System.Windows.Forms.Label();
             this.stuSection = new System.Windows.Forms.Label();
             this.stuId = new System.Windows.Forms.Label();
             this.stuName = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -100,29 +100,30 @@ namespace University_Management_System
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // stumenuinfopanel
             // 
-            this.panel1.Controls.Add(this.stuIanke);
-            this.panel1.Controls.Add(this.stuSection);
-            this.panel1.Controls.Add(this.stuId);
-            this.panel1.Controls.Add(this.stuName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1334, 131);
-            this.panel1.TabIndex = 0;
+            this.stumenuinfopanel.Controls.Add(this.stuIntake);
+            this.stumenuinfopanel.Controls.Add(this.stuSection);
+            this.stumenuinfopanel.Controls.Add(this.stuId);
+            this.stumenuinfopanel.Controls.Add(this.stuName);
+            this.stumenuinfopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stumenuinfopanel.Location = new System.Drawing.Point(0, 0);
+            this.stumenuinfopanel.Name = "stumenuinfopanel";
+            this.stumenuinfopanel.Size = new System.Drawing.Size(1334, 131);
+            this.stumenuinfopanel.TabIndex = 0;
+            this.stumenuinfopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.stumenuinfopanel_Paint);
             // 
-            // stuIanke
+            // stuIntake
             // 
-            this.stuIanke.AutoSize = true;
-            this.stuIanke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stuIanke.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuIanke.ForeColor = System.Drawing.Color.White;
-            this.stuIanke.Location = new System.Drawing.Point(828, 35);
-            this.stuIanke.Name = "stuIanke";
-            this.stuIanke.Size = new System.Drawing.Size(67, 23);
-            this.stuIanke.TabIndex = 0;
-            this.stuIanke.Text = "Intake";
+            this.stuIntake.AutoSize = true;
+            this.stuIntake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stuIntake.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuIntake.ForeColor = System.Drawing.Color.White;
+            this.stuIntake.Location = new System.Drawing.Point(828, 35);
+            this.stuIntake.Name = "stuIntake";
+            this.stuIntake.Size = new System.Drawing.Size(67, 23);
+            this.stuIntake.TabIndex = 0;
+            this.stuIntake.Text = "Intake";
             // 
             // stuSection
             // 
@@ -671,13 +672,13 @@ namespace University_Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(1334, 547);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.stumenuinfopanel);
             this.MinimumSize = new System.Drawing.Size(1278, 586);
             this.Name = "Student_Menu";
             this.Text = "Student_Menu";
             this.Load += new System.EventHandler(this.Student_Menu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.stumenuinfopanel.ResumeLayout(false);
+            this.stumenuinfopanel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.course.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -706,7 +707,7 @@ namespace University_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel stumenuinfopanel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage course;
         private System.Windows.Forms.TabPage result;
@@ -750,7 +751,7 @@ namespace University_Management_System
         private System.Windows.Forms.Button stu_Srchbtn;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView stu_ViewCgrid;
-        private System.Windows.Forms.Label stuIanke;
+        private System.Windows.Forms.Label stuIntake;
         private System.Windows.Forms.Label stuSection;
         private System.Windows.Forms.Label stuId;
         private System.Windows.Forms.Label stuName;

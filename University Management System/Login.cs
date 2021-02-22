@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
+
+    
     public partial class Login : Form
     {
         //string table;
         public Login()
         {
             InitializeComponent();
-            
-        }
 
+        }
         private Home_Page mainForm = null;
         public Login(Form callingForm)
         {
@@ -28,6 +29,7 @@ namespace University_Management_System
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
+            UserName.username = aname.Text;
             //MessageBox.Show(loginas.Text);
             DBAccess con = new DBAccess();
             string table="";
@@ -83,5 +85,13 @@ namespace University_Management_System
             //aname.Text = loginas.Text;
              //table = loginas.SelectedItem.ToString();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+    
+    
+
 }

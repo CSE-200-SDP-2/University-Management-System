@@ -79,6 +79,7 @@
     <Compile Include="Teacher Menu.Designer.cs">
       <DependentUpon>Teacher Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Username.cs" />
     <EmbeddedResource Include="Admin Menu.resx">
       <DependentUpon>Admin Menu.cs</DependentUpon>
     </EmbeddedResource>
