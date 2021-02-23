@@ -120,6 +120,7 @@ namespace University_Management_System
             this.aassigncourse = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.cSemester = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
             this.cAssignbtn = new System.Windows.Forms.Button();
             this.tchCode2 = new System.Windows.Forms.TextBox();
@@ -128,6 +129,14 @@ namespace University_Management_System
             this.label68 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.cassigngrid = new System.Windows.Forms.DataGridView();
+            this.assignserialno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigntchname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigntchcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assigncname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignctype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignccredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignsemester = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.search = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.student = new System.Windows.Forms.TabPage();
@@ -285,15 +294,19 @@ namespace University_Management_System
             this.res_srchId = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cSemester = new System.Windows.Forms.TextBox();
-            this.assignserialno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assigntchname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assigntchcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assigncname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignctype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignccredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignsemester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchslnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchfnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchmnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchdobgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchbggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchgendergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchreligiongrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchnationalitygrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchpositiongrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modtchmobilegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.register.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -444,8 +457,9 @@ namespace University_Management_System
             this.stuDob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stuDob.CalendarMonthBackground = System.Drawing.Color.Azure;
             this.stuDob.CalendarTitleBackColor = System.Drawing.Color.Azure;
-            this.stuDob.CustomFormat = "dd-MM-yyyy";
+            this.stuDob.CustomFormat = "dd/MM/yyyy";
             this.stuDob.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.stuDob.Location = new System.Drawing.Point(351, 208);
             this.stuDob.Name = "stuDob";
             this.stuDob.Size = new System.Drawing.Size(256, 27);
@@ -850,7 +864,7 @@ namespace University_Management_System
             this.tchRegbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.tchRegbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tchRegbtn.ForeColor = System.Drawing.Color.White;
-            this.tchRegbtn.Location = new System.Drawing.Point(935, 363);
+            this.tchRegbtn.Location = new System.Drawing.Point(935, 373);
             this.tchRegbtn.Name = "tchRegbtn";
             this.tchRegbtn.Size = new System.Drawing.Size(123, 35);
             this.tchRegbtn.TabIndex = 44;
@@ -862,9 +876,10 @@ namespace University_Management_System
             // 
             this.tchDob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tchDob.CalendarMonthBackground = System.Drawing.Color.Azure;
-            this.tchDob.CustomFormat = "dd-MM-yyyy";
+            this.tchDob.CustomFormat = "dd/MM/yyyy";
             this.tchDob.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchDob.Location = new System.Drawing.Point(350, 273);
+            this.tchDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.tchDob.Location = new System.Drawing.Point(350, 283);
             this.tchDob.Name = "tchDob";
             this.tchDob.Size = new System.Drawing.Size(256, 27);
             this.tchDob.TabIndex = 43;
@@ -884,7 +899,7 @@ namespace University_Management_System
             "Professor",
             "Chairman",
             "Dean"});
-            this.tchPosition.Location = new System.Drawing.Point(803, 231);
+            this.tchPosition.Location = new System.Drawing.Point(803, 241);
             this.tchPosition.MaxDropDownItems = 4;
             this.tchPosition.Name = "tchPosition";
             this.tchPosition.Size = new System.Drawing.Size(255, 28);
@@ -910,7 +925,7 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.tchDept.Location = new System.Drawing.Point(803, 274);
+            this.tchDept.Location = new System.Drawing.Point(803, 284);
             this.tchDept.MaxDropDownItems = 4;
             this.tchDept.Name = "tchDept";
             this.tchDept.Size = new System.Drawing.Size(255, 28);
@@ -928,7 +943,7 @@ namespace University_Management_System
             "Male",
             "Female",
             "Others"});
-            this.tchGender.Location = new System.Drawing.Point(804, 97);
+            this.tchGender.Location = new System.Drawing.Point(804, 107);
             this.tchGender.Name = "tchGender";
             this.tchGender.Size = new System.Drawing.Size(255, 28);
             this.tchGender.TabIndex = 42;
@@ -949,7 +964,7 @@ namespace University_Management_System
             "O-",
             "AB+",
             "AB-"});
-            this.tchBg.Location = new System.Drawing.Point(352, 318);
+            this.tchBg.Location = new System.Drawing.Point(352, 328);
             this.tchBg.Name = "tchBg";
             this.tchBg.Size = new System.Drawing.Size(255, 28);
             this.tchBg.TabIndex = 40;
@@ -960,7 +975,7 @@ namespace University_Management_System
             this.tchMobile.BackColor = System.Drawing.Color.Azure;
             this.tchMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchMobile.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchMobile.Location = new System.Drawing.Point(804, 317);
+            this.tchMobile.Location = new System.Drawing.Point(804, 327);
             this.tchMobile.Name = "tchMobile";
             this.tchMobile.Size = new System.Drawing.Size(255, 24);
             this.tchMobile.TabIndex = 38;
@@ -971,7 +986,7 @@ namespace University_Management_System
             this.label17.AutoSize = true;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(689, 323);
+            this.label17.Location = new System.Drawing.Point(689, 333);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 23);
             this.label17.TabIndex = 36;
@@ -983,7 +998,7 @@ namespace University_Management_System
             this.label21.AutoSize = true;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(689, 236);
+            this.label21.Location = new System.Drawing.Point(689, 246);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(78, 23);
             this.label21.TabIndex = 34;
@@ -996,7 +1011,7 @@ namespace University_Management_System
             this.label18.AutoSize = true;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(689, 102);
+            this.label18.Location = new System.Drawing.Point(689, 112);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 23);
             this.label18.TabIndex = 35;
@@ -1008,7 +1023,7 @@ namespace University_Management_System
             this.label19.AutoSize = true;
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(689, 279);
+            this.label19.Location = new System.Drawing.Point(689, 289);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 23);
             this.label19.TabIndex = 34;
@@ -1021,7 +1036,7 @@ namespace University_Management_System
             this.label20.AutoSize = true;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(213, 319);
+            this.label20.Location = new System.Drawing.Point(213, 329);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(120, 23);
             this.label20.TabIndex = 33;
@@ -1033,7 +1048,7 @@ namespace University_Management_System
             this.label22.AutoSize = true;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(213, 276);
+            this.label22.Location = new System.Drawing.Point(213, 286);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(119, 23);
             this.label22.TabIndex = 31;
@@ -1045,7 +1060,7 @@ namespace University_Management_System
             this.tchMname.BackColor = System.Drawing.Color.Azure;
             this.tchMname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchMname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchMname.Location = new System.Drawing.Point(352, 227);
+            this.tchMname.Location = new System.Drawing.Point(352, 237);
             this.tchMname.Name = "tchMname";
             this.tchMname.Size = new System.Drawing.Size(255, 24);
             this.tchMname.TabIndex = 30;
@@ -1056,7 +1071,7 @@ namespace University_Management_System
             this.label24.AutoSize = true;
             this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(213, 231);
+            this.label24.Location = new System.Drawing.Point(213, 241);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(141, 23);
             this.label24.TabIndex = 27;
@@ -1068,7 +1083,7 @@ namespace University_Management_System
             this.tchFname.BackColor = System.Drawing.Color.Azure;
             this.tchFname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchFname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchFname.Location = new System.Drawing.Point(352, 184);
+            this.tchFname.Location = new System.Drawing.Point(352, 194);
             this.tchFname.Name = "tchFname";
             this.tchFname.Size = new System.Drawing.Size(255, 24);
             this.tchFname.TabIndex = 25;
@@ -1079,7 +1094,7 @@ namespace University_Management_System
             this.label26.AutoSize = true;
             this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(209, 186);
+            this.label26.Location = new System.Drawing.Point(209, 196);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(134, 23);
             this.label26.TabIndex = 23;
@@ -1091,7 +1106,7 @@ namespace University_Management_System
             this.tchNationality.BackColor = System.Drawing.Color.Azure;
             this.tchNationality.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchNationality.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchNationality.Location = new System.Drawing.Point(804, 190);
+            this.tchNationality.Location = new System.Drawing.Point(804, 200);
             this.tchNationality.Name = "tchNationality";
             this.tchNationality.Size = new System.Drawing.Size(255, 24);
             this.tchNationality.TabIndex = 21;
@@ -1102,7 +1117,7 @@ namespace University_Management_System
             this.tchName.BackColor = System.Drawing.Color.Azure;
             this.tchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchName.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchName.Location = new System.Drawing.Point(352, 141);
+            this.tchName.Location = new System.Drawing.Point(352, 151);
             this.tchName.Name = "tchName";
             this.tchName.Size = new System.Drawing.Size(255, 24);
             this.tchName.TabIndex = 20;
@@ -1113,7 +1128,7 @@ namespace University_Management_System
             this.label27.AutoSize = true;
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(689, 195);
+            this.label27.Location = new System.Drawing.Point(689, 205);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(108, 23);
             this.label27.TabIndex = 19;
@@ -1125,7 +1140,7 @@ namespace University_Management_System
             this.label28.AutoSize = true;
             this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(213, 146);
+            this.label28.Location = new System.Drawing.Point(213, 156);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 23);
             this.label28.TabIndex = 18;
@@ -1137,7 +1152,7 @@ namespace University_Management_System
             this.tchReligion.BackColor = System.Drawing.Color.Azure;
             this.tchReligion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchReligion.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchReligion.Location = new System.Drawing.Point(804, 147);
+            this.tchReligion.Location = new System.Drawing.Point(804, 157);
             this.tchReligion.Name = "tchReligion";
             this.tchReligion.Size = new System.Drawing.Size(254, 24);
             this.tchReligion.TabIndex = 16;
@@ -1148,7 +1163,7 @@ namespace University_Management_System
             this.label29.AutoSize = true;
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(689, 150);
+            this.label29.Location = new System.Drawing.Point(689, 160);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(82, 23);
             this.label29.TabIndex = 15;
@@ -1160,7 +1175,7 @@ namespace University_Management_System
             this.tchCode.BackColor = System.Drawing.Color.Azure;
             this.tchCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchCode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCode.Location = new System.Drawing.Point(352, 98);
+            this.tchCode.Location = new System.Drawing.Point(352, 108);
             this.tchCode.Name = "tchCode";
             this.tchCode.Size = new System.Drawing.Size(254, 24);
             this.tchCode.TabIndex = 17;
@@ -1171,7 +1186,7 @@ namespace University_Management_System
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(213, 101);
+            this.label30.Location = new System.Drawing.Point(213, 111);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 23);
             this.label30.TabIndex = 14;
@@ -1524,7 +1539,7 @@ namespace University_Management_System
             this.aassigncourse.Controls.Add(this.panel15);
             this.aassigncourse.Location = new System.Drawing.Point(4, 32);
             this.aassigncourse.Name = "aassigncourse";
-            this.aassigncourse.Size = new System.Drawing.Size(1260, 439);
+            this.aassigncourse.Size = new System.Drawing.Size(1260, 449);
             this.aassigncourse.TabIndex = 1;
             this.aassigncourse.Text = "Assign Course";
             // 
@@ -1534,7 +1549,7 @@ namespace University_Management_System
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(641, 439);
+            this.panel16.Size = new System.Drawing.Size(641, 449);
             this.panel16.TabIndex = 1;
             // 
             // panel17
@@ -1549,8 +1564,19 @@ namespace University_Management_System
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(641, 439);
+            this.panel17.Size = new System.Drawing.Size(641, 449);
             this.panel17.TabIndex = 0;
+            // 
+            // cSemester
+            // 
+            this.cSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cSemester.BackColor = System.Drawing.Color.Azure;
+            this.cSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cSemester.Location = new System.Drawing.Point(285, 262);
+            this.cSemester.Name = "cSemester";
+            this.cSemester.Size = new System.Drawing.Size(209, 24);
+            this.cSemester.TabIndex = 26;
             // 
             // label72
             // 
@@ -1559,7 +1585,7 @@ namespace University_Management_System
             this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label72.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(146, 258);
+            this.label72.Location = new System.Drawing.Point(146, 263);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(86, 23);
             this.label72.TabIndex = 25;
@@ -1572,7 +1598,7 @@ namespace University_Management_System
             this.cAssignbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.cAssignbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cAssignbtn.ForeColor = System.Drawing.Color.White;
-            this.cAssignbtn.Location = new System.Drawing.Point(376, 300);
+            this.cAssignbtn.Location = new System.Drawing.Point(376, 305);
             this.cAssignbtn.Name = "cAssignbtn";
             this.cAssignbtn.Size = new System.Drawing.Size(118, 32);
             this.cAssignbtn.TabIndex = 24;
@@ -1587,7 +1613,7 @@ namespace University_Management_System
             this.tchCode2.BackColor = System.Drawing.Color.Azure;
             this.tchCode2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchCode2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCode2.Location = new System.Drawing.Point(285, 143);
+            this.tchCode2.Location = new System.Drawing.Point(285, 148);
             this.tchCode2.Name = "tchCode2";
             this.tchCode2.Size = new System.Drawing.Size(209, 24);
             this.tchCode2.TabIndex = 20;
@@ -1598,7 +1624,7 @@ namespace University_Management_System
             this.label69.AutoSize = true;
             this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label69.ForeColor = System.Drawing.Color.White;
-            this.label69.Location = new System.Drawing.Point(146, 146);
+            this.label69.Location = new System.Drawing.Point(146, 151);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(126, 23);
             this.label69.TabIndex = 19;
@@ -1610,7 +1636,7 @@ namespace University_Management_System
             this.cCode2.BackColor = System.Drawing.Color.Azure;
             this.cCode2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cCode2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cCode2.Location = new System.Drawing.Point(285, 197);
+            this.cCode2.Location = new System.Drawing.Point(285, 202);
             this.cCode2.Name = "cCode2";
             this.cCode2.Size = new System.Drawing.Size(209, 24);
             this.cCode2.TabIndex = 20;
@@ -1622,7 +1648,7 @@ namespace University_Management_System
             this.label68.AutoSize = true;
             this.label68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(146, 198);
+            this.label68.Location = new System.Drawing.Point(146, 203);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(118, 23);
             this.label68.TabIndex = 19;
@@ -1634,7 +1660,7 @@ namespace University_Management_System
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel15.Location = new System.Drawing.Point(641, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(619, 439);
+            this.panel15.Size = new System.Drawing.Size(619, 449);
             this.panel15.TabIndex = 0;
             // 
             // cassigngrid
@@ -1656,9 +1682,67 @@ namespace University_Management_System
             this.cassigngrid.Location = new System.Drawing.Point(0, 0);
             this.cassigngrid.Name = "cassigngrid";
             this.cassigngrid.ReadOnly = true;
-            this.cassigngrid.Size = new System.Drawing.Size(619, 439);
+            this.cassigngrid.Size = new System.Drawing.Size(619, 449);
             this.cassigngrid.TabIndex = 0;
             this.cassigngrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cassigngrid_CellContentClick);
+            // 
+            // assignserialno
+            // 
+            this.assignserialno.HeaderText = "Sl. No.";
+            this.assignserialno.Name = "assignserialno";
+            this.assignserialno.ReadOnly = true;
+            this.assignserialno.Width = 92;
+            // 
+            // assigntchname
+            // 
+            this.assigntchname.HeaderText = "Teacher Name";
+            this.assigntchname.Name = "assigntchname";
+            this.assigntchname.ReadOnly = true;
+            this.assigntchname.Width = 159;
+            // 
+            // assigntchcode
+            // 
+            this.assigntchcode.HeaderText = "Teacher Code";
+            this.assigntchcode.Name = "assigntchcode";
+            this.assigntchcode.ReadOnly = true;
+            this.assigntchcode.Width = 151;
+            // 
+            // assignccode
+            // 
+            this.assignccode.HeaderText = "Course Code";
+            this.assignccode.Name = "assignccode";
+            this.assignccode.ReadOnly = true;
+            this.assignccode.Width = 143;
+            // 
+            // assigncname
+            // 
+            this.assigncname.HeaderText = "Course Name";
+            this.assigncname.Name = "assigncname";
+            this.assigncname.ReadOnly = true;
+            this.assigncname.Width = 151;
+            // 
+            // assignctype
+            // 
+            this.assignctype.HeaderText = "Course Type";
+            this.assignctype.Name = "assignctype";
+            this.assignctype.ReadOnly = true;
+            this.assignctype.Width = 142;
+            // 
+            // assignccredit
+            // 
+            this.assignccredit.HeaderText = "Credit";
+            this.assignccredit.Name = "assignccredit";
+            this.assignccredit.ReadOnly = true;
+            this.assignccredit.ToolTipText = "Course Credit";
+            this.assignccredit.Width = 89;
+            // 
+            // assignsemester
+            // 
+            this.assignsemester.FillWeight = 130F;
+            this.assignsemester.HeaderText = "Semester";
+            this.assignsemester.Name = "assignsemester";
+            this.assignsemester.ReadOnly = true;
+            this.assignsemester.Width = 111;
             // 
             // search
             // 
@@ -2199,7 +2283,7 @@ namespace University_Management_System
             this.mod_stuDeletebtn.TabIndex = 42;
             this.mod_stuDeletebtn.Text = "Delete";
             this.mod_stuDeletebtn.UseVisualStyleBackColor = true;
-            this.mod_stuDeletebtn.Click += new System.EventHandler(this.button9_Click);
+            this.mod_stuDeletebtn.Click += new System.EventHandler(this.mod_stuDeletebtn_Click);
             // 
             // mod_stuUpdatebtn
             // 
@@ -2214,6 +2298,7 @@ namespace University_Management_System
             this.mod_stuUpdatebtn.TabIndex = 42;
             this.mod_stuUpdatebtn.Text = "Update";
             this.mod_stuUpdatebtn.UseVisualStyleBackColor = true;
+            this.mod_stuUpdatebtn.Click += new System.EventHandler(this.mod_stuUpdatebtn_Click);
             // 
             // mod_stuSrchbtn
             // 
@@ -2237,7 +2322,7 @@ namespace University_Management_System
             this.mod_stuDob.CalendarTitleBackColor = System.Drawing.Color.Azure;
             this.mod_stuDob.CustomFormat = "dd/MM/yyyy";
             this.mod_stuDob.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_stuDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.mod_stuDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.mod_stuDob.Location = new System.Drawing.Point(268, 208);
             this.mod_stuDob.Name = "mod_stuDob";
             this.mod_stuDob.Size = new System.Drawing.Size(195, 27);
@@ -2583,7 +2668,7 @@ namespace University_Management_System
             // 
             this.mod_stuGrid.AllowUserToAddRows = false;
             this.mod_stuGrid.AllowUserToDeleteRows = false;
-            this.mod_stuGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.mod_stuGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.mod_stuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mod_stuGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.modstuserialnogrid,
@@ -2613,14 +2698,14 @@ namespace University_Management_System
             this.modstuserialnogrid.HeaderText = "Sl. No.";
             this.modstuserialnogrid.Name = "modstuserialnogrid";
             this.modstuserialnogrid.ReadOnly = true;
-            this.modstuserialnogrid.Width = 87;
+            this.modstuserialnogrid.Width = 85;
             // 
             // modstuidgrid
             // 
             this.modstuidgrid.HeaderText = "ID";
             this.modstuidgrid.Name = "modstuidgrid";
             this.modstuidgrid.ReadOnly = true;
-            this.modstuidgrid.Width = 87;
+            this.modstuidgrid.Width = 56;
             // 
             // modstunamegrid
             // 
@@ -2634,77 +2719,77 @@ namespace University_Management_System
             this.modstufnamegrid.HeaderText = "Father\'s Name";
             this.modstufnamegrid.Name = "modstufnamegrid";
             this.modstufnamegrid.ReadOnly = true;
-            this.modstufnamegrid.Width = 87;
+            this.modstufnamegrid.Width = 145;
             // 
             // modstumnamegrid
             // 
             this.modstumnamegrid.HeaderText = "Mother\'s Name";
             this.modstumnamegrid.Name = "modstumnamegrid";
             this.modstumnamegrid.ReadOnly = true;
-            this.modstumnamegrid.Width = 87;
+            this.modstumnamegrid.Width = 151;
             // 
             // modstudobgrid
             // 
             this.modstudobgrid.HeaderText = "Date of Birth";
             this.modstudobgrid.Name = "modstudobgrid";
             this.modstudobgrid.ReadOnly = true;
-            this.modstudobgrid.Width = 87;
+            this.modstudobgrid.Width = 132;
             // 
             // modstubggrid
             // 
             this.modstubggrid.HeaderText = "Blood Group";
             this.modstubggrid.Name = "modstubggrid";
             this.modstubggrid.ReadOnly = true;
-            this.modstubggrid.Width = 87;
+            this.modstubggrid.Width = 132;
             // 
             // modstugendergrid
             // 
             this.modstugendergrid.HeaderText = "Gender";
             this.modstugendergrid.Name = "modstugendergrid";
             this.modstugendergrid.ReadOnly = true;
-            this.modstugendergrid.Width = 88;
+            this.modstugendergrid.Width = 99;
             // 
             // modstureligiongrid
             // 
             this.modstureligiongrid.HeaderText = "Religion";
             this.modstureligiongrid.Name = "modstureligiongrid";
             this.modstureligiongrid.ReadOnly = true;
-            this.modstureligiongrid.Width = 87;
+            this.modstureligiongrid.Width = 107;
             // 
             // modstunationalitygrid
             // 
             this.modstunationalitygrid.HeaderText = "Nationality";
             this.modstunationalitygrid.Name = "modstunationalitygrid";
             this.modstunationalitygrid.ReadOnly = true;
-            this.modstunationalitygrid.Width = 87;
+            this.modstunationalitygrid.Width = 133;
             // 
             // modstusectiongrid
             // 
             this.modstusectiongrid.HeaderText = "Section";
             this.modstusectiongrid.Name = "modstusectiongrid";
             this.modstusectiongrid.ReadOnly = true;
-            this.modstusectiongrid.Width = 87;
+            this.modstusectiongrid.Width = 95;
             // 
             // modstuproggrid
             // 
             this.modstuproggrid.HeaderText = "Program";
             this.modstuproggrid.Name = "modstuproggrid";
             this.modstuproggrid.ReadOnly = true;
-            this.modstuproggrid.Width = 87;
+            this.modstuproggrid.Width = 110;
             // 
             // modstudeptgrid
             // 
             this.modstudeptgrid.HeaderText = "Department";
             this.modstudeptgrid.Name = "modstudeptgrid";
             this.modstudeptgrid.ReadOnly = true;
-            this.modstudeptgrid.Width = 87;
+            this.modstudeptgrid.Width = 137;
             // 
             // modstumobilegrid
             // 
             this.modstumobilegrid.HeaderText = "Mobile";
             this.modstumobilegrid.Name = "modstumobilegrid";
             this.modstumobilegrid.ReadOnly = true;
-            this.modstumobilegrid.Width = 87;
+            this.modstumobilegrid.Width = 95;
             // 
             // tchmod
             // 
@@ -2729,12 +2814,31 @@ namespace University_Management_System
             // 
             // mod_tchGrid
             // 
+            this.mod_tchGrid.AllowUserToAddRows = false;
+            this.mod_tchGrid.AllowUserToDeleteRows = false;
+            this.mod_tchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.mod_tchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mod_tchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.modtchslnogrid,
+            this.modtchcodegrid,
+            this.modtchnamegrid,
+            this.modtchfnamegrid,
+            this.modtchmnamegrid,
+            this.modtchdobgrid,
+            this.modtchbggrid,
+            this.modtchgendergrid,
+            this.modtchreligiongrid,
+            this.modtchnationalitygrid,
+            this.modtchpositiongrid,
+            this.modtchdeptgrid,
+            this.modtchmobilegrid});
             this.mod_tchGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mod_tchGrid.Location = new System.Drawing.Point(0, 0);
             this.mod_tchGrid.Name = "mod_tchGrid";
+            this.mod_tchGrid.ReadOnly = true;
             this.mod_tchGrid.Size = new System.Drawing.Size(1262, 160);
             this.mod_tchGrid.TabIndex = 0;
+            this.mod_tchGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mod_tchGrid_CellContentClick);
             // 
             // panel4
             // 
@@ -2768,7 +2872,7 @@ namespace University_Management_System
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1262, 296);
+            this.panel4.Size = new System.Drawing.Size(1262, 303);
             this.panel4.TabIndex = 0;
             // 
             // mod_tchDeletebtn
@@ -2778,12 +2882,13 @@ namespace University_Management_System
             this.mod_tchDeletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.mod_tchDeletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mod_tchDeletebtn.ForeColor = System.Drawing.Color.White;
-            this.mod_tchDeletebtn.Location = new System.Drawing.Point(851, 232);
+            this.mod_tchDeletebtn.Location = new System.Drawing.Point(851, 235);
             this.mod_tchDeletebtn.Name = "mod_tchDeletebtn";
             this.mod_tchDeletebtn.Size = new System.Drawing.Size(109, 31);
             this.mod_tchDeletebtn.TabIndex = 68;
             this.mod_tchDeletebtn.Text = "Delete";
             this.mod_tchDeletebtn.UseVisualStyleBackColor = true;
+            this.mod_tchDeletebtn.Click += new System.EventHandler(this.mod_tchDeletebtn_Click);
             // 
             // mod_tchUpdatebtn
             // 
@@ -2792,12 +2897,13 @@ namespace University_Management_System
             this.mod_tchUpdatebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.mod_tchUpdatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mod_tchUpdatebtn.ForeColor = System.Drawing.Color.White;
-            this.mod_tchUpdatebtn.Location = new System.Drawing.Point(589, 232);
+            this.mod_tchUpdatebtn.Location = new System.Drawing.Point(589, 235);
             this.mod_tchUpdatebtn.Name = "mod_tchUpdatebtn";
             this.mod_tchUpdatebtn.Size = new System.Drawing.Size(109, 31);
             this.mod_tchUpdatebtn.TabIndex = 69;
             this.mod_tchUpdatebtn.Text = "Update";
             this.mod_tchUpdatebtn.UseVisualStyleBackColor = true;
+            this.mod_tchUpdatebtn.Click += new System.EventHandler(this.mod_tchUpdatebtn_Click);
             // 
             // mod_tchSrchbtn
             // 
@@ -2806,12 +2912,13 @@ namespace University_Management_System
             this.mod_tchSrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.mod_tchSrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mod_tchSrchbtn.ForeColor = System.Drawing.Color.White;
-            this.mod_tchSrchbtn.Location = new System.Drawing.Point(303, 232);
+            this.mod_tchSrchbtn.Location = new System.Drawing.Point(303, 235);
             this.mod_tchSrchbtn.Name = "mod_tchSrchbtn";
             this.mod_tchSrchbtn.Size = new System.Drawing.Size(109, 31);
             this.mod_tchSrchbtn.TabIndex = 70;
             this.mod_tchSrchbtn.Text = "Search";
             this.mod_tchSrchbtn.UseVisualStyleBackColor = true;
+            this.mod_tchSrchbtn.Click += new System.EventHandler(this.mod_tchSrchbtn_Click);
             // 
             // mod_tchDob
             // 
@@ -2819,8 +2926,8 @@ namespace University_Management_System
             this.mod_tchDob.CalendarMonthBackground = System.Drawing.Color.Azure;
             this.mod_tchDob.CustomFormat = "dd/MM/yyyy";
             this.mod_tchDob.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.mod_tchDob.Location = new System.Drawing.Point(628, 34);
+            this.mod_tchDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.mod_tchDob.Location = new System.Drawing.Point(628, 37);
             this.mod_tchDob.Name = "mod_tchDob";
             this.mod_tchDob.Size = new System.Drawing.Size(195, 27);
             this.mod_tchDob.TabIndex = 67;
@@ -2840,7 +2947,7 @@ namespace University_Management_System
             "Professor",
             "Chairman",
             "Dean"});
-            this.mod_tchPosition.Location = new System.Drawing.Point(966, 75);
+            this.mod_tchPosition.Location = new System.Drawing.Point(966, 78);
             this.mod_tchPosition.MaxDropDownItems = 4;
             this.mod_tchPosition.Name = "mod_tchPosition";
             this.mod_tchPosition.Size = new System.Drawing.Size(176, 28);
@@ -2866,7 +2973,7 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.mod_tchDept.Location = new System.Drawing.Point(966, 119);
+            this.mod_tchDept.Location = new System.Drawing.Point(966, 122);
             this.mod_tchDept.MaxDropDownItems = 4;
             this.mod_tchDept.Name = "mod_tchDept";
             this.mod_tchDept.Size = new System.Drawing.Size(176, 28);
@@ -2883,7 +2990,7 @@ namespace University_Management_System
             "Male",
             "Female",
             "Others"});
-            this.mod_tchGender.Location = new System.Drawing.Point(628, 122);
+            this.mod_tchGender.Location = new System.Drawing.Point(628, 125);
             this.mod_tchGender.Name = "mod_tchGender";
             this.mod_tchGender.Size = new System.Drawing.Size(196, 28);
             this.mod_tchGender.TabIndex = 66;
@@ -2904,7 +3011,7 @@ namespace University_Management_System
             "O-",
             "AB+",
             "AB-"});
-            this.mod_tchBg.Location = new System.Drawing.Point(628, 79);
+            this.mod_tchBg.Location = new System.Drawing.Point(628, 82);
             this.mod_tchBg.Name = "mod_tchBg";
             this.mod_tchBg.Size = new System.Drawing.Size(196, 28);
             this.mod_tchBg.TabIndex = 65;
@@ -2915,7 +3022,7 @@ namespace University_Management_System
             this.mod_tchMobile.BackColor = System.Drawing.Color.Azure;
             this.mod_tchMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchMobile.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchMobile.Location = new System.Drawing.Point(967, 162);
+            this.mod_tchMobile.Location = new System.Drawing.Point(967, 165);
             this.mod_tchMobile.Name = "mod_tchMobile";
             this.mod_tchMobile.Size = new System.Drawing.Size(176, 24);
             this.mod_tchMobile.TabIndex = 64;
@@ -2926,7 +3033,7 @@ namespace University_Management_System
             this.label15.AutoSize = true;
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(852, 168);
+            this.label15.Location = new System.Drawing.Point(852, 171);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 23);
             this.label15.TabIndex = 63;
@@ -2938,7 +3045,7 @@ namespace University_Management_System
             this.label16.AutoSize = true;
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(852, 81);
+            this.label16.Location = new System.Drawing.Point(852, 84);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 23);
             this.label16.TabIndex = 61;
@@ -2950,7 +3057,7 @@ namespace University_Management_System
             this.label51.AutoSize = true;
             this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label51.ForeColor = System.Drawing.Color.White;
-            this.label51.Location = new System.Drawing.Point(504, 123);
+            this.label51.Location = new System.Drawing.Point(504, 126);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(74, 23);
             this.label51.TabIndex = 62;
@@ -2962,7 +3069,7 @@ namespace University_Management_System
             this.label52.AutoSize = true;
             this.label52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(852, 124);
+            this.label52.Location = new System.Drawing.Point(852, 127);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(112, 23);
             this.label52.TabIndex = 60;
@@ -2974,7 +3081,7 @@ namespace University_Management_System
             this.label53.AutoSize = true;
             this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(502, 76);
+            this.label53.Location = new System.Drawing.Point(502, 79);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(120, 23);
             this.label53.TabIndex = 59;
@@ -2986,7 +3093,7 @@ namespace University_Management_System
             this.label54.AutoSize = true;
             this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(502, 33);
+            this.label54.Location = new System.Drawing.Point(502, 36);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(119, 23);
             this.label54.TabIndex = 58;
@@ -2998,7 +3105,7 @@ namespace University_Management_System
             this.mod_tchMname.BackColor = System.Drawing.Color.Azure;
             this.mod_tchMname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchMname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchMname.Location = new System.Drawing.Point(263, 162);
+            this.mod_tchMname.Location = new System.Drawing.Point(263, 165);
             this.mod_tchMname.Name = "mod_tchMname";
             this.mod_tchMname.Size = new System.Drawing.Size(204, 24);
             this.mod_tchMname.TabIndex = 57;
@@ -3009,7 +3116,7 @@ namespace University_Management_System
             this.label55.AutoSize = true;
             this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(124, 166);
+            this.label55.Location = new System.Drawing.Point(124, 169);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(141, 23);
             this.label55.TabIndex = 56;
@@ -3021,7 +3128,7 @@ namespace University_Management_System
             this.mod_tchFname.BackColor = System.Drawing.Color.Azure;
             this.mod_tchFname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchFname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchFname.Location = new System.Drawing.Point(263, 119);
+            this.mod_tchFname.Location = new System.Drawing.Point(263, 122);
             this.mod_tchFname.Name = "mod_tchFname";
             this.mod_tchFname.Size = new System.Drawing.Size(204, 24);
             this.mod_tchFname.TabIndex = 55;
@@ -3032,7 +3139,7 @@ namespace University_Management_System
             this.label56.AutoSize = true;
             this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(120, 121);
+            this.label56.Location = new System.Drawing.Point(120, 124);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(134, 23);
             this.label56.TabIndex = 54;
@@ -3044,7 +3151,7 @@ namespace University_Management_System
             this.mod_tchNationality.BackColor = System.Drawing.Color.Azure;
             this.mod_tchNationality.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchNationality.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchNationality.Location = new System.Drawing.Point(967, 40);
+            this.mod_tchNationality.Location = new System.Drawing.Point(967, 43);
             this.mod_tchNationality.Name = "mod_tchNationality";
             this.mod_tchNationality.Size = new System.Drawing.Size(176, 24);
             this.mod_tchNationality.TabIndex = 51;
@@ -3055,7 +3162,7 @@ namespace University_Management_System
             this.mod_tchName.BackColor = System.Drawing.Color.Azure;
             this.mod_tchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchName.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchName.Location = new System.Drawing.Point(263, 76);
+            this.mod_tchName.Location = new System.Drawing.Point(263, 79);
             this.mod_tchName.Name = "mod_tchName";
             this.mod_tchName.Size = new System.Drawing.Size(204, 24);
             this.mod_tchName.TabIndex = 50;
@@ -3066,7 +3173,7 @@ namespace University_Management_System
             this.label57.AutoSize = true;
             this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label57.ForeColor = System.Drawing.Color.White;
-            this.label57.Location = new System.Drawing.Point(852, 40);
+            this.label57.Location = new System.Drawing.Point(852, 43);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(108, 23);
             this.label57.TabIndex = 49;
@@ -3078,7 +3185,7 @@ namespace University_Management_System
             this.label58.AutoSize = true;
             this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(124, 80);
+            this.label58.Location = new System.Drawing.Point(124, 83);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(62, 23);
             this.label58.TabIndex = 48;
@@ -3091,7 +3198,7 @@ namespace University_Management_System
             this.mod_tchReligion.BackColor = System.Drawing.Color.Azure;
             this.mod_tchReligion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchReligion.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchReligion.Location = new System.Drawing.Point(628, 172);
+            this.mod_tchReligion.Location = new System.Drawing.Point(628, 175);
             this.mod_tchReligion.Name = "mod_tchReligion";
             this.mod_tchReligion.Size = new System.Drawing.Size(195, 24);
             this.mod_tchReligion.TabIndex = 46;
@@ -3102,7 +3209,7 @@ namespace University_Management_System
             this.label59.AutoSize = true;
             this.label59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(504, 171);
+            this.label59.Location = new System.Drawing.Point(504, 174);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(82, 23);
             this.label59.TabIndex = 45;
@@ -3114,7 +3221,7 @@ namespace University_Management_System
             this.mod_tchCode.BackColor = System.Drawing.Color.Azure;
             this.mod_tchCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mod_tchCode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mod_tchCode.Location = new System.Drawing.Point(263, 33);
+            this.mod_tchCode.Location = new System.Drawing.Point(263, 36);
             this.mod_tchCode.Name = "mod_tchCode";
             this.mod_tchCode.Size = new System.Drawing.Size(204, 24);
             this.mod_tchCode.TabIndex = 47;
@@ -3125,7 +3232,7 @@ namespace University_Management_System
             this.label60.AutoSize = true;
             this.label60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(124, 36);
+            this.label60.Location = new System.Drawing.Point(124, 39);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(126, 23);
             this.label60.TabIndex = 44;
@@ -3549,74 +3656,96 @@ namespace University_Management_System
             this.panel3.Size = new System.Drawing.Size(1284, 547);
             this.panel3.TabIndex = 2;
             // 
-            // cSemester
+            // modtchslnogrid
             // 
-            this.cSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cSemester.BackColor = System.Drawing.Color.Azure;
-            this.cSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cSemester.Location = new System.Drawing.Point(285, 257);
-            this.cSemester.Name = "cSemester";
-            this.cSemester.Size = new System.Drawing.Size(209, 24);
-            this.cSemester.TabIndex = 26;
+            this.modtchslnogrid.HeaderText = "SL. NO.";
+            this.modtchslnogrid.Name = "modtchslnogrid";
+            this.modtchslnogrid.ReadOnly = true;
+            this.modtchslnogrid.Width = 95;
             // 
-            // assignserialno
+            // modtchcodegrid
             // 
-            this.assignserialno.HeaderText = "Sl. No.";
-            this.assignserialno.Name = "assignserialno";
-            this.assignserialno.ReadOnly = true;
-            this.assignserialno.Width = 85;
+            this.modtchcodegrid.HeaderText = "Teacher Code";
+            this.modtchcodegrid.Name = "modtchcodegrid";
+            this.modtchcodegrid.ReadOnly = true;
+            this.modtchcodegrid.Width = 138;
             // 
-            // assigntchname
+            // modtchnamegrid
             // 
-            this.assigntchname.HeaderText = "Teacher Name";
-            this.assigntchname.Name = "assigntchname";
-            this.assigntchname.ReadOnly = true;
-            this.assigntchname.Width = 145;
+            this.modtchnamegrid.HeaderText = "Name";
+            this.modtchnamegrid.Name = "modtchnamegrid";
+            this.modtchnamegrid.ReadOnly = true;
+            this.modtchnamegrid.Width = 87;
             // 
-            // assigntchcode
+            // modtchfnamegrid
             // 
-            this.assigntchcode.HeaderText = "Teacher Code";
-            this.assigntchcode.Name = "assigntchcode";
-            this.assigntchcode.ReadOnly = true;
-            this.assigntchcode.Width = 138;
+            this.modtchfnamegrid.HeaderText = "Father\'s Name";
+            this.modtchfnamegrid.Name = "modtchfnamegrid";
+            this.modtchfnamegrid.ReadOnly = true;
+            this.modtchfnamegrid.Width = 145;
             // 
-            // assignccode
+            // modtchmnamegrid
             // 
-            this.assignccode.HeaderText = "Course Code";
-            this.assignccode.Name = "assignccode";
-            this.assignccode.ReadOnly = true;
-            this.assignccode.Width = 131;
+            this.modtchmnamegrid.HeaderText = "Mother\'s Name";
+            this.modtchmnamegrid.Name = "modtchmnamegrid";
+            this.modtchmnamegrid.ReadOnly = true;
+            this.modtchmnamegrid.Width = 151;
             // 
-            // assigncname
+            // modtchdobgrid
             // 
-            this.assigncname.HeaderText = "Course Name";
-            this.assigncname.Name = "assigncname";
-            this.assigncname.ReadOnly = true;
-            this.assigncname.Width = 138;
+            this.modtchdobgrid.HeaderText = "Date of Birth";
+            this.modtchdobgrid.Name = "modtchdobgrid";
+            this.modtchdobgrid.ReadOnly = true;
+            this.modtchdobgrid.Width = 132;
             // 
-            // assignctype
+            // modtchbggrid
             // 
-            this.assignctype.HeaderText = "Course Type";
-            this.assignctype.Name = "assignctype";
-            this.assignctype.ReadOnly = true;
-            this.assignctype.Width = 130;
+            this.modtchbggrid.HeaderText = "Blood Group";
+            this.modtchbggrid.Name = "modtchbggrid";
+            this.modtchbggrid.ReadOnly = true;
+            this.modtchbggrid.Width = 132;
             // 
-            // assignccredit
+            // modtchgendergrid
             // 
-            this.assignccredit.HeaderText = "Credit";
-            this.assignccredit.Name = "assignccredit";
-            this.assignccredit.ReadOnly = true;
-            this.assignccredit.ToolTipText = "Course Credit";
-            this.assignccredit.Width = 89;
+            this.modtchgendergrid.HeaderText = "Gender";
+            this.modtchgendergrid.Name = "modtchgendergrid";
+            this.modtchgendergrid.ReadOnly = true;
+            this.modtchgendergrid.Width = 99;
             // 
-            // assignsemester
+            // modtchreligiongrid
             // 
-            this.assignsemester.FillWeight = 130F;
-            this.assignsemester.HeaderText = "Semester";
-            this.assignsemester.Name = "assignsemester";
-            this.assignsemester.ReadOnly = true;
-            this.assignsemester.Width = 111;
+            this.modtchreligiongrid.HeaderText = "Religion";
+            this.modtchreligiongrid.Name = "modtchreligiongrid";
+            this.modtchreligiongrid.ReadOnly = true;
+            this.modtchreligiongrid.Width = 107;
+            // 
+            // modtchnationalitygrid
+            // 
+            this.modtchnationalitygrid.HeaderText = "Nationality";
+            this.modtchnationalitygrid.Name = "modtchnationalitygrid";
+            this.modtchnationalitygrid.ReadOnly = true;
+            this.modtchnationalitygrid.Width = 133;
+            // 
+            // modtchpositiongrid
+            // 
+            this.modtchpositiongrid.HeaderText = "Position";
+            this.modtchpositiongrid.Name = "modtchpositiongrid";
+            this.modtchpositiongrid.ReadOnly = true;
+            this.modtchpositiongrid.Width = 103;
+            // 
+            // modtchdeptgrid
+            // 
+            this.modtchdeptgrid.HeaderText = "Department";
+            this.modtchdeptgrid.Name = "modtchdeptgrid";
+            this.modtchdeptgrid.ReadOnly = true;
+            this.modtchdeptgrid.Width = 137;
+            // 
+            // modtchmobilegrid
+            // 
+            this.modtchmobilegrid.HeaderText = "Mobile";
+            this.modtchmobilegrid.Name = "modtchmobilegrid";
+            this.modtchmobilegrid.ReadOnly = true;
+            this.modtchmobilegrid.Width = 95;
             // 
             // Admin_Menu
             // 
@@ -3813,12 +3942,10 @@ namespace University_Management_System
         private System.Windows.Forms.TextBox mod_stuId;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView mod_stuGrid;
         private System.Windows.Forms.Button mod_stuDeletebtn;
         private System.Windows.Forms.Button mod_stuUpdatebtn;
         private System.Windows.Forms.Button mod_stuSrchbtn;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView mod_tchGrid;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DateTimePicker mod_tchDob;
         private System.Windows.Forms.ComboBox mod_tchPosition;
@@ -3937,6 +4064,15 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn resctotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn rescgrade;
         private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.TextBox cSemester;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignserialno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assigncname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignctype;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignccredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignsemester;
         private System.Windows.Forms.DataGridViewTextBoxColumn modstuserialnogrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn modstuidgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn modstunamegrid;
@@ -3951,14 +4087,20 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn modstuproggrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn modstudeptgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn modstumobilegrid;
-        private System.Windows.Forms.TextBox cSemester;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignserialno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assigntchcode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignccode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assigncname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignctype;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignccredit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn assignsemester;
+        public System.Windows.Forms.DataGridView mod_stuGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchslnogrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchnamegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchfnamegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchmnamegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchdobgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchbggrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchgendergrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchreligiongrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchnationalitygrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchpositiongrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchdeptgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modtchmobilegrid;
+        public System.Windows.Forms.DataGridView mod_tchGrid;
     }
 }

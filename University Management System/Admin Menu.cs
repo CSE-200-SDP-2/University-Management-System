@@ -231,11 +231,6 @@ namespace University_Management_System
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label58_Click(object sender, EventArgs e)
         {
 
@@ -608,6 +603,7 @@ namespace University_Management_System
             if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 0)
             {
                 MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mod_stuGrid.Rows.Clear();
             }
             if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 1)
             {
@@ -774,6 +770,11 @@ namespace University_Management_System
 
         private void mod_stuSrchbtn_Click(object sender, EventArgs e)
         {
+            Modstu_LoadData();
+        }
+
+        private void Modstu_LoadData()
+        {
             con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");
             DataTable modstudent = new DataTable();
             con.sda.Fill(modstudent);
@@ -801,14 +802,13 @@ namespace University_Management_System
                     mod_stuGrid.Rows[n].Cells["modstumobilegrid"].Value = row["smobile"].ToString();
                 }
                 Modstu_ClearData();
-               
+
             }
             else
             {
                 MessageBox.Show("Student ID doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void Modstu_ClearData()
         {
             mod_stuId.Clear();
@@ -826,14 +826,15 @@ namespace University_Management_System
             mod_stuMobile.Clear();
 
         }
-     
 
-        private void mod_Stugrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        string agerid;
+        public void mod_Stugrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             DataGridViewRow row = mod_stuGrid.Rows[e.RowIndex];
             sn = row.Cells[1].Value.ToString();
             mod_stuId.Text = mod_stuGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            agerid = mod_stuGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             mod_stuName.Text = row.Cells[2].Value.ToString();
             mod_stuFname.Text = row.Cells[3].Value.ToString();
             mod_stuMname.Text = row.Cells[4].Value.ToString();
@@ -847,6 +848,131 @@ namespace University_Management_System
             mod_stuDept.Text = row.Cells[12].Value.ToString();
             mod_stuMobile.Text = row.Cells[13].Value.ToString();
 
+        }
+
+        private void mod_stuUpdatebtn_Click(object sender, EventArgs e)
+        {
+            if (agerid == mod_stuId.Text)
+            {
+                con.dataSend("Update Student Set sname ='" + mod_stuName.Text + "',sfname='" + mod_stuFname.Text + "',smname='" + mod_stuMname.Text + "',sdob='" + mod_stuDob.Text + "',sbg ='" + mod_stuBg.Text + "',sgender='" + mod_stuGender.Text + "',sreligion='" + mod_stuReligion.Text + "',snationality='" + mod_stuNationality.Text + "',ssection='" + mod_stuSection.Text + "',sprog='" + mod_stuProgram.Text + "',sdept='" + mod_stuDept.Text + "',smobile='" + mod_stuMobile.Text + "' where id = '" + mod_stuId.Text + "'");
+                mod_stuGrid.Rows.Clear();
+                Modstu_LoadData();
+                Modstu_ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Student ID can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mod_stuDeletebtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dl = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dl == DialogResult.Yes)
+            {
+                con.dataSend("Delete From Student Where id = '" + mod_stuId.Text + "'");
+                mod_stuGrid.Rows.Clear();
+                Modstu_ClearData();
+            }
+        }
+
+        private void mod_tchSrchbtn_Click(object sender, EventArgs e)
+        {
+            modtch_LoadData();
+        }
+
+        private void mod_tchUpdatebtn_Click(object sender, EventArgs e)
+        {
+            if (agercode == mod_tchCode.Text)
+            {
+                con.dataSend("Update Teacher Set tname ='" + mod_tchName.Text + "',tfname='" + mod_tchFname.Text + "',tmname='" + mod_tchMname.Text + "',tdob='" + mod_tchDob.Text + "',tbg ='" + mod_tchBg.Text + "',tgender='" + mod_tchGender.Text + "',treligion='" + mod_tchReligion.Text + "',tnationality='" + mod_tchNationality.Text + "',tposition='" + mod_tchPosition.Text + "',tdept='" + mod_tchDept.Text + "',tmobile='" + mod_tchMobile.Text + "' where id = '" + mod_tchCode.Text + "'");
+                mod_tchGrid.Rows.Clear();
+                modtch_LoadData();
+                modtch_ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Teacher code can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mod_tchDeletebtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dl = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                con.dataSend("Delete From Teacher Where id = '" + mod_tchCode.Text + "'");
+                mod_tchGrid.Rows.Clear();
+                modtch_ClearData();
+            }
+        }
+
+        private void modtch_LoadData()
+        {
+            con.dataGet("select * from Teacher where id = '" + mod_tchCode.Text + "'");
+            DataTable modtchinfo = new DataTable();
+            con.sda.Fill(modtchinfo);
+            if(modtchinfo.Rows.Count > 0)
+            {
+                foreach(DataRow row in modtchinfo.Rows)
+                {
+                    int n = mod_tchGrid.Rows.Add();
+                    mod_tchGrid.Rows[n].Cells["modtchslnogrid"].Value = n + 1;
+                    mod_tchGrid.Rows[n].Cells["modtchcodegrid"].Value = row["id"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchnamegrid"].Value = row["tname"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchfnamegrid"].Value = row["tfname"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchmnamegrid"].Value = row["tmname"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchdobgrid"].Value = row["tdob"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchbggrid"].Value = row["tbg"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchgendergrid"].Value = row["tgender"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchreligiongrid"].Value = row["treligion"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchnationalitygrid"].Value = row["tnationality"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchpositiongrid"].Value = row["tposition"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchdeptgrid"].Value = row["tdept"].ToString();
+                    mod_tchGrid.Rows[n].Cells["modtchmobilegrid"].Value = row["tmobile"].ToString();
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("The teacher doesn't exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void modtch_ClearData()
+        {
+            mod_tchCode.Clear();
+            mod_tchName.Clear();
+            mod_tchFname.Clear();
+            mod_tchMname.Clear();
+            mod_tchDob.ResetText();
+            mod_tchBg.SelectedIndex = -1;
+            mod_tchGender.SelectedIndex = -1;
+            mod_tchReligion.Clear();
+            mod_tchNationality.Clear();
+            mod_tchPosition.SelectedIndex = -1;
+            mod_tchDept.SelectedIndex = -1;
+            mod_tchMobile.Clear();
+
+        }
+
+        string agercode;
+        public void mod_tchGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = mod_tchGrid.Rows[e.RowIndex];
+            mod_tchCode.Text = row.Cells[1].Value.ToString();
+            agercode = row.Cells[1].Value.ToString();
+            mod_tchName.Text = row.Cells[2].Value.ToString();
+            mod_tchFname.Text = row.Cells[3].Value.ToString();
+            mod_tchMname.Text = row.Cells[4].Value.ToString();
+            mod_tchDob.Text = row.Cells[5].Value.ToString();
+            mod_tchBg.Text = row.Cells[6].Value.ToString();
+            mod_tchGender.Text = row.Cells[7].Value.ToString();
+            mod_tchReligion.Text = row.Cells[8].Value.ToString();
+            mod_tchNationality.Text = row.Cells[9].Value.ToString();
+            mod_tchPosition.Text = row.Cells[10].Value.ToString();
+            mod_tchDept.Text = row.Cells[11].Value.ToString();
+            mod_tchMobile.Text = row.Cells[12].Value.ToString();
         }
     }
 }
