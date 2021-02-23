@@ -120,6 +120,7 @@ namespace University_Management_System
             this.tchCcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tchCdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tchCproggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tchCsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -276,7 +277,6 @@ namespace University_Management_System
             // 
             this.tchClist.AllowUserToAddRows = false;
             this.tchClist.AllowUserToDeleteRows = false;
-            this.tchClist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tchClist.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tchClist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tchClist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -286,7 +286,8 @@ namespace University_Management_System
             this.tchCtypegrid,
             this.tchCcreditgrid,
             this.tchCdeptgrid,
-            this.tchCproggrid});
+            this.tchCproggrid,
+            this.tchCsemestergrid});
             this.tchClist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tchClist.Location = new System.Drawing.Point(0, 0);
             this.tchClist.Name = "tchClist";
@@ -1151,6 +1152,13 @@ namespace University_Management_System
             this.tchCproggrid.Name = "tchCproggrid";
             this.tchCproggrid.ReadOnly = true;
             // 
+            // tchCsemestergrid
+            // 
+            this.tchCsemestergrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tchCsemestergrid.HeaderText = "Semester";
+            this.tchCsemestergrid.Name = "tchCsemestergrid";
+            this.tchCsemestergrid.ReadOnly = true;
+            // 
             // Teacher_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -1302,5 +1310,6 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn tchCcreditgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn tchCdeptgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn tchCproggrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tchCsemestergrid;
     }
 }

@@ -63,8 +63,8 @@ namespace University_Management_System
             {
                 foreach (DataRow row in Stuinfo.Rows)
                 {
-                    name += row["id"].ToString();
-                    id2 += row["sname"].ToString();
+                    name += row["sname"].ToString();
+                    id2 += row["id"].ToString();
                     intake += row["sintake"].ToString();
                     section += row["ssection"].ToString();
                 }

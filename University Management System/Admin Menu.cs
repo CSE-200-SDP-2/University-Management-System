@@ -54,7 +54,7 @@ namespace University_Management_System
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
@@ -104,18 +104,19 @@ namespace University_Management_System
             Auto_ccode();
             Auto_modstuid();
             Auto_tchcode();
+           
         }
         public void Auto_ccode()
         {
             con.dataGet("Select ccode from Course"); //  '" +  +"'
-                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+                                                     //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestccode = new DataTable();
             con.sda.Fill(dtsuggestccode);
 
 
             if (dtsuggestccode.Rows.Count > 0)
             {
-                for(int i=0;i<dtsuggestccode.Rows.Count;i++)
+                for (int i = 0; i < dtsuggestccode.Rows.Count; i++)
                 {
                     coll.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
                 }
@@ -127,7 +128,7 @@ namespace University_Management_System
             cCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
             cCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cCode2.AutoCompleteCustomSource = coll;
-            }
+        }
 
 
         public void Auto_modstuid()
@@ -225,11 +226,6 @@ namespace University_Management_System
 
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -267,7 +263,7 @@ namespace University_Management_System
 
         private void button15_MouseHover(object sender, EventArgs e)
         {
-           
+
         }
 
         private void stuid_TextChanged(object sender, EventArgs e)
@@ -314,7 +310,7 @@ namespace University_Management_System
             stuMobile.Clear();
         }
 
-        
+
         private void tchRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Teacher.id from Teacher where Teacher.id='" + tchCode.Text + "'");                                                                                                                                                        //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -355,7 +351,7 @@ namespace University_Management_System
         private void cRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Course.ccode from Course where Course.ccode='" + cCode.Text + "'"); //  '" +  +"'                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
-            DataTable dtcourse= new DataTable();
+            DataTable dtcourse = new DataTable();
             con.sda.Fill(dtcourse);
 
 
@@ -378,7 +374,7 @@ namespace University_Management_System
             cCode.Clear();
             cTitle.Clear();
             cCredit.Clear();
-            cProgram.SelectedIndex=-1;
+            cProgram.SelectedIndex = -1;
             cDept.SelectedIndex = -1;
             cType.SelectedIndex = -1;
         }
@@ -388,7 +384,7 @@ namespace University_Management_System
             DataTable dt = new DataTable();
             con.sda.Fill(dt);
             cReggrid.Rows.Clear();
-            foreach(DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 int n = cReggrid.Rows.Add();
                 cReggrid.Rows[n].Cells["serialno"].Value = n + 1;
@@ -403,15 +399,15 @@ namespace University_Management_System
 
         private void cReggrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* DataGridViewRow row = cReggrid.Rows[e.RowIndex];
-            sn = row.Cells[1].Value.ToString();
-            //cCode.Text = cReggrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cCode.Text = row.Cells[1].Value.ToString();
-            cTitle.Text = row.Cells[2].Value.ToString();
-            cType.Text = row.Cells[3].Value.ToString();
-            cCredit.Text = row.Cells[4].Value.ToString();
-            cProgram.Text = row.Cells[5].Value.ToString();
-            cDept.Text = row.Cells[6].Value.ToString();  */
+            /* DataGridViewRow row = cReggrid.Rows[e.RowIndex];
+             sn = row.Cells[1].Value.ToString();
+             //cCode.Text = cReggrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+             cCode.Text = row.Cells[1].Value.ToString();
+             cTitle.Text = row.Cells[2].Value.ToString();
+             cType.Text = row.Cells[3].Value.ToString();
+             cCredit.Text = row.Cells[4].Value.ToString();
+             cProgram.Text = row.Cells[5].Value.ToString();
+             cDept.Text = row.Cells[6].Value.ToString();  */
         }
 
         private void Admin_Menu_Activated(object sender, EventArgs e)
@@ -429,14 +425,14 @@ namespace University_Management_System
             //string check;
             //con.dataGet("select id from [Teacher]");
             con.dataGet("Select Teacher.id,Course.ccode from Teacher,Course where Teacher.id='" + tchCode2.Text + "'and Course.ccode='" + cCode2.Text + "'"); //  '" +  +"'
-                                                                                                                    //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dt = new DataTable();
             con.sda.Fill(dt);
 
 
             if (dt.Rows.Count > 0)
             {
-                con.dataGet("Select * from Teacher_Course where id='" + tchCode2.Text + "' and ccode='" + cCode2.Text + "'");
+                con.dataGet("Select * from Teacher_Course where id='" + tchCode2.Text + "' and ccode='" + cCode2.Text + "' and tsemester='"+cSemester.Text+"'");
                 DataTable dt2 = new DataTable();
                 con.sda.Fill(dt2);
                 if (dt2.Rows.Count > 0)
@@ -448,13 +444,13 @@ namespace University_Management_System
                     //assignid += tchCode2.Text;
                     //assigncoursecode += cCode2.Text;
                     //check = con.dataGet("Select id from Teacher where id='" + tchCode2.Text + "'");
-                    string variables = "id,ccode";
-                    string values = "'" + tchCode2.Text + "','" + cCode2.Text + "'";  //'"++"'
+                    string variables = "id,ccode,tsemester";
+                    string values = "'" + tchCode2.Text + "','" + cCode2.Text + "','" + cSemester.Text + "'";  //'"++"'
                     con.dataSend("Insert into Teacher_Course(" + variables + ") values(" + values + ")");
                     MessageBox.Show("Teacher Assigned To Course");
                     //Assign_ClearData();
                     Assign_LoadData();
-                    
+
                 }
             }
             else
@@ -466,25 +462,27 @@ namespace University_Management_System
         {
             tchCode2.Clear();
             cCode2.Clear();
+            cSemester.Clear();
         }
 
         private void Assign_LoadData()
         {
-             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit from Teacher,Course where  Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' ---> Teacher.id='" + tchCode2.Text + "' or
+            con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit,Teacher_Course.tsemester from Teacher_Course,Teacher,Course where Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode and Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' ---> Teacher.id='" + tchCode2.Text + "' or
             DataTable dtassign = new DataTable();
-             con.sda.Fill(dtassign);
-             cassigngrid.Rows.Clear();
-             foreach(DataRow row in dtassign.Rows)
-             {
-                 int n = cassigngrid.Rows.Add();
-                 cassigngrid.Rows[n].Cells["assignserialno"].Value = n + 1;
-                 cassigngrid.Rows[n].Cells["assigntchname"].Value = row["tname"].ToString();
-                 cassigngrid.Rows[n].Cells["assigntchcode"].Value = row["id"].ToString();
-                 cassigngrid.Rows[n].Cells["assignccode"].Value = row["ccode"].ToString();
-                 cassigngrid.Rows[n].Cells["assigncname"].Value = row["ctitle"].ToString();
-                 cassigngrid.Rows[n].Cells["assignctype"].Value = row["ctype"].ToString();
-                 cassigngrid.Rows[n].Cells["assignccredit"].Value = row["ccredit"].ToString();
-             }  
+            con.sda.Fill(dtassign);
+            cassigngrid.Rows.Clear();
+            foreach (DataRow row in dtassign.Rows)
+            {
+                int n = cassigngrid.Rows.Add();
+                cassigngrid.Rows[n].Cells["assignserialno"].Value = n + 1;
+                cassigngrid.Rows[n].Cells["assigntchname"].Value = row["tname"].ToString();
+                cassigngrid.Rows[n].Cells["assigntchcode"].Value = row["id"].ToString();
+                cassigngrid.Rows[n].Cells["assignccode"].Value = row["ccode"].ToString();
+                cassigngrid.Rows[n].Cells["assigncname"].Value = row["ctitle"].ToString();
+                cassigngrid.Rows[n].Cells["assignctype"].Value = row["ctype"].ToString();
+                cassigngrid.Rows[n].Cells["assignccredit"].Value = row["ccredit"].ToString();
+                cassigngrid.Rows[n].Cells["assignsemester"].Value = row["tsemester"].ToString();
+            }
             Assign_ClearData();
         }
 
@@ -513,21 +511,21 @@ namespace University_Management_System
 
             if (id != "" && name != "" && intake != "" && section != "")//____
             {
-                con.dataGet("Select * from Student Where id = '"+id+"' and sname = '"+name+"' and sintake = '"+intake+"' and ssection = '"+section+"'");
+                con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "' and sintake = '" + intake + "' and ssection = '" + section + "'");
             }
             else if (id == "" && name != "" && intake != "" && section != "")//_BCD
             {
                 con.dataGet("Select * from Student Where sname = '" + name + "' and sintake = '" + intake + "' and ssection = '" + section + "'");
             }
-            else if(id != "" && name == "" && intake != "" && section != "")//A_CD
+            else if (id != "" && name == "" && intake != "" && section != "")//A_CD
             {
                 con.dataGet("Select * from Student Where id = '" + id + "' and  sintake = '" + intake + "' and ssection = '" + section + "'");
             }
-            else if(id != "" && name != "" && intake == "" && section != "")//AB_D
+            else if (id != "" && name != "" && intake == "" && section != "")//AB_D
             {
                 con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "' and  ssection = '" + section + "'");
             }
-            else if(id != "" && name != "" && intake != "" && section == "")//ABC_
+            else if (id != "" && name != "" && intake != "" && section == "")//ABC_
             {
                 con.dataGet("Select * from Student Where id = '" + id + "' and sname = '" + name + "' and sintake = '" + intake + "'");
             }
@@ -584,7 +582,7 @@ namespace University_Management_System
 
             if (Stuinfo.Rows.Count > 0)
             {
-                foreach(DataRow row in Stuinfo.Rows)
+                foreach (DataRow row in Stuinfo.Rows)
                 {
                     int n = srch_stuGrid.Rows.Add();
                     srch_stuGrid.Rows[n].Cells["stuslgrid"].Value = n + 1;
@@ -602,7 +600,7 @@ namespace University_Management_System
             {
                 MessageBox.Show("Student Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         public void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -638,7 +636,7 @@ namespace University_Management_System
         {
             srch_tchCode.Clear();
             srch_tchName.Clear();
-            srch_tchPosition.SelectedIndex=-1;
+            srch_tchPosition.SelectedIndex = -1;
             srch_tchDept.SelectedIndex = -1;
         }
         private void srch_tchSrchbtn_Click(object sender, EventArgs e)
@@ -756,9 +754,9 @@ namespace University_Management_System
             {
                 foreach (DataRow row in Stuinfo.Rows)
                 {
-                    name+= row["id"].ToString();
+                    name += row["id"].ToString();
                     id2 += row["sname"].ToString();
-                    intake += row["sintake"].ToString(); 
+                    intake += row["sintake"].ToString();
                     section += row["ssection"].ToString();
                 }
             }
@@ -771,6 +769,83 @@ namespace University_Management_System
             res_srchStuintake.Text = intake;
             res_srchStusection.Text = section;
 
+
+        }
+
+        private void mod_stuSrchbtn_Click(object sender, EventArgs e)
+        {
+            con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");
+            DataTable modstudent = new DataTable();
+            con.sda.Fill(modstudent);
+            if (modstudent.Rows.Count > 0)
+            {
+                // con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");
+                // DataTable modstu = new DataTable();
+                // con.sda.Fill(modstu);
+                foreach (DataRow row in modstudent.Rows)
+                {
+                    int n = mod_stuGrid.Rows.Add();
+                    mod_stuGrid.Rows[n].Cells["modstuserialnogrid"].Value = n + 1;
+                    mod_stuGrid.Rows[n].Cells["modstuidgrid"].Value = row["id"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstunamegrid"].Value = row["sname"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstufnamegrid"].Value = row["sfname"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstumnamegrid"].Value = row["smname"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstudobgrid"].Value = row["sdob"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstubggrid"].Value = row["sbg"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstugendergrid"].Value = row["sgender"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstureligiongrid"].Value = row["sreligion"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstunationalitygrid"].Value = row["snationality"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstusectiongrid"].Value = row["ssection"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstuproggrid"].Value = row["sprog"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstudeptgrid"].Value = row["sdept"].ToString();
+                    mod_stuGrid.Rows[n].Cells["modstumobilegrid"].Value = row["smobile"].ToString();
+                }
+                Modstu_ClearData();
+               
+            }
+            else
+            {
+                MessageBox.Show("Student ID doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Modstu_ClearData()
+        {
+            mod_stuId.Clear();
+            mod_stuName.Clear();
+            mod_stuFname.Clear();
+            mod_stuMname.Clear();
+            mod_stuDob.ResetText();
+            mod_stuBg.SelectedIndex = -1;
+            mod_stuGender.SelectedIndex = -1;
+            mod_stuReligion.Clear();
+            mod_stuNationality.Clear();
+            mod_stuSection.Clear();
+            mod_stuProgram.SelectedIndex = -1;
+            mod_stuDept.SelectedIndex = -1;
+            mod_stuMobile.Clear();
+
+        }
+     
+
+        private void mod_Stugrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow row = mod_stuGrid.Rows[e.RowIndex];
+            sn = row.Cells[1].Value.ToString();
+            mod_stuId.Text = mod_stuGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            mod_stuName.Text = row.Cells[2].Value.ToString();
+            mod_stuFname.Text = row.Cells[3].Value.ToString();
+            mod_stuMname.Text = row.Cells[4].Value.ToString();
+            mod_stuDob.Text = row.Cells[5].Value.ToString();
+            mod_stuBg.Text = row.Cells[6].Value.ToString();
+            mod_stuGender.Text = row.Cells[7].Value.ToString();
+            mod_stuReligion.Text = row.Cells[8].Value.ToString();
+            mod_stuNationality.Text = row.Cells[9].Value.ToString();
+            mod_stuSection.Text = row.Cells[10].Value.ToString();
+            mod_stuProgram.Text = row.Cells[11].Value.ToString();
+            mod_stuDept.Text = row.Cells[12].Value.ToString();
+            mod_stuMobile.Text = row.Cells[13].Value.ToString();
 
         }
     }

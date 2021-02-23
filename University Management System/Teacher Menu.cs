@@ -112,6 +112,7 @@ namespace University_Management_System
                 tchClist.Rows[n].Cells["tchCcreditgrid"].Value = row["ccredit"].ToString();
                 tchClist.Rows[n].Cells["tchCdeptgrid"].Value = row["cdept"].ToString();
                 tchClist.Rows[n].Cells["tchCproggrid"].Value = row["cprogram"].ToString();
+                tchClist.Rows[n].Cells["tchCsemestergrid"].Value = row["tsemester"].ToString();
             }
             if (tabControl1.SelectedIndex == 0 && tabControl3.SelectedIndex == 0)
             {
@@ -171,5 +172,6 @@ namespace University_Management_System
                 }
             }
         }
+
     }
 }
