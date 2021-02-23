@@ -18,7 +18,7 @@ namespace University_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home_Page());
             //Application.Run(new Admin_Menu());
-            //Application.Run(new Admin_Login());
+            //Application.Run(new Student_Menu());
         }
     }
 }
