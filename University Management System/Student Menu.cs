@@ -33,6 +33,7 @@ namespace University_Management_System
             StuCourse_LoadData();
             Auto_studentCourseSelectioncoursecode();
             Auto_studentCourseSelectionsemester();
+            Stu_CurrentCourse_LoadData();
         }
 
         public void Auto_studentCourseSelectioncoursecode()
@@ -155,8 +156,8 @@ namespace University_Management_System
             
             coursecode = stu_Availablegrid.Rows[e.RowIndex].Cells[2].Value.ToString();
             teacherid = stu_Availablegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MessageBox.Show(String.Format(semester), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show(String.Format(teacherid),"Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //MessageBox.Show(String.Format(semester), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(String.Format(teacherid),"Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void stu_CSelectbtn_Click(object sender, EventArgs e)
@@ -185,9 +186,11 @@ namespace University_Management_System
                     stu_SelectedCgrid.Rows[n].Cells["stuCYsemestergrid"].Value = row["ssemester"].ToString();
             }
         }
-
+        string selected;
         private void stu_SelectedCgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            selected = stu_SelectedCgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //MessageBox.Show(String.Format(selected), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -196,9 +199,39 @@ namespace University_Management_System
             //stu_SelectedCgrid.Refresh();
         }
 
+        
         private void stu_Deletebtn_Click(object sender, EventArgs e)
         {
-
+            DialogResult dl = MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if(dl==DialogResult.Yes)
+            {
+                con.dataSend("Delete from Student_Course where ccode='" + selected + "'");
+                MessageBox.Show("Course information deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                stu_SelectedCgrid.Rows.Clear();
+                StuCourse_LoadData();
+            }
+        }
+        private void Stu_CurrentCourse_LoadData()
+        {
+            con.dataGet("Select * from Student_Course,Teacher,Course where Student_Course.ccode=Course.ccode and Student_Course.tid=Teacher.id");
+            DataTable stucourse = new DataTable();
+            con.sda.Fill(stucourse);
+            foreach (DataRow row in stucourse.Rows)
+            {
+                int n = stu_ViewCgrid.Rows.Add();
+                stu_ViewCgrid.Rows[n].Cells["stuCserialnogrid"].Value = n + 1;
+                stu_ViewCgrid.Rows[n].Cells["stuCcodegrid"].Value = row["ccode"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCtitlegrid"].Value = row["ctitle"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCcreditgrid"].Value = row["ccredit"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCtypegrid"].Value = row["ctype"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCsemestergrid"].Value = row["ssemester"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCtchcodegrid"].Value = row["tid"].ToString();
+                stu_ViewCgrid.Rows[n].Cells["stuCtchnamegrid"].Value = row["tname"].ToString();
+            }
+        }
+        private void stu_ViewCgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }

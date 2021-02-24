@@ -92,6 +92,14 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.stuCserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtchnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -633,12 +641,25 @@ namespace University_Management_System
             // 
             // stu_ViewCgrid
             // 
+            this.stu_ViewCgrid.AllowUserToAddRows = false;
+            this.stu_ViewCgrid.AllowUserToDeleteRows = false;
             this.stu_ViewCgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_ViewCgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stuCserialnogrid,
+            this.stuCcodegrid,
+            this.stuCtitlegrid,
+            this.stuCcreditgrid,
+            this.stuCtypegrid,
+            this.stuCsemestergrid,
+            this.stuCtchcodegrid,
+            this.stuCtchnamegrid});
             this.stu_ViewCgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stu_ViewCgrid.Location = new System.Drawing.Point(0, 0);
             this.stu_ViewCgrid.Name = "stu_ViewCgrid";
+            this.stu_ViewCgrid.ReadOnly = true;
             this.stu_ViewCgrid.Size = new System.Drawing.Size(1318, 348);
             this.stu_ViewCgrid.TabIndex = 0;
+            this.stu_ViewCgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_ViewCgrid_CellContentClick);
             // 
             // result
             // 
@@ -825,6 +846,63 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 2;
             // 
+            // stuCserialnogrid
+            // 
+            this.stuCserialnogrid.HeaderText = "Sl. No.";
+            this.stuCserialnogrid.Name = "stuCserialnogrid";
+            this.stuCserialnogrid.ReadOnly = true;
+            this.stuCserialnogrid.Width = 159;
+            // 
+            // stuCcodegrid
+            // 
+            this.stuCcodegrid.HeaderText = "Course Code";
+            this.stuCcodegrid.Name = "stuCcodegrid";
+            this.stuCcodegrid.ReadOnly = true;
+            this.stuCcodegrid.Width = 160;
+            // 
+            // stuCtitlegrid
+            // 
+            this.stuCtitlegrid.HeaderText = "Course Title";
+            this.stuCtitlegrid.Name = "stuCtitlegrid";
+            this.stuCtitlegrid.ReadOnly = true;
+            this.stuCtitlegrid.Width = 159;
+            // 
+            // stuCcreditgrid
+            // 
+            this.stuCcreditgrid.HeaderText = "Credit";
+            this.stuCcreditgrid.Name = "stuCcreditgrid";
+            this.stuCcreditgrid.ReadOnly = true;
+            this.stuCcreditgrid.ToolTipText = "Course Credit";
+            this.stuCcreditgrid.Width = 160;
+            // 
+            // stuCtypegrid
+            // 
+            this.stuCtypegrid.HeaderText = "Course Type";
+            this.stuCtypegrid.Name = "stuCtypegrid";
+            this.stuCtypegrid.ReadOnly = true;
+            this.stuCtypegrid.Width = 159;
+            // 
+            // stuCsemestergrid
+            // 
+            this.stuCsemestergrid.HeaderText = "Semester";
+            this.stuCsemestergrid.Name = "stuCsemestergrid";
+            this.stuCsemestergrid.ReadOnly = true;
+            this.stuCsemestergrid.Width = 159;
+            // 
+            // stuCtchcodegrid
+            // 
+            this.stuCtchcodegrid.HeaderText = "Teacher Code";
+            this.stuCtchcodegrid.Name = "stuCtchcodegrid";
+            this.stuCtchcodegrid.ReadOnly = true;
+            this.stuCtchcodegrid.Width = 160;
+            // 
+            // stuCtchnamegrid
+            // 
+            this.stuCtchnamegrid.HeaderText = "Teacher Name";
+            this.stuCtchnamegrid.Name = "stuCtchnamegrid";
+            this.stuCtchnamegrid.ReadOnly = true;
+            this.stuCtchnamegrid.Width = 159;
+            // 
             // Student_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -930,5 +1008,13 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtypegrid;
         public System.Windows.Forms.Button stu_Srchbtn;
         public System.Windows.Forms.DataGridView stu_Availablegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCserialnogrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCtitlegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCcreditgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCtypegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCsemestergrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCtchcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCtchnamegrid;
     }
 }
