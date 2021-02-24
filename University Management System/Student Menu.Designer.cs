@@ -59,10 +59,6 @@ namespace University_Management_System
             this.panel3 = new System.Windows.Forms.Panel();
             this.stu_Csemester = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.stu_Deletebtn = new System.Windows.Forms.Button();
-            this.stu_Clearbtn = new System.Windows.Forms.Button();
-            this.stu_CSelectbtn = new System.Windows.Forms.Button();
-            this.stu_Srchbtn = new System.Windows.Forms.Button();
             this.stu_Ccode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.stu_Cdept = new System.Windows.Forms.ComboBox();
@@ -74,6 +70,14 @@ namespace University_Management_System
             this.viewcourse = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.stu_ViewCgrid = new System.Windows.Forms.DataGridView();
+            this.stuCserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCtchnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.result = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.stu_Viewresgrid = new System.Windows.Forms.DataGridView();
@@ -92,14 +96,9 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.stuCserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCtchnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stu_Deletebtn = new System.Windows.Forms.Button();
+            this.stu_CSelectbtn = new System.Windows.Forms.Button();
+            this.stu_Srchbtn = new System.Windows.Forms.Button();
             this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -399,7 +398,6 @@ namespace University_Management_System
             this.panel3.Controls.Add(this.stu_Csemester);
             this.panel3.Controls.Add(this.label72);
             this.panel3.Controls.Add(this.stu_Deletebtn);
-            this.panel3.Controls.Add(this.stu_Clearbtn);
             this.panel3.Controls.Add(this.stu_CSelectbtn);
             this.panel3.Controls.Add(this.stu_Srchbtn);
             this.panel3.Controls.Add(this.stu_Ccode);
@@ -422,7 +420,7 @@ namespace University_Management_System
             this.stu_Csemester.BackColor = System.Drawing.Color.Azure;
             this.stu_Csemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stu_Csemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stu_Csemester.Location = new System.Drawing.Point(990, 33);
+            this.stu_Csemester.Location = new System.Drawing.Point(978, 33);
             this.stu_Csemester.Name = "stu_Csemester";
             this.stu_Csemester.Size = new System.Drawing.Size(152, 24);
             this.stu_Csemester.TabIndex = 48;
@@ -434,75 +432,11 @@ namespace University_Management_System
             this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label72.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(879, 34);
+            this.label72.Location = new System.Drawing.Point(867, 34);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(86, 23);
             this.label72.TabIndex = 47;
             this.label72.Text = "Semester";
-            // 
-            // stu_Deletebtn
-            // 
-            this.stu_Deletebtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stu_Deletebtn.FlatAppearance.BorderSize = 0;
-            this.stu_Deletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.stu_Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stu_Deletebtn.ForeColor = System.Drawing.Color.White;
-            this.stu_Deletebtn.Image = global::University_Management_System.Properties.Resources.Delete;
-            this.stu_Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stu_Deletebtn.Location = new System.Drawing.Point(1244, 48);
-            this.stu_Deletebtn.Name = "stu_Deletebtn";
-            this.stu_Deletebtn.Size = new System.Drawing.Size(43, 31);
-            this.stu_Deletebtn.TabIndex = 45;
-            this.stu_Deletebtn.UseVisualStyleBackColor = true;
-            this.stu_Deletebtn.Click += new System.EventHandler(this.stu_Deletebtn_Click);
-            // 
-            // stu_Clearbtn
-            // 
-            this.stu_Clearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stu_Clearbtn.FlatAppearance.BorderSize = 0;
-            this.stu_Clearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.stu_Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stu_Clearbtn.ForeColor = System.Drawing.Color.White;
-            this.stu_Clearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.stu_Clearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stu_Clearbtn.Location = new System.Drawing.Point(1180, 48);
-            this.stu_Clearbtn.Name = "stu_Clearbtn";
-            this.stu_Clearbtn.Size = new System.Drawing.Size(43, 31);
-            this.stu_Clearbtn.TabIndex = 45;
-            this.stu_Clearbtn.UseVisualStyleBackColor = true;
-            this.stu_Clearbtn.Click += new System.EventHandler(this.stu_Clearbtn_Click);
-            // 
-            // stu_CSelectbtn
-            // 
-            this.stu_CSelectbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stu_CSelectbtn.FlatAppearance.BorderSize = 0;
-            this.stu_CSelectbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.stu_CSelectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stu_CSelectbtn.ForeColor = System.Drawing.Color.White;
-            this.stu_CSelectbtn.Image = global::University_Management_System.Properties.Resources.Select;
-            this.stu_CSelectbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stu_CSelectbtn.Location = new System.Drawing.Point(1244, 11);
-            this.stu_CSelectbtn.Name = "stu_CSelectbtn";
-            this.stu_CSelectbtn.Size = new System.Drawing.Size(43, 31);
-            this.stu_CSelectbtn.TabIndex = 46;
-            this.stu_CSelectbtn.UseVisualStyleBackColor = true;
-            this.stu_CSelectbtn.Click += new System.EventHandler(this.stu_CSelectbtn_Click);
-            // 
-            // stu_Srchbtn
-            // 
-            this.stu_Srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stu_Srchbtn.FlatAppearance.BorderSize = 0;
-            this.stu_Srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.stu_Srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stu_Srchbtn.ForeColor = System.Drawing.Color.White;
-            this.stu_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.stu_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stu_Srchbtn.Location = new System.Drawing.Point(1180, 11);
-            this.stu_Srchbtn.Name = "stu_Srchbtn";
-            this.stu_Srchbtn.Size = new System.Drawing.Size(43, 31);
-            this.stu_Srchbtn.TabIndex = 46;
-            this.stu_Srchbtn.UseVisualStyleBackColor = true;
-            this.stu_Srchbtn.Click += new System.EventHandler(this.stu_Srchbtn_Click);
             // 
             // stu_Ccode
             // 
@@ -510,7 +444,7 @@ namespace University_Management_System
             this.stu_Ccode.BackColor = System.Drawing.Color.Azure;
             this.stu_Ccode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stu_Ccode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stu_Ccode.Location = new System.Drawing.Point(701, 32);
+            this.stu_Ccode.Location = new System.Drawing.Point(689, 32);
             this.stu_Ccode.Name = "stu_Ccode";
             this.stu_Ccode.Size = new System.Drawing.Size(154, 24);
             this.stu_Ccode.TabIndex = 44;
@@ -522,7 +456,7 @@ namespace University_Management_System
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(578, 34);
+            this.label3.Location = new System.Drawing.Point(566, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 21);
             this.label3.TabIndex = 43;
@@ -548,7 +482,7 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.stu_Cdept.Location = new System.Drawing.Point(407, 31);
+            this.stu_Cdept.Location = new System.Drawing.Point(395, 31);
             this.stu_Cdept.MaxDropDownItems = 5;
             this.stu_Cdept.Name = "stu_Cdept";
             this.stu_Cdept.Size = new System.Drawing.Size(154, 28);
@@ -566,7 +500,7 @@ namespace University_Management_System
             "BBA",
             "M.Sc.",
             "MBA"});
-            this.stu_Cprogram.Location = new System.Drawing.Point(141, 31);
+            this.stu_Cprogram.Location = new System.Drawing.Point(129, 31);
             this.stu_Cprogram.Name = "stu_Cprogram";
             this.stu_Cprogram.Size = new System.Drawing.Size(139, 28);
             this.stu_Cprogram.TabIndex = 16;
@@ -577,7 +511,7 @@ namespace University_Management_System
             this.label12.AutoSize = true;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(293, 36);
+            this.label12.Location = new System.Drawing.Point(281, 36);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 21);
             this.label12.TabIndex = 15;
@@ -589,7 +523,7 @@ namespace University_Management_System
             this.label11.AutoSize = true;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(56, 33);
+            this.label11.Location = new System.Drawing.Point(44, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 21);
             this.label11.TabIndex = 14;
@@ -636,7 +570,7 @@ namespace University_Management_System
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1318, 348);
+            this.panel8.Size = new System.Drawing.Size(1318, 356);
             this.panel8.TabIndex = 0;
             // 
             // stu_ViewCgrid
@@ -657,9 +591,66 @@ namespace University_Management_System
             this.stu_ViewCgrid.Location = new System.Drawing.Point(0, 0);
             this.stu_ViewCgrid.Name = "stu_ViewCgrid";
             this.stu_ViewCgrid.ReadOnly = true;
-            this.stu_ViewCgrid.Size = new System.Drawing.Size(1318, 348);
+            this.stu_ViewCgrid.Size = new System.Drawing.Size(1318, 356);
             this.stu_ViewCgrid.TabIndex = 0;
             this.stu_ViewCgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_ViewCgrid_CellContentClick);
+            // 
+            // stuCserialnogrid
+            // 
+            this.stuCserialnogrid.HeaderText = "Sl. No.";
+            this.stuCserialnogrid.Name = "stuCserialnogrid";
+            this.stuCserialnogrid.ReadOnly = true;
+            this.stuCserialnogrid.Width = 159;
+            // 
+            // stuCcodegrid
+            // 
+            this.stuCcodegrid.HeaderText = "Course Code";
+            this.stuCcodegrid.Name = "stuCcodegrid";
+            this.stuCcodegrid.ReadOnly = true;
+            this.stuCcodegrid.Width = 160;
+            // 
+            // stuCtitlegrid
+            // 
+            this.stuCtitlegrid.HeaderText = "Course Title";
+            this.stuCtitlegrid.Name = "stuCtitlegrid";
+            this.stuCtitlegrid.ReadOnly = true;
+            this.stuCtitlegrid.Width = 159;
+            // 
+            // stuCcreditgrid
+            // 
+            this.stuCcreditgrid.HeaderText = "Credit";
+            this.stuCcreditgrid.Name = "stuCcreditgrid";
+            this.stuCcreditgrid.ReadOnly = true;
+            this.stuCcreditgrid.ToolTipText = "Course Credit";
+            this.stuCcreditgrid.Width = 160;
+            // 
+            // stuCtypegrid
+            // 
+            this.stuCtypegrid.HeaderText = "Course Type";
+            this.stuCtypegrid.Name = "stuCtypegrid";
+            this.stuCtypegrid.ReadOnly = true;
+            this.stuCtypegrid.Width = 159;
+            // 
+            // stuCsemestergrid
+            // 
+            this.stuCsemestergrid.HeaderText = "Semester";
+            this.stuCsemestergrid.Name = "stuCsemestergrid";
+            this.stuCsemestergrid.ReadOnly = true;
+            this.stuCsemestergrid.Width = 159;
+            // 
+            // stuCtchcodegrid
+            // 
+            this.stuCtchcodegrid.HeaderText = "Teacher Code";
+            this.stuCtchcodegrid.Name = "stuCtchcodegrid";
+            this.stuCtchcodegrid.ReadOnly = true;
+            this.stuCtchcodegrid.Width = 160;
+            // 
+            // stuCtchnamegrid
+            // 
+            this.stuCtchnamegrid.HeaderText = "Teacher Name";
+            this.stuCtchnamegrid.Name = "stuCtchnamegrid";
+            this.stuCtchnamegrid.ReadOnly = true;
+            this.stuCtchnamegrid.Width = 159;
             // 
             // result
             // 
@@ -846,62 +837,53 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 2;
             // 
-            // stuCserialnogrid
+            // stu_Deletebtn
             // 
-            this.stuCserialnogrid.HeaderText = "Sl. No.";
-            this.stuCserialnogrid.Name = "stuCserialnogrid";
-            this.stuCserialnogrid.ReadOnly = true;
-            this.stuCserialnogrid.Width = 159;
+            this.stu_Deletebtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Deletebtn.FlatAppearance.BorderSize = 0;
+            this.stu_Deletebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Deletebtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Deletebtn.Image = global::University_Management_System.Properties.Resources.Delete;
+            this.stu_Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Deletebtn.Location = new System.Drawing.Point(1232, 48);
+            this.stu_Deletebtn.Name = "stu_Deletebtn";
+            this.stu_Deletebtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Deletebtn.TabIndex = 45;
+            this.stu_Deletebtn.UseVisualStyleBackColor = true;
+            this.stu_Deletebtn.Click += new System.EventHandler(this.stu_Deletebtn_Click);
             // 
-            // stuCcodegrid
+            // stu_CSelectbtn
             // 
-            this.stuCcodegrid.HeaderText = "Course Code";
-            this.stuCcodegrid.Name = "stuCcodegrid";
-            this.stuCcodegrid.ReadOnly = true;
-            this.stuCcodegrid.Width = 160;
+            this.stu_CSelectbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_CSelectbtn.FlatAppearance.BorderSize = 0;
+            this.stu_CSelectbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_CSelectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_CSelectbtn.ForeColor = System.Drawing.Color.White;
+            this.stu_CSelectbtn.Image = global::University_Management_System.Properties.Resources.Select;
+            this.stu_CSelectbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_CSelectbtn.Location = new System.Drawing.Point(1232, 11);
+            this.stu_CSelectbtn.Name = "stu_CSelectbtn";
+            this.stu_CSelectbtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_CSelectbtn.TabIndex = 46;
+            this.stu_CSelectbtn.UseVisualStyleBackColor = true;
+            this.stu_CSelectbtn.Click += new System.EventHandler(this.stu_CSelectbtn_Click);
             // 
-            // stuCtitlegrid
+            // stu_Srchbtn
             // 
-            this.stuCtitlegrid.HeaderText = "Course Title";
-            this.stuCtitlegrid.Name = "stuCtitlegrid";
-            this.stuCtitlegrid.ReadOnly = true;
-            this.stuCtitlegrid.Width = 159;
-            // 
-            // stuCcreditgrid
-            // 
-            this.stuCcreditgrid.HeaderText = "Credit";
-            this.stuCcreditgrid.Name = "stuCcreditgrid";
-            this.stuCcreditgrid.ReadOnly = true;
-            this.stuCcreditgrid.ToolTipText = "Course Credit";
-            this.stuCcreditgrid.Width = 160;
-            // 
-            // stuCtypegrid
-            // 
-            this.stuCtypegrid.HeaderText = "Course Type";
-            this.stuCtypegrid.Name = "stuCtypegrid";
-            this.stuCtypegrid.ReadOnly = true;
-            this.stuCtypegrid.Width = 159;
-            // 
-            // stuCsemestergrid
-            // 
-            this.stuCsemestergrid.HeaderText = "Semester";
-            this.stuCsemestergrid.Name = "stuCsemestergrid";
-            this.stuCsemestergrid.ReadOnly = true;
-            this.stuCsemestergrid.Width = 159;
-            // 
-            // stuCtchcodegrid
-            // 
-            this.stuCtchcodegrid.HeaderText = "Teacher Code";
-            this.stuCtchcodegrid.Name = "stuCtchcodegrid";
-            this.stuCtchcodegrid.ReadOnly = true;
-            this.stuCtchcodegrid.Width = 160;
-            // 
-            // stuCtchnamegrid
-            // 
-            this.stuCtchnamegrid.HeaderText = "Teacher Name";
-            this.stuCtchnamegrid.Name = "stuCtchnamegrid";
-            this.stuCtchnamegrid.ReadOnly = true;
-            this.stuCtchnamegrid.Width = 159;
+            this.stu_Srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stu_Srchbtn.FlatAppearance.BorderSize = 0;
+            this.stu_Srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stu_Srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stu_Srchbtn.ForeColor = System.Drawing.Color.White;
+            this.stu_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.stu_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stu_Srchbtn.Location = new System.Drawing.Point(1165, 29);
+            this.stu_Srchbtn.Name = "stu_Srchbtn";
+            this.stu_Srchbtn.Size = new System.Drawing.Size(43, 31);
+            this.stu_Srchbtn.TabIndex = 46;
+            this.stu_Srchbtn.UseVisualStyleBackColor = true;
+            this.stu_Srchbtn.Click += new System.EventHandler(this.stu_Srchbtn_Click);
             // 
             // Student_Menu
             // 
@@ -983,7 +965,6 @@ namespace University_Management_System
         private System.Windows.Forms.TextBox stu_Ccode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button stu_Deletebtn;
-        private System.Windows.Forms.Button stu_Clearbtn;
         private System.Windows.Forms.Button stu_CSelectbtn;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView stu_ViewCgrid;

@@ -40,9 +40,7 @@ namespace University_Management_System
         }
         private void Home_Page_Load(object sender, EventArgs e)
         {
-            //Admin_Menu_Load();
-            //Course_LoadData();
-            timer1.Start();
+            Sururpic.Start();
         }
 
         private void bubtlogo_Click(object sender, EventArgs e)
@@ -101,80 +99,38 @@ namespace University_Management_System
             logoutbtn.Hide();
             loginbtn.Show();
         }
-
-        private void loginpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        /*private void loginpanel_Load(object sender, EventArgs e)
-        {
-            //Admin_Menu_Load();
-            //Course_LoadData();
-            timer1.Start();
-        }
-        */
-        private void timer1_Tick_1(object sender, EventArgs e)
+        private void Sururpic_Tick(object sender, EventArgs e)
         {
             if (lastpic.Visible == true)
-            {
-                lastpic.Visible = false;
-                firstpic.Visible = true;
-            }
-            else if (sixthpic.Visible == true)
-            {
-                sixthpic.Visible = false;
-                lastpic.Visible = true;
-            }
-            else if (fifthpic.Visible == true)
-            {
-                fifthpic.Visible = false;
-                sixthpic.Visible = true;
-            }
-            else if (thirdpic.Visible == true)
-            {
-                thirdpic.Visible = false;
-                fifthpic.Visible = true;
-            }
-            else if (secondpic.Visible == true)
-            {
-                secondpic.Visible = false;
-                thirdpic.Visible = true;
-            }
-            else if (firstpic.Visible == true)
-            {
-                firstpic.Visible = false;
-                secondpic.Visible = true;
-            }
+           {
+               lastpic.Visible = false;
+               firstpic.Visible = true;
+           }
+           else if (fifthpic.Visible == true)
+           {
+               fifthpic.Visible = false;
+               lastpic.Visible = true;
+           }
+           else if (fourthpic.Visible == true)
+           {
+               fourthpic.Visible = false;
+               fifthpic.Visible = true;
+           }
+           else if (thirdpic.Visible == true)
+           {
+               thirdpic.Visible = false;
+               fourthpic.Visible = true;
+           }
+           else if (secondpic.Visible == true)
+           {
+               secondpic.Visible = false;
+               thirdpic.Visible = true;
+           }
+           else if (firstpic.Visible == true)
+           {
+               firstpic.Visible = false;
+               secondpic.Visible = true;
+           }
         }
-        /* if(lastpic.Visible==true)
-    {
-        lastpic.Visible = false;
-        sixthpic.Visible = true;
-    }
-    else if(sixthpic.Visible==true)
-    {
-        sixthpic.Visible = false;
-        fifthpic.Visible = true;
-    }
-    else if (fifthpic.Visible == true)
-{
-fifthpic.Visible = false;
-thirdpic.Visible = true;
-}
-else if (thirdpic.Visible == true)
-{
-thirdpic.Visible = false;
-secondpic.Visible = true;
-}
-else if (secondpic.Visible == true)
-{
-secondpic.Visible = false;
-firstpic.Visible = true;
-}
-else if (firstpic.Visible == true)
-{
-firstpic.Visible = false;
-lastpic.Visible = true;
-}*/
     }
 }

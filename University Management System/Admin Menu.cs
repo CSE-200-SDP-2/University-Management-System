@@ -27,75 +27,6 @@ namespace University_Management_System
             mainForm = callingForm as Home_Page;
             InitializeComponent();
         }
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stuinfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
@@ -130,7 +61,6 @@ namespace University_Management_System
             cCode2.AutoCompleteCustomSource = coll;
         }
 
-
         public void Auto_modstuid()
         {
             con.dataGet("Select id from Student"); //  '" +  +"'
@@ -152,6 +82,7 @@ namespace University_Management_System
             mod_stuId.AutoCompleteSource = AutoCompleteSource.CustomSource;
             mod_stuId.AutoCompleteCustomSource = coll;
         }
+
         public void Auto_tchcode()
         {
             con.dataGet("Select id from Teacher"); //  '" +  +"'
@@ -174,96 +105,6 @@ namespace University_Management_System
             tchCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
             tchCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             tchCode2.AutoCompleteCustomSource = coll;
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged_1(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void tchinfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox22_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox34_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox30_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label58_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label45_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label61_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label70_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stuid_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void stuRegbtn_Click(object sender, EventArgs e)
@@ -304,8 +145,6 @@ namespace University_Management_System
             stuDept.SelectedIndex = -1;
             stuMobile.Clear();
         }
-
-
         private void tchRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Teacher.id from Teacher where Teacher.id='" + tchCode.Text + "'");                                                                                                                                                        //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -342,7 +181,6 @@ namespace University_Management_System
             tchDept.SelectedIndex = -1;
             tchMobile.Clear();
         }
-
         private void cRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Course.ccode from Course where Course.ccode='" + cCode.Text + "'"); //  '" +  +"'                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -391,7 +229,6 @@ namespace University_Management_System
                 cReggrid.Rows[n].Cells["cdeptgrid"].Value = row["cdept"].ToString();
             }
         }
-
         private void cReggrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             /* DataGridViewRow row = cReggrid.Rows[e.RowIndex];
@@ -404,17 +241,14 @@ namespace University_Management_System
              cProgram.Text = row.Cells[5].Value.ToString();
              cDept.Text = row.Cells[6].Value.ToString();  */
         }
-
         private void Admin_Menu_Activated(object sender, EventArgs e)
         {
             //Course_LoadData();
         }
-
         private void label71_Click(object sender, EventArgs e)
         {
 
         }
-
         private void cAssignbtn_Click(object sender, EventArgs e)
         {
             //string check;
@@ -459,7 +293,6 @@ namespace University_Management_System
             cCode2.Clear();
             cSemester.Clear();
         }
-
         private void Assign_LoadData()
         {
             con.dataGet("Select Teacher.tname,Teacher.id,Course.ccode,Course.ctitle,Course.ctype,Course.ccredit,Teacher_Course.tsemester from Teacher_Course,Teacher,Course where Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode and Course.ccode='" + cCode2.Text + "'"); //  or Course.ccode='" + cCode2.Text + "'               Teacher_Course.id=Teacher.id and Teacher_Course.ccode=Course.ccode          Teacher.id='" + tchCode2.Text + "' and Course.ccode='" + cCode2.Text + "' ---> Teacher.id='" + tchCode2.Text + "' or
@@ -479,15 +312,6 @@ namespace University_Management_System
                 cassigngrid.Rows[n].Cells["assignsemester"].Value = row["tsemester"].ToString();
             }
             Assign_ClearData();
-        }
-
-        private void cassigngrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void cCode2_TextChanged(object sender, EventArgs e)
-        {
-
         }
         public void Clear_Studata()
         {
@@ -610,12 +434,6 @@ namespace University_Management_System
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        /*private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }*/
-
         public void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl4.SelectedIndex == 0)
@@ -627,7 +445,6 @@ namespace University_Management_System
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         public void Clear_Tchdata()
         {
             srch_tchCode.Clear();
@@ -733,7 +550,6 @@ namespace University_Management_System
                 MessageBox.Show("Teacher Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void res_srchbtn_Click(object sender, EventArgs e)
         {
             string id = res_srchId.Text;
@@ -767,12 +583,10 @@ namespace University_Management_System
 
 
         }
-
         private void mod_stuSrchbtn_Click(object sender, EventArgs e)
         {
             Modstu_LoadData();
         }
-
         private void Modstu_LoadData()
         {
             con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");
@@ -826,7 +640,6 @@ namespace University_Management_System
             mod_stuMobile.Clear();
 
         }
-
         string agerid;
         public void mod_Stugrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -849,7 +662,6 @@ namespace University_Management_System
             mod_stuMobile.Text = row.Cells[13].Value.ToString();
 
         }
-
         private void mod_stuUpdatebtn_Click(object sender, EventArgs e)
         {
             if (agerid == mod_stuId.Text)
@@ -864,7 +676,6 @@ namespace University_Management_System
                 MessageBox.Show("Student ID can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void mod_stuDeletebtn_Click(object sender, EventArgs e)
         {
             DialogResult dl = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -875,12 +686,10 @@ namespace University_Management_System
                 Modstu_ClearData();
             }
         }
-
         private void mod_tchSrchbtn_Click(object sender, EventArgs e)
         {
             modtch_LoadData();
         }
-
         private void mod_tchUpdatebtn_Click(object sender, EventArgs e)
         {
             if (agercode == mod_tchCode.Text)
@@ -895,7 +704,6 @@ namespace University_Management_System
                 MessageBox.Show("Teacher code can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void mod_tchDeletebtn_Click(object sender, EventArgs e)
         {
             DialogResult dl = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -906,7 +714,6 @@ namespace University_Management_System
                 modtch_ClearData();
             }
         }
-
         private void modtch_LoadData()
         {
             con.dataGet("select * from Teacher where id = '" + mod_tchCode.Text + "'");
@@ -955,7 +762,6 @@ namespace University_Management_System
             mod_tchMobile.Clear();
 
         }
-
         string agercode;
         public void mod_tchGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

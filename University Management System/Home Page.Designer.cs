@@ -30,7 +30,6 @@ namespace University_Management_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home_Page));
             this.navpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bubtlogo = new System.Windows.Forms.PictureBox();
@@ -41,18 +40,18 @@ namespace University_Management_System
             this.firstpic = new System.Windows.Forms.PictureBox();
             this.secondpic = new System.Windows.Forms.PictureBox();
             this.thirdpic = new System.Windows.Forms.PictureBox();
+            this.fourthpic = new System.Windows.Forms.PictureBox();
             this.fifthpic = new System.Windows.Forms.PictureBox();
-            this.sixthpic = new System.Windows.Forms.PictureBox();
             this.lastpic = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Sururpic = new System.Windows.Forms.Timer(this.components);
             this.navpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bubtlogo)).BeginInit();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourthpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifthpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sixthpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastpic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,20 +138,19 @@ namespace University_Management_System
             this.loginpanel.Controls.Add(this.firstpic);
             this.loginpanel.Controls.Add(this.secondpic);
             this.loginpanel.Controls.Add(this.thirdpic);
+            this.loginpanel.Controls.Add(this.fourthpic);
             this.loginpanel.Controls.Add(this.fifthpic);
-            this.loginpanel.Controls.Add(this.sixthpic);
             this.loginpanel.Controls.Add(this.lastpic);
             this.loginpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginpanel.Location = new System.Drawing.Point(0, 143);
             this.loginpanel.Name = "loginpanel";
             this.loginpanel.Size = new System.Drawing.Size(1284, 586);
             this.loginpanel.TabIndex = 2;
-            this.loginpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginpanel_Paint);
             // 
             // firstpic
             // 
             this.firstpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.firstpic.Image = ((System.Drawing.Image)(resources.GetObject("firstpic.Image")));
+            this.firstpic.Image = global::University_Management_System.Properties.Resources._1st;
             this.firstpic.Location = new System.Drawing.Point(0, 0);
             this.firstpic.Name = "firstpic";
             this.firstpic.Size = new System.Drawing.Size(1284, 586);
@@ -163,7 +161,7 @@ namespace University_Management_System
             // secondpic
             // 
             this.secondpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondpic.Image = ((System.Drawing.Image)(resources.GetObject("secondpic.Image")));
+            this.secondpic.Image = global::University_Management_System.Properties.Resources._2nd;
             this.secondpic.Location = new System.Drawing.Point(0, 0);
             this.secondpic.Name = "secondpic";
             this.secondpic.Size = new System.Drawing.Size(1284, 586);
@@ -174,7 +172,7 @@ namespace University_Management_System
             // thirdpic
             // 
             this.thirdpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thirdpic.Image = ((System.Drawing.Image)(resources.GetObject("thirdpic.Image")));
+            this.thirdpic.Image = global::University_Management_System.Properties.Resources._3rd;
             this.thirdpic.Location = new System.Drawing.Point(0, 0);
             this.thirdpic.Name = "thirdpic";
             this.thirdpic.Size = new System.Drawing.Size(1284, 586);
@@ -182,32 +180,32 @@ namespace University_Management_System
             this.thirdpic.TabIndex = 3;
             this.thirdpic.TabStop = false;
             // 
+            // fourthpic
+            // 
+            this.fourthpic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fourthpic.Image = global::University_Management_System.Properties.Resources._4th;
+            this.fourthpic.Location = new System.Drawing.Point(0, 0);
+            this.fourthpic.Name = "fourthpic";
+            this.fourthpic.Size = new System.Drawing.Size(1284, 586);
+            this.fourthpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fourthpic.TabIndex = 2;
+            this.fourthpic.TabStop = false;
+            // 
             // fifthpic
             // 
             this.fifthpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fifthpic.Image = ((System.Drawing.Image)(resources.GetObject("fifthpic.Image")));
+            this.fifthpic.Image = global::University_Management_System.Properties.Resources._5th;
             this.fifthpic.Location = new System.Drawing.Point(0, 0);
             this.fifthpic.Name = "fifthpic";
             this.fifthpic.Size = new System.Drawing.Size(1284, 586);
             this.fifthpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fifthpic.TabIndex = 2;
+            this.fifthpic.TabIndex = 1;
             this.fifthpic.TabStop = false;
-            // 
-            // sixthpic
-            // 
-            this.sixthpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sixthpic.Image = ((System.Drawing.Image)(resources.GetObject("sixthpic.Image")));
-            this.sixthpic.Location = new System.Drawing.Point(0, 0);
-            this.sixthpic.Name = "sixthpic";
-            this.sixthpic.Size = new System.Drawing.Size(1284, 586);
-            this.sixthpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.sixthpic.TabIndex = 1;
-            this.sixthpic.TabStop = false;
             // 
             // lastpic
             // 
             this.lastpic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lastpic.Image = ((System.Drawing.Image)(resources.GetObject("lastpic.Image")));
+            this.lastpic.Image = global::University_Management_System.Properties.Resources.last;
             this.lastpic.Location = new System.Drawing.Point(0, 0);
             this.lastpic.Name = "lastpic";
             this.lastpic.Size = new System.Drawing.Size(1284, 586);
@@ -215,11 +213,11 @@ namespace University_Management_System
             this.lastpic.TabIndex = 0;
             this.lastpic.TabStop = false;
             // 
-            // timer1
+            // Sururpic
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 3000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.Sururpic.Enabled = true;
+            this.Sururpic.Interval = 1000;
+            this.Sururpic.Tick += new System.EventHandler(this.Sururpic_Tick);
             // 
             // Home_Page
             // 
@@ -242,8 +240,8 @@ namespace University_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.firstpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thirdpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourthpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifthpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sixthpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastpic)).EndInit();
             this.ResumeLayout(false);
 
@@ -261,12 +259,12 @@ namespace University_Management_System
         private System.Windows.Forms.Panel loginpanel;
         private System.Windows.Forms.Button loginbtn;
         public System.Windows.Forms.Button logoutbtn;
-        private System.Windows.Forms.PictureBox fifthpic;
-        private System.Windows.Forms.PictureBox sixthpic;
         private System.Windows.Forms.PictureBox lastpic;
-        private System.Windows.Forms.PictureBox firstpic;
-        private System.Windows.Forms.PictureBox secondpic;
+        private System.Windows.Forms.Timer Sururpic;
+        private System.Windows.Forms.PictureBox fifthpic;
+        private System.Windows.Forms.PictureBox fourthpic;
         private System.Windows.Forms.PictureBox thirdpic;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox secondpic;
+        private System.Windows.Forms.PictureBox firstpic;
     }
 }

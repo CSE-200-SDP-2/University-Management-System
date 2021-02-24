@@ -435,7 +435,7 @@ namespace University_Management_System
             this.stuinfo.Size = new System.Drawing.Size(1268, 475);
             this.stuinfo.TabIndex = 0;
             this.stuinfo.Text = "Student Information";
-            this.stuinfo.Click += new System.EventHandler(this.stuinfo_Click);
+            //this.stuinfo.Click += new System.EventHandler(this.stuinfo_Click);
             // 
             // stuRegbtn
             // 
@@ -555,7 +555,7 @@ namespace University_Management_System
             this.stuMobile.Name = "stuMobile";
             this.stuMobile.Size = new System.Drawing.Size(255, 24);
             this.stuMobile.TabIndex = 11;
-            this.stuMobile.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            //this.stuMobile.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label14
             // 
@@ -639,7 +639,7 @@ namespace University_Management_System
             this.stuSection.Name = "stuSection";
             this.stuSection.Size = new System.Drawing.Size(255, 24);
             this.stuSection.TabIndex = 7;
-            this.stuSection.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            //this.stuSection.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // stuMname
             // 
@@ -651,7 +651,7 @@ namespace University_Management_System
             this.stuMname.Name = "stuMname";
             this.stuMname.Size = new System.Drawing.Size(255, 24);
             this.stuMname.TabIndex = 7;
-            this.stuMname.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            //this.stuMname.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label10
             // 
@@ -687,7 +687,7 @@ namespace University_Management_System
             this.stuIntake.Name = "stuIntake";
             this.stuIntake.Size = new System.Drawing.Size(255, 24);
             this.stuIntake.TabIndex = 5;
-            this.stuIntake.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            //this.stuIntake.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // stuFname
             // 
@@ -699,7 +699,7 @@ namespace University_Management_System
             this.stuFname.Name = "stuFname";
             this.stuFname.Size = new System.Drawing.Size(255, 24);
             this.stuFname.TabIndex = 5;
-            this.stuFname.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            //this.stuFname.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label9
             // 
@@ -735,7 +735,7 @@ namespace University_Management_System
             this.stuNationality.Name = "stuNationality";
             this.stuNationality.Size = new System.Drawing.Size(255, 24);
             this.stuNationality.TabIndex = 3;
-            this.stuNationality.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            //this.stuNationality.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // stuName
             // 
@@ -747,7 +747,7 @@ namespace University_Management_System
             this.stuName.Name = "stuName";
             this.stuName.Size = new System.Drawing.Size(255, 24);
             this.stuName.TabIndex = 3;
-            this.stuName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.stuName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
@@ -783,7 +783,7 @@ namespace University_Management_System
             this.stuReligion.Name = "stuReligion";
             this.stuReligion.Size = new System.Drawing.Size(254, 24);
             this.stuReligion.TabIndex = 1;
-            this.stuReligion.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            //this.stuReligion.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label7
             // 
@@ -807,7 +807,7 @@ namespace University_Management_System
             this.stuId.Name = "stuId";
             this.stuId.Size = new System.Drawing.Size(254, 24);
             this.stuId.TabIndex = 1;
-            this.stuId.TextChanged += new System.EventHandler(this.stuid_TextChanged);
+            //this.stuId.TextChanged += new System.EventHandler(this.stuid_TextChanged);
             // 
             // label1
             // 
@@ -855,7 +855,7 @@ namespace University_Management_System
             this.tchinfo.Size = new System.Drawing.Size(1268, 475);
             this.tchinfo.TabIndex = 1;
             this.tchinfo.Text = "Teacher Information";
-            this.tchinfo.Click += new System.EventHandler(this.tchinfo_Click);
+            //this.tchinfo.Click += new System.EventHandler(this.tchinfo_Click);
             // 
             // tchRegbtn
             // 
@@ -904,7 +904,7 @@ namespace University_Management_System
             this.tchPosition.Name = "tchPosition";
             this.tchPosition.Size = new System.Drawing.Size(255, 28);
             this.tchPosition.TabIndex = 22;
-            this.tchPosition.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            //this.tchPosition.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // tchDept
             // 
@@ -930,7 +930,7 @@ namespace University_Management_System
             this.tchDept.Name = "tchDept";
             this.tchDept.Size = new System.Drawing.Size(255, 28);
             this.tchDept.TabIndex = 22;
-            this.tchDept.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            //this.tchDept.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // tchGender
             // 
@@ -1003,7 +1003,7 @@ namespace University_Management_System
             this.label21.Size = new System.Drawing.Size(78, 23);
             this.label21.TabIndex = 34;
             this.label21.Text = "Position";
-            this.label21.Click += new System.EventHandler(this.label19_Click);
+            //this.label21.Click += new System.EventHandler(this.label19_Click);
             // 
             // label18
             // 
@@ -1028,7 +1028,7 @@ namespace University_Management_System
             this.label19.Size = new System.Drawing.Size(112, 23);
             this.label19.TabIndex = 34;
             this.label19.Text = "Department";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
+            //this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -1605,7 +1605,7 @@ namespace University_Management_System
             this.cAssignbtn.Text = "Assign";
             this.cAssignbtn.UseVisualStyleBackColor = true;
             this.cAssignbtn.Click += new System.EventHandler(this.cAssignbtn_Click);
-            this.cAssignbtn.MouseHover += new System.EventHandler(this.button15_MouseHover);
+            //this.cAssignbtn.MouseHover += new System.EventHandler(this.button15_MouseHover);
             // 
             // tchCode2
             // 
@@ -1640,7 +1640,7 @@ namespace University_Management_System
             this.cCode2.Name = "cCode2";
             this.cCode2.Size = new System.Drawing.Size(209, 24);
             this.cCode2.TabIndex = 20;
-            this.cCode2.TextChanged += new System.EventHandler(this.cCode2_TextChanged);
+            //this.cCode2.TextChanged += new System.EventHandler(this.cCode2_TextChanged);
             // 
             // label68
             // 
@@ -1684,7 +1684,7 @@ namespace University_Management_System
             this.cassigngrid.ReadOnly = true;
             this.cassigngrid.Size = new System.Drawing.Size(619, 449);
             this.cassigngrid.TabIndex = 0;
-            this.cassigngrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cassigngrid_CellContentClick);
+            //this.cassigngrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cassigngrid_CellContentClick);
             // 
             // assignserialno
             // 
@@ -1897,7 +1897,7 @@ namespace University_Management_System
             this.srch_stuSection.Name = "srch_stuSection";
             this.srch_stuSection.Size = new System.Drawing.Size(236, 20);
             this.srch_stuSection.TabIndex = 1;
-            this.srch_stuSection.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            //this.srch_stuSection.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
             // srch_stuName
             // 
@@ -2616,7 +2616,7 @@ namespace University_Management_System
             this.mod_stuReligion.Name = "mod_stuReligion";
             this.mod_stuReligion.Size = new System.Drawing.Size(196, 24);
             this.mod_stuReligion.TabIndex = 16;
-            this.mod_stuReligion.TextChanged += new System.EventHandler(this.textBox34_TextChanged);
+            //this.mod_stuReligion.TextChanged += new System.EventHandler(this.textBox34_TextChanged);
             // 
             // label49
             // 
@@ -2629,7 +2629,7 @@ namespace University_Management_System
             this.label49.Size = new System.Drawing.Size(82, 23);
             this.label49.TabIndex = 15;
             this.label49.Text = "Religion";
-            this.label49.Click += new System.EventHandler(this.label49_Click);
+            //this.label49.Click += new System.EventHandler(this.label49_Click);
             // 
             // mod_stuId
             // 
@@ -2952,7 +2952,7 @@ namespace University_Management_System
             this.mod_tchPosition.Name = "mod_tchPosition";
             this.mod_tchPosition.Size = new System.Drawing.Size(176, 28);
             this.mod_tchPosition.TabIndex = 52;
-            this.mod_tchPosition.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
+            //this.mod_tchPosition.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
             // 
             // mod_tchDept
             // 
@@ -3190,7 +3190,7 @@ namespace University_Management_System
             this.label58.Size = new System.Drawing.Size(62, 23);
             this.label58.TabIndex = 48;
             this.label58.Text = "Name";
-            this.label58.Click += new System.EventHandler(this.label58_Click);
+            //this.label58.Click += new System.EventHandler(this.label58_Click);
             // 
             // mod_tchReligion
             // 
@@ -3355,7 +3355,7 @@ namespace University_Management_System
             this.label61.Size = new System.Drawing.Size(70, 23);
             this.label61.TabIndex = 10;
             this.label61.Text = "Section";
-            this.label61.Click += new System.EventHandler(this.label61_Click);
+            //this.label61.Click += new System.EventHandler(this.label61_Click);
             // 
             // res_totalSection
             // 
@@ -3404,7 +3404,7 @@ namespace University_Management_System
             this.label45.Size = new System.Drawing.Size(112, 23);
             this.label45.TabIndex = 36;
             this.label45.Text = "Department";
-            this.label45.Click += new System.EventHandler(this.label45_Click);
+            //this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
             // res_totalIntake
             // 
@@ -3645,7 +3645,7 @@ namespace University_Management_System
             this.label70.Size = new System.Drawing.Size(31, 23);
             this.label70.TabIndex = 2;
             this.label70.Text = "ID";
-            this.label70.Click += new System.EventHandler(this.label70_Click);
+            //this.label70.Click += new System.EventHandler(this.label70_Click);
             // 
             // panel3
             // 
