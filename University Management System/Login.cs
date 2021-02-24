@@ -29,27 +29,21 @@ namespace University_Management_System
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            UserName.username = aname.Text;
-            //MessageBox.Show(loginas.Text);
-            DBAccess con = new DBAccess();
-            string table="";
-            table += loginas.Text;
-
-            //'"+table+"'
-            //if (table == "Admin")
-            //{
-            /*if (table == "Admin")
-           // {*/
-                con.dataGet("Select * from "+ table +" where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
-            //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            if (loginas.SelectedIndex > -1)
+            {
+                UserName.username = aname.Text;
+                //MessageBox.Show(loginas.Text);
+                DBAccess con = new DBAccess();
+                string table = "";
+                table += loginas.Text;
+                con.dataGet("Select * from " + table + " where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+                                                                                                                        //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
                 DataTable dt = new DataTable();
                 con.sda.Fill(dt);
-
-
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide();
-                this.mainForm.logoutbtn.Show();
+                    this.mainForm.logoutbtn.Show();
                     //this.mainForm.openChildForm(new Admin_Menu());
                     /*Admin_Menu frm = new Admin_Menu();
                     frm.Show();
@@ -59,25 +53,31 @@ namespace University_Management_System
                             frm1.Hide();
                     }*/
 
-                    if(table == "Admin")
+                    if (table == "Admin")
                     {
                         this.mainForm.openChildForm(new Admin_Menu(mainForm));
                     }
-                    else if(table =="Teacher")
+                    else if (table == "Teacher")
                     {
                         this.mainForm.openChildForm(new Teacher_Menu(mainForm));
                     }
-                    else if(table == "Student")
+                    else if (table == "Student")
                     {
                         this.mainForm.openChildForm(new Student_Menu(mainForm));
                     }
-                
+
 
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username or Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }// }
+            }
+            else
+            {
+                MessageBox.Show("Please select an User!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void loginas_SelectedIndexChanged(object sender, EventArgs e)
