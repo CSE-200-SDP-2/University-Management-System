@@ -15,7 +15,7 @@ namespace University_Management_System
         public Home_Page()
         {
             InitializeComponent();
-            
+            Sururpic.Start();
             //timer1.Enabled = true;
             //openChildForm(new Student_Menu());
             // customizedesign();
@@ -40,7 +40,7 @@ namespace University_Management_System
         }
         private void Home_Page_Load(object sender, EventArgs e)
         {
-            Sururpic.Start();
+            
         }
 
         private void bubtlogo_Click(object sender, EventArgs e)

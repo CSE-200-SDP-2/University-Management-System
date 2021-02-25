@@ -90,6 +90,30 @@ namespace University_Management_System
         {
 
         }
+
+        public void showpass_Click(object sender, EventArgs e)
+        {
+            apass.UseSystemPasswordChar = false;
+            showpass.Hide();
+            hidepass.Show();
+        }
+
+        private void hidepass_Click(object sender, EventArgs e)
+        {
+            apass.UseSystemPasswordChar = true;
+            hidepass.Hide();
+            showpass.Show();
+        }
+
+        private void apass_TextChanged(object sender, EventArgs e)
+        {
+            if (showpass.Visible == true)
+            {
+                apass.UseSystemPasswordChar = true;
+            }
+            else
+                apass.UseSystemPasswordChar = false;
+        }
     }
     
     

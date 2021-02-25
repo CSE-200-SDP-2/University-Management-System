@@ -216,7 +216,7 @@ namespace University_Management_System
             // Sururpic
             // 
             this.Sururpic.Enabled = true;
-            this.Sururpic.Interval = 1000;
+            this.Sururpic.Interval = 3000;
             this.Sururpic.Tick += new System.EventHandler(this.Sururpic_Tick);
             // 
             // Home_Page

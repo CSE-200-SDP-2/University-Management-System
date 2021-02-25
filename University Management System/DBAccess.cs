@@ -23,15 +23,15 @@ namespace University_Management_System
         //Fahad:"Data Source=DESKTOP-P3HPOTN\SQLEXPRESS;Initial Catalog=Unimanage;Integrated Security=True"
         public void connection()
         {
-            /*Raihan*/      //con = new SqlConnection(@"Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True");
-            /*Rahat*/         con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\LOCALHOST;Initial Catalog=Unimanage;Integrated Security=True");
+            /*Raihan*/      con = new SqlConnection(@"Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True");
+            /*Rahat*/        // con = new SqlConnection(@"Data Source=DESKTOP-90O69VH\LOCALHOST;Initial Catalog=Unimanage;Integrated Security=True");
             /*Fahad*/       //con = new SqlConnection(@"Data Source=DESKTOP-P3HPOTN\SQLEXPRESS;Initial Catalog=Unimanage;Integrated Security=True");
             con.Open();
         }
         public static string connectionDatabase()
         {
-            /*Raihan*/     //return "Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True";
-            /*Rahat*/        return "Data Source=DESKTOP-90O69VH\\LOCALHOST;Initial Catalog=Unimanage;Integrated Security=True";
+            /*Raihan*/     return "Data Source=DESKTOP-DP4N1ED;Initial Catalog=Unimanage;Integrated Security=True";
+            /*Rahat*/        //return "Data Source=DESKTOP-90O69VH\\LOCALHOST;Initial Catalog=Unimanage;Integrated Security=True";
             /*Fahad*/      //return "Data Source=DESKTOP-P3HPOTN\\SQLEXPRESS;Initial Catalog=Unimanage;Integrated Security=True";
         }
 

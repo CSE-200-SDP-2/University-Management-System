@@ -173,5 +173,37 @@ namespace University_Management_System
             }
         }
 
+        private void tchstulistSrchbtn_Click(object sender, EventArgs e)
+        {
+            con.dataGet("Select Student.id,Student.sname,Student.sintake,Student.ssection,Student.sdept,Student.sprog,Student.smobile from Teacher_Course,Student,Student_Course where Student.id=Student_Course.id and Student_Course.tid=Teacher_Course.id and Teacher_Course.ccode='"+tchCcode.Text+"' and Teacher_Course.tsemester='"+tchCsemester.Text+ "' and Student_Course.ccode='" + tchCcode.Text + "' and Student_Course.ssemester='" + tchCsemester.Text + "'");
+            DataTable stulist = new DataTable();
+            con.sda.Fill(stulist);
+            tchstuGrid.Rows.Clear();
+            if(stulist.Rows.Count>0)
+            {
+                foreach(DataRow row in stulist.Rows)
+                {
+                    int n = tchstuGrid.Rows.Add();
+                    tchstuGrid.Rows[n].Cells["stulistserialnogrid"].Value = n + 1;
+                    tchstuGrid.Rows[n].Cells["stulistidgrid"].Value = row["id"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistnamegrid"].Value = row["sname"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistintakegrid"].Value = row["sintake"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistsectiongrid"].Value = row["ssection"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistdeptgrid"].Value = row["sdept"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistproggrid"].Value = row["sprog"].ToString();
+                    tchstuGrid.Rows[n].Cells["stulistmobilegrid"].Value = row["smobile"].ToString();
+                }
+                stulist_ClearData();
+            }
+            else
+            {
+                MessageBox.Show("No Student has taken this Course", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void stulist_ClearData()
+        {
+            tchCcode.Clear();
+            tchCsemester.Clear();
+        }
     }
 }

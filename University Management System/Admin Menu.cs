@@ -428,10 +428,13 @@ namespace University_Management_System
             {
                 MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mod_stuGrid.Rows.Clear();
+                Modstu_ClearData();
             }
             if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 1)
             {
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mod_tchGrid.Rows.Clear();
+                modtch_ClearData();
             }
         }
         public void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
@@ -592,6 +595,7 @@ namespace University_Management_System
             con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");
             DataTable modstudent = new DataTable();
             con.sda.Fill(modstudent);
+            mod_stuGrid.Rows.Clear();
             if (modstudent.Rows.Count > 0)
             {
                 // con.dataGet("Select * from Student where id='" + mod_stuId.Text + "'");

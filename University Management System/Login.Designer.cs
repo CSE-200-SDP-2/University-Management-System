@@ -39,6 +39,8 @@ namespace University_Management_System
             this.loginas = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.showpass = new System.Windows.Forms.Button();
+            this.hidepass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,13 +109,15 @@ namespace University_Management_System
             this.apass.ForeColor = System.Drawing.Color.White;
             this.apass.Location = new System.Drawing.Point(166, 112);
             this.apass.Name = "apass";
-            this.apass.PasswordChar = '*';
             this.apass.Size = new System.Drawing.Size(275, 24);
             this.apass.TabIndex = 4;
+            this.apass.TextChanged += new System.EventHandler(this.apass_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.showpass);
+            this.panel1.Controls.Add(this.hidepass);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginas);
             this.panel1.Controls.Add(this.panel2);
@@ -133,7 +137,7 @@ namespace University_Management_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(238, 164);
+            this.label3.Location = new System.Drawing.Point(238, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 21);
             this.label3.TabIndex = 8;
@@ -151,7 +155,7 @@ namespace University_Management_System
             "Admin",
             "Teacher",
             "Student"});
-            this.loginas.Location = new System.Drawing.Point(320, 165);
+            this.loginas.Location = new System.Drawing.Point(320, 169);
             this.loginas.Name = "loginas";
             this.loginas.Size = new System.Drawing.Size(121, 24);
             this.loginas.TabIndex = 7;
@@ -176,6 +180,33 @@ namespace University_Management_System
             this.panel3.Padding = new System.Windows.Forms.Padding(4);
             this.panel3.Size = new System.Drawing.Size(390, 4);
             this.panel3.TabIndex = 6;
+            // 
+            // showpass
+            // 
+            this.showpass.FlatAppearance.BorderSize = 0;
+            this.showpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.showpass.Image = global::University_Management_System.Properties.Resources.show_password_icon_19;
+            this.showpass.Location = new System.Drawing.Point(391, 98);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(53, 40);
+            this.showpass.TabIndex = 10;
+            this.showpass.UseVisualStyleBackColor = true;
+            this.showpass.Click += new System.EventHandler(this.showpass_Click);
+            // 
+            // hidepass
+            // 
+            this.hidepass.FlatAppearance.BorderSize = 0;
+            this.hidepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.hidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hidepass.Image = global::University_Management_System.Properties.Resources.show_password_icon_182;
+            this.hidepass.Location = new System.Drawing.Point(391, 98);
+            this.hidepass.Name = "hidepass";
+            this.hidepass.Size = new System.Drawing.Size(53, 40);
+            this.hidepass.TabIndex = 9;
+            this.hidepass.UseVisualStyleBackColor = true;
+            this.hidepass.Click += new System.EventHandler(this.hidepass_Click);
             // 
             // Login
             // 
@@ -206,5 +237,7 @@ namespace University_Management_System
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.ComboBox loginas;
+        private System.Windows.Forms.Button hidepass;
+        public System.Windows.Forms.Button showpass;
     }
 }
