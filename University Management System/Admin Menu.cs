@@ -29,8 +29,7 @@ namespace University_Management_System
         }
 
         private void Admin_Menu_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("Rahat ekta Abal!");
+        { 
             Course_LoadData();
             Assign_LoadData();
             Auto_ccode();
@@ -801,8 +800,8 @@ namespace University_Management_System
             DialogResult del = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(del==DialogResult.Yes)
             {
-                con.dataSend("Delete from Teacher_Course where id='" + modTchcode.Text + "' and ccode='" + modCcode.Text + "' and tsemester='" + modSemester + "'");
-                con.dataSend("Delete from Student_Course where tid='" + modTchcode.Text + "' and ccode='" + modCcode.Text + "' and ssemester='" + modSemester + "'");
+                con.dataSend("Delete from Teacher_Course where Teacher_Course.id='" + modTchcode.Text + "' and Teacher_Course.ccode='" + modCcode.Text + "' and Teacher_Course.tsemester='" + modSemester.Text + "'");
+                con.dataSend("Delete from Student_Course where Student_Course.tid='" + modTchcode.Text + "' and Student_Course.ccode='" + modCcode.Text + "' and Student_Course.ssemester='" + modSemester.Text + "'");
                 mod_Tchremove_ClearData();
             }
         }
