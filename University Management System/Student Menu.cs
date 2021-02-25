@@ -171,7 +171,7 @@ namespace University_Management_System
 
         private void StuCourse_LoadData()
         {
-            con.dataGet("Select * from Student_Course,Course where Student_Course.ccode=Course.ccode");
+            con.dataGet("Select * from Student_Course,Course where Student_Course.ccode=Course.ccode and Student_Course.id='" + studentid + "'");
             DataTable stuccourse = new DataTable();
             con.sda.Fill(stuccourse);
           foreach(DataRow row in stuccourse.Rows)
@@ -186,12 +186,13 @@ namespace University_Management_System
                     stu_SelectedCgrid.Rows[n].Cells["stuCYsemestergrid"].Value = row["ssemester"].ToString();
             }
         }
-        string selected;
+        string selected="";
+        string stuSemester = "";
         private void stu_SelectedCgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             selected = stu_SelectedCgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
             //MessageBox.Show(String.Format(selected), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            stuSemester = stu_SelectedCgrid.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void stu_Clearbtn_Click(object sender, EventArgs e)
@@ -202,18 +203,23 @@ namespace University_Management_System
         
         private void stu_Deletebtn_Click(object sender, EventArgs e)
         {
-            DialogResult dl = MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            if(dl==DialogResult.Yes)
+            if(selected!="" && stuSemester!="")
             {
-                con.dataSend("Delete from Student_Course where ccode='" + selected + "'");
-                MessageBox.Show("Course information deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                stu_SelectedCgrid.Rows.Clear();
-                StuCourse_LoadData();
+                DialogResult dl = MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dl == DialogResult.Yes)
+                {
+                    con.dataSend("Delete from Student_Course where ccode='" + selected + "' and Student_Course.id='" + studentid + "' and ssemester='"+stuSemester+"'");
+                    MessageBox.Show("Course information deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    stu_SelectedCgrid.Rows.Clear();
+                    StuCourse_LoadData();
+                    selected = "";
+                    stuSemester = "";
+                }
             }
         }
         private void Stu_CurrentCourse_LoadData()
         {
-            con.dataGet("Select * from Student_Course,Teacher,Course where Student_Course.ccode=Course.ccode and Student_Course.tid=Teacher.id");
+            con.dataGet("Select * from Student_Course,Teacher,Course where Student_Course.ccode=Course.ccode and Student_Course.tid=Teacher.id and Student_Course.id='" + studentid + "'");
             DataTable stucourse = new DataTable();
             con.sda.Fill(stucourse);
             foreach (DataRow row in stucourse.Rows)

@@ -37,8 +37,10 @@ namespace University_Management_System
             Auto_tchcode();
            
         }
+        AutoCompleteStringCollection collc = new AutoCompleteStringCollection();
         public void Auto_ccode()
         {
+            
             con.dataGet("Select ccode from Course"); //  '" +  +"'
                                                      //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestccode = new DataTable();
@@ -49,7 +51,7 @@ namespace University_Management_System
             {
                 for (int i = 0; i < dtsuggestccode.Rows.Count; i++)
                 {
-                    coll.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
+                    collc.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
                 }
             }
             /*else
@@ -58,7 +60,7 @@ namespace University_Management_System
             }*/
             cCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
             cCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cCode2.AutoCompleteCustomSource = coll;
+            cCode2.AutoCompleteCustomSource = collc;
         }
 
         public void Auto_modstuid()
@@ -668,16 +670,20 @@ namespace University_Management_System
         }
         private void mod_stuUpdatebtn_Click(object sender, EventArgs e)
         {
-            if (agerid == mod_stuId.Text)
+            DialogResult stuupdate = MessageBox.Show("Update student information?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (stuupdate == DialogResult.Yes)
             {
-                con.dataSend("Update Student Set sname ='" + mod_stuName.Text + "',sfname='" + mod_stuFname.Text + "',smname='" + mod_stuMname.Text + "',sdob='" + mod_stuDob.Text + "',sbg ='" + mod_stuBg.Text + "',sgender='" + mod_stuGender.Text + "',sreligion='" + mod_stuReligion.Text + "',snationality='" + mod_stuNationality.Text + "',ssection='" + mod_stuSection.Text + "',sprog='" + mod_stuProgram.Text + "',sdept='" + mod_stuDept.Text + "',smobile='" + mod_stuMobile.Text + "' where id = '" + mod_stuId.Text + "'");
-                mod_stuGrid.Rows.Clear();
-                Modstu_LoadData();
-                Modstu_ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Student ID can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (agerid == mod_stuId.Text)
+                {
+                    con.dataSend("Update Student Set sname ='" + mod_stuName.Text + "',sfname='" + mod_stuFname.Text + "',smname='" + mod_stuMname.Text + "',sdob='" + mod_stuDob.Text + "',sbg ='" + mod_stuBg.Text + "',sgender='" + mod_stuGender.Text + "',sreligion='" + mod_stuReligion.Text + "',snationality='" + mod_stuNationality.Text + "',ssection='" + mod_stuSection.Text + "',sprog='" + mod_stuProgram.Text + "',sdept='" + mod_stuDept.Text + "',smobile='" + mod_stuMobile.Text + "' where id = '" + mod_stuId.Text + "'");
+                    mod_stuGrid.Rows.Clear();
+                    Modstu_LoadData();
+                    Modstu_ClearData();
+                }
+                else
+                {
+                    MessageBox.Show("Student ID can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void mod_stuDeletebtn_Click(object sender, EventArgs e)
@@ -696,16 +702,20 @@ namespace University_Management_System
         }
         private void mod_tchUpdatebtn_Click(object sender, EventArgs e)
         {
-            if (agercode == mod_tchCode.Text)
+            DialogResult tchupdate = MessageBox.Show("Update teacher information?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (tchupdate == DialogResult.Yes)
             {
-                con.dataSend("Update Teacher Set tname ='" + mod_tchName.Text + "',tfname='" + mod_tchFname.Text + "',tmname='" + mod_tchMname.Text + "',tdob='" + mod_tchDob.Text + "',tbg ='" + mod_tchBg.Text + "',tgender='" + mod_tchGender.Text + "',treligion='" + mod_tchReligion.Text + "',tnationality='" + mod_tchNationality.Text + "',tposition='" + mod_tchPosition.Text + "',tdept='" + mod_tchDept.Text + "',tmobile='" + mod_tchMobile.Text + "' where id = '" + mod_tchCode.Text + "'");
-                mod_tchGrid.Rows.Clear();
-                modtch_LoadData();
-                modtch_ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Teacher code can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (agercode == mod_tchCode.Text)
+                {
+                    con.dataSend("Update Teacher Set tname ='" + mod_tchName.Text + "',tfname='" + mod_tchFname.Text + "',tmname='" + mod_tchMname.Text + "',tdob='" + mod_tchDob.Text + "',tbg ='" + mod_tchBg.Text + "',tgender='" + mod_tchGender.Text + "',treligion='" + mod_tchReligion.Text + "',tnationality='" + mod_tchNationality.Text + "',tposition='" + mod_tchPosition.Text + "',tdept='" + mod_tchDept.Text + "',tmobile='" + mod_tchMobile.Text + "' where id = '" + mod_tchCode.Text + "'");
+                    mod_tchGrid.Rows.Clear();
+                    modtch_LoadData();
+                    modtch_ClearData();
+                }
+                else
+                {
+                    MessageBox.Show("Teacher code can't be changed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void mod_tchDeletebtn_Click(object sender, EventArgs e)
@@ -783,6 +793,86 @@ namespace University_Management_System
             mod_tchPosition.Text = row.Cells[10].Value.ToString();
             mod_tchDept.Text = row.Cells[11].Value.ToString();
             mod_tchMobile.Text = row.Cells[12].Value.ToString();
+        }
+
+        private void modTchremove_Click(object sender, EventArgs e)
+        {
+            DialogResult del = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(del==DialogResult.Yes)
+            {
+                con.dataSend("Delete from Teacher_Course where id='" + modTchcode.Text + "' and ccode='" + modCcode.Text + "' and tsemester='" + modSemester + "'");
+                mod_Tchremove_ClearData();
+            }
+        }
+        private void mod_Tchremove_ClearData()
+        {
+            modTchcode.Clear();
+            modCcode.Clear();
+            modSemester.Clear();
+        }
+        string srno,Ccode;
+        private void modCoursegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = modCoursegrid.Rows[e.RowIndex];
+            srno = row.Cells[1].Value.ToString();
+            Ccode = modCoursegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            modCtitle2.Text = modCoursegrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+            modCcredit2.Text = modCoursegrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+        }
+
+        private void modCsrch_Click(object sender, EventArgs e)
+        {
+            mod_Course_LoadData();
+            modCcode2.Clear();
+        }
+        private void mod_Course_LoadData()
+        {
+            con.dataGet("Select * from Course where ccode='" + modCcode2.Text + "'");
+            DataTable modCourse = new DataTable();
+            con.sda.Fill(modCourse);
+            modCoursegrid.Rows.Clear();
+            if(modCourse.Rows.Count>0)
+            {
+                foreach(DataRow row in modCourse.Rows)
+                {
+                    int n = modCoursegrid.Rows.Add();
+                    modCoursegrid.Rows[n].Cells["modCserialnogrid"].Value = n + 1;
+                    modCoursegrid.Rows[n].Cells["modCcodegrid"].Value = row["ccode"].ToString();
+                    modCoursegrid.Rows[n].Cells["modCtitlegrid"].Value = row["ctitle"].ToString();
+                    modCoursegrid.Rows[n].Cells["modCcreditgrid"].Value = row["ccredit"].ToString();
+                    modCoursegrid.Rows[n].Cells["modCtypegrid"].Value = row["ctype"].ToString();
+                    modCoursegrid.Rows[n].Cells["modCproggrid"].Value = row["cprogram"].ToString();
+                    modCoursegrid.Rows[n].Cells["modCdeptgrid"].Value = row["cdept"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Course information doesn't exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void modDelete_Course_Click(object sender, EventArgs e)
+        {
+            DialogResult coursedel = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (coursedel == DialogResult.Yes)
+            {
+                con.dataSend("Delete from Course where ccode ='" + modCcode2.Text + "'");
+            }
+        }
+
+        private void modUpdate_Course_Click(object sender, EventArgs e)
+        {
+            DialogResult courseupdate = MessageBox.Show("Update teacher information?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (courseupdate == DialogResult.Yes)
+            {
+                con.dataSend("Update Course set ccode='" + modCcode2.Text + "',ctitle='" + modCtitle2.Text + "',ccredit='" + modCcredit2.Text + "' where ccode='" + Ccode + "'");
+                modCoursegrid.Rows.Clear();
+                mod_Course_LoadData();
+                modCcode2.Clear();
+                modCtitle2.Clear();
+                modCcredit2.Clear();
+            }
         }
     }
 }
