@@ -30,6 +30,7 @@ namespace University_Management_System
 
         private void Admin_Menu_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Rahat ekta Abal!");
             Course_LoadData();
             Assign_LoadData();
             Auto_ccode();
