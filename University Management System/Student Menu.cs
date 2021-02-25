@@ -167,6 +167,7 @@ namespace University_Management_System
             con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
             stu_SelectedCgrid.Rows.Clear();
             StuCourse_LoadData();
+            stu_ViewCgrid.Rows.Clear();
             Stu_CurrentCourse_LoadData();
         }
 
@@ -215,6 +216,7 @@ namespace University_Management_System
                     StuCourse_LoadData();
                     selected = "";
                     stuSemester = "";
+                    stu_ViewCgrid.Rows.Clear();
                     Stu_CurrentCourse_LoadData();
                 }
             }
