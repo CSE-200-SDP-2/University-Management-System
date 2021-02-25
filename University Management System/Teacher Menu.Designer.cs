@@ -51,13 +51,25 @@ namespace University_Management_System
             this.stulist = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tchstuGrid = new System.Windows.Forms.DataGridView();
+            this.stulistserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistintakegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistsectiongrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistproggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stulistmobilegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tchCsemester = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.tchstulistSrchbtn = new System.Windows.Forms.Button();
             this.tchCcode = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.marks = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.insertmarks = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.markInsertbtn = new System.Windows.Forms.Button();
             this.insertMarksstuatten = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.insertMarksstuct = new System.Windows.Forms.TextBox();
@@ -73,15 +85,27 @@ namespace University_Management_System
             this.marksListgrid = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.marksStulistgrid = new System.Windows.Forms.DataGridView();
+            this.insertMslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertMsidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertMsnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertMsintakegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertMssectiongrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertMccodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.marksSrchbtn = new System.Windows.Forms.Button();
+            this.insertMarktsemester = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.insertMarksccode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.modifymarks = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.mod_Markslist = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.mod_Marksclearbtn = new System.Windows.Forms.Button();
+            this.mod_Markssrchbtn = new System.Windows.Forms.Button();
             this.mod_Marksid = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.mod_Marksinsert = new System.Windows.Forms.Button();
             this.mod_Marksatten = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mod_marksct = new System.Windows.Forms.TextBox();
@@ -94,6 +118,8 @@ namespace University_Management_System
             this.panel14 = new System.Windows.Forms.Panel();
             this.res_Grid = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.res_Clearbtn = new System.Windows.Forms.Button();
+            this.res_Srchbtn = new System.Windows.Forms.Button();
             this.res_Ccode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.settings = new System.Windows.Forms.TabPage();
@@ -111,25 +137,14 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tchstulistSrchbtn = new System.Windows.Forms.Button();
-            this.markInsertbtn = new System.Windows.Forms.Button();
-            this.marksClearbtn = new System.Windows.Forms.Button();
-            this.marksSrchbtn = new System.Windows.Forms.Button();
-            this.mod_Marksclearbtn = new System.Windows.Forms.Button();
-            this.mod_Markssrchbtn = new System.Windows.Forms.Button();
-            this.mod_Marksinsert = new System.Windows.Forms.Button();
-            this.res_Clearbtn = new System.Windows.Forms.Button();
-            this.res_Srchbtn = new System.Windows.Forms.Button();
-            this.tchCsemester = new System.Windows.Forms.TextBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.stulistserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistintakegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistsectiongrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistdeptgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistproggrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stulistmobilegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marksidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markmidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markfinalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markof3grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markattendencegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marktotalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markgradegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -403,6 +418,54 @@ namespace University_Management_System
             this.tchstuGrid.Size = new System.Drawing.Size(1318, 249);
             this.tchstuGrid.TabIndex = 0;
             // 
+            // stulistserialnogrid
+            // 
+            this.stulistserialnogrid.HeaderText = "Sl. No.";
+            this.stulistserialnogrid.Name = "stulistserialnogrid";
+            this.stulistserialnogrid.ReadOnly = true;
+            // 
+            // stulistidgrid
+            // 
+            this.stulistidgrid.HeaderText = "ID";
+            this.stulistidgrid.Name = "stulistidgrid";
+            this.stulistidgrid.ReadOnly = true;
+            // 
+            // stulistnamegrid
+            // 
+            this.stulistnamegrid.HeaderText = "Name";
+            this.stulistnamegrid.Name = "stulistnamegrid";
+            this.stulistnamegrid.ReadOnly = true;
+            // 
+            // stulistintakegrid
+            // 
+            this.stulistintakegrid.HeaderText = "Intake";
+            this.stulistintakegrid.Name = "stulistintakegrid";
+            this.stulistintakegrid.ReadOnly = true;
+            // 
+            // stulistsectiongrid
+            // 
+            this.stulistsectiongrid.HeaderText = "Section";
+            this.stulistsectiongrid.Name = "stulistsectiongrid";
+            this.stulistsectiongrid.ReadOnly = true;
+            // 
+            // stulistdeptgrid
+            // 
+            this.stulistdeptgrid.HeaderText = "Department";
+            this.stulistdeptgrid.Name = "stulistdeptgrid";
+            this.stulistdeptgrid.ReadOnly = true;
+            // 
+            // stulistproggrid
+            // 
+            this.stulistproggrid.HeaderText = "Program";
+            this.stulistproggrid.Name = "stulistproggrid";
+            this.stulistproggrid.ReadOnly = true;
+            // 
+            // stulistmobilegrid
+            // 
+            this.stulistmobilegrid.HeaderText = "Mobile";
+            this.stulistmobilegrid.Name = "stulistmobilegrid";
+            this.stulistmobilegrid.ReadOnly = true;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tchCsemester);
@@ -415,6 +478,46 @@ namespace University_Management_System
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 140);
             this.panel4.TabIndex = 0;
+            // 
+            // tchCsemester
+            // 
+            this.tchCsemester.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tchCsemester.BackColor = System.Drawing.Color.Azure;
+            this.tchCsemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tchCsemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tchCsemester.Location = new System.Drawing.Point(797, 57);
+            this.tchCsemester.Name = "tchCsemester";
+            this.tchCsemester.Size = new System.Drawing.Size(152, 24);
+            this.tchCsemester.TabIndex = 50;
+            // 
+            // label72
+            // 
+            this.label72.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label72.AutoSize = true;
+            this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label72.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(686, 58);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(90, 23);
+            this.label72.TabIndex = 49;
+            this.label72.Text = "Semester";
+            // 
+            // tchstulistSrchbtn
+            // 
+            this.tchstulistSrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tchstulistSrchbtn.FlatAppearance.BorderSize = 0;
+            this.tchstulistSrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tchstulistSrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tchstulistSrchbtn.ForeColor = System.Drawing.Color.White;
+            this.tchstulistSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.tchstulistSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tchstulistSrchbtn.Location = new System.Drawing.Point(983, 52);
+            this.tchstulistSrchbtn.Name = "tchstulistSrchbtn";
+            this.tchstulistSrchbtn.Size = new System.Drawing.Size(43, 31);
+            this.tchstulistSrchbtn.TabIndex = 40;
+            this.tchstulistSrchbtn.UseVisualStyleBackColor = true;
+            this.tchstulistSrchbtn.Click += new System.EventHandler(this.tchstulistSrchbtn_Click);
             // 
             // tchCcode
             // 
@@ -494,6 +597,18 @@ namespace University_Management_System
             this.panel8.Size = new System.Drawing.Size(1312, 68);
             this.panel8.TabIndex = 2;
             // 
+            // markInsertbtn
+            // 
+            this.markInsertbtn.FlatAppearance.BorderSize = 0;
+            this.markInsertbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markInsertbtn.Image = global::University_Management_System.Properties.Resources.insert;
+            this.markInsertbtn.Location = new System.Drawing.Point(1247, 15);
+            this.markInsertbtn.Name = "markInsertbtn";
+            this.markInsertbtn.Size = new System.Drawing.Size(43, 38);
+            this.markInsertbtn.TabIndex = 2;
+            this.markInsertbtn.UseVisualStyleBackColor = true;
+            this.markInsertbtn.Click += new System.EventHandler(this.markInsertbtn_Click);
+            // 
             // insertMarksstuatten
             // 
             this.insertMarksstuatten.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -530,7 +645,7 @@ namespace University_Management_System
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Out of 30 :";
+            this.label5.Text = "Out of 25 :";
             // 
             // insertMarksstufinal
             // 
@@ -612,10 +727,22 @@ namespace University_Management_System
             // 
             // marksListgrid
             // 
+            this.marksListgrid.AllowUserToAddRows = false;
+            this.marksListgrid.AllowUserToDeleteRows = false;
             this.marksListgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.marksListgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.markslgrid,
+            this.marksidgrid,
+            this.markmidgrid,
+            this.markfinalgrid,
+            this.markof3grid,
+            this.markattendencegrid,
+            this.marktotalgrid,
+            this.markgradegrid});
             this.marksListgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.marksListgrid.Location = new System.Drawing.Point(0, 0);
             this.marksListgrid.Name = "marksListgrid";
+            this.marksListgrid.ReadOnly = true;
             this.marksListgrid.Size = new System.Drawing.Size(670, 196);
             this.marksListgrid.TabIndex = 0;
             // 
@@ -631,17 +758,71 @@ namespace University_Management_System
             // 
             // marksStulistgrid
             // 
+            this.marksStulistgrid.AllowUserToAddRows = false;
+            this.marksStulistgrid.AllowUserToDeleteRows = false;
             this.marksStulistgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.marksStulistgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.insertMslgrid,
+            this.insertMsidgrid,
+            this.insertMsnamegrid,
+            this.insertMsintakegrid,
+            this.insertMssectiongrid,
+            this.insertMccodegrid});
             this.marksStulistgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.marksStulistgrid.Location = new System.Drawing.Point(0, 0);
             this.marksStulistgrid.Name = "marksStulistgrid";
+            this.marksStulistgrid.ReadOnly = true;
             this.marksStulistgrid.Size = new System.Drawing.Size(670, 196);
             this.marksStulistgrid.TabIndex = 0;
+            this.marksStulistgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.marksStulistgrid_CellContentClick);
+            // 
+            // insertMslgrid
+            // 
+            this.insertMslgrid.HeaderText = "SL. NO.";
+            this.insertMslgrid.Name = "insertMslgrid";
+            this.insertMslgrid.ReadOnly = true;
+            this.insertMslgrid.Width = 105;
+            // 
+            // insertMsidgrid
+            // 
+            this.insertMsidgrid.HeaderText = "ID";
+            this.insertMsidgrid.Name = "insertMsidgrid";
+            this.insertMsidgrid.ReadOnly = true;
+            this.insertMsidgrid.Width = 104;
+            // 
+            // insertMsnamegrid
+            // 
+            this.insertMsnamegrid.HeaderText = "Name";
+            this.insertMsnamegrid.Name = "insertMsnamegrid";
+            this.insertMsnamegrid.ReadOnly = true;
+            this.insertMsnamegrid.Width = 105;
+            // 
+            // insertMsintakegrid
+            // 
+            this.insertMsintakegrid.HeaderText = "Intake";
+            this.insertMsintakegrid.Name = "insertMsintakegrid";
+            this.insertMsintakegrid.ReadOnly = true;
+            this.insertMsintakegrid.Width = 104;
+            // 
+            // insertMssectiongrid
+            // 
+            this.insertMssectiongrid.HeaderText = "Section";
+            this.insertMssectiongrid.Name = "insertMssectiongrid";
+            this.insertMssectiongrid.ReadOnly = true;
+            this.insertMssectiongrid.Width = 105;
+            // 
+            // insertMccodegrid
+            // 
+            this.insertMccodegrid.HeaderText = "Course Code";
+            this.insertMccodegrid.Name = "insertMccodegrid";
+            this.insertMccodegrid.ReadOnly = true;
+            this.insertMccodegrid.Width = 104;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.marksClearbtn);
             this.panel6.Controls.Add(this.marksSrchbtn);
+            this.panel6.Controls.Add(this.insertMarktsemester);
+            this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.insertMarksccode);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -650,13 +831,52 @@ namespace University_Management_System
             this.panel6.Size = new System.Drawing.Size(1312, 78);
             this.panel6.TabIndex = 0;
             // 
+            // marksSrchbtn
+            // 
+            this.marksSrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.marksSrchbtn.FlatAppearance.BorderSize = 0;
+            this.marksSrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.marksSrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.marksSrchbtn.ForeColor = System.Drawing.Color.White;
+            this.marksSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.marksSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.marksSrchbtn.Location = new System.Drawing.Point(1000, 24);
+            this.marksSrchbtn.Name = "marksSrchbtn";
+            this.marksSrchbtn.Size = new System.Drawing.Size(43, 31);
+            this.marksSrchbtn.TabIndex = 44;
+            this.marksSrchbtn.UseVisualStyleBackColor = true;
+            this.marksSrchbtn.Click += new System.EventHandler(this.marksSrchbtn_Click);
+            // 
+            // insertMarktsemester
+            // 
+            this.insertMarktsemester.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.insertMarktsemester.BackColor = System.Drawing.Color.Azure;
+            this.insertMarktsemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.insertMarktsemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertMarktsemester.Location = new System.Drawing.Point(737, 29);
+            this.insertMarktsemester.Name = "insertMarktsemester";
+            this.insertMarktsemester.Size = new System.Drawing.Size(227, 24);
+            this.insertMarktsemester.TabIndex = 42;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(649, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 21);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Semester";
+            // 
             // insertMarksccode
             // 
             this.insertMarksccode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.insertMarksccode.BackColor = System.Drawing.Color.Azure;
             this.insertMarksccode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.insertMarksccode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertMarksccode.Location = new System.Drawing.Point(574, 26);
+            this.insertMarksccode.Location = new System.Drawing.Point(392, 28);
             this.insertMarksccode.Name = "insertMarksccode";
             this.insertMarksccode.Size = new System.Drawing.Size(227, 24);
             this.insertMarksccode.TabIndex = 42;
@@ -667,7 +887,7 @@ namespace University_Management_System
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(435, 27);
+            this.label1.Location = new System.Drawing.Point(270, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 21);
             this.label1.TabIndex = 41;
@@ -724,6 +944,36 @@ namespace University_Management_System
             this.panel11.Size = new System.Drawing.Size(1312, 139);
             this.panel11.TabIndex = 0;
             // 
+            // mod_Marksclearbtn
+            // 
+            this.mod_Marksclearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mod_Marksclearbtn.FlatAppearance.BorderSize = 0;
+            this.mod_Marksclearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.mod_Marksclearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mod_Marksclearbtn.ForeColor = System.Drawing.Color.White;
+            this.mod_Marksclearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.mod_Marksclearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mod_Marksclearbtn.Location = new System.Drawing.Point(745, 54);
+            this.mod_Marksclearbtn.Name = "mod_Marksclearbtn";
+            this.mod_Marksclearbtn.Size = new System.Drawing.Size(43, 31);
+            this.mod_Marksclearbtn.TabIndex = 45;
+            this.mod_Marksclearbtn.UseVisualStyleBackColor = true;
+            // 
+            // mod_Markssrchbtn
+            // 
+            this.mod_Markssrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mod_Markssrchbtn.FlatAppearance.BorderSize = 0;
+            this.mod_Markssrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.mod_Markssrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mod_Markssrchbtn.ForeColor = System.Drawing.Color.White;
+            this.mod_Markssrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.mod_Markssrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mod_Markssrchbtn.Location = new System.Drawing.Point(745, 17);
+            this.mod_Markssrchbtn.Name = "mod_Markssrchbtn";
+            this.mod_Markssrchbtn.Size = new System.Drawing.Size(43, 31);
+            this.mod_Markssrchbtn.TabIndex = 46;
+            this.mod_Markssrchbtn.UseVisualStyleBackColor = true;
+            // 
             // mod_Marksid
             // 
             this.mod_Marksid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -742,6 +992,17 @@ namespace University_Management_System
             this.label11.Size = new System.Drawing.Size(37, 21);
             this.label11.TabIndex = 14;
             this.label11.Text = "ID :";
+            // 
+            // mod_Marksinsert
+            // 
+            this.mod_Marksinsert.FlatAppearance.BorderSize = 0;
+            this.mod_Marksinsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mod_Marksinsert.Image = global::University_Management_System.Properties.Resources.insert;
+            this.mod_Marksinsert.Location = new System.Drawing.Point(1141, 83);
+            this.mod_Marksinsert.Name = "mod_Marksinsert";
+            this.mod_Marksinsert.Size = new System.Drawing.Size(43, 38);
+            this.mod_Marksinsert.TabIndex = 13;
+            this.mod_Marksinsert.UseVisualStyleBackColor = true;
             // 
             // mod_Marksatten
             // 
@@ -859,6 +1120,36 @@ namespace University_Management_System
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(1326, 105);
             this.panel13.TabIndex = 0;
+            // 
+            // res_Clearbtn
+            // 
+            this.res_Clearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_Clearbtn.FlatAppearance.BorderSize = 0;
+            this.res_Clearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.res_Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.res_Clearbtn.ForeColor = System.Drawing.Color.White;
+            this.res_Clearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.res_Clearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.res_Clearbtn.Location = new System.Drawing.Point(842, 55);
+            this.res_Clearbtn.Name = "res_Clearbtn";
+            this.res_Clearbtn.Size = new System.Drawing.Size(43, 31);
+            this.res_Clearbtn.TabIndex = 47;
+            this.res_Clearbtn.UseVisualStyleBackColor = true;
+            // 
+            // res_Srchbtn
+            // 
+            this.res_Srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_Srchbtn.FlatAppearance.BorderSize = 0;
+            this.res_Srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.res_Srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.res_Srchbtn.ForeColor = System.Drawing.Color.White;
+            this.res_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.res_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.res_Srchbtn.Location = new System.Drawing.Point(842, 18);
+            this.res_Srchbtn.Name = "res_Srchbtn";
+            this.res_Srchbtn.Size = new System.Drawing.Size(43, 31);
+            this.res_Srchbtn.TabIndex = 48;
+            this.res_Srchbtn.UseVisualStyleBackColor = true;
             // 
             // res_Ccode
             // 
@@ -1039,206 +1330,53 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 0;
             // 
-            // tchstulistSrchbtn
+            // markslgrid
             // 
-            this.tchstulistSrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tchstulistSrchbtn.FlatAppearance.BorderSize = 0;
-            this.tchstulistSrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tchstulistSrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tchstulistSrchbtn.ForeColor = System.Drawing.Color.White;
-            this.tchstulistSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.tchstulistSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tchstulistSrchbtn.Location = new System.Drawing.Point(983, 52);
-            this.tchstulistSrchbtn.Name = "tchstulistSrchbtn";
-            this.tchstulistSrchbtn.Size = new System.Drawing.Size(43, 31);
-            this.tchstulistSrchbtn.TabIndex = 40;
-            this.tchstulistSrchbtn.UseVisualStyleBackColor = true;
-            this.tchstulistSrchbtn.Click += new System.EventHandler(this.tchstulistSrchbtn_Click);
+            this.markslgrid.HeaderText = "SL. No.";
+            this.markslgrid.Name = "markslgrid";
+            this.markslgrid.ReadOnly = true;
             // 
-            // markInsertbtn
+            // marksidgrid
             // 
-            this.markInsertbtn.FlatAppearance.BorderSize = 0;
-            this.markInsertbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.markInsertbtn.Image = global::University_Management_System.Properties.Resources.insert;
-            this.markInsertbtn.Location = new System.Drawing.Point(1247, 15);
-            this.markInsertbtn.Name = "markInsertbtn";
-            this.markInsertbtn.Size = new System.Drawing.Size(43, 38);
-            this.markInsertbtn.TabIndex = 2;
-            this.markInsertbtn.UseVisualStyleBackColor = true;
+            this.marksidgrid.HeaderText = "ID";
+            this.marksidgrid.Name = "marksidgrid";
+            this.marksidgrid.ReadOnly = true;
             // 
-            // marksClearbtn
+            // markmidgrid
             // 
-            this.marksClearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.marksClearbtn.FlatAppearance.BorderSize = 0;
-            this.marksClearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.marksClearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.marksClearbtn.ForeColor = System.Drawing.Color.White;
-            this.marksClearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.marksClearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.marksClearbtn.Location = new System.Drawing.Point(835, 42);
-            this.marksClearbtn.Name = "marksClearbtn";
-            this.marksClearbtn.Size = new System.Drawing.Size(43, 31);
-            this.marksClearbtn.TabIndex = 43;
-            this.marksClearbtn.UseVisualStyleBackColor = true;
+            this.markmidgrid.HeaderText = "Mid Exam";
+            this.markmidgrid.Name = "markmidgrid";
+            this.markmidgrid.ReadOnly = true;
             // 
-            // marksSrchbtn
+            // markfinalgrid
             // 
-            this.marksSrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.marksSrchbtn.FlatAppearance.BorderSize = 0;
-            this.marksSrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.marksSrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.marksSrchbtn.ForeColor = System.Drawing.Color.White;
-            this.marksSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.marksSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.marksSrchbtn.Location = new System.Drawing.Point(835, 5);
-            this.marksSrchbtn.Name = "marksSrchbtn";
-            this.marksSrchbtn.Size = new System.Drawing.Size(43, 31);
-            this.marksSrchbtn.TabIndex = 44;
-            this.marksSrchbtn.UseVisualStyleBackColor = true;
-            this.marksSrchbtn.Click += new System.EventHandler(this.button2_Click);
+            this.markfinalgrid.HeaderText = "Final Exam";
+            this.markfinalgrid.Name = "markfinalgrid";
+            this.markfinalgrid.ReadOnly = true;
             // 
-            // mod_Marksclearbtn
+            // markof3grid
             // 
-            this.mod_Marksclearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mod_Marksclearbtn.FlatAppearance.BorderSize = 0;
-            this.mod_Marksclearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.mod_Marksclearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mod_Marksclearbtn.ForeColor = System.Drawing.Color.White;
-            this.mod_Marksclearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.mod_Marksclearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mod_Marksclearbtn.Location = new System.Drawing.Point(745, 54);
-            this.mod_Marksclearbtn.Name = "mod_Marksclearbtn";
-            this.mod_Marksclearbtn.Size = new System.Drawing.Size(43, 31);
-            this.mod_Marksclearbtn.TabIndex = 45;
-            this.mod_Marksclearbtn.UseVisualStyleBackColor = true;
+            this.markof3grid.HeaderText = "Out of 25";
+            this.markof3grid.Name = "markof3grid";
+            this.markof3grid.ReadOnly = true;
             // 
-            // mod_Markssrchbtn
+            // markattendencegrid
             // 
-            this.mod_Markssrchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mod_Markssrchbtn.FlatAppearance.BorderSize = 0;
-            this.mod_Markssrchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.mod_Markssrchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mod_Markssrchbtn.ForeColor = System.Drawing.Color.White;
-            this.mod_Markssrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.mod_Markssrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mod_Markssrchbtn.Location = new System.Drawing.Point(745, 17);
-            this.mod_Markssrchbtn.Name = "mod_Markssrchbtn";
-            this.mod_Markssrchbtn.Size = new System.Drawing.Size(43, 31);
-            this.mod_Markssrchbtn.TabIndex = 46;
-            this.mod_Markssrchbtn.UseVisualStyleBackColor = true;
+            this.markattendencegrid.HeaderText = "Attendence";
+            this.markattendencegrid.Name = "markattendencegrid";
+            this.markattendencegrid.ReadOnly = true;
             // 
-            // mod_Marksinsert
+            // marktotalgrid
             // 
-            this.mod_Marksinsert.FlatAppearance.BorderSize = 0;
-            this.mod_Marksinsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mod_Marksinsert.Image = global::University_Management_System.Properties.Resources.insert;
-            this.mod_Marksinsert.Location = new System.Drawing.Point(1141, 83);
-            this.mod_Marksinsert.Name = "mod_Marksinsert";
-            this.mod_Marksinsert.Size = new System.Drawing.Size(43, 38);
-            this.mod_Marksinsert.TabIndex = 13;
-            this.mod_Marksinsert.UseVisualStyleBackColor = true;
+            this.marktotalgrid.HeaderText = "Total";
+            this.marktotalgrid.Name = "marktotalgrid";
+            this.marktotalgrid.ReadOnly = true;
             // 
-            // res_Clearbtn
+            // markgradegrid
             // 
-            this.res_Clearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_Clearbtn.FlatAppearance.BorderSize = 0;
-            this.res_Clearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.res_Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.res_Clearbtn.ForeColor = System.Drawing.Color.White;
-            this.res_Clearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.res_Clearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_Clearbtn.Location = new System.Drawing.Point(842, 55);
-            this.res_Clearbtn.Name = "res_Clearbtn";
-            this.res_Clearbtn.Size = new System.Drawing.Size(43, 31);
-            this.res_Clearbtn.TabIndex = 47;
-            this.res_Clearbtn.UseVisualStyleBackColor = true;
-            // 
-            // res_Srchbtn
-            // 
-            this.res_Srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_Srchbtn.FlatAppearance.BorderSize = 0;
-            this.res_Srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.res_Srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.res_Srchbtn.ForeColor = System.Drawing.Color.White;
-            this.res_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.res_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_Srchbtn.Location = new System.Drawing.Point(842, 18);
-            this.res_Srchbtn.Name = "res_Srchbtn";
-            this.res_Srchbtn.Size = new System.Drawing.Size(43, 31);
-            this.res_Srchbtn.TabIndex = 48;
-            this.res_Srchbtn.UseVisualStyleBackColor = true;
-            // 
-            // tchCsemester
-            // 
-            this.tchCsemester.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tchCsemester.BackColor = System.Drawing.Color.Azure;
-            this.tchCsemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tchCsemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCsemester.Location = new System.Drawing.Point(797, 57);
-            this.tchCsemester.Name = "tchCsemester";
-            this.tchCsemester.Size = new System.Drawing.Size(152, 24);
-            this.tchCsemester.TabIndex = 50;
-            // 
-            // label72
-            // 
-            this.label72.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label72.AutoSize = true;
-            this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label72.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(686, 58);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(90, 23);
-            this.label72.TabIndex = 49;
-            this.label72.Text = "Semester";
-            // 
-            // stulistserialnogrid
-            // 
-            this.stulistserialnogrid.HeaderText = "Sl. No.";
-            this.stulistserialnogrid.Name = "stulistserialnogrid";
-            this.stulistserialnogrid.ReadOnly = true;
-            // 
-            // stulistidgrid
-            // 
-            this.stulistidgrid.HeaderText = "ID";
-            this.stulistidgrid.Name = "stulistidgrid";
-            this.stulistidgrid.ReadOnly = true;
-            // 
-            // stulistnamegrid
-            // 
-            this.stulistnamegrid.HeaderText = "Name";
-            this.stulistnamegrid.Name = "stulistnamegrid";
-            this.stulistnamegrid.ReadOnly = true;
-            // 
-            // stulistintakegrid
-            // 
-            this.stulistintakegrid.HeaderText = "Intake";
-            this.stulistintakegrid.Name = "stulistintakegrid";
-            this.stulistintakegrid.ReadOnly = true;
-            // 
-            // stulistsectiongrid
-            // 
-            this.stulistsectiongrid.HeaderText = "Section";
-            this.stulistsectiongrid.Name = "stulistsectiongrid";
-            this.stulistsectiongrid.ReadOnly = true;
-            // 
-            // stulistdeptgrid
-            // 
-            this.stulistdeptgrid.HeaderText = "Department";
-            this.stulistdeptgrid.Name = "stulistdeptgrid";
-            this.stulistdeptgrid.ReadOnly = true;
-            // 
-            // stulistproggrid
-            // 
-            this.stulistproggrid.HeaderText = "Program";
-            this.stulistproggrid.Name = "stulistproggrid";
-            this.stulistproggrid.ReadOnly = true;
-            // 
-            // stulistmobilegrid
-            // 
-            this.stulistmobilegrid.HeaderText = "Mobile";
-            this.stulistmobilegrid.Name = "stulistmobilegrid";
-            this.stulistmobilegrid.ReadOnly = true;
+            this.markgradegrid.HeaderText = "Grade";
+            this.markgradegrid.Name = "markgradegrid";
+            this.markgradegrid.ReadOnly = true;
             // 
             // Teacher_Menu
             // 
@@ -1324,14 +1462,12 @@ namespace University_Management_System
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button marksClearbtn;
         private System.Windows.Forms.Button marksSrchbtn;
         private System.Windows.Forms.TextBox insertMarksccode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DataGridView marksListgrid;
-        private System.Windows.Forms.DataGridView marksStulistgrid;
         private System.Windows.Forms.TextBox insertMarksstuatten;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox insertMarksstuct;
@@ -1401,5 +1537,22 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn stulistdeptgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stulistproggrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stulistmobilegrid;
+        private System.Windows.Forms.TextBox insertMarktsemester;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMslgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMsidgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMsnamegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMsintakegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMssectiongrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertMccodegrid;
+        public System.Windows.Forms.DataGridView marksStulistgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markslgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marksidgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markmidgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markfinalgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markof3grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markattendencegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marktotalgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markgradegrid;
     }
 }
