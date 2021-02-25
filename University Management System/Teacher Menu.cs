@@ -116,7 +116,7 @@ namespace University_Management_System
             }
             if (tabControl1.SelectedIndex == 0 && tabControl3.SelectedIndex == 0)
             {
-                if (tchClist.Rows.Count ==0)
+                if (tchClist.Rows.Count == null)
                 {
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -155,7 +155,7 @@ namespace University_Management_System
         {
             if(tabControl1.SelectedIndex==0 && tabControl3.SelectedIndex==0)
             {
-                if (tchClist.Rows.Count <2)
+                if (tchClist.Rows.Count == null)
                 {
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -166,7 +166,7 @@ namespace University_Management_System
         {
             if(tabControl3.SelectedIndex==0)
             {
-                if (tchClist.Rows.Count <2)
+                if (tchClist.Rows.Count  == null)
                 {
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
