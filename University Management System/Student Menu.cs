@@ -150,7 +150,7 @@ namespace University_Management_System
             stu_Ccode.Clear();
             stu_Csemester.Clear();
         }
-        string coursecode;
+        string coursecode="";
         public void stu_Availablegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -162,13 +162,17 @@ namespace University_Management_System
 
         private void stu_CSelectbtn_Click(object sender, EventArgs e)
         {
-            string variables = "id,ccode,ssemester,tid";
-            string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + teacherid + "'";
-            con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
-            stu_SelectedCgrid.Rows.Clear();
-            StuCourse_LoadData();
-            stu_ViewCgrid.Rows.Clear();
-            Stu_CurrentCourse_LoadData();
+            if (coursecode != "")
+            {
+                string variables = "id,ccode,ssemester,tid";
+                string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + teacherid + "'";
+                con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
+                stu_SelectedCgrid.Rows.Clear();
+                coursecode = "";
+                StuCourse_LoadData();
+                stu_ViewCgrid.Rows.Clear();
+                Stu_CurrentCourse_LoadData();
+            }
         }
 
         private void StuCourse_LoadData()

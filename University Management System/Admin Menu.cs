@@ -801,6 +801,7 @@ namespace University_Management_System
             if(del==DialogResult.Yes)
             {
                 con.dataSend("Delete from Teacher_Course where id='" + modTchcode.Text + "' and ccode='" + modCcode.Text + "' and tsemester='" + modSemester + "'");
+                con.dataSend("Delete from Student_Course where tid='" + modTchcode.Text + "' and ccode='" + modCcode.Text + "' and ssemester='" + modSemester + "'");
                 mod_Tchremove_ClearData();
             }
         }
@@ -815,6 +816,7 @@ namespace University_Management_System
         {
             DataGridViewRow row = modCoursegrid.Rows[e.RowIndex];
             srno = row.Cells[1].Value.ToString();
+            modCcode2.Text= modCoursegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             Ccode = modCoursegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             modCtitle2.Text = modCoursegrid.Rows[e.RowIndex].Cells[2].Value.ToString();
             modCcredit2.Text = modCoursegrid.Rows[e.RowIndex].Cells[3].Value.ToString();
