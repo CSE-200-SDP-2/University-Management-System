@@ -368,6 +368,9 @@ namespace University_Management_System
                                 con.dataSend("Update Teacher Set pass='" + set_Newpass.Text + "' where id='" + tchcode + "'");
                                 con.dataSend("insert into Forgot_Pass(" + var + ") values(" + val + ")");
                                 MessageBox.Show("Password changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                set_Conpass.Clear();
+                                set_Newpass.Clear();
+                                set_Oldpass.Clear();
                             }
                         }
                         else
