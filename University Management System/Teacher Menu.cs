@@ -324,5 +324,119 @@ namespace University_Management_System
                 MessageBox.Show("There is no Marks inserted yet.","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        private void tch_Showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tch_Showpass.Checked) //show pass clicked 
+            {
+                set_Oldpass.UseSystemPasswordChar = false;
+                set_Newpass.UseSystemPasswordChar = false;
+                set_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                set_Oldpass.UseSystemPasswordChar = true;
+                set_Newpass.UseSystemPasswordChar = true;
+                set_Conpass.UseSystemPasswordChar = true;
+            }
+        }
+        private void tch_Setconfirmbtn_Click(object sender, EventArgs e)
+        {
+            if (set_Newpass.Text != "" && set_Conpass.Text != "") 
+            {
+                con.dataGet("select * from Teacher Where id = '" + tchcode + "' and pass = '" + set_Oldpass.Text + "'");
+                DataTable oc = new DataTable();
+                con.sda.Fill(oc);
+
+                if(oc.Rows.Count > 0)
+                {
+                    if(set_Newpass.Text == set_Conpass.Text)
+                    {
+                        if (set_Newpass.Text != "" + tchcode + "bubt" && set_Conpass.Text != "" + tchcode + "bubt")
+                        {
+                            con.dataGet("select * from Forgot_Pass where fid = '" + tchcode + "' and fpass = '" + set_Conpass.Text + "'");
+                            DataTable dc = new DataTable();
+                            con.sda.Fill(dc);
+                            if (dc.Rows.Count > 0)
+                            {
+                                MessageBox.Show("Old password can't be used again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                string var = "fid,fpass";
+                                string val = "'" + tchcode + "','" + set_Newpass.Text + "'";
+                                con.dataSend("Update Teacher Set pass='" + set_Newpass.Text + "' where id='" + tchcode + "'");
+                                con.dataSend("insert into Forgot_Pass(" + var + ") values(" + val + ")");
+                                MessageBox.Show("Password changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Old password can't be used again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password doesn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Old password doesn't match!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("New Password and Confirm Password can't be blank!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void set_Oldpass_TextChanged(object sender, EventArgs e)
+        {
+            if (tch_Showpass.Checked) //show pass clicked 
+            {
+                set_Oldpass.UseSystemPasswordChar = false;
+                //set_Newpass.UseSystemPasswordChar = false;
+                //set_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                set_Oldpass.UseSystemPasswordChar = true;
+                //set_Newpass.UseSystemPasswordChar = true;
+                //set_Conpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void set_Newpass_TextChanged(object sender, EventArgs e)
+        {
+            if (tch_Showpass.Checked) //show pass clicked 
+            {
+                //set_Oldpass.UseSystemPasswordChar = false;
+                set_Newpass.UseSystemPasswordChar = false;
+                //set_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                //set_Oldpass.UseSystemPasswordChar = true;
+                set_Newpass.UseSystemPasswordChar = true;
+                //set_Conpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void set_Conpass_TextChanged(object sender, EventArgs e)
+        {
+            if (tch_Showpass.Checked) //show pass clicked 
+            {
+                //set_Oldpass.UseSystemPasswordChar = false;
+                //set_Newpass.UseSystemPasswordChar = false;
+                set_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                //set_Oldpass.UseSystemPasswordChar = true;
+                //set_Newpass.UseSystemPasswordChar = true;
+                set_Conpass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

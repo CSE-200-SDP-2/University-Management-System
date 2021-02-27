@@ -135,7 +135,7 @@ namespace University_Management_System
             this.settings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.tch_Setconfimbtn = new System.Windows.Forms.Button();
+            this.tch_Setconfirmbtn = new System.Windows.Forms.Button();
             this.tch_Showpass = new System.Windows.Forms.CheckBox();
             this.set_Oldpass = new System.Windows.Forms.TextBox();
             this.set_Newpass = new System.Windows.Forms.TextBox();
@@ -385,7 +385,7 @@ namespace University_Management_System
             this.stulist.Controls.Add(this.panel4);
             this.stulist.Location = new System.Drawing.Point(4, 30);
             this.stulist.Name = "stulist";
-            this.stulist.Size = new System.Drawing.Size(1318, 348);
+            this.stulist.Size = new System.Drawing.Size(1246, 396);
             this.stulist.TabIndex = 1;
             this.stulist.Text = "Student List";
             // 
@@ -393,9 +393,9 @@ namespace University_Management_System
             // 
             this.panel5.Controls.Add(this.tchstuGrid);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 99);
+            this.panel5.Location = new System.Drawing.Point(0, 147);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1318, 249);
+            this.panel5.Size = new System.Drawing.Size(1246, 249);
             this.panel5.TabIndex = 1;
             // 
             // tchstuGrid
@@ -417,7 +417,7 @@ namespace University_Management_System
             this.tchstuGrid.Location = new System.Drawing.Point(0, 0);
             this.tchstuGrid.Name = "tchstuGrid";
             this.tchstuGrid.ReadOnly = true;
-            this.tchstuGrid.Size = new System.Drawing.Size(1318, 249);
+            this.tchstuGrid.Size = new System.Drawing.Size(1246, 249);
             this.tchstuGrid.TabIndex = 0;
             // 
             // stulistserialnogrid
@@ -478,7 +478,7 @@ namespace University_Management_System
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1318, 140);
+            this.panel4.Size = new System.Drawing.Size(1246, 140);
             this.panel4.TabIndex = 0;
             // 
             // tchCsemester
@@ -487,7 +487,7 @@ namespace University_Management_System
             this.tchCsemester.BackColor = System.Drawing.Color.Azure;
             this.tchCsemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchCsemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCsemester.Location = new System.Drawing.Point(797, 57);
+            this.tchCsemester.Location = new System.Drawing.Point(761, 57);
             this.tchCsemester.Name = "tchCsemester";
             this.tchCsemester.Size = new System.Drawing.Size(152, 24);
             this.tchCsemester.TabIndex = 50;
@@ -499,7 +499,7 @@ namespace University_Management_System
             this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label72.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(686, 58);
+            this.label72.Location = new System.Drawing.Point(650, 58);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(90, 23);
             this.label72.TabIndex = 49;
@@ -514,7 +514,7 @@ namespace University_Management_System
             this.tchstulistSrchbtn.ForeColor = System.Drawing.Color.White;
             this.tchstulistSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
             this.tchstulistSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tchstulistSrchbtn.Location = new System.Drawing.Point(983, 52);
+            this.tchstulistSrchbtn.Location = new System.Drawing.Point(947, 52);
             this.tchstulistSrchbtn.Name = "tchstulistSrchbtn";
             this.tchstulistSrchbtn.Size = new System.Drawing.Size(43, 31);
             this.tchstulistSrchbtn.TabIndex = 40;
@@ -527,7 +527,7 @@ namespace University_Management_System
             this.tchCcode.BackColor = System.Drawing.Color.Azure;
             this.tchCcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchCcode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCcode.Location = new System.Drawing.Point(432, 57);
+            this.tchCcode.Location = new System.Drawing.Point(396, 57);
             this.tchCcode.Name = "tchCcode";
             this.tchCcode.Size = new System.Drawing.Size(227, 24);
             this.tchCcode.TabIndex = 20;
@@ -538,7 +538,7 @@ namespace University_Management_System
             this.label67.AutoSize = true;
             this.label67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(293, 58);
+            this.label67.Location = new System.Drawing.Point(257, 58);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(105, 21);
             this.label67.TabIndex = 19;
@@ -1273,7 +1273,7 @@ namespace University_Management_System
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.tch_Setconfimbtn);
+            this.panel15.Controls.Add(this.tch_Setconfirmbtn);
             this.panel15.Controls.Add(this.tch_Showpass);
             this.panel15.Controls.Add(this.set_Oldpass);
             this.panel15.Controls.Add(this.set_Newpass);
@@ -1290,17 +1290,18 @@ namespace University_Management_System
             this.panel15.Size = new System.Drawing.Size(417, 238);
             this.panel15.TabIndex = 1;
             // 
-            // tch_Setconfimbtn
+            // tch_Setconfirmbtn
             // 
-            this.tch_Setconfimbtn.FlatAppearance.BorderSize = 0;
-            this.tch_Setconfimbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.tch_Setconfimbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tch_Setconfimbtn.Location = new System.Drawing.Point(282, 191);
-            this.tch_Setconfimbtn.Name = "tch_Setconfimbtn";
-            this.tch_Setconfimbtn.Size = new System.Drawing.Size(108, 31);
-            this.tch_Setconfimbtn.TabIndex = 4;
-            this.tch_Setconfimbtn.Text = "Confirm";
-            this.tch_Setconfimbtn.UseVisualStyleBackColor = true;
+            this.tch_Setconfirmbtn.FlatAppearance.BorderSize = 0;
+            this.tch_Setconfirmbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.tch_Setconfirmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tch_Setconfirmbtn.Location = new System.Drawing.Point(282, 191);
+            this.tch_Setconfirmbtn.Name = "tch_Setconfirmbtn";
+            this.tch_Setconfirmbtn.Size = new System.Drawing.Size(108, 31);
+            this.tch_Setconfirmbtn.TabIndex = 4;
+            this.tch_Setconfirmbtn.Text = "Confirm";
+            this.tch_Setconfirmbtn.UseVisualStyleBackColor = true;
+            this.tch_Setconfirmbtn.Click += new System.EventHandler(this.tch_Setconfirmbtn_Click);
             // 
             // tch_Showpass
             // 
@@ -1312,6 +1313,7 @@ namespace University_Management_System
             this.tch_Showpass.TabIndex = 3;
             this.tch_Showpass.Text = "Show Password";
             this.tch_Showpass.UseVisualStyleBackColor = true;
+            this.tch_Showpass.CheckedChanged += new System.EventHandler(this.tch_Showpass_CheckedChanged);
             // 
             // set_Oldpass
             // 
@@ -1322,6 +1324,7 @@ namespace University_Management_System
             this.set_Oldpass.Name = "set_Oldpass";
             this.set_Oldpass.Size = new System.Drawing.Size(240, 20);
             this.set_Oldpass.TabIndex = 2;
+            this.set_Oldpass.TextChanged += new System.EventHandler(this.set_Oldpass_TextChanged);
             // 
             // set_Newpass
             // 
@@ -1332,6 +1335,7 @@ namespace University_Management_System
             this.set_Newpass.Name = "set_Newpass";
             this.set_Newpass.Size = new System.Drawing.Size(234, 20);
             this.set_Newpass.TabIndex = 2;
+            this.set_Newpass.TextChanged += new System.EventHandler(this.set_Newpass_TextChanged);
             // 
             // set_Conpass
             // 
@@ -1342,6 +1346,7 @@ namespace University_Management_System
             this.set_Conpass.Name = "set_Conpass";
             this.set_Conpass.Size = new System.Drawing.Size(214, 20);
             this.set_Conpass.TabIndex = 2;
+            this.set_Conpass.TextChanged += new System.EventHandler(this.set_Conpass_TextChanged);
             // 
             // panel18
             // 
@@ -1536,7 +1541,7 @@ namespace University_Management_System
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button tch_Setconfimbtn;
+        private System.Windows.Forms.Button tch_Setconfirmbtn;
         private System.Windows.Forms.CheckBox tch_Showpass;
         private System.Windows.Forms.TextBox set_Oldpass;
         private System.Windows.Forms.TextBox set_Newpass;
