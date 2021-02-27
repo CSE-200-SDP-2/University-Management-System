@@ -40,8 +40,12 @@ namespace University_Management_System
             {
                 if (newPasscon.Text != "" + username + "bubt")
                 {
-                    con.dataSend("Update Student Set pass='" + newPasscon.Text + "' where id='"+username+"'");
+                    string var = "fid,fpass";
+                    string val = "'" + username + "','" + newPass.Text + "'";
+                    con.dataSend("Update "+user+" Set pass='" + newPasscon.Text + "' where id='"+username+"'");
+                    con.dataSend("insert into Forgot_Pass(" + var + ") values(" + val + ")");
                     MessageBox.Show("Password changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.mainForm.logoutbtn.Show();
                     if (user == "Teacher")
                     {
                         this.mainForm.openChildForm(new Teacher_Menu(mainForm));

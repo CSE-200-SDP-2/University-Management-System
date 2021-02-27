@@ -35,12 +35,13 @@ namespace University_Management_System
             this.aname = new System.Windows.Forms.TextBox();
             this.apass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.showpass = new System.Windows.Forms.Button();
-            this.hidepass = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.loginas = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.FPassbtn = new System.Windows.Forms.Button();
+            this.showpass = new System.Windows.Forms.Button();
+            this.hidepass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +117,7 @@ namespace University_Management_System
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.FPassbtn);
             this.panel1.Controls.Add(this.showpass);
             this.panel1.Controls.Add(this.hidepass);
             this.panel1.Controls.Add(this.label3);
@@ -131,33 +133,6 @@ namespace University_Management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 271);
             this.panel1.TabIndex = 5;
-            // 
-            // showpass
-            // 
-            this.showpass.FlatAppearance.BorderSize = 0;
-            this.showpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showpass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.showpass.Image = global::University_Management_System.Properties.Resources.show_password_icon_19;
-            this.showpass.Location = new System.Drawing.Point(391, 98);
-            this.showpass.Name = "showpass";
-            this.showpass.Size = new System.Drawing.Size(53, 40);
-            this.showpass.TabIndex = 10;
-            this.showpass.UseVisualStyleBackColor = true;
-            this.showpass.Click += new System.EventHandler(this.showpass_Click);
-            // 
-            // hidepass
-            // 
-            this.hidepass.FlatAppearance.BorderSize = 0;
-            this.hidepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.hidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hidepass.Image = global::University_Management_System.Properties.Resources.show_password_icon_182;
-            this.hidepass.Location = new System.Drawing.Point(391, 98);
-            this.hidepass.Name = "hidepass";
-            this.hidepass.Size = new System.Drawing.Size(53, 40);
-            this.hidepass.TabIndex = 9;
-            this.hidepass.UseVisualStyleBackColor = true;
-            this.hidepass.Click += new System.EventHandler(this.hidepass_Click);
             // 
             // label3
             // 
@@ -208,6 +183,49 @@ namespace University_Management_System
             this.panel3.Size = new System.Drawing.Size(390, 4);
             this.panel3.TabIndex = 6;
             // 
+            // FPassbtn
+            // 
+            this.FPassbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FPassbtn.FlatAppearance.BorderSize = 0;
+            this.FPassbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.FPassbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FPassbtn.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FPassbtn.ForeColor = System.Drawing.Color.White;
+            this.FPassbtn.Location = new System.Drawing.Point(55, 214);
+            this.FPassbtn.Name = "FPassbtn";
+            this.FPassbtn.Size = new System.Drawing.Size(149, 28);
+            this.FPassbtn.TabIndex = 13;
+            this.FPassbtn.Text = "Forgot Password ?";
+            this.FPassbtn.UseVisualStyleBackColor = true;
+            this.FPassbtn.Click += new System.EventHandler(this.FPassbtn_Click);
+            // 
+            // showpass
+            // 
+            this.showpass.FlatAppearance.BorderSize = 0;
+            this.showpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.showpass.Image = global::University_Management_System.Properties.Resources.show_password_icon_19;
+            this.showpass.Location = new System.Drawing.Point(391, 98);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(53, 40);
+            this.showpass.TabIndex = 10;
+            this.showpass.UseVisualStyleBackColor = true;
+            this.showpass.Click += new System.EventHandler(this.showpass_Click);
+            // 
+            // hidepass
+            // 
+            this.hidepass.FlatAppearance.BorderSize = 0;
+            this.hidepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.hidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hidepass.Image = global::University_Management_System.Properties.Resources.show_password_icon_182;
+            this.hidepass.Location = new System.Drawing.Point(391, 98);
+            this.hidepass.Name = "hidepass";
+            this.hidepass.Size = new System.Drawing.Size(53, 40);
+            this.hidepass.TabIndex = 9;
+            this.hidepass.UseVisualStyleBackColor = true;
+            this.hidepass.Click += new System.EventHandler(this.hidepass_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,5 +257,6 @@ namespace University_Management_System
         public System.Windows.Forms.ComboBox loginas;
         private System.Windows.Forms.Button hidepass;
         public System.Windows.Forms.Button showpass;
+        private System.Windows.Forms.Button FPassbtn;
     }
 }

@@ -91,7 +91,7 @@ namespace University_Management_System
 
         public void logoutbtn_Click(object sender, EventArgs e)
         {
-            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Admin_Menu" || x.Name == "Student_Menu" || x.Name == "Teacher_Menu").ToArray();
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Admin_Menu" || x.Name == "Student_Menu" || x.Name == "Teacher_Menu" || x.Name == "Change_Password" || x.Name == "Forget_password").ToArray();
             foreach (Form openForm in formsList)
             {
                 openForm.Close();

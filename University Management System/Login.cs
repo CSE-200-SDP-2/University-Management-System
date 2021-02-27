@@ -15,6 +15,7 @@ namespace University_Management_System
     public partial class Login : Form
     {
         //string table;
+        DBAccess con = new DBAccess();
         public Login()
         {
             InitializeComponent();
@@ -124,6 +125,31 @@ namespace University_Management_System
             }
             else
                 apass.UseSystemPasswordChar = false;
+        }
+
+        private void FPassbtn_Click(object sender, EventArgs e)
+        {
+            if (loginas.SelectedIndex > -1)
+            {
+                con.dataGet("Select * from " + loginas.Text + " where id = '" + aname.Text + "'");
+                DataTable cc = new DataTable();
+                con.sda.Fill(cc);
+                if (cc.Rows.Count > 0)
+                {
+                    User.user = loginas.Text;
+                    UserName.username = aname.Text;
+                    this.mainForm.openChildForm(new Forget_password(mainForm));
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Enter a correct username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an User!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     
