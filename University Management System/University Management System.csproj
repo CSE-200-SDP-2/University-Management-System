@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Change Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change Password.Designer.cs">
+      <DependentUpon>Change Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBAccess.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -80,9 +86,13 @@
       <DependentUpon>Teacher Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherCode.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Username.cs" />
     <EmbeddedResource Include="Admin Menu.resx">
       <DependentUpon>Admin Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change Password.resx">
+      <DependentUpon>Change Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

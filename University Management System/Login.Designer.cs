@@ -35,12 +35,12 @@ namespace University_Management_System
             this.aname = new System.Windows.Forms.TextBox();
             this.apass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showpass = new System.Windows.Forms.Button();
+            this.hidepass = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.loginas = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.showpass = new System.Windows.Forms.Button();
-            this.hidepass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,10 +127,37 @@ namespace University_Management_System
             this.panel1.Controls.Add(this.aloginbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(419, 138);
+            this.panel1.Location = new System.Drawing.Point(394, 138);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 271);
             this.panel1.TabIndex = 5;
+            // 
+            // showpass
+            // 
+            this.showpass.FlatAppearance.BorderSize = 0;
+            this.showpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.showpass.Image = global::University_Management_System.Properties.Resources.show_password_icon_19;
+            this.showpass.Location = new System.Drawing.Point(391, 98);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(53, 40);
+            this.showpass.TabIndex = 10;
+            this.showpass.UseVisualStyleBackColor = true;
+            this.showpass.Click += new System.EventHandler(this.showpass_Click);
+            // 
+            // hidepass
+            // 
+            this.hidepass.FlatAppearance.BorderSize = 0;
+            this.hidepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.hidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hidepass.Image = global::University_Management_System.Properties.Resources.show_password_icon_182;
+            this.hidepass.Location = new System.Drawing.Point(391, 98);
+            this.hidepass.Name = "hidepass";
+            this.hidepass.Size = new System.Drawing.Size(53, 40);
+            this.hidepass.TabIndex = 9;
+            this.hidepass.UseVisualStyleBackColor = true;
+            this.hidepass.Click += new System.EventHandler(this.hidepass_Click);
             // 
             // label3
             // 
@@ -181,39 +208,12 @@ namespace University_Management_System
             this.panel3.Size = new System.Drawing.Size(390, 4);
             this.panel3.TabIndex = 6;
             // 
-            // showpass
-            // 
-            this.showpass.FlatAppearance.BorderSize = 0;
-            this.showpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showpass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.showpass.Image = global::University_Management_System.Properties.Resources.show_password_icon_19;
-            this.showpass.Location = new System.Drawing.Point(391, 98);
-            this.showpass.Name = "showpass";
-            this.showpass.Size = new System.Drawing.Size(53, 40);
-            this.showpass.TabIndex = 10;
-            this.showpass.UseVisualStyleBackColor = true;
-            this.showpass.Click += new System.EventHandler(this.showpass_Click);
-            // 
-            // hidepass
-            // 
-            this.hidepass.FlatAppearance.BorderSize = 0;
-            this.hidepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.hidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hidepass.Image = global::University_Management_System.Properties.Resources.show_password_icon_182;
-            this.hidepass.Location = new System.Drawing.Point(391, 98);
-            this.hidepass.Name = "hidepass";
-            this.hidepass.Size = new System.Drawing.Size(53, 40);
-            this.hidepass.TabIndex = 9;
-            this.hidepass.UseVisualStyleBackColor = true;
-            this.hidepass.Click += new System.EventHandler(this.hidepass_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(1334, 547);
+            this.ClientSize = new System.Drawing.Size(1284, 547);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1278, 586);
             this.Name = "Login";

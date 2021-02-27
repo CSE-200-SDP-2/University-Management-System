@@ -31,6 +31,7 @@ namespace University_Management_System
         {
             if (loginas.SelectedIndex > -1)
             {
+                User.user = loginas.Text;
                 UserName.username = aname.Text;
                 //MessageBox.Show(loginas.Text);
                 DBAccess con = new DBAccess();
@@ -42,28 +43,38 @@ namespace University_Management_System
                 con.sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    this.Hide();
-                    this.mainForm.logoutbtn.Show();
-                    //this.mainForm.openChildForm(new Admin_Menu());
-                    /*Admin_Menu frm = new Admin_Menu();
-                    frm.Show();
-                    foreach (Form frm1 in Application.OpenForms)
+                    if (apass.Text == "" + aname.Text + "bubt")
                     {
-                        if (frm1.Name != "Admin_Menu")
-                            frm1.Hide();
-                    }*/
+                        
+                        this.mainForm.openChildForm(new Change_Password(mainForm));
+                        this.Hide();
 
-                    if (table == "Admin")
-                    {
-                        this.mainForm.openChildForm(new Admin_Menu(mainForm));
                     }
-                    else if (table == "Teacher")
+                    else
                     {
-                        this.mainForm.openChildForm(new Teacher_Menu(mainForm));
-                    }
-                    else if (table == "Student")
-                    {
-                        this.mainForm.openChildForm(new Student_Menu(mainForm));
+                        this.Hide();
+                        this.mainForm.logoutbtn.Show();
+                        //this.mainForm.openChildForm(new Admin_Menu());
+                        /*Admin_Menu frm = new Admin_Menu();
+                        frm.Show();
+                        foreach (Form frm1 in Application.OpenForms)
+                        {
+                            if (frm1.Name != "Admin_Menu")
+                                frm1.Hide();
+                        }*/
+
+                        if (table == "Admin")
+                        {
+                            this.mainForm.openChildForm(new Admin_Menu(mainForm));
+                        }
+                        else if (table == "Teacher")
+                        {
+                            this.mainForm.openChildForm(new Teacher_Menu(mainForm));
+                        }
+                        else if (table == "Student")
+                        {
+                            this.mainForm.openChildForm(new Student_Menu(mainForm));
+                        }
                     }
 
 
