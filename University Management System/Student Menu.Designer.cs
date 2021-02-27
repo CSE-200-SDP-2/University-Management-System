@@ -772,7 +772,7 @@ namespace University_Management_System
             this.stu_Setbtn.TabIndex = 4;
             this.stu_Setbtn.Text = "Confirm";
             this.stu_Setbtn.UseVisualStyleBackColor = true;
-            this.stu_Setbtn.Click += new System.EventHandler(this.button9_Click);
+            this.stu_Setbtn.Click += new System.EventHandler(this.settings_Confirmbtn_Click);
             // 
             // stu_Showpass
             // 
@@ -784,6 +784,7 @@ namespace University_Management_System
             this.stu_Showpass.TabIndex = 3;
             this.stu_Showpass.Text = "Show Password";
             this.stu_Showpass.UseVisualStyleBackColor = true;
+            this.stu_Showpass.CheckedChanged += new System.EventHandler(this.stu_Showpass_CheckedChanged);
             // 
             // stu_Oldpass
             // 
@@ -794,6 +795,7 @@ namespace University_Management_System
             this.stu_Oldpass.Name = "stu_Oldpass";
             this.stu_Oldpass.Size = new System.Drawing.Size(240, 20);
             this.stu_Oldpass.TabIndex = 2;
+            this.stu_Oldpass.TextChanged += new System.EventHandler(this.stu_Oldpass_TextChanged);
             // 
             // stu_Newpass
             // 
@@ -804,6 +806,7 @@ namespace University_Management_System
             this.stu_Newpass.Name = "stu_Newpass";
             this.stu_Newpass.Size = new System.Drawing.Size(234, 20);
             this.stu_Newpass.TabIndex = 2;
+            this.stu_Newpass.TextChanged += new System.EventHandler(this.stu_Newpass_TextChanged);
             // 
             // stu_Conpass
             // 
@@ -814,6 +817,7 @@ namespace University_Management_System
             this.stu_Conpass.Name = "stu_Conpass";
             this.stu_Conpass.Size = new System.Drawing.Size(214, 20);
             this.stu_Conpass.TabIndex = 2;
+            this.stu_Conpass.TextChanged += new System.EventHandler(this.stu_Conpass_TextChanged);
             // 
             // panel18
             // 

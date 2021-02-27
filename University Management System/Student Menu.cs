@@ -87,11 +87,6 @@ namespace University_Management_System
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void stumenuinfopanel_Paint(object sender, PaintEventArgs e)
         {
             con.dataGet("select * from Student where id = '" + studentid + "'");
@@ -247,5 +242,115 @@ namespace University_Management_System
         {
            
         }
+
+        private void stu_Showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stu_Showpass.Checked) //show pass clicked 
+            {
+                stu_Oldpass.UseSystemPasswordChar = false;
+                stu_Newpass.UseSystemPasswordChar = false;
+                stu_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                stu_Oldpass.UseSystemPasswordChar = true;
+                stu_Newpass.UseSystemPasswordChar = true;
+                stu_Conpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void stu_Oldpass_TextChanged(object sender, EventArgs e)
+        {
+            if (stu_Showpass.Checked) //show pass clicked 
+            {
+                stu_Oldpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                stu_Oldpass.UseSystemPasswordChar = true; 
+            }
+        }
+
+        private void stu_Newpass_TextChanged(object sender, EventArgs e)
+        {
+            if (stu_Showpass.Checked) //show pass clicked 
+            {
+                stu_Newpass.UseSystemPasswordChar = false;
+               
+            }
+            else
+            {
+                stu_Newpass.UseSystemPasswordChar = true;
+                
+            }
+        }
+
+        private void stu_Conpass_TextChanged(object sender, EventArgs e)
+        {
+            if (stu_Showpass.Checked) //show pass clicked 
+            {
+                stu_Conpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                stu_Conpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void settings_Confirmbtn_Click(object sender, EventArgs e)
+        {
+            if (stu_Newpass.Text != "" && stu_Conpass.Text != "" && stu_Oldpass.Text!="")
+            {
+                
+                    con.dataGet("Select * from Student where id= '" + studentid + "' and pass='" + stu_Oldpass.Text + "'");
+                DataTable op = new DataTable();
+                con.sda.Fill(op);
+                if(op.Rows.Count>0)
+                {
+                    if(stu_Newpass.Text==stu_Conpass.Text)
+                    {
+                        if (stu_Conpass.Text != "" + studentid + "bubt")
+                        {
+                            con.dataGet("select * from Forgot_Pass Where fid = '" + studentid + "' and fpass = '" + stu_Newpass.Text + "'");
+                            DataTable dc = new DataTable();
+                            con.sda.Fill(dc);
+                            if (dc.Rows.Count > 0)
+                            {
+                                MessageBox.Show("Old password can't be used again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                string var = "fid,fpass";
+                                string val = "'" + studentid + "','" + stu_Newpass.Text + "'";
+                                con.dataSend("Update Student Set pass='" + stu_Conpass.Text + "' where id='" + studentid + "'");
+                                con.dataSend("insert into Forgot_Pass(" + var + ") values(" + val + ")");
+                                MessageBox.Show("Password changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                stu_Oldpass.Clear();
+                                stu_Newpass.Clear();
+                                stu_Conpass.Clear();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Old password can't be used again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password doesn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Old password doesn't match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("New Passoword and Confirm Password can't be blank!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
     }
 }
