@@ -50,12 +50,6 @@ namespace University_Management_System
             this.stuCYsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.stu_Availablegrid = new System.Windows.Forms.DataGridView();
-            this.stuCAserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.stu_Csemester = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
@@ -82,6 +76,12 @@ namespace University_Management_System
             this.stuCtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuCtchnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.result = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Sturesbox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.stu_Viewresgrid = new System.Windows.Forms.DataGridView();
             this.settings = new System.Windows.Forms.TabPage();
@@ -99,11 +99,23 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.dgSturesultSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultctitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultcredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultmid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultfinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultof25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultattendence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesulttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -119,14 +131,14 @@ namespace University_Management_System
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stu_ViewCgrid)).BeginInit();
             this.result.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stu_Viewresgrid)).BeginInit();
             this.settings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // stumenuinfopanel
@@ -349,7 +361,8 @@ namespace University_Management_System
             this.stuCAcodegrid,
             this.stuCAtitlegrid,
             this.stuCAcreditgrid,
-            this.stuCAtypegrid});
+            this.stuCAtypegrid,
+            this.dgsemestergrid});
             this.stu_Availablegrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stu_Availablegrid.Location = new System.Drawing.Point(0, 0);
             this.stu_Availablegrid.Name = "stu_Availablegrid";
@@ -357,48 +370,6 @@ namespace University_Management_System
             this.stu_Availablegrid.Size = new System.Drawing.Size(607, 239);
             this.stu_Availablegrid.TabIndex = 0;
             this.stu_Availablegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_Availablegrid_CellContentClick);
-            // 
-            // stuCAserialnogrid
-            // 
-            this.stuCAserialnogrid.HeaderText = "Sl. No.";
-            this.stuCAserialnogrid.Name = "stuCAserialnogrid";
-            this.stuCAserialnogrid.ReadOnly = true;
-            this.stuCAserialnogrid.Width = 84;
-            // 
-            // stuCAtchcodegrid
-            // 
-            this.stuCAtchcodegrid.HeaderText = "Teacher Code";
-            this.stuCAtchcodegrid.Name = "stuCAtchcodegrid";
-            this.stuCAtchcodegrid.ReadOnly = true;
-            this.stuCAtchcodegrid.Width = 136;
-            // 
-            // stuCAcodegrid
-            // 
-            this.stuCAcodegrid.HeaderText = "Course Code";
-            this.stuCAcodegrid.Name = "stuCAcodegrid";
-            this.stuCAcodegrid.ReadOnly = true;
-            this.stuCAcodegrid.Width = 130;
-            // 
-            // stuCAtitlegrid
-            // 
-            this.stuCAtitlegrid.HeaderText = "Course Title";
-            this.stuCAtitlegrid.Name = "stuCAtitlegrid";
-            this.stuCAtitlegrid.ReadOnly = true;
-            this.stuCAtitlegrid.Width = 125;
-            // 
-            // stuCAcreditgrid
-            // 
-            this.stuCAcreditgrid.HeaderText = "Credit";
-            this.stuCAcreditgrid.Name = "stuCAcreditgrid";
-            this.stuCAcreditgrid.ReadOnly = true;
-            this.stuCAcreditgrid.Width = 81;
-            // 
-            // stuCAtypegrid
-            // 
-            this.stuCAtypegrid.HeaderText = "Course Type";
-            this.stuCAtypegrid.Name = "stuCAtypegrid";
-            this.stuCAtypegrid.ReadOnly = true;
-            this.stuCAtypegrid.Width = 129;
             // 
             // panel3
             // 
@@ -649,7 +620,6 @@ namespace University_Management_System
             this.stu_ViewCgrid.ReadOnly = true;
             this.stu_ViewCgrid.Size = new System.Drawing.Size(1318, 348);
             this.stu_ViewCgrid.TabIndex = 0;
-            this.stu_ViewCgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_ViewCgrid_CellContentClick);
             // 
             // stuCserialnogrid
             // 
@@ -710,22 +680,107 @@ namespace University_Management_System
             this.result.TabIndex = 1;
             this.result.Text = "Result";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1326, 382);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label5);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.Sturesbox);
+            this.panel9.Controls.Add(this.label4);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1326, 57);
+            this.panel9.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1130, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 23);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "SGPA :";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Location = new System.Drawing.Point(490, 39);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(4);
+            this.panel10.Size = new System.Drawing.Size(350, 4);
+            this.panel10.TabIndex = 50;
+            // 
+            // Sturesbox
+            // 
+            this.Sturesbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Sturesbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
+            this.Sturesbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Sturesbox.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sturesbox.ForeColor = System.Drawing.Color.White;
+            this.Sturesbox.Location = new System.Drawing.Point(586, 13);
+            this.Sturesbox.Name = "Sturesbox";
+            this.Sturesbox.Size = new System.Drawing.Size(241, 24);
+            this.Sturesbox.TabIndex = 49;
+            this.Sturesbox.TextChanged += new System.EventHandler(this.Sturesbox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(486, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Semester :";
+            // 
             // panel4
             // 
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel4.Controls.Add(this.stu_Viewresgrid);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 63);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1326, 382);
+            this.panel4.Size = new System.Drawing.Size(1326, 319);
             this.panel4.TabIndex = 1;
             // 
             // stu_Viewresgrid
             // 
+            this.stu_Viewresgrid.AllowUserToAddRows = false;
+            this.stu_Viewresgrid.AllowUserToDeleteRows = false;
+            this.stu_Viewresgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.stu_Viewresgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stu_Viewresgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgSturesultSL,
+            this.dgsturesultccode,
+            this.dgsturesultctitle,
+            this.dgsturesultcredit,
+            this.dgsturesultmid,
+            this.dgsturesultfinal,
+            this.dgsturesultof25,
+            this.dgsturesultattendence,
+            this.dgsturesulttotal,
+            this.dgsturesultgrade});
             this.stu_Viewresgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stu_Viewresgrid.Location = new System.Drawing.Point(0, 0);
             this.stu_Viewresgrid.Name = "stu_Viewresgrid";
-            this.stu_Viewresgrid.Size = new System.Drawing.Size(1326, 382);
+            this.stu_Viewresgrid.ReadOnly = true;
+            this.stu_Viewresgrid.Size = new System.Drawing.Size(1326, 319);
             this.stu_Viewresgrid.TabIndex = 0;
             // 
             // settings
@@ -889,60 +944,114 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 2;
             // 
-            // panel1
+            // dgSturesultSL
             // 
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1326, 382);
-            this.panel1.TabIndex = 2;
+            this.dgSturesultSL.HeaderText = "SL. No.";
+            this.dgSturesultSL.Name = "dgSturesultSL";
+            this.dgSturesultSL.ReadOnly = true;
             // 
-            // panel9
+            // dgsturesultccode
             // 
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.textBox1);
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1326, 57);
-            this.panel9.TabIndex = 2;
+            this.dgsturesultccode.HeaderText = "Course Code";
+            this.dgsturesultccode.Name = "dgsturesultccode";
+            this.dgsturesultccode.ReadOnly = true;
             // 
-            // label4
+            // dgsturesultctitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(486, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Semester :";
+            this.dgsturesultctitle.HeaderText = "Course title";
+            this.dgsturesultctitle.Name = "dgsturesultctitle";
+            this.dgsturesultctitle.ReadOnly = true;
             // 
-            // textBox1
+            // dgsturesultcredit
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(23)))), ((int)(((byte)(78)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(586, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 24);
-            this.textBox1.TabIndex = 49;
+            this.dgsturesultcredit.HeaderText = "Credit";
+            this.dgsturesultcredit.Name = "dgsturesultcredit";
+            this.dgsturesultcredit.ReadOnly = true;
             // 
-            // panel10
+            // dgsturesultmid
             // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(490, 39);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(4);
-            this.panel10.Size = new System.Drawing.Size(350, 4);
-            this.panel10.TabIndex = 50;
+            this.dgsturesultmid.HeaderText = "Mid";
+            this.dgsturesultmid.Name = "dgsturesultmid";
+            this.dgsturesultmid.ReadOnly = true;
+            // 
+            // dgsturesultfinal
+            // 
+            this.dgsturesultfinal.HeaderText = "Final";
+            this.dgsturesultfinal.Name = "dgsturesultfinal";
+            this.dgsturesultfinal.ReadOnly = true;
+            // 
+            // dgsturesultof25
+            // 
+            this.dgsturesultof25.HeaderText = "Out of 30";
+            this.dgsturesultof25.Name = "dgsturesultof25";
+            this.dgsturesultof25.ReadOnly = true;
+            // 
+            // dgsturesultattendence
+            // 
+            this.dgsturesultattendence.HeaderText = "Attendence";
+            this.dgsturesultattendence.Name = "dgsturesultattendence";
+            this.dgsturesultattendence.ReadOnly = true;
+            // 
+            // dgsturesulttotal
+            // 
+            this.dgsturesulttotal.HeaderText = "Total";
+            this.dgsturesulttotal.Name = "dgsturesulttotal";
+            this.dgsturesulttotal.ReadOnly = true;
+            // 
+            // dgsturesultgrade
+            // 
+            this.dgsturesultgrade.HeaderText = "Grade";
+            this.dgsturesultgrade.Name = "dgsturesultgrade";
+            this.dgsturesultgrade.ReadOnly = true;
+            // 
+            // stuCAserialnogrid
+            // 
+            this.stuCAserialnogrid.HeaderText = "Sl. No.";
+            this.stuCAserialnogrid.Name = "stuCAserialnogrid";
+            this.stuCAserialnogrid.ReadOnly = true;
+            this.stuCAserialnogrid.Width = 84;
+            // 
+            // stuCAtchcodegrid
+            // 
+            this.stuCAtchcodegrid.HeaderText = "Teacher Code";
+            this.stuCAtchcodegrid.Name = "stuCAtchcodegrid";
+            this.stuCAtchcodegrid.ReadOnly = true;
+            this.stuCAtchcodegrid.Width = 136;
+            // 
+            // stuCAcodegrid
+            // 
+            this.stuCAcodegrid.HeaderText = "Course Code";
+            this.stuCAcodegrid.Name = "stuCAcodegrid";
+            this.stuCAcodegrid.ReadOnly = true;
+            this.stuCAcodegrid.Width = 130;
+            // 
+            // stuCAtitlegrid
+            // 
+            this.stuCAtitlegrid.HeaderText = "Course Title";
+            this.stuCAtitlegrid.Name = "stuCAtitlegrid";
+            this.stuCAtitlegrid.ReadOnly = true;
+            this.stuCAtitlegrid.Width = 125;
+            // 
+            // stuCAcreditgrid
+            // 
+            this.stuCAcreditgrid.HeaderText = "Credit";
+            this.stuCAcreditgrid.Name = "stuCAcreditgrid";
+            this.stuCAcreditgrid.ReadOnly = true;
+            this.stuCAcreditgrid.Width = 81;
+            // 
+            // stuCAtypegrid
+            // 
+            this.stuCAtypegrid.HeaderText = "Course Type";
+            this.stuCAtypegrid.Name = "stuCAtypegrid";
+            this.stuCAtypegrid.ReadOnly = true;
+            this.stuCAtypegrid.Width = 129;
+            // 
+            // dgsemestergrid
+            // 
+            this.dgsemestergrid.HeaderText = "Semester";
+            this.dgsemestergrid.Name = "dgsemestergrid";
+            this.dgsemestergrid.ReadOnly = true;
+            this.dgsemestergrid.Width = 101;
             // 
             // Student_Menu
             // 
@@ -973,6 +1082,9 @@ namespace University_Management_System
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stu_ViewCgrid)).EndInit();
             this.result.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stu_Viewresgrid)).EndInit();
             this.settings.ResumeLayout(false);
@@ -980,9 +1092,6 @@ namespace University_Management_System
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1043,12 +1152,6 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCYcreditgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCYtypegrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCYsemestergrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAserialnogrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtchcodegrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAcodegrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtitlegrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAcreditgrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtypegrid;
         public System.Windows.Forms.Button stu_Srchbtn;
         public System.Windows.Forms.DataGridView stu_Availablegrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCserialnogrid;
@@ -1061,8 +1164,26 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCtchnamegrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Sturesbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSturesultSL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultctitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultcredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultmid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultfinal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultof25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultattendence;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesulttotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultgrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAserialnogrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtchcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAcodegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtitlegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAcreditgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtypegrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgsemestergrid;
     }
 }

@@ -205,6 +205,7 @@ namespace University_Management_System
         private void marksSrchbtn_Click(object sender, EventArgs e)
         {
             marksemester = insertMarktsemester.Text;
+            mcode = insertMarksccode.Text;
             con.dataGet("Select Student.id,Student.sname,Student.sintake,Student.ssection,Student_Course.ccode from Student,Student_Course,Teacher_Course Where Student.id=Student_Course.id and Student_Course.tid=Teacher_Course.id and Student_Course.tid = '"+tchcode+"' and Student_Course.ccode = '"+ insertMarksccode.Text +"' and Student_Course.ssemester = '"+insertMarktsemester.Text+"' and Student_Course.ssemester = Teacher_Course.tsemester");
             DataTable Stulist = new DataTable();
             con.sda.Fill(Stulist);
@@ -222,6 +223,7 @@ namespace University_Management_System
                     marksStulistgrid.Rows[n].Cells["insertMccodegrid"].Value = row["ccode"].ToString();
                 }
                 Srch_Mark_Cleardata();
+                marksListgrid_LoadData();
 
             }
             else
@@ -239,12 +241,11 @@ namespace University_Management_System
         {
             DataGridViewRow row = marksStulistgrid.Rows[e.RowIndex];
             insertMarksstuid.Text = row.Cells[1].Value.ToString();
-            mcode = row.Cells[5].Value.ToString();
         }
 
         private void markInsertbtn_Click(object sender, EventArgs e)
         {
-            con.dataGet("Select * from Result where ccode = '" + mcode + "' and rsemester = '" + marksemester + "' and id = '" + insertMarksstumid.Text + "'");
+            con.dataGet("Select * from Result where ccode = '" + mcode + "' and rsemester = '" + marksemester + "' and id = '" + insertMarksstumid.Text + "' and tid = '" + tchcode + "'");
             DataTable check = new DataTable();
             con.sda.Fill(check);
             if (check.Rows.Count > 0)
@@ -253,8 +254,8 @@ namespace University_Management_System
             }
             else
             {
-                string var = "id,ccode,rsemester,mid,final,outof25,attendence";
-                string val = "'" + insertMarksstuid.Text + "','" + mcode + "','" + marksemester + "','" + insertMarksstumid.Text + "','" + insertMarksstufinal.Text + "','" + insertMarksstuct.Text + "','" + insertMarksstuatten.Text + "'";
+                string var = "id,tid,ccode,rsemester,mid,final,outof25,attendence";
+                string val = "'" + insertMarksstuid.Text + "','" + tchcode + "','" + mcode + "','" + marksemester + "','" + insertMarksstumid.Text + "','" + insertMarksstufinal.Text + "','" + insertMarksstuct.Text + "','" + insertMarksstuatten.Text + "'";
                 con.dataSend("INSERT into Result(" + var + ") values(" + val + ")");
                 MessageBox.Show("Marks Successfully Inserted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 marksListgrid_LoadData();
@@ -263,11 +264,11 @@ namespace University_Management_System
 
         private void marksListgrid_LoadData()
         {
-            con.dataGet("Select * from Result where ccode = '" + mcode + "' and rsemester = '" + marksemester + "'");
+            con.dataGet("Select * from Result where ccode = '" + mcode + "' and rsemester = '" + marksemester + "' and tid = '" + tchcode + "'");
             DataTable Markt = new DataTable();
             con.sda.Fill(Markt);
-
-            if(Markt.Rows.Count > 0)
+            marksListgrid.Rows.Clear();
+            if (Markt.Rows.Count > 0)
             {
                 foreach(DataRow row in Markt.Rows)
                 {

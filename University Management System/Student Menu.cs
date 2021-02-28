@@ -132,6 +132,7 @@ namespace University_Management_System
                     stu_Availablegrid.Rows[n].Cells["stuCAtitlegrid"].Value = row["ctitle"].ToString();
                     stu_Availablegrid.Rows[n].Cells["stuCAcreditgrid"].Value = row["ccredit"].ToString();
                     stu_Availablegrid.Rows[n].Cells["stuCAtypegrid"].Value = row["ctype"].ToString();
+                    stu_Availablegrid.Rows[n].Cells["dgsemestergrid"].Value = row["tsemester"].ToString();
                 }
                 Stu_ClearData();
             }
@@ -238,10 +239,28 @@ namespace University_Management_System
                 stu_ViewCgrid.Rows[n].Cells["stuCtchnamegrid"].Value = row["tname"].ToString();
             }
         }
-        private void stu_ViewCgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void Sturesbox_TextChanged(object sender, EventArgs e)
         {
-           
+            if(Sturesbox.Text == "")
+            {
+                stu_Viewresgrid.Rows.Clear();
+            }
+            else
+            {
+                con.dataGet("Select Course.ccode,Course.ctitle,Course.ccredit,Result.mid,Result.final,Result.outof25,Result.attendence From Course,Result Where Result.ccode = Course.ccode and Result.id = '" + studentid + "' and Result.rsemester like '%" + Sturesbox.Text + "%'");
+                DataTable result = new DataTable();
+                con.sda.Fill(result);
+
+                foreach(DataRow row in result.Rows)
+                {
+
+                }
+            }
+
         }
+
 
         private void stu_Showpass_CheckedChanged(object sender, EventArgs e)
         {
@@ -351,6 +370,5 @@ namespace University_Management_System
             }
 
         }
-
     }
 }
