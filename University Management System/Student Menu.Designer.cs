@@ -50,6 +50,13 @@ namespace University_Management_System
             this.stuCYsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.stu_Availablegrid = new System.Windows.Forms.DataGridView();
+            this.stuCAserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuCAtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.stu_Csemester = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
@@ -84,6 +91,16 @@ namespace University_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.stu_Viewresgrid = new System.Windows.Forms.DataGridView();
+            this.dgSturesultSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultctitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultcredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultmid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultfinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultof25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultattendence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesulttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgsturesultgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.settings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -99,23 +116,6 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgSturesultSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultctitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultcredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultmid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultfinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultof25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultattendence = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesulttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsturesultgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAserialnogrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtchcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAcodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtitlegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAcreditgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stuCAtypegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgsemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -370,6 +370,55 @@ namespace University_Management_System
             this.stu_Availablegrid.Size = new System.Drawing.Size(607, 239);
             this.stu_Availablegrid.TabIndex = 0;
             this.stu_Availablegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_Availablegrid_CellContentClick);
+            // 
+            // stuCAserialnogrid
+            // 
+            this.stuCAserialnogrid.HeaderText = "Sl. No.";
+            this.stuCAserialnogrid.Name = "stuCAserialnogrid";
+            this.stuCAserialnogrid.ReadOnly = true;
+            this.stuCAserialnogrid.Width = 84;
+            // 
+            // stuCAtchcodegrid
+            // 
+            this.stuCAtchcodegrid.HeaderText = "Teacher Code";
+            this.stuCAtchcodegrid.Name = "stuCAtchcodegrid";
+            this.stuCAtchcodegrid.ReadOnly = true;
+            this.stuCAtchcodegrid.Width = 136;
+            // 
+            // stuCAcodegrid
+            // 
+            this.stuCAcodegrid.HeaderText = "Course Code";
+            this.stuCAcodegrid.Name = "stuCAcodegrid";
+            this.stuCAcodegrid.ReadOnly = true;
+            this.stuCAcodegrid.Width = 130;
+            // 
+            // stuCAtitlegrid
+            // 
+            this.stuCAtitlegrid.HeaderText = "Course Title";
+            this.stuCAtitlegrid.Name = "stuCAtitlegrid";
+            this.stuCAtitlegrid.ReadOnly = true;
+            this.stuCAtitlegrid.Width = 125;
+            // 
+            // stuCAcreditgrid
+            // 
+            this.stuCAcreditgrid.HeaderText = "Credit";
+            this.stuCAcreditgrid.Name = "stuCAcreditgrid";
+            this.stuCAcreditgrid.ReadOnly = true;
+            this.stuCAcreditgrid.Width = 81;
+            // 
+            // stuCAtypegrid
+            // 
+            this.stuCAtypegrid.HeaderText = "Course Type";
+            this.stuCAtypegrid.Name = "stuCAtypegrid";
+            this.stuCAtypegrid.ReadOnly = true;
+            this.stuCAtypegrid.Width = 129;
+            // 
+            // dgsemestergrid
+            // 
+            this.dgsemestergrid.HeaderText = "Semester";
+            this.dgsemestergrid.Name = "dgsemestergrid";
+            this.dgsemestergrid.ReadOnly = true;
+            this.dgsemestergrid.Width = 101;
             // 
             // panel3
             // 
@@ -714,6 +763,7 @@ namespace University_Management_System
             this.Sgpalbl.Size = new System.Drawing.Size(75, 23);
             this.Sgpalbl.TabIndex = 51;
             this.Sgpalbl.Text = "SGPA :";
+            this.Sgpalbl.Click += new System.EventHandler(this.Sgpalbl_Click);
             // 
             // panel10
             // 
@@ -784,6 +834,66 @@ namespace University_Management_System
             this.stu_Viewresgrid.ReadOnly = true;
             this.stu_Viewresgrid.Size = new System.Drawing.Size(1326, 319);
             this.stu_Viewresgrid.TabIndex = 0;
+            // 
+            // dgSturesultSL
+            // 
+            this.dgSturesultSL.HeaderText = "SL. No.";
+            this.dgSturesultSL.Name = "dgSturesultSL";
+            this.dgSturesultSL.ReadOnly = true;
+            // 
+            // dgsturesultccode
+            // 
+            this.dgsturesultccode.HeaderText = "Course Code";
+            this.dgsturesultccode.Name = "dgsturesultccode";
+            this.dgsturesultccode.ReadOnly = true;
+            // 
+            // dgsturesultctitle
+            // 
+            this.dgsturesultctitle.HeaderText = "Course title";
+            this.dgsturesultctitle.Name = "dgsturesultctitle";
+            this.dgsturesultctitle.ReadOnly = true;
+            // 
+            // dgsturesultcredit
+            // 
+            this.dgsturesultcredit.HeaderText = "Credit";
+            this.dgsturesultcredit.Name = "dgsturesultcredit";
+            this.dgsturesultcredit.ReadOnly = true;
+            // 
+            // dgsturesultmid
+            // 
+            this.dgsturesultmid.HeaderText = "Mid";
+            this.dgsturesultmid.Name = "dgsturesultmid";
+            this.dgsturesultmid.ReadOnly = true;
+            // 
+            // dgsturesultfinal
+            // 
+            this.dgsturesultfinal.HeaderText = "Final";
+            this.dgsturesultfinal.Name = "dgsturesultfinal";
+            this.dgsturesultfinal.ReadOnly = true;
+            // 
+            // dgsturesultof25
+            // 
+            this.dgsturesultof25.HeaderText = "Out of 30";
+            this.dgsturesultof25.Name = "dgsturesultof25";
+            this.dgsturesultof25.ReadOnly = true;
+            // 
+            // dgsturesultattendence
+            // 
+            this.dgsturesultattendence.HeaderText = "Attendence";
+            this.dgsturesultattendence.Name = "dgsturesultattendence";
+            this.dgsturesultattendence.ReadOnly = true;
+            // 
+            // dgsturesulttotal
+            // 
+            this.dgsturesulttotal.HeaderText = "Total";
+            this.dgsturesulttotal.Name = "dgsturesulttotal";
+            this.dgsturesulttotal.ReadOnly = true;
+            // 
+            // dgsturesultgrade
+            // 
+            this.dgsturesultgrade.HeaderText = "Grade";
+            this.dgsturesultgrade.Name = "dgsturesultgrade";
+            this.dgsturesultgrade.ReadOnly = true;
             // 
             // settings
             // 
@@ -945,115 +1055,6 @@ namespace University_Management_System
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 2;
-            // 
-            // dgSturesultSL
-            // 
-            this.dgSturesultSL.HeaderText = "SL. No.";
-            this.dgSturesultSL.Name = "dgSturesultSL";
-            this.dgSturesultSL.ReadOnly = true;
-            // 
-            // dgsturesultccode
-            // 
-            this.dgsturesultccode.HeaderText = "Course Code";
-            this.dgsturesultccode.Name = "dgsturesultccode";
-            this.dgsturesultccode.ReadOnly = true;
-            // 
-            // dgsturesultctitle
-            // 
-            this.dgsturesultctitle.HeaderText = "Course title";
-            this.dgsturesultctitle.Name = "dgsturesultctitle";
-            this.dgsturesultctitle.ReadOnly = true;
-            // 
-            // dgsturesultcredit
-            // 
-            this.dgsturesultcredit.HeaderText = "Credit";
-            this.dgsturesultcredit.Name = "dgsturesultcredit";
-            this.dgsturesultcredit.ReadOnly = true;
-            // 
-            // dgsturesultmid
-            // 
-            this.dgsturesultmid.HeaderText = "Mid";
-            this.dgsturesultmid.Name = "dgsturesultmid";
-            this.dgsturesultmid.ReadOnly = true;
-            // 
-            // dgsturesultfinal
-            // 
-            this.dgsturesultfinal.HeaderText = "Final";
-            this.dgsturesultfinal.Name = "dgsturesultfinal";
-            this.dgsturesultfinal.ReadOnly = true;
-            // 
-            // dgsturesultof25
-            // 
-            this.dgsturesultof25.HeaderText = "Out of 30";
-            this.dgsturesultof25.Name = "dgsturesultof25";
-            this.dgsturesultof25.ReadOnly = true;
-            // 
-            // dgsturesultattendence
-            // 
-            this.dgsturesultattendence.HeaderText = "Attendence";
-            this.dgsturesultattendence.Name = "dgsturesultattendence";
-            this.dgsturesultattendence.ReadOnly = true;
-            // 
-            // dgsturesulttotal
-            // 
-            this.dgsturesulttotal.HeaderText = "Total";
-            this.dgsturesulttotal.Name = "dgsturesulttotal";
-            this.dgsturesulttotal.ReadOnly = true;
-            // 
-            // dgsturesultgrade
-            // 
-            this.dgsturesultgrade.HeaderText = "Grade";
-            this.dgsturesultgrade.Name = "dgsturesultgrade";
-            this.dgsturesultgrade.ReadOnly = true;
-            // 
-            // stuCAserialnogrid
-            // 
-            this.stuCAserialnogrid.HeaderText = "Sl. No.";
-            this.stuCAserialnogrid.Name = "stuCAserialnogrid";
-            this.stuCAserialnogrid.ReadOnly = true;
-            this.stuCAserialnogrid.Width = 84;
-            // 
-            // stuCAtchcodegrid
-            // 
-            this.stuCAtchcodegrid.HeaderText = "Teacher Code";
-            this.stuCAtchcodegrid.Name = "stuCAtchcodegrid";
-            this.stuCAtchcodegrid.ReadOnly = true;
-            this.stuCAtchcodegrid.Width = 136;
-            // 
-            // stuCAcodegrid
-            // 
-            this.stuCAcodegrid.HeaderText = "Course Code";
-            this.stuCAcodegrid.Name = "stuCAcodegrid";
-            this.stuCAcodegrid.ReadOnly = true;
-            this.stuCAcodegrid.Width = 130;
-            // 
-            // stuCAtitlegrid
-            // 
-            this.stuCAtitlegrid.HeaderText = "Course Title";
-            this.stuCAtitlegrid.Name = "stuCAtitlegrid";
-            this.stuCAtitlegrid.ReadOnly = true;
-            this.stuCAtitlegrid.Width = 125;
-            // 
-            // stuCAcreditgrid
-            // 
-            this.stuCAcreditgrid.HeaderText = "Credit";
-            this.stuCAcreditgrid.Name = "stuCAcreditgrid";
-            this.stuCAcreditgrid.ReadOnly = true;
-            this.stuCAcreditgrid.Width = 81;
-            // 
-            // stuCAtypegrid
-            // 
-            this.stuCAtypegrid.HeaderText = "Course Type";
-            this.stuCAtypegrid.Name = "stuCAtypegrid";
-            this.stuCAtypegrid.ReadOnly = true;
-            this.stuCAtypegrid.Width = 129;
-            // 
-            // dgsemestergrid
-            // 
-            this.dgsemestergrid.HeaderText = "Semester";
-            this.dgsemestergrid.Name = "dgsemestergrid";
-            this.dgsemestergrid.ReadOnly = true;
-            this.dgsemestergrid.Width = 101;
             // 
             // Student_Menu
             // 

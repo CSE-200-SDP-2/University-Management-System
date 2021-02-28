@@ -206,7 +206,7 @@ namespace University_Management_System
         {
             marksemester = insertMarktsemester.Text;
             mcode = insertMarksccode.Text;
-            con.dataGet("Select Student.id,Student.sname,Student.sintake,Student.ssection,Student_Course.ccode from Student,Student_Course,Teacher_Course Where Student.id=Student_Course.id and Student_Course.tid=Teacher_Course.id and Student_Course.tid = '"+tchcode+"' and Student_Course.ccode = '"+ insertMarksccode.Text +"' and Student_Course.ssemester = '"+insertMarktsemester.Text+"' and Student_Course.ssemester = Teacher_Course.tsemester");
+            con.dataGet("Select Student.id,Student.sname,Student.sintake,Student.ssection,Student_Course.ccode from Student,Student_Course,Teacher_Course Where Student_Course.ssemester = Teacher_Course.tsemester and Student_Course.ccode=Teacher_Course.ccode and  Student.id=Student_Course.id and Student_Course.tid=Teacher_Course.id and Student_Course.tid = '" + tchcode+"' and Student_Course.ccode = '"+ insertMarksccode.Text +"' and Student_Course.ssemester = '"+insertMarktsemester.Text+"'");
             DataTable Stulist = new DataTable();
             con.sda.Fill(Stulist);
             marksStulistgrid.Rows.Clear();

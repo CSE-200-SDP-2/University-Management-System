@@ -323,17 +323,18 @@ namespace University_Management_System
                     stu_Viewresgrid.Rows[n].Cells["dgsturesultgrade"].Value = grade;
 
                     gpa *= ccredit1;
-                    totalcredit = ccredit1;
+                    totalcredit += ccredit1;
                     totalgpa += gpa;
 
                 }
 
                 float sgpa;
+                string sgpaa;
                 sgpa = (totalgpa / totalcredit);
-                string.Format("{0:0.00}", sgpa);
+                sgpaa=String.Format("{0:0.00}", sgpa);
 
                 if (!float.IsNaN(sgpa))
-                    Sgpalbl.Text = "SGPA : " + sgpa;
+                    Sgpalbl.Text = "SGPA : " + sgpaa;
                 else
                     Sgpalbl.Text = "SGPA : ";
             }
@@ -447,6 +448,11 @@ namespace University_Management_System
             {
                 MessageBox.Show("New Passoword and Confirm Password can't be blank!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void Sgpalbl_Click(object sender, EventArgs e)
+        {
 
         }
     }
