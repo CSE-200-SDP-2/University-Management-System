@@ -147,6 +147,8 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -1187,6 +1189,8 @@ namespace University_Management_System
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.textBox1);
+            this.panel13.Controls.Add(this.label19);
             this.panel13.Controls.Add(this.res_Clearbtn);
             this.panel13.Controls.Add(this.res_Srchbtn);
             this.panel13.Controls.Add(this.res_Ccode);
@@ -1206,7 +1210,7 @@ namespace University_Management_System
             this.res_Clearbtn.ForeColor = System.Drawing.Color.White;
             this.res_Clearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
             this.res_Clearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_Clearbtn.Location = new System.Drawing.Point(806, 55);
+            this.res_Clearbtn.Location = new System.Drawing.Point(1000, 55);
             this.res_Clearbtn.Name = "res_Clearbtn";
             this.res_Clearbtn.Size = new System.Drawing.Size(43, 31);
             this.res_Clearbtn.TabIndex = 47;
@@ -1221,7 +1225,7 @@ namespace University_Management_System
             this.res_Srchbtn.ForeColor = System.Drawing.Color.White;
             this.res_Srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
             this.res_Srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_Srchbtn.Location = new System.Drawing.Point(806, 18);
+            this.res_Srchbtn.Location = new System.Drawing.Point(1000, 18);
             this.res_Srchbtn.Name = "res_Srchbtn";
             this.res_Srchbtn.Size = new System.Drawing.Size(43, 31);
             this.res_Srchbtn.TabIndex = 48;
@@ -1233,7 +1237,7 @@ namespace University_Management_System
             this.res_Ccode.BackColor = System.Drawing.Color.Azure;
             this.res_Ccode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.res_Ccode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.res_Ccode.Location = new System.Drawing.Point(545, 39);
+            this.res_Ccode.Location = new System.Drawing.Point(351, 39);
             this.res_Ccode.Name = "res_Ccode";
             this.res_Ccode.Size = new System.Drawing.Size(227, 24);
             this.res_Ccode.TabIndex = 46;
@@ -1244,7 +1248,7 @@ namespace University_Management_System
             this.label12.AutoSize = true;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(406, 40);
+            this.label12.Location = new System.Drawing.Point(212, 40);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 21);
             this.label12.TabIndex = 45;
@@ -1410,6 +1414,29 @@ namespace University_Management_System
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1262, 464);
             this.panel2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BackColor = System.Drawing.Color.Azure;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(708, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 24);
+            this.textBox1.TabIndex = 50;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(620, 41);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 21);
+            this.label19.TabIndex = 49;
+            this.label19.Text = "Semester";
             // 
             // Teacher_Menu
             // 
@@ -1589,5 +1616,7 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn markgradegrid;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label19;
     }
 }

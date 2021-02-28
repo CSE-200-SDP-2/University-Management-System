@@ -131,7 +131,9 @@ namespace University_Management_System
         {
             if (loginas.SelectedIndex > -1)
             {
-                con.dataGet("Select * from " + loginas.Text + " where id = '" + aname.Text + "'");
+                if (loginas.Text != "Admin")
+                { 
+                    con.dataGet("Select * from " + loginas.Text + " where id = '" + aname.Text + "'");
                 DataTable cc = new DataTable();
                 con.sda.Fill(cc);
                 if (cc.Rows.Count > 0)
@@ -144,6 +146,10 @@ namespace University_Management_System
                 else
                 {
                     MessageBox.Show("Enter a correct username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } }
+                else
+                {
+                    MessageBox.Show("Admin password can't be changed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

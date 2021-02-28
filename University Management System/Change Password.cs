@@ -25,12 +25,13 @@ namespace University_Management_System
         {
             mainForm = callingForm as Home_Page;
             InitializeComponent();
+            
             MessageBox.Show("First Login? You have to change password.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         private void Change_Password_Load(object sender, EventArgs e)
         {
-            
+            passwordpanel.Hide();
         }
 
         private void confirmPass_Click(object sender, EventArgs e)
@@ -107,6 +108,29 @@ namespace University_Management_System
                
                 newPasscon.UseSystemPasswordChar = true;
             }
+        }
+
+        private void nextbtn_Click(object sender, EventArgs e)
+        {
+            if(SecureQues.Text!="" && SecureAns.Text!="")
+            {
+                string var = "sid,squestion,sanswer";
+                string val = "'" + username + "','" + SecureQues.Text + "','" + SecureAns.Text + "'";
+                con.dataSend("insert into Security_Question(" + var + ") values(" + val + ")");
+                MessageBox.Show("Security question setup successful.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                securitypanel.Hide();
+                passwordpanel.Show();
+            }
+            else
+            {
+                MessageBox.Show("Question or Answer box is Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -47,16 +47,24 @@ namespace University_Management_System
             this.panel17 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.securityQuespanel = new System.Windows.Forms.Panel();
+            this.secureSubmitbtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SecureQAns = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SecureQ = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.submitpanel.SuspendLayout();
             this.resetpanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.securityQuespanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.submitpanel);
             this.panel1.Controls.Add(this.resetpanel);
+            this.panel1.Controls.Add(this.securityQuespanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -280,6 +288,82 @@ namespace University_Management_System
             this.label15.TabIndex = 22;
             this.label15.Text = "Confirm Password :";
             // 
+            // securityQuespanel
+            // 
+            this.securityQuespanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.securityQuespanel.Controls.Add(this.SecureQ);
+            this.securityQuespanel.Controls.Add(this.SecureQAns);
+            this.securityQuespanel.Controls.Add(this.label3);
+            this.securityQuespanel.Controls.Add(this.secureSubmitbtn);
+            this.securityQuespanel.Controls.Add(this.label4);
+            this.securityQuespanel.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.securityQuespanel.Location = new System.Drawing.Point(329, 67);
+            this.securityQuespanel.Name = "securityQuespanel";
+            this.securityQuespanel.Size = new System.Drawing.Size(677, 413);
+            this.securityQuespanel.TabIndex = 2;
+            this.securityQuespanel.Paint += new System.Windows.Forms.PaintEventHandler(this.securityQuespanel_Paint);
+            // 
+            // secureSubmitbtn
+            // 
+            this.secureSubmitbtn.FlatAppearance.BorderSize = 0;
+            this.secureSubmitbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.secureSubmitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secureSubmitbtn.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secureSubmitbtn.ForeColor = System.Drawing.Color.White;
+            this.secureSubmitbtn.Location = new System.Drawing.Point(469, 303);
+            this.secureSubmitbtn.Name = "secureSubmitbtn";
+            this.secureSubmitbtn.Size = new System.Drawing.Size(108, 31);
+            this.secureSubmitbtn.TabIndex = 21;
+            this.secureSubmitbtn.Text = "Submit";
+            this.secureSubmitbtn.UseVisualStyleBackColor = true;
+            this.secureSubmitbtn.Click += new System.EventHandler(this.secureSubmitbtn_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(275, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(187, 26);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Security Question";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SecureQAns
+            // 
+            this.SecureQAns.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecureQAns.ForeColor = System.Drawing.Color.Black;
+            this.SecureQAns.Location = new System.Drawing.Point(174, 239);
+            this.SecureQAns.Name = "SecureQAns";
+            this.SecureQAns.Size = new System.Drawing.Size(432, 27);
+            this.SecureQAns.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(70, 242);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 23);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Answer   :";
+            // 
+            // SecureQ
+            // 
+            this.SecureQ.AutoSize = true;
+            this.SecureQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SecureQ.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecureQ.ForeColor = System.Drawing.Color.White;
+            this.SecureQ.Location = new System.Drawing.Point(70, 154);
+            this.SecureQ.Name = "SecureQ";
+            this.SecureQ.Size = new System.Drawing.Size(101, 23);
+            this.SecureQ.TabIndex = 26;
+            this.SecureQ.Text = "Question :";
+            // 
             // Forget_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +379,8 @@ namespace University_Management_System
             this.resetpanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.securityQuespanel.ResumeLayout(false);
+            this.securityQuespanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +405,11 @@ namespace University_Management_System
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel securityQuespanel;
+        private System.Windows.Forms.Button secureSubmitbtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox SecureQAns;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SecureQ;
     }
 }

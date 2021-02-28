@@ -26,6 +26,7 @@ namespace University_Management_System
             mainForm = callingForm as Home_Page;
             InitializeComponent();
             resetpanel.Hide();
+            securityQuespanel.Hide();
         }
 
         private void Submitpassbtn_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace University_Management_System
             if(oldp.Rows.Count > 0)
             {
                 submitpanel.Hide();
-                resetpanel.Show();
+                securityQuespanel.Show();
             }
             else
             {
@@ -150,6 +151,47 @@ namespace University_Management_System
             {
                 MessageBox.Show("Password doesn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void secureSubmitbtn_Click(object sender, EventArgs e)
+        {
+            if(SecureQAns.Text!="")
+            {
+                con.dataGet("Select * from Security_Question where sid='" + username + "' and sanswer='" + SecureQAns.Text + "'");
+                DataTable sa = new DataTable();
+                con.sda.Fill(sa);
+                if(sa.Rows.Count>0)
+                {
+                    MessageBox.Show("Security question answer accepted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    securityQuespanel.Hide();
+                    resetpanel.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Security question answer didn't match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Answer box is Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void securityQuespanel_Paint(object sender, PaintEventArgs e)
+        {
+            con.dataGet("Select * from Security_Question where sid='" + username + "'");
+            DataTable sq = new DataTable();
+            con.sda.Fill(sq);
+            string question;
+            question = "Question : ";
+            if (sq.Rows.Count > 0)
+            {
+                foreach (DataRow row in sq.Rows)
+                {
+                    question += row["squestion"].ToString();
+                }
+            }
+            SecureQ.Text = question;
         }
     }
 }
