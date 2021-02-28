@@ -78,7 +78,7 @@ namespace University_Management_System
             this.result = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Sgpalbl = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Sturesbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -692,7 +692,7 @@ namespace University_Management_System
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label5);
+            this.panel9.Controls.Add(this.Sgpalbl);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.Sturesbox);
             this.panel9.Controls.Add(this.label4);
@@ -702,23 +702,24 @@ namespace University_Management_System
             this.panel9.Size = new System.Drawing.Size(1326, 57);
             this.panel9.TabIndex = 2;
             // 
-            // label5
+            // Sgpalbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1130, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 23);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "SGPA :";
+            this.Sgpalbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sgpalbl.AutoSize = true;
+            this.Sgpalbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sgpalbl.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sgpalbl.ForeColor = System.Drawing.Color.White;
+            this.Sgpalbl.Location = new System.Drawing.Point(1120, 17);
+            this.Sgpalbl.Name = "Sgpalbl";
+            this.Sgpalbl.Size = new System.Drawing.Size(75, 23);
+            this.Sgpalbl.TabIndex = 51;
+            this.Sgpalbl.Text = "SGPA :";
             // 
             // panel10
             // 
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(490, 39);
+            this.panel10.Location = new System.Drawing.Point(493, 42);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(4);
             this.panel10.Size = new System.Drawing.Size(350, 4);
@@ -731,7 +732,7 @@ namespace University_Management_System
             this.Sturesbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Sturesbox.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sturesbox.ForeColor = System.Drawing.Color.White;
-            this.Sturesbox.Location = new System.Drawing.Point(586, 13);
+            this.Sturesbox.Location = new System.Drawing.Point(589, 16);
             this.Sturesbox.Name = "Sturesbox";
             this.Sturesbox.Size = new System.Drawing.Size(241, 24);
             this.Sturesbox.TabIndex = 49;
@@ -739,11 +740,12 @@ namespace University_Management_System
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(486, 13);
+            this.label4.Location = new System.Drawing.Point(489, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 1;
@@ -1167,7 +1169,7 @@ namespace University_Management_System
         private System.Windows.Forms.TextBox Sturesbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Sgpalbl;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgSturesultSL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultccode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgsturesultctitle;
