@@ -29,9 +29,9 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.register = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -315,7 +315,9 @@ namespace University_Management_System
             this.res_totalResultgrid = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.res_totalSrchbtn = new System.Windows.Forms.Button();
+            this.label80 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
+            this.res_totalSemester = new System.Windows.Forms.TextBox();
             this.res_totalSection = new System.Windows.Forms.TextBox();
             this.res_totalDept = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -323,27 +325,13 @@ namespace University_Management_System
             this.label62 = new System.Windows.Forms.Label();
             this.searchresult = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.rsgpa = new System.Windows.Forms.Label();
             this.res_srchStusection = new System.Windows.Forms.Label();
             this.res_srchStuid = new System.Windows.Forms.Label();
             this.res_srchStuintake = new System.Windows.Forms.Label();
             this.res_srchStuname = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.res_srchGrid = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.res_srchClearbtn = new System.Windows.Forms.Button();
-            this.res_srchbtn = new System.Windows.Forms.Button();
-            this.res_srchId = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.res_totalSemester = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.totalresAdminslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalresAdminidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalresAdminsnamegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalresAdminsgpagrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label81 = new System.Windows.Forms.Label();
-            this.res_srchSemester = new System.Windows.Forms.TextBox();
-            this.rsgpa = new System.Windows.Forms.Label();
             this.rescslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resccodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rescmidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -352,6 +340,15 @@ namespace University_Management_System
             this.rescattendence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resctotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rescgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.res_srchClearbtn = new System.Windows.Forms.Button();
+            this.res_srchbtn = new System.Windows.Forms.Button();
+            this.res_srchSemester = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.res_srchId = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ResRefresh = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.register.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -906,7 +903,7 @@ namespace University_Management_System
             this.tchRegbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.tchRegbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tchRegbtn.ForeColor = System.Drawing.Color.White;
-            this.tchRegbtn.Location = new System.Drawing.Point(935, 398);
+            this.tchRegbtn.Location = new System.Drawing.Point(935, 403);
             this.tchRegbtn.Name = "tchRegbtn";
             this.tchRegbtn.Size = new System.Drawing.Size(123, 35);
             this.tchRegbtn.TabIndex = 44;
@@ -921,7 +918,7 @@ namespace University_Management_System
             this.tchDob.CustomFormat = "dd/MM/yyyy";
             this.tchDob.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tchDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.tchDob.Location = new System.Drawing.Point(350, 308);
+            this.tchDob.Location = new System.Drawing.Point(350, 313);
             this.tchDob.Name = "tchDob";
             this.tchDob.Size = new System.Drawing.Size(256, 27);
             this.tchDob.TabIndex = 43;
@@ -941,7 +938,7 @@ namespace University_Management_System
             "Professor",
             "Chairman",
             "Dean"});
-            this.tchPosition.Location = new System.Drawing.Point(803, 266);
+            this.tchPosition.Location = new System.Drawing.Point(803, 271);
             this.tchPosition.MaxDropDownItems = 4;
             this.tchPosition.Name = "tchPosition";
             this.tchPosition.Size = new System.Drawing.Size(255, 28);
@@ -966,7 +963,7 @@ namespace University_Management_System
             "Marketing",
             "Finace",
             "Math & Statistics"});
-            this.tchDept.Location = new System.Drawing.Point(803, 309);
+            this.tchDept.Location = new System.Drawing.Point(803, 314);
             this.tchDept.MaxDropDownItems = 4;
             this.tchDept.Name = "tchDept";
             this.tchDept.Size = new System.Drawing.Size(255, 28);
@@ -983,7 +980,7 @@ namespace University_Management_System
             "Male",
             "Female",
             "Others"});
-            this.tchGender.Location = new System.Drawing.Point(804, 132);
+            this.tchGender.Location = new System.Drawing.Point(804, 137);
             this.tchGender.Name = "tchGender";
             this.tchGender.Size = new System.Drawing.Size(255, 28);
             this.tchGender.TabIndex = 42;
@@ -1004,7 +1001,7 @@ namespace University_Management_System
             "O-",
             "AB+",
             "AB-"});
-            this.tchBg.Location = new System.Drawing.Point(352, 353);
+            this.tchBg.Location = new System.Drawing.Point(352, 358);
             this.tchBg.Name = "tchBg";
             this.tchBg.Size = new System.Drawing.Size(255, 28);
             this.tchBg.TabIndex = 40;
@@ -1015,7 +1012,7 @@ namespace University_Management_System
             this.tchMobile.BackColor = System.Drawing.Color.Azure;
             this.tchMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchMobile.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchMobile.Location = new System.Drawing.Point(804, 352);
+            this.tchMobile.Location = new System.Drawing.Point(804, 357);
             this.tchMobile.Name = "tchMobile";
             this.tchMobile.Size = new System.Drawing.Size(255, 24);
             this.tchMobile.TabIndex = 38;
@@ -1026,7 +1023,7 @@ namespace University_Management_System
             this.label17.AutoSize = true;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(689, 358);
+            this.label17.Location = new System.Drawing.Point(689, 363);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 23);
             this.label17.TabIndex = 36;
@@ -1038,7 +1035,7 @@ namespace University_Management_System
             this.label21.AutoSize = true;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(689, 271);
+            this.label21.Location = new System.Drawing.Point(689, 276);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(78, 23);
             this.label21.TabIndex = 34;
@@ -1050,7 +1047,7 @@ namespace University_Management_System
             this.label18.AutoSize = true;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(689, 137);
+            this.label18.Location = new System.Drawing.Point(689, 142);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 23);
             this.label18.TabIndex = 35;
@@ -1062,7 +1059,7 @@ namespace University_Management_System
             this.label19.AutoSize = true;
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(689, 314);
+            this.label19.Location = new System.Drawing.Point(689, 319);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 23);
             this.label19.TabIndex = 34;
@@ -1074,7 +1071,7 @@ namespace University_Management_System
             this.label20.AutoSize = true;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(213, 354);
+            this.label20.Location = new System.Drawing.Point(213, 359);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(120, 23);
             this.label20.TabIndex = 33;
@@ -1086,7 +1083,7 @@ namespace University_Management_System
             this.label22.AutoSize = true;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(213, 311);
+            this.label22.Location = new System.Drawing.Point(213, 316);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(119, 23);
             this.label22.TabIndex = 31;
@@ -1098,7 +1095,7 @@ namespace University_Management_System
             this.tchMname.BackColor = System.Drawing.Color.Azure;
             this.tchMname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchMname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchMname.Location = new System.Drawing.Point(352, 262);
+            this.tchMname.Location = new System.Drawing.Point(352, 267);
             this.tchMname.Name = "tchMname";
             this.tchMname.Size = new System.Drawing.Size(255, 24);
             this.tchMname.TabIndex = 30;
@@ -1109,7 +1106,7 @@ namespace University_Management_System
             this.label24.AutoSize = true;
             this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(213, 266);
+            this.label24.Location = new System.Drawing.Point(213, 271);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(141, 23);
             this.label24.TabIndex = 27;
@@ -1121,7 +1118,7 @@ namespace University_Management_System
             this.tchFname.BackColor = System.Drawing.Color.Azure;
             this.tchFname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchFname.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchFname.Location = new System.Drawing.Point(352, 219);
+            this.tchFname.Location = new System.Drawing.Point(352, 224);
             this.tchFname.Name = "tchFname";
             this.tchFname.Size = new System.Drawing.Size(255, 24);
             this.tchFname.TabIndex = 25;
@@ -1132,7 +1129,7 @@ namespace University_Management_System
             this.label26.AutoSize = true;
             this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(209, 221);
+            this.label26.Location = new System.Drawing.Point(209, 226);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(134, 23);
             this.label26.TabIndex = 23;
@@ -1144,7 +1141,7 @@ namespace University_Management_System
             this.tchNationality.BackColor = System.Drawing.Color.Azure;
             this.tchNationality.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchNationality.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchNationality.Location = new System.Drawing.Point(804, 225);
+            this.tchNationality.Location = new System.Drawing.Point(804, 230);
             this.tchNationality.Name = "tchNationality";
             this.tchNationality.Size = new System.Drawing.Size(255, 24);
             this.tchNationality.TabIndex = 21;
@@ -1155,7 +1152,7 @@ namespace University_Management_System
             this.tchName.BackColor = System.Drawing.Color.Azure;
             this.tchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchName.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchName.Location = new System.Drawing.Point(352, 176);
+            this.tchName.Location = new System.Drawing.Point(352, 181);
             this.tchName.Name = "tchName";
             this.tchName.Size = new System.Drawing.Size(255, 24);
             this.tchName.TabIndex = 20;
@@ -1166,7 +1163,7 @@ namespace University_Management_System
             this.label27.AutoSize = true;
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(689, 230);
+            this.label27.Location = new System.Drawing.Point(689, 235);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(108, 23);
             this.label27.TabIndex = 19;
@@ -1178,7 +1175,7 @@ namespace University_Management_System
             this.label28.AutoSize = true;
             this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(213, 181);
+            this.label28.Location = new System.Drawing.Point(213, 186);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 23);
             this.label28.TabIndex = 18;
@@ -1190,7 +1187,7 @@ namespace University_Management_System
             this.tchReligion.BackColor = System.Drawing.Color.Azure;
             this.tchReligion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchReligion.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchReligion.Location = new System.Drawing.Point(804, 182);
+            this.tchReligion.Location = new System.Drawing.Point(804, 187);
             this.tchReligion.Name = "tchReligion";
             this.tchReligion.Size = new System.Drawing.Size(254, 24);
             this.tchReligion.TabIndex = 16;
@@ -1201,7 +1198,7 @@ namespace University_Management_System
             this.label29.AutoSize = true;
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(689, 185);
+            this.label29.Location = new System.Drawing.Point(689, 190);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(82, 23);
             this.label29.TabIndex = 15;
@@ -1213,7 +1210,7 @@ namespace University_Management_System
             this.tchCode.BackColor = System.Drawing.Color.Azure;
             this.tchCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tchCode.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tchCode.Location = new System.Drawing.Point(352, 133);
+            this.tchCode.Location = new System.Drawing.Point(352, 138);
             this.tchCode.Name = "tchCode";
             this.tchCode.Size = new System.Drawing.Size(254, 24);
             this.tchCode.TabIndex = 17;
@@ -1224,7 +1221,7 @@ namespace University_Management_System
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(213, 136);
+            this.label30.Location = new System.Drawing.Point(213, 141);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 23);
             this.label30.TabIndex = 14;
@@ -3801,39 +3798,35 @@ namespace University_Management_System
             this.res_totalResultgrid.AllowUserToAddRows = false;
             this.res_totalResultgrid.AllowUserToDeleteRows = false;
             this.res_totalResultgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.res_totalResultgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.res_totalResultgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.res_totalResultgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.res_totalResultgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.totalresAdminslgrid,
-            this.totalresAdminidgrid,
-            this.totalresAdminsnamegrid,
-            this.totalresAdminsgpagrid});
             this.res_totalResultgrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.res_totalResultgrid.Location = new System.Drawing.Point(0, 0);
             this.res_totalResultgrid.Name = "res_totalResultgrid";
             this.res_totalResultgrid.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.res_totalResultgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.res_totalResultgrid.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.res_totalResultgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.res_totalResultgrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.res_totalResultgrid.Size = new System.Drawing.Size(1262, 356);
             this.res_totalResultgrid.TabIndex = 0;
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.ResRefresh);
             this.panel11.Controls.Add(this.res_totalSrchbtn);
             this.panel11.Controls.Add(this.label80);
             this.panel11.Controls.Add(this.label61);
@@ -3858,12 +3851,24 @@ namespace University_Management_System
             this.res_totalSrchbtn.ForeColor = System.Drawing.Color.White;
             this.res_totalSrchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
             this.res_totalSrchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_totalSrchbtn.Location = new System.Drawing.Point(1157, 42);
+            this.res_totalSrchbtn.Location = new System.Drawing.Point(1161, 20);
             this.res_totalSrchbtn.Name = "res_totalSrchbtn";
             this.res_totalSrchbtn.Size = new System.Drawing.Size(43, 31);
             this.res_totalSrchbtn.TabIndex = 38;
             this.res_totalSrchbtn.UseVisualStyleBackColor = true;
             this.res_totalSrchbtn.Click += new System.EventHandler(this.res_totalSrchbtn_Click);
+            // 
+            // label80
+            // 
+            this.label80.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label80.AutoSize = true;
+            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label80.ForeColor = System.Drawing.Color.White;
+            this.label80.Location = new System.Drawing.Point(880, 47);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(86, 23);
+            this.label80.TabIndex = 10;
+            this.label80.Text = "Semester";
             // 
             // label61
             // 
@@ -3876,6 +3881,17 @@ namespace University_Management_System
             this.label61.Size = new System.Drawing.Size(70, 23);
             this.label61.TabIndex = 10;
             this.label61.Text = "Section";
+            // 
+            // res_totalSemester
+            // 
+            this.res_totalSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_totalSemester.BackColor = System.Drawing.Color.Azure;
+            this.res_totalSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.res_totalSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.res_totalSemester.Location = new System.Drawing.Point(981, 46);
+            this.res_totalSemester.Name = "res_totalSemester";
+            this.res_totalSemester.Size = new System.Drawing.Size(161, 24);
+            this.res_totalSemester.TabIndex = 11;
             // 
             // res_totalSection
             // 
@@ -3975,6 +3991,16 @@ namespace University_Management_System
             this.panel12.Size = new System.Drawing.Size(1262, 139);
             this.panel12.TabIndex = 2;
             // 
+            // rsgpa
+            // 
+            this.rsgpa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rsgpa.AutoSize = true;
+            this.rsgpa.Location = new System.Drawing.Point(1076, 107);
+            this.rsgpa.Name = "rsgpa";
+            this.rsgpa.Size = new System.Drawing.Size(71, 23);
+            this.rsgpa.TabIndex = 1;
+            this.rsgpa.Text = "SGPA :";
+            // 
             // res_srchStusection
             // 
             this.res_srchStusection.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -4048,164 +4074,6 @@ namespace University_Management_System
             this.res_srchGrid.Size = new System.Drawing.Size(1262, 224);
             this.res_srchGrid.TabIndex = 0;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.res_srchClearbtn);
-            this.panel8.Controls.Add(this.res_srchbtn);
-            this.panel8.Controls.Add(this.res_srchSemester);
-            this.panel8.Controls.Add(this.label81);
-            this.panel8.Controls.Add(this.res_srchId);
-            this.panel8.Controls.Add(this.label70);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1262, 100);
-            this.panel8.TabIndex = 0;
-            // 
-            // res_srchClearbtn
-            // 
-            this.res_srchClearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_srchClearbtn.FlatAppearance.BorderSize = 0;
-            this.res_srchClearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.res_srchClearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.res_srchClearbtn.ForeColor = System.Drawing.Color.White;
-            this.res_srchClearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
-            this.res_srchClearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_srchClearbtn.Location = new System.Drawing.Point(953, 53);
-            this.res_srchClearbtn.Name = "res_srchClearbtn";
-            this.res_srchClearbtn.Size = new System.Drawing.Size(43, 31);
-            this.res_srchClearbtn.TabIndex = 4;
-            this.res_srchClearbtn.UseVisualStyleBackColor = true;
-            this.res_srchClearbtn.Click += new System.EventHandler(this.res_srchClearbtn_Click);
-            // 
-            // res_srchbtn
-            // 
-            this.res_srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_srchbtn.FlatAppearance.BorderSize = 0;
-            this.res_srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.res_srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.res_srchbtn.ForeColor = System.Drawing.Color.White;
-            this.res_srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
-            this.res_srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.res_srchbtn.Location = new System.Drawing.Point(953, 16);
-            this.res_srchbtn.Name = "res_srchbtn";
-            this.res_srchbtn.Size = new System.Drawing.Size(43, 31);
-            this.res_srchbtn.TabIndex = 4;
-            this.res_srchbtn.UseVisualStyleBackColor = true;
-            this.res_srchbtn.Click += new System.EventHandler(this.res_srchbtn_Click);
-            // 
-            // res_srchId
-            // 
-            this.res_srchId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_srchId.BackColor = System.Drawing.Color.Azure;
-            this.res_srchId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.res_srchId.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.res_srchId.Location = new System.Drawing.Point(315, 34);
-            this.res_srchId.Name = "res_srchId";
-            this.res_srchId.Size = new System.Drawing.Size(254, 24);
-            this.res_srchId.TabIndex = 3;
-            // 
-            // label70
-            // 
-            this.label70.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label70.AutoSize = true;
-            this.label70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label70.ForeColor = System.Drawing.Color.White;
-            this.label70.Location = new System.Drawing.Point(267, 35);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(31, 23);
-            this.label70.TabIndex = 2;
-            this.label70.Text = "ID";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tabControl1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1284, 547);
-            this.panel3.TabIndex = 2;
-            // 
-            // res_totalSemester
-            // 
-            this.res_totalSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_totalSemester.BackColor = System.Drawing.Color.Azure;
-            this.res_totalSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.res_totalSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.res_totalSemester.Location = new System.Drawing.Point(981, 46);
-            this.res_totalSemester.Name = "res_totalSemester";
-            this.res_totalSemester.Size = new System.Drawing.Size(161, 24);
-            this.res_totalSemester.TabIndex = 11;
-            // 
-            // label80
-            // 
-            this.label80.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label80.AutoSize = true;
-            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label80.ForeColor = System.Drawing.Color.White;
-            this.label80.Location = new System.Drawing.Point(880, 47);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(86, 23);
-            this.label80.TabIndex = 10;
-            this.label80.Text = "Semester";
-            // 
-            // totalresAdminslgrid
-            // 
-            this.totalresAdminslgrid.HeaderText = "SL. No.";
-            this.totalresAdminslgrid.Name = "totalresAdminslgrid";
-            this.totalresAdminslgrid.ReadOnly = true;
-            // 
-            // totalresAdminidgrid
-            // 
-            this.totalresAdminidgrid.HeaderText = "ID";
-            this.totalresAdminidgrid.Name = "totalresAdminidgrid";
-            this.totalresAdminidgrid.ReadOnly = true;
-            // 
-            // totalresAdminsnamegrid
-            // 
-            this.totalresAdminsnamegrid.HeaderText = "Name";
-            this.totalresAdminsnamegrid.Name = "totalresAdminsnamegrid";
-            this.totalresAdminsnamegrid.ReadOnly = true;
-            // 
-            // totalresAdminsgpagrid
-            // 
-            this.totalresAdminsgpagrid.HeaderText = "SGPA";
-            this.totalresAdminsgpagrid.Name = "totalresAdminsgpagrid";
-            this.totalresAdminsgpagrid.ReadOnly = true;
-            // 
-            // label81
-            // 
-            this.label81.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label81.AutoSize = true;
-            this.label81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label81.ForeColor = System.Drawing.Color.White;
-            this.label81.Location = new System.Drawing.Point(586, 35);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(86, 23);
-            this.label81.TabIndex = 2;
-            this.label81.Text = "Semester";
-            // 
-            // res_srchSemester
-            // 
-            this.res_srchSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.res_srchSemester.BackColor = System.Drawing.Color.Azure;
-            this.res_srchSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.res_srchSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.res_srchSemester.Location = new System.Drawing.Point(682, 34);
-            this.res_srchSemester.Name = "res_srchSemester";
-            this.res_srchSemester.Size = new System.Drawing.Size(254, 24);
-            this.res_srchSemester.TabIndex = 3;
-            // 
-            // rsgpa
-            // 
-            this.rsgpa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rsgpa.AutoSize = true;
-            this.rsgpa.Location = new System.Drawing.Point(1076, 107);
-            this.rsgpa.Name = "rsgpa";
-            this.rsgpa.Size = new System.Drawing.Size(71, 23);
-            this.rsgpa.TabIndex = 1;
-            this.rsgpa.Text = "SGPA :";
-            // 
             // rescslgrid
             // 
             this.rescslgrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -4262,6 +4130,123 @@ namespace University_Management_System
             this.rescgrade.HeaderText = "Grade";
             this.rescgrade.Name = "rescgrade";
             this.rescgrade.ReadOnly = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.res_srchClearbtn);
+            this.panel8.Controls.Add(this.res_srchbtn);
+            this.panel8.Controls.Add(this.res_srchSemester);
+            this.panel8.Controls.Add(this.label81);
+            this.panel8.Controls.Add(this.res_srchId);
+            this.panel8.Controls.Add(this.label70);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1262, 100);
+            this.panel8.TabIndex = 0;
+            // 
+            // res_srchClearbtn
+            // 
+            this.res_srchClearbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_srchClearbtn.FlatAppearance.BorderSize = 0;
+            this.res_srchClearbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.res_srchClearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.res_srchClearbtn.ForeColor = System.Drawing.Color.White;
+            this.res_srchClearbtn.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.res_srchClearbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.res_srchClearbtn.Location = new System.Drawing.Point(953, 53);
+            this.res_srchClearbtn.Name = "res_srchClearbtn";
+            this.res_srchClearbtn.Size = new System.Drawing.Size(43, 31);
+            this.res_srchClearbtn.TabIndex = 4;
+            this.res_srchClearbtn.UseVisualStyleBackColor = true;
+            this.res_srchClearbtn.Click += new System.EventHandler(this.res_srchClearbtn_Click);
+            // 
+            // res_srchbtn
+            // 
+            this.res_srchbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_srchbtn.FlatAppearance.BorderSize = 0;
+            this.res_srchbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.res_srchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.res_srchbtn.ForeColor = System.Drawing.Color.White;
+            this.res_srchbtn.Image = global::University_Management_System.Properties.Resources.Saerch_icon;
+            this.res_srchbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.res_srchbtn.Location = new System.Drawing.Point(953, 16);
+            this.res_srchbtn.Name = "res_srchbtn";
+            this.res_srchbtn.Size = new System.Drawing.Size(43, 31);
+            this.res_srchbtn.TabIndex = 4;
+            this.res_srchbtn.UseVisualStyleBackColor = true;
+            this.res_srchbtn.Click += new System.EventHandler(this.res_srchbtn_Click);
+            // 
+            // res_srchSemester
+            // 
+            this.res_srchSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_srchSemester.BackColor = System.Drawing.Color.Azure;
+            this.res_srchSemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.res_srchSemester.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.res_srchSemester.Location = new System.Drawing.Point(682, 34);
+            this.res_srchSemester.Name = "res_srchSemester";
+            this.res_srchSemester.Size = new System.Drawing.Size(254, 24);
+            this.res_srchSemester.TabIndex = 3;
+            // 
+            // label81
+            // 
+            this.label81.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label81.AutoSize = true;
+            this.label81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label81.ForeColor = System.Drawing.Color.White;
+            this.label81.Location = new System.Drawing.Point(586, 35);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(86, 23);
+            this.label81.TabIndex = 2;
+            this.label81.Text = "Semester";
+            // 
+            // res_srchId
+            // 
+            this.res_srchId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.res_srchId.BackColor = System.Drawing.Color.Azure;
+            this.res_srchId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.res_srchId.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.res_srchId.Location = new System.Drawing.Point(315, 34);
+            this.res_srchId.Name = "res_srchId";
+            this.res_srchId.Size = new System.Drawing.Size(254, 24);
+            this.res_srchId.TabIndex = 3;
+            // 
+            // label70
+            // 
+            this.label70.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label70.AutoSize = true;
+            this.label70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(267, 35);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(31, 23);
+            this.label70.TabIndex = 2;
+            this.label70.Text = "ID";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tabControl1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1284, 547);
+            this.panel3.TabIndex = 2;
+            // 
+            // ResRefresh
+            // 
+            this.ResRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ResRefresh.FlatAppearance.BorderSize = 0;
+            this.ResRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ResRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResRefresh.ForeColor = System.Drawing.Color.White;
+            this.ResRefresh.Image = global::University_Management_System.Properties.Resources.Refresh;
+            this.ResRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ResRefresh.Location = new System.Drawing.Point(1161, 67);
+            this.ResRefresh.Name = "ResRefresh";
+            this.ResRefresh.Size = new System.Drawing.Size(43, 31);
+            this.ResRefresh.TabIndex = 39;
+            this.ResRefresh.UseVisualStyleBackColor = true;
+            this.ResRefresh.Click += new System.EventHandler(this.ResRefresh_Click);
             // 
             // Admin_Menu
             // 
@@ -4655,10 +4640,6 @@ namespace University_Management_System
         private System.Windows.Forms.Button modCsrch;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.TextBox res_totalSemester;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalresAdminslgrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalresAdminidgrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalresAdminsnamegrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalresAdminsgpagrid;
         private System.Windows.Forms.TextBox res_srchSemester;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label rsgpa;
@@ -4670,5 +4651,6 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn rescattendence;
         private System.Windows.Forms.DataGridViewTextBoxColumn resctotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn rescgrade;
+        private System.Windows.Forms.Button ResRefresh;
     }
 }

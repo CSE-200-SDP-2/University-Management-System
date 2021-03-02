@@ -949,6 +949,7 @@ namespace University_Management_System
             }
         }
 
+        int Max2 = 0;
         private void res_totalSrchbtn_Click(object sender, EventArgs e)
         {
             con.dataSend("Drop View Slist");
@@ -960,7 +961,6 @@ namespace University_Management_System
             DataTable cmax = new DataTable();
             con.sda.Fill(cmax);
             res_totalResultgrid.Rows.Clear();
-            int Max2 = 0;
             if (cmax.Rows.Count > 0)
             {
                 //int Max2;
@@ -970,8 +970,26 @@ namespace University_Management_System
                     Max2 = int.Parse(Max1);
                 }
 
+                DataGridViewTextBoxColumn col0 = new DataGridViewTextBoxColumn();
+                col0.DataPropertyName = "Sl";
+                col0.Name = "SL. No.";
+                res_totalResultgrid.Columns.Add(col0);
+                DataGridViewTextBoxColumn col10 = new DataGridViewTextBoxColumn();
+                col10.DataPropertyName = "id";
+                col10.Name = "ID";
+                res_totalResultgrid.Columns.Add(col10);
+                DataGridViewTextBoxColumn colll0 = new DataGridViewTextBoxColumn();
+                colll0.DataPropertyName = "name";
+                colll0.Name = "Name";
+                res_totalResultgrid.Columns.Add(colll0);
+                DataGridViewTextBoxColumn col110 = new DataGridViewTextBoxColumn();
+                col110.DataPropertyName = "sgpa";
+                col110.Name = "SGPA";
+                res_totalResultgrid.Columns.Add(col110);
+
+
                 //int totalcoloumn = 3;
-                for(int i = 1; i <= Max2 ; i++)
+                for (int i = 1; i <= Max2 ; i++)
                 {
                     string s = i.ToString();
                     DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
@@ -990,15 +1008,15 @@ namespace University_Management_System
                 foreach(DataRow row in Sl.Rows)
                 {
                     int n = res_totalResultgrid.Rows.Add();
-                    res_totalResultgrid.Rows[n].Cells["totalresAdminslgrid"].Value = n + 1;
+                    res_totalResultgrid.Rows[n].Cells[0].Value = n + 1;
                     string iid = row["id"].ToString();
                     con.dataGet("Select id,sname from Student Where id = '" + iid + "'");
                     DataTable Stu = new DataTable();
                     con.sda.Fill(Stu);
                     foreach(DataRow row1 in Stu.Rows)
                     {
-                        res_totalResultgrid.Rows[n].Cells["totalresAdminidgrid"].Value = row1["id"].ToString();
-                        res_totalResultgrid.Rows[n].Cells["totalresAdminsnamegrid"].Value = row1["sname"].ToString();
+                        res_totalResultgrid.Rows[n].Cells[1].Value = row1["id"].ToString();
+                        res_totalResultgrid.Rows[n].Cells[2].Value = row1["sname"].ToString();
                     }
 
                     con.dataGet("Select Course.ccode,Course.ccredit,Result.mid,Result.final,Result.outof25,Result.attendence From Course,Result Where Result.ccode = Course.ccode and Result.id = '" + iid + "' and rsemester = '" + res_totalSemester.Text + "'");
@@ -1074,7 +1092,7 @@ namespace University_Management_System
 
                     if (!float.IsNaN(sgpa))
                     {
-                        res_totalResultgrid.Rows[n].Cells["totalresAdminsgpagrid"].Value = sgpaa;
+                        res_totalResultgrid.Rows[n].Cells[3].Value = sgpaa;
                     }
                     else
                     {
@@ -1101,6 +1119,11 @@ namespace University_Management_System
             res_srchId.Clear();
             res_srchSemester.Clear();
 
+        }
+
+        private void ResRefresh_Click(object sender, EventArgs e)
+        {
+            res_totalResultgrid.Columns.Clear();
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)
