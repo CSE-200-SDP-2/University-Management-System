@@ -508,6 +508,8 @@ namespace University_Management_System
                     res_Grid.Rows[n].Cells["tchResgradegrid"].Value = grade;
 
                 }
+                res_Ccode.Clear();
+                res_semester.Clear();
             }
             else
             {
