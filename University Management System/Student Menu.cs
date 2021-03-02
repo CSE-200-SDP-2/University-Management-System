@@ -283,11 +283,11 @@ namespace University_Management_System
                     string credit = row["ccredit"].ToString();
                     float ccredit1 = float.Parse(credit);
 
-                    int M, F, OF25, A, AN, Total;
-                    M = int.Parse(mid);
-                    F = int.Parse(final);
-                    OF25 = int.Parse(of25);
-                    A = int.Parse(att);
+                    float M, F, OF25, A, AN, Total;
+                    M = float.Parse(mid);
+                    F = float.Parse(final);
+                    OF25 = float.Parse(of25);
+                    A = float.Parse(att);
                     if (A >= 80) AN = 5;
                     else if (A <= 79 && A >= 70) AN = 4;
                     else if (A <= 69 && A >= 60) AN = 3;

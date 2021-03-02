@@ -558,6 +558,7 @@ namespace University_Management_System
         private void res_srchbtn_Click(object sender, EventArgs e)
         {
             string id = res_srchId.Text;
+            string semester = res_srchSemester.Text;
             con.dataGet("select * from Student where id = '" + id + "'");
 
             DataTable Stuinfo = new DataTable();
@@ -585,6 +586,91 @@ namespace University_Management_System
             res_srchStuname.Text = name;
             res_srchStuintake.Text = intake;
             res_srchStusection.Text = section;
+
+
+            con.dataGet("Select * from Result,Course Where Result.ccode = Course.ccode and id = '" + id + "' and rsemester = '" + semester + "'");
+            DataTable result = new DataTable();
+            con.sda.Fill(result);
+
+            float totalcredit = 0.00f;
+            float totalgpa = 0.00f;
+            res_srchGrid.Rows.Clear();
+            foreach (DataRow row in result.Rows)
+            {
+
+                int n = res_srchGrid.Rows.Add();
+                res_srchGrid.Rows[n].Cells["rescslgrid"].Value = n + 1;
+                res_srchGrid.Rows[n].Cells["resccodegrid"].Value = row["ccode"].ToString();
+                res_srchGrid.Rows[n].Cells["rescmidgrid"].Value = row["mid"].ToString();
+                res_srchGrid.Rows[n].Cells["rescfinalgrid"].Value = row["final"].ToString();
+                res_srchGrid.Rows[n].Cells["rescoutof30"].Value = row["outof25"].ToString();
+                res_srchGrid.Rows[n].Cells["rescattendence"].Value = row["attendence"].ToString();
+
+
+                /// mid,final,out of 25 and attendence 
+                string mid = row["mid"].ToString();
+                string final = row["final"].ToString();
+                string of25 = row["outof25"].ToString();
+                string att = row["attendence"].ToString();
+
+                //
+                string credit = row["ccredit"].ToString();
+                float ccredit1 = float.Parse(credit);
+
+                float M, F, OF25, A, AN, Total;
+                M = float.Parse(mid);
+                F = float.Parse(final);
+                OF25 = float.Parse(of25);
+                A = float.Parse(att);
+                if (A >= 80) AN = 5;
+                else if (A <= 79 && A >= 70) AN = 4;
+                else if (A <= 69 && A >= 60) AN = 3;
+                else if (A <= 59 && A >= 55) AN = 2;
+                else AN = 1;
+                Total = (M + (F + (OF25 + AN)));
+                string grade;
+                float gpa;
+                //80+ = A+ =4.00
+                //75-79 = A =3.75
+                //70 - 74 =A- = 3.50
+                //65-69 = B+ = 3.25
+                //60-64 = B = 3.00
+                //55 - 59 =B- = 2.75
+                //50-54 = C+ = 2.50
+                //45-59 = C = 2.25
+                //40-44 = D = 2.00
+                //<40 = F
+                if (Total >= 80) { grade = "A+"; gpa = 4.00f; }
+                else if (Total <= 79 && Total >= 75) { grade = "A"; gpa = 3.75f; }
+                else if (Total <= 74 && Total >= 70) { grade = "A-"; gpa = 3.50f; }
+                else if (Total <= 69 && Total >= 65) { grade = "B+"; gpa = 3.25f; }
+                else if (Total <= 64 && Total >= 60) { grade = "B"; gpa = 3.00f; }
+                else if (Total <= 59 && Total >= 55) { grade = "B-"; gpa = 2.75f; }
+                else if (Total <= 54 && Total >= 50) { grade = "C+"; gpa = 2.50f; }
+                else if (Total <= 49 && Total >= 45) { grade = "C"; gpa = 2.25f; }
+                else if (Total <= 44 && Total >= 40) { grade = "D"; gpa = 2.00f; }
+                else { grade = "F"; gpa = 0.00f; }
+
+
+
+                res_srchGrid.Rows[n].Cells["resctotal"].Value = Total.ToString();
+                res_srchGrid.Rows[n].Cells["rescgrade"].Value = grade;
+
+                gpa *= ccredit1;
+                totalcredit += ccredit1;
+                totalgpa += gpa;
+
+            }
+
+            float sgpa;
+            string sgpaa;
+            sgpa = (totalgpa / totalcredit);
+            sgpaa = String.Format("{0:0.00}", sgpa);
+
+            if (!float.IsNaN(sgpa))
+                rsgpa.Text = "SGPA : " + sgpaa;
+            else
+                rsgpa.Text = "SGPA : ";
 
 
         }
@@ -861,6 +947,159 @@ namespace University_Management_System
             {
                 con.dataSend("Delete from Course where ccode ='" + modCcode2.Text + "'");
             }
+        }
+
+        private void res_totalSrchbtn_Click(object sender, EventArgs e)
+        {
+            con.dataSend("Drop View Slist");
+            con.dataSend("Drop View Clist");
+            con.dataSend("Create View [Slist] As Select student.id,Student_Course.ccode from Student,Student_Course Where Student.id = Student_Course.id and Student.sdept = '" + res_totalDept.Text + "' and Student.sintake = '" + res_totalIntake.Text + "' and  Student.ssection ='" + res_totalSection.Text + "' and Student_Course.ssemester = '" + res_totalSemester.Text + "'");
+            con.dataSend("Create View [Clist] As Select id,Count(ccode) as A From Slist group by id");
+
+            con.dataGet("Select Max(A) As maxx from Clist");
+            DataTable cmax = new DataTable();
+            con.sda.Fill(cmax);
+            int Max2 = 0;
+            if (cmax.Rows.Count > 0)
+            {
+                //int Max2;
+                foreach (DataRow row in cmax.Rows)
+                {
+                    string Max1 = row["maxx"].ToString();
+                    Max2 = int.Parse(Max1);
+                }
+
+                //int totalcoloumn = 3;
+                for(int i = 1; i <= Max2 ; i++)
+                {
+                    string s = i.ToString();
+                    DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                    col.DataPropertyName = "subject" + s + "";
+                    col.Name = "Subject " + s + "";
+                    res_totalResultgrid.Columns.Add(col);
+                    DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
+                    col2.DataPropertyName = "subject" + s + "g";
+                    col2.Name = "Grade";
+                    res_totalResultgrid.Columns.Add(col2);
+                }
+
+                con.dataGet("Select distinct id from [Slist]");
+                DataTable Sl = new DataTable();
+                con.sda.Fill(Sl);
+                foreach(DataRow row in Sl.Rows)
+                {
+                    int n = res_totalResultgrid.Rows.Add();
+                    res_totalResultgrid.Rows[n].Cells["totalresAdminslgrid"].Value = n + 1;
+                    string iid = row["id"].ToString();
+                    con.dataGet("Select id,sname from Student Where id = '" + iid + "'");
+                    DataTable Stu = new DataTable();
+                    con.sda.Fill(Stu);
+                    foreach(DataRow row1 in Stu.Rows)
+                    {
+                        res_totalResultgrid.Rows[n].Cells["totalresAdminidgrid"].Value = row1["id"].ToString();
+                        res_totalResultgrid.Rows[n].Cells["totalresAdminsnamegrid"].Value = row1["sname"].ToString();
+                    }
+
+                    con.dataGet("Select Course.ccode,Course.ccredit,Result.mid,Result.final,Result.outof25,Result.attendence From Course,Result Where Result.ccode = Course.ccode and Result.id = '" + iid + "' and rsemester = '" + res_totalSemester.Text + "'");
+                    DataTable result = new DataTable();
+                    con.sda.Fill(result);
+                    float totalcredit = 0.00f;
+                    float totalgpa = 0.00f;
+                    int j = 3;
+                    foreach (DataRow row2 in result.Rows)
+                    {
+                        /// mid,final,out of 25 and attendence 
+                        string mid = row2["mid"].ToString();
+                        string final = row2["final"].ToString();
+                        string of25 = row2["outof25"].ToString();
+                        string att = row2["attendence"].ToString();
+
+                        //
+                        string credit = row2["ccredit"].ToString();
+                        float ccredit1 = float.Parse(credit);
+
+                        float  M, F, OF25, AN, Total;
+                        int A;
+                        M = float.Parse(mid);
+                        F = float.Parse(final);
+                        OF25 = float.Parse(of25);
+                        A = int.Parse(att);
+                        if (A >= 80) AN = 5;
+                        else if (A <= 79 && A >= 70) AN = 4;
+                        else if (A <= 69 && A >= 60) AN = 3;
+                        else if (A <= 59 && A >= 55) AN = 2;
+                        else AN = 1;
+                        Total = (M + (F + (OF25 + AN)));
+                        string grade;
+                        float gpa;
+                        //80+ = A+ =4.00
+                        //75-79 = A =3.75
+                        //70 - 74 =A- = 3.50
+                        //65-69 = B+ = 3.25
+                        //60-64 = B = 3.00
+                        //55 - 59 =B- = 2.75
+                        //50-54 = C+ = 2.50
+                        //45-59 = C = 2.25
+                        //40-44 = D = 2.00
+                        //<40 = F
+                        if (Total >= 80) { grade = "A+"; gpa = 4.00f; }
+                        else if (Total <= 79 && Total >= 75) { grade = "A"; gpa = 3.75f; }
+                        else if (Total <= 74 && Total >= 70) { grade = "A-"; gpa = 3.50f; }
+                        else if (Total <= 69 && Total >= 65) { grade = "B+"; gpa = 3.25f; }
+                        else if (Total <= 64 && Total >= 60) { grade = "B"; gpa = 3.00f; }
+                        else if (Total <= 59 && Total >= 55) { grade = "B-"; gpa = 2.75f; }
+                        else if (Total <= 54 && Total >= 50) { grade = "C+"; gpa = 2.50f; }
+                        else if (Total <= 49 && Total >= 45) { grade = "C"; gpa = 2.25f; }
+                        else if (Total <= 44 && Total >= 40) { grade = "D"; gpa = 2.00f; }
+                        else { grade = "F"; gpa = 0.00f; }
+
+                        //string sub = "subject" + j + "";
+                        res_totalResultgrid.Rows[n].Cells[++j].Value = row2["ccode"].ToString();
+                        //string gg = "subject" + j + "g";
+                        res_totalResultgrid.Rows[n].Cells[++j].Value = grade;
+
+
+
+                        gpa *= ccredit1;
+                        totalcredit += ccredit1;
+                        totalgpa += gpa;
+
+                    }
+
+                    float sgpa;
+                    string sgpaa;
+                    sgpa = (totalgpa / totalcredit);
+                    sgpaa = String.Format("{0:0.00}", sgpa);
+
+                    if (!float.IsNaN(sgpa))
+                    {
+                        res_totalResultgrid.Rows[n].Cells["totalresAdminsgpagrid"].Value = sgpaa;
+                    }
+                    else
+                    {
+                        //kisuina
+                    }
+                }
+            }
+            else
+            {
+                // Pore lekhmu ne
+            }
+
+            
+        }
+
+        private void res_srchClearbtn_Click(object sender, EventArgs e)
+        {
+            res_srchStuid.Text = "ID";
+            res_srchStuname.Text = "Name";
+            res_srchStuintake.Text = "Intake";
+            res_srchStusection.Text = "Section";
+            res_srchGrid.Rows.Clear();
+            rsgpa.Text = "SGPA : ";
+            res_srchId.Clear();
+            res_srchSemester.Clear();
+
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)
