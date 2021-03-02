@@ -959,6 +959,7 @@ namespace University_Management_System
             con.dataGet("Select Max(A) As maxx from Clist");
             DataTable cmax = new DataTable();
             con.sda.Fill(cmax);
+            res_totalResultgrid.Rows.Clear();
             int Max2 = 0;
             if (cmax.Rows.Count > 0)
             {
