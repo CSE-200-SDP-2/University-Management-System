@@ -31,15 +31,15 @@ namespace University_Management_System
         private void Student_Menu_Load(object sender, EventArgs e)
         {
             StuCourse_LoadData();
-            Auto_studentCourseSelectioncoursecode();
-            Auto_studentCourseSelectionsemester();
             Stu_CurrentCourse_LoadData();
+            Auto_studentResultsemester();
         }
 
         public void Auto_studentCourseSelectioncoursecode()
         {
-            con.dataGet("Select Course.ccode from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "'"); //  '" +  +"'
-                                                                                                                                                                       //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            coll.Clear();
+            con.dataGet("Select Teacher_Course.ccode from Teacher_Course,Course where Teacher_Course.ccode=Course.ccode and  Course.cprogram='"+ stu_Cprogram.Text+ "' and Course.cdept='"+ stu_Cdept.Text+ "'"); //  '" +  +"'
+                                                             //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggeststulistccode = new DataTable();
             con.sda.Fill(dtsuggeststulistccode);
 
@@ -58,13 +58,15 @@ namespace University_Management_System
             stu_Ccode.AutoCompleteMode = AutoCompleteMode.Suggest;
             stu_Ccode.AutoCompleteSource = AutoCompleteSource.CustomSource;
             stu_Ccode.AutoCompleteCustomSource = coll;
+           
         }
 
-        AutoCompleteStringCollection collb = new AutoCompleteStringCollection();
+        AutoCompleteStringCollection collcca = new AutoCompleteStringCollection();
         public void Auto_studentCourseSelectionsemester()
         {
-            con.dataGet("Select tsemester from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "' and Teacher_Course.ccode='" + stu_Ccode.Text + "'");  //  '" +  +"'
-                                                                                                                                                                                                                       //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            collcca.Clear();
+            con.dataGet("Select tsemester from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "' and Teacher_Course.ccode='"+stu_Ccode.Text+"'"); //  '" +  +"'
+                                                             //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestsemester = new DataTable();
             con.sda.Fill(dtsuggestsemester);
 
@@ -73,7 +75,7 @@ namespace University_Management_System
             {
                 for (int i = 0; i < dtsuggestsemester.Rows.Count; i++)
                 {
-                    collb.Add(dtsuggestsemester.Rows[i]["tsemester"].ToString());
+                    collcca.Add(dtsuggestsemester.Rows[i]["tsemester"].ToString());
                 }
             }
             /*else
@@ -82,8 +84,37 @@ namespace University_Management_System
             }*/
             stu_Csemester.AutoCompleteMode = AutoCompleteMode.Suggest;
             stu_Csemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            stu_Csemester.AutoCompleteCustomSource = collb;
+            stu_Csemester.AutoCompleteCustomSource = collcca;
+            
         }
+
+        AutoCompleteStringCollection seme = new AutoCompleteStringCollection();
+        public void Auto_studentResultsemester()
+        {
+            seme.Clear();
+            con.dataGet("Select ssemester from Student_Course where id='"+studentid+"'"); //  '" +  +"'
+                                                                                                                                                                                                                      //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestsemester = new DataTable();
+            con.sda.Fill(dtsuggestsemester);
+
+
+            if (dtsuggestsemester.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestsemester.Rows.Count; i++)
+                {
+                    seme.Add(dtsuggestsemester.Rows[i]["ssemester"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            Sturesbox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Sturesbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            Sturesbox.AutoCompleteCustomSource = seme;
+
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -456,6 +487,16 @@ namespace University_Management_System
         private void Sgpalbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Ccode_TextChanged(object sender, EventArgs e)
+        {
+            Auto_studentCourseSelectioncoursecode();
+        }
+
+        private void stu_Csemester_TextChanged(object sender, EventArgs e)
+        {
+            Auto_studentCourseSelectionsemester();
         }
     }
 }

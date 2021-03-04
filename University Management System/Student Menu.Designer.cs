@@ -451,6 +451,7 @@ namespace University_Management_System
             this.stu_Csemester.Name = "stu_Csemester";
             this.stu_Csemester.Size = new System.Drawing.Size(152, 24);
             this.stu_Csemester.TabIndex = 48;
+            this.stu_Csemester.TextChanged += new System.EventHandler(this.stu_Csemester_TextChanged);
             // 
             // label72
             // 
@@ -523,7 +524,7 @@ namespace University_Management_System
             this.stu_Ccode.Name = "stu_Ccode";
             this.stu_Ccode.Size = new System.Drawing.Size(154, 24);
             this.stu_Ccode.TabIndex = 44;
-            this.stu_Ccode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.stu_Ccode.TextChanged += new System.EventHandler(this.Ccode_TextChanged);
             // 
             // label3
             // 
