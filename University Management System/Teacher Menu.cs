@@ -588,9 +588,111 @@ namespace University_Management_System
             
         }
 
+
+        // Modify Marks---------------------
+        private void mod_Markssrchbtn_Click(object sender, EventArgs e)
+        {
+            mod_MarkLoadData();
+        }
+        string semester,code,sid;
         private void mod_Marksinsert_Click(object sender, EventArgs e)
         {
 
+            con.dataSend("Update Result Set mid = '" + mod_Marksmid.Text + "',final = '" + mod_Marksfinal.Text + "',outof25 = '" + mod_Marksoutof25.Text + "',attendence = '" + mod_Marksattendence.Text + "' Where id = '" + sid + "' and ccode = '" + code + "' and tid = '" + tchcode + "' and rsemester = '" + semester + "'");
+            mod_MarkLoadData();
+            mod_Marksmid.Clear();
+            mod_Marksfinal.Clear();
+            mod_Marksoutof25.Clear();
+            mod_Marksattendence.Clear();
+        }
+        public void mod_Markslist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = mod_Markslist.Rows[e.RowIndex];
+            mod_Marksmid.Text = row.Cells[4].Value.ToString();
+            mod_Marksfinal.Text = row.Cells[5].Value.ToString();
+            mod_Marksoutof25.Text = row.Cells[6].Value.ToString();
+            mod_Marksattendence.Text = row.Cells[7].Value.ToString();
+            semester = row.Cells[3].Value.ToString();
+            code = row.Cells[2].Value.ToString();
+            sid = row.Cells[1].Value.ToString();
+        }
+        private void mod_Marksclearbtn_Click(object sender, EventArgs e)
+        {
+            mod_Marksmid.Clear();
+            mod_Marksfinal.Clear();
+            mod_Marksoutof25.Clear();
+            mod_Marksattendence.Clear();
+            mod_Marksid.Clear();
+            mod_Markssemester.Clear();
+            mod_Markslist.Rows.Clear();
+        }
+
+
+        private void mod_MarkLoadData()
+        {
+            con.dataGet("Select * from Result Where tid = '" + tchcode + "' and id = '" + mod_Marksid.Text + "' and rsemester = '" + mod_Markssemester.Text + "'");
+            DataTable res = new DataTable();
+            con.sda.Fill(res);
+            mod_Markslist.Rows.Clear();
+            if (res.Rows.Count > 0 )
+            {
+                foreach(DataRow row in res.Rows)
+                {
+                    int n = mod_Markslist.Rows.Add();
+                    mod_Markslist.Rows[n].Cells["mod_Markslgrid"].Value = n + 1;
+                    mod_Markslist.Rows[n].Cells["mod_Markidgrid"].Value = row["id"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markccodegrid"].Value = row["ccode"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Marksemestergrid"].Value = row["rsemester"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markmidgrid"].Value = row["mid"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markfinalgrid"].Value = row["final"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markoutof25grid"].Value = row["outof25"].ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markattendencegrid"].Value = row["attendence"].ToString();
+
+                    string mid = row["mid"].ToString();
+                    string final = row["final"].ToString();
+                    string of25 = row["outof25"].ToString();
+                    string att = row["attendence"].ToString();
+                    float M, F, OF25, A, AN, Total;
+                    M = float.Parse(mid);
+                    F = float.Parse(final);
+                    OF25 = float.Parse(of25);
+                    A = int.Parse(att);
+                    if (A >= 80) AN = 5;
+                    else if (A <= 79 && A >= 70) AN = 4;
+                    else if (A <= 69 && A >= 60) AN = 3;
+                    else if (A <= 59 && A >= 55) AN = 2;
+                    else AN = 1;
+                    Total = (M + (F + (OF25 + AN)));
+                    string grade;
+                    //80+ = A+ =4.00
+                    //75-79 = A =3.75
+                    //70 - 74 =A- = 3.50
+                    //65-69 = B+ = 3.25
+                    //60-64 = B = 3.00
+                    //55 - 59 =B- = 2.75
+                    //50-54 = C+ = 2.50
+                    //45-59 = C = 2.25
+                    //40-44 = D = 2.00
+                    //<40 = F
+                    if (Total >= 80) grade = "A+";
+                    else if (Total <= 79 && Total >= 75) grade = "A";
+                    else if (Total <= 74 && Total >= 70) grade = "A-";
+                    else if (Total <= 69 && Total >= 65) grade = "B+";
+                    else if (Total <= 64 && Total >= 60) grade = "B";
+                    else if (Total <= 59 && Total >= 55) grade = "B-";
+                    else if (Total <= 54 && Total >= 50) grade = "C+";
+                    else if (Total <= 49 && Total >= 45) grade = "C";
+                    else if (Total <= 44 && Total >= 40) grade = "D";
+                    else grade = "F";
+
+                    mod_Markslist.Rows[n].Cells["mod_Marktotalgrid"].Value = Total.ToString();
+                    mod_Markslist.Rows[n].Cells["mod_Markgradegrid"].Value = grade;
+                }
+            }
+            else
+            {
+                MessageBox.Show("You never inserted marks for this student!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
