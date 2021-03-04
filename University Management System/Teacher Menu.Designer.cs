@@ -110,9 +110,21 @@ namespace University_Management_System
             this.modifymarks = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.mod_Markslist = new System.Windows.Forms.DataGridView();
+            this.mod_Markslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markccodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Marksemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markmidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markfinalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markoutof25grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Markattendencegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_Marktotalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod_MarkgradeGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.mod_Marksclearbtn = new System.Windows.Forms.Button();
             this.mod_Markssrchbtn = new System.Windows.Forms.Button();
+            this.mod_Markssemester = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.mod_Marksid = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.mod_Marksinsert = new System.Windows.Forms.Button();
@@ -160,18 +172,6 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.mod_Markssemester = new System.Windows.Forms.TextBox();
-            this.mod_Markslgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markccodegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Marksemestergrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markmidgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markfinalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markoutof25grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Markattendencegrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_Marktotalgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mod_MarkgradeGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -516,6 +516,7 @@ namespace University_Management_System
             this.tchCsemester.Name = "tchCsemester";
             this.tchCsemester.Size = new System.Drawing.Size(152, 24);
             this.tchCsemester.TabIndex = 50;
+            this.tchCsemester.TextChanged += new System.EventHandler(this.tchCsemester_TextChanged);
             // 
             // label72
             // 
@@ -963,6 +964,7 @@ namespace University_Management_System
             this.insertMarktsemester.Name = "insertMarktsemester";
             this.insertMarktsemester.Size = new System.Drawing.Size(227, 24);
             this.insertMarktsemester.TabIndex = 42;
+            this.insertMarktsemester.TextChanged += new System.EventHandler(this.insertMarktsemester_TextChanged);
             // 
             // label16
             // 
@@ -1045,6 +1047,66 @@ namespace University_Management_System
             this.mod_Markslist.TabIndex = 0;
             this.mod_Markslist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mod_Markslist_CellContentClick);
             // 
+            // mod_Markslgrid
+            // 
+            this.mod_Markslgrid.HeaderText = "SL. No.";
+            this.mod_Markslgrid.Name = "mod_Markslgrid";
+            this.mod_Markslgrid.ReadOnly = true;
+            // 
+            // mod_Markidgrid
+            // 
+            this.mod_Markidgrid.HeaderText = "ID";
+            this.mod_Markidgrid.Name = "mod_Markidgrid";
+            this.mod_Markidgrid.ReadOnly = true;
+            // 
+            // mod_Markccodegrid
+            // 
+            this.mod_Markccodegrid.HeaderText = "Course Code";
+            this.mod_Markccodegrid.Name = "mod_Markccodegrid";
+            this.mod_Markccodegrid.ReadOnly = true;
+            // 
+            // mod_Marksemestergrid
+            // 
+            this.mod_Marksemestergrid.HeaderText = "Semester";
+            this.mod_Marksemestergrid.Name = "mod_Marksemestergrid";
+            this.mod_Marksemestergrid.ReadOnly = true;
+            // 
+            // mod_Markmidgrid
+            // 
+            this.mod_Markmidgrid.HeaderText = "Mid";
+            this.mod_Markmidgrid.Name = "mod_Markmidgrid";
+            this.mod_Markmidgrid.ReadOnly = true;
+            // 
+            // mod_Markfinalgrid
+            // 
+            this.mod_Markfinalgrid.HeaderText = "Final";
+            this.mod_Markfinalgrid.Name = "mod_Markfinalgrid";
+            this.mod_Markfinalgrid.ReadOnly = true;
+            // 
+            // mod_Markoutof25grid
+            // 
+            this.mod_Markoutof25grid.HeaderText = "Out of 25";
+            this.mod_Markoutof25grid.Name = "mod_Markoutof25grid";
+            this.mod_Markoutof25grid.ReadOnly = true;
+            // 
+            // mod_Markattendencegrid
+            // 
+            this.mod_Markattendencegrid.HeaderText = "Attendence";
+            this.mod_Markattendencegrid.Name = "mod_Markattendencegrid";
+            this.mod_Markattendencegrid.ReadOnly = true;
+            // 
+            // mod_Marktotalgrid
+            // 
+            this.mod_Marktotalgrid.HeaderText = "Total";
+            this.mod_Marktotalgrid.Name = "mod_Marktotalgrid";
+            this.mod_Marktotalgrid.ReadOnly = true;
+            // 
+            // mod_MarkgradeGrid
+            // 
+            this.mod_MarkgradeGrid.HeaderText = "Grade";
+            this.mod_MarkgradeGrid.Name = "mod_MarkgradeGrid";
+            this.mod_MarkgradeGrid.ReadOnly = true;
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.mod_Marksclearbtn);
@@ -1099,6 +1161,25 @@ namespace University_Management_System
             this.mod_Markssrchbtn.TabIndex = 46;
             this.mod_Markssrchbtn.UseVisualStyleBackColor = true;
             this.mod_Markssrchbtn.Click += new System.EventHandler(this.mod_Markssrchbtn_Click);
+            // 
+            // mod_Markssemester
+            // 
+            this.mod_Markssemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mod_Markssemester.Location = new System.Drawing.Point(662, 39);
+            this.mod_Markssemester.Name = "mod_Markssemester";
+            this.mod_Markssemester.Size = new System.Drawing.Size(167, 20);
+            this.mod_Markssemester.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(559, 39);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 21);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Semester :";
             // 
             // mod_Marksid
             // 
@@ -1348,6 +1429,7 @@ namespace University_Management_System
             this.res_semester.Name = "res_semester";
             this.res_semester.Size = new System.Drawing.Size(227, 24);
             this.res_semester.TabIndex = 50;
+            this.res_semester.TextChanged += new System.EventHandler(this.res_semester_TextChanged);
             // 
             // label19
             // 
@@ -1387,6 +1469,7 @@ namespace University_Management_System
             this.res_Ccode.Name = "res_Ccode";
             this.res_Ccode.Size = new System.Drawing.Size(227, 24);
             this.res_Ccode.TabIndex = 46;
+            this.res_Ccode.TextChanged += new System.EventHandler(this.res_Ccode_TextChanged);
             // 
             // label12
             // 
@@ -1560,85 +1643,6 @@ namespace University_Management_System
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1284, 461);
             this.panel2.TabIndex = 0;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(559, 39);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 21);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "Semester :";
-            // 
-            // mod_Markssemester
-            // 
-            this.mod_Markssemester.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mod_Markssemester.Location = new System.Drawing.Point(662, 39);
-            this.mod_Markssemester.Name = "mod_Markssemester";
-            this.mod_Markssemester.Size = new System.Drawing.Size(167, 20);
-            this.mod_Markssemester.TabIndex = 15;
-            // 
-            // mod_Markslgrid
-            // 
-            this.mod_Markslgrid.HeaderText = "SL. No.";
-            this.mod_Markslgrid.Name = "mod_Markslgrid";
-            this.mod_Markslgrid.ReadOnly = true;
-            // 
-            // mod_Markidgrid
-            // 
-            this.mod_Markidgrid.HeaderText = "ID";
-            this.mod_Markidgrid.Name = "mod_Markidgrid";
-            this.mod_Markidgrid.ReadOnly = true;
-            // 
-            // mod_Markccodegrid
-            // 
-            this.mod_Markccodegrid.HeaderText = "Course Code";
-            this.mod_Markccodegrid.Name = "mod_Markccodegrid";
-            this.mod_Markccodegrid.ReadOnly = true;
-            // 
-            // mod_Marksemestergrid
-            // 
-            this.mod_Marksemestergrid.HeaderText = "Semester";
-            this.mod_Marksemestergrid.Name = "mod_Marksemestergrid";
-            this.mod_Marksemestergrid.ReadOnly = true;
-            // 
-            // mod_Markmidgrid
-            // 
-            this.mod_Markmidgrid.HeaderText = "Mid";
-            this.mod_Markmidgrid.Name = "mod_Markmidgrid";
-            this.mod_Markmidgrid.ReadOnly = true;
-            // 
-            // mod_Markfinalgrid
-            // 
-            this.mod_Markfinalgrid.HeaderText = "Final";
-            this.mod_Markfinalgrid.Name = "mod_Markfinalgrid";
-            this.mod_Markfinalgrid.ReadOnly = true;
-            // 
-            // mod_Markoutof25grid
-            // 
-            this.mod_Markoutof25grid.HeaderText = "Out of 25";
-            this.mod_Markoutof25grid.Name = "mod_Markoutof25grid";
-            this.mod_Markoutof25grid.ReadOnly = true;
-            // 
-            // mod_Markattendencegrid
-            // 
-            this.mod_Markattendencegrid.HeaderText = "Attendence";
-            this.mod_Markattendencegrid.Name = "mod_Markattendencegrid";
-            this.mod_Markattendencegrid.ReadOnly = true;
-            // 
-            // mod_Marktotalgrid
-            // 
-            this.mod_Marktotalgrid.HeaderText = "Total";
-            this.mod_Marktotalgrid.Name = "mod_Marktotalgrid";
-            this.mod_Marktotalgrid.ReadOnly = true;
-            // 
-            // mod_MarkgradeGrid
-            // 
-            this.mod_MarkgradeGrid.HeaderText = "Grade";
-            this.mod_MarkgradeGrid.Name = "mod_MarkgradeGrid";
-            this.mod_MarkgradeGrid.ReadOnly = true;
             // 
             // Teacher_Menu
             // 

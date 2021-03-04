@@ -38,8 +38,8 @@ namespace University_Management_System
 
         public void Auto_studentCourseSelectioncoursecode()
         {
-            con.dataGet("Select ccode from Teacher_Course"); //  '" +  +"'
-                                                             //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            con.dataGet("Select Course.ccode from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "'"); //  '" +  +"'
+                                                                                                                                                                       //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggeststulistccode = new DataTable();
             con.sda.Fill(dtsuggeststulistccode);
 
@@ -59,10 +59,12 @@ namespace University_Management_System
             stu_Ccode.AutoCompleteSource = AutoCompleteSource.CustomSource;
             stu_Ccode.AutoCompleteCustomSource = coll;
         }
+
+        AutoCompleteStringCollection collb = new AutoCompleteStringCollection();
         public void Auto_studentCourseSelectionsemester()
         {
-            con.dataGet("Select tsemester from Teacher_Course"); //  '" +  +"'
-                                                             //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            con.dataGet("Select tsemester from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "' and Teacher_Course.ccode='" + stu_Ccode.Text + "'");  //  '" +  +"'
+                                                                                                                                                                                                                       //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestsemester = new DataTable();
             con.sda.Fill(dtsuggestsemester);
 
@@ -71,7 +73,7 @@ namespace University_Management_System
             {
                 for (int i = 0; i < dtsuggestsemester.Rows.Count; i++)
                 {
-                    coll.Add(dtsuggestsemester.Rows[i]["tsemester"].ToString());
+                    collb.Add(dtsuggestsemester.Rows[i]["tsemester"].ToString());
                 }
             }
             /*else
@@ -80,7 +82,7 @@ namespace University_Management_System
             }*/
             stu_Csemester.AutoCompleteMode = AutoCompleteMode.Suggest;
             stu_Csemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            stu_Csemester.AutoCompleteCustomSource = coll;
+            stu_Csemester.AutoCompleteCustomSource = collb;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

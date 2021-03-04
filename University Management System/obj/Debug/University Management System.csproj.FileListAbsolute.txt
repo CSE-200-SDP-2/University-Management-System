@@ -86,3 +86,5 @@ R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Manageme
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University_Management_System.Change_Password.resources
 C:\Users\HP\Documents\GitHub\University-Management-System\University Management System\obj\Debug\University_Management_System.Forget_password.resources
 R:\CLASS\6th Semester\CSE-200 Software Development 2\SDP 200\University-Management-System\University Management System\obj\Debug\University_Management_System.Forget_password.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Change_Password.resources
+D:\SDP\University-Management-System\University Management System\obj\Debug\University_Management_System.Forget_password.resources
