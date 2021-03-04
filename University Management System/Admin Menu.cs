@@ -35,12 +35,17 @@ namespace University_Management_System
             Auto_ccode();
             Auto_modstuid();
             Auto_tchcode();
-           
+            Auto_modtchcode();
+            Auto_modcourse_dismisstchcode();
+            Auto_modcourse_cmodccode();
+            Auto_resultstuid();
+
+
         }
         AutoCompleteStringCollection collc = new AutoCompleteStringCollection();
         public void Auto_ccode()
         {
-            
+            collc.Clear();
             con.dataGet("Select ccode from Course"); //  '" +  +"'
                                                      //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestccode = new DataTable();
@@ -65,6 +70,7 @@ namespace University_Management_System
 
         public void Auto_modstuid()
         {
+            coll.Clear();
             con.dataGet("Select id from Student"); //  '" +  +"'
                                                    //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestmodstuid = new DataTable();
@@ -76,17 +82,15 @@ namespace University_Management_System
                     coll.Add(dtsuggestmodstuid.Rows[i]["id"].ToString());
                 }
             }
-            else
-            {
-                MessageBox.Show("Student ID not found");
-            }
+            
             mod_stuId.AutoCompleteMode = AutoCompleteMode.Suggest;
             mod_stuId.AutoCompleteSource = AutoCompleteSource.CustomSource;
             mod_stuId.AutoCompleteCustomSource = coll;
         }
-
+        AutoCompleteStringCollection colle = new AutoCompleteStringCollection();
         public void Auto_tchcode()
         {
+            colle.Clear();
             con.dataGet("Select id from Teacher"); //  '" +  +"'
                                                    //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggesttchcode = new DataTable();
@@ -97,7 +101,7 @@ namespace University_Management_System
             {
                 for (int i = 0; i < dtsuggesttchcode.Rows.Count; i++)
                 {
-                    coll.Add(dtsuggesttchcode.Rows[i]["id"].ToString());
+                    colle.Add(dtsuggesttchcode.Rows[i]["id"].ToString());
                 }
             }
             /*else
@@ -106,7 +110,176 @@ namespace University_Management_System
             }*/
             tchCode2.AutoCompleteMode = AutoCompleteMode.Suggest;
             tchCode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            tchCode2.AutoCompleteCustomSource = coll;
+            tchCode2.AutoCompleteCustomSource = colle;
+        }
+
+        AutoCompleteStringCollection collec = new AutoCompleteStringCollection();
+        public void Auto_modtchcode()
+        {
+            collec.Clear();
+            con.dataGet("Select id from Teacher"); //  '" +  +"'
+                                                   //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggesttchcode = new DataTable();
+            con.sda.Fill(dtsuggesttchcode);
+
+
+            if (dtsuggesttchcode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggesttchcode.Rows.Count; i++)
+                {
+                    collec.Add(dtsuggesttchcode.Rows[i]["id"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            mod_tchCode.AutoCompleteMode = AutoCompleteMode.Suggest;
+            mod_tchCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            mod_tchCode.AutoCompleteCustomSource = collec;
+        }
+        AutoCompleteStringCollection collecc = new AutoCompleteStringCollection();
+        public void Auto_modcourse_dismisstchcode()
+        {
+            collecc.Clear();
+            con.dataGet("Select id from Teacher_Course"); //  '" +  +"'
+                                                   //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggesttchcode = new DataTable();
+            con.sda.Fill(dtsuggesttchcode);
+
+
+            if (dtsuggesttchcode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggesttchcode.Rows.Count; i++)
+                {
+                    collecc.Add(dtsuggesttchcode.Rows[i]["id"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            modTchcode.AutoCompleteMode = AutoCompleteMode.Suggest;
+            modTchcode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            modTchcode.AutoCompleteCustomSource = collecc;
+        }
+        AutoCompleteStringCollection collecca = new AutoCompleteStringCollection();
+        public void Auto_modcourse_dissccode()
+        {
+            collecca.Clear();
+            con.dataGet("Select ccode from Teacher_Course where id='"+ modTchcode.Text+ "'"); //  '" +  +"'
+                                                     //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestccode = new DataTable();
+            con.sda.Fill(dtsuggestccode);
+
+
+            if (dtsuggestccode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestccode.Rows.Count; i++)
+                {
+                    collecca.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            modCcode.AutoCompleteMode = AutoCompleteMode.Suggest;
+            modCcode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            modCcode.AutoCompleteCustomSource = collecca;
+        }
+
+        AutoCompleteStringCollection semester = new AutoCompleteStringCollection();
+        public void Auto_modcourse_disssemester()
+        {
+            semester.Clear();
+            con.dataGet("Select tsemester from Teacher_Course where id='" + modTchcode.Text + "' and ccode='"+modCcode.Text+"'"); //  '" +  +"'
+                                                                                                //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestccode = new DataTable();
+            con.sda.Fill(dtsuggestccode);
+
+
+            if (dtsuggestccode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestccode.Rows.Count; i++)
+                {
+                    semester.Add(dtsuggestccode.Rows[i]["tsemester"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            modSemester.AutoCompleteMode = AutoCompleteMode.Suggest;
+            modSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            modSemester.AutoCompleteCustomSource = semester;
+        }
+
+        AutoCompleteStringCollection ccode = new AutoCompleteStringCollection();
+        public void Auto_modcourse_cmodccode()
+        {
+            ccode.Clear();
+            con.dataGet("Select ccode from Course"); //  '" +  +"'
+                                                                                                                                      //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestccode = new DataTable();
+            con.sda.Fill(dtsuggestccode);
+
+
+            if (dtsuggestccode.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestccode.Rows.Count; i++)
+                {
+                    ccode.Add(dtsuggestccode.Rows[i]["ccode"].ToString());
+                }
+            }
+            /*else
+            {
+                MessageBox.Show("Course not found");
+            }*/
+            modCcode2.AutoCompleteMode = AutoCompleteMode.Suggest;
+            modCcode2.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            modCcode2.AutoCompleteCustomSource = ccode;
+        }
+        AutoCompleteStringCollection resultt = new AutoCompleteStringCollection();
+        public void Auto_resultstuid()
+        {
+            resultt.Clear();
+            con.dataGet("Select id from Student_Course"); //  '" +  +"'
+                                                   //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestmodstuid = new DataTable();
+            con.sda.Fill(dtsuggestmodstuid);
+            if (dtsuggestmodstuid.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestmodstuid.Rows.Count; i++)
+                {
+                    resultt.Add(dtsuggestmodstuid.Rows[i]["id"].ToString());
+                }
+            }
+            
+            res_srchId.AutoCompleteMode = AutoCompleteMode.Suggest;
+            res_srchId.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            res_srchId.AutoCompleteCustomSource = resultt;
+        }
+
+        AutoCompleteStringCollection ssemester = new AutoCompleteStringCollection();
+        public void Auto_resultstusemester()
+        {
+            ssemester.Clear();
+            con.dataGet("Select ssemester from Student_Course where id='"+res_srchId.Text+"'"); //  '" +  +"'
+                                                          //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
+            DataTable dtsuggestmodstuid = new DataTable();
+            con.sda.Fill(dtsuggestmodstuid);
+            if (dtsuggestmodstuid.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtsuggestmodstuid.Rows.Count; i++)
+                {
+                    ssemester.Add(dtsuggestmodstuid.Rows[i]["ssemester"].ToString());
+                }
+            }
+           
+            res_srchSemester.AutoCompleteMode = AutoCompleteMode.Suggest;
+            res_srchSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            res_srchSemester.AutoCompleteCustomSource = ssemester;
         }
 
         private void stuRegbtn_Click(object sender, EventArgs e)
@@ -572,8 +745,8 @@ namespace University_Management_System
             {
                 foreach (DataRow row in Stuinfo.Rows)
                 {
-                    name += row["id"].ToString();
-                    id2 += row["sname"].ToString();
+                    name += row["sname"].ToString();
+                    id2 += row["id"].ToString();
                     intake += row["sintake"].ToString();
                     section += row["ssection"].ToString();
                 }
@@ -670,9 +843,10 @@ namespace University_Management_System
             if (!float.IsNaN(sgpa))
                 rsgpa.Text = "SGPA : " + sgpaa;
             else
+            {
                 rsgpa.Text = "SGPA : ";
-
-
+                MessageBox.Show("The Result isn't publish yet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void mod_stuSrchbtn_Click(object sender, EventArgs e)
         {
@@ -1124,6 +1298,21 @@ namespace University_Management_System
         private void ResRefresh_Click(object sender, EventArgs e)
         {
             res_totalResultgrid.Columns.Clear();
+        }
+
+        private void modCcode_TextChanged(object sender, EventArgs e)
+        {
+            Auto_modcourse_dissccode();
+        }
+
+        private void modSemester_TextChanged(object sender, EventArgs e)
+        {
+            Auto_modcourse_disssemester();
+        }
+
+        private void res_srchSemester_TextChanged(object sender, EventArgs e)
+        {
+            Auto_resultstusemester();
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)
