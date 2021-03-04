@@ -587,5 +587,10 @@ namespace University_Management_System
         {
             
         }
+
+        private void mod_Marksinsert_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
