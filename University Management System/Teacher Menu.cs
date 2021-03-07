@@ -40,6 +40,9 @@ namespace University_Management_System
             Auto_MarksInsertcoursecode();
             Auto_Resultcoursecode();
             Auto_Coursestulistcoursecode();
+            Auto_Resultsemester();
+            Auto_Insertmarkssemester();
+            Auto_Couesestulistsemester();
         }
 
         AutoCompleteStringCollection collq = new AutoCompleteStringCollection();
@@ -72,7 +75,7 @@ namespace University_Management_System
         public void Auto_Resultsemester()
         {
             collw.Clear();
-            con.dataGet("Select tsemester from Teacher_Course where id='" + tchcode + "' and ccode = '"+ res_Ccode.Text+"'"); //  '" select tsemester from t_c where id=tchcode, ccode=textboxname and +  +"'
+            con.dataGet("Select tsemester from Teacher_Course where id='" + tchcode + "'"); //  '" select tsemester from t_c where id=tchcode, ccode=textboxname and +  +"'
                                                                                         //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggeststulistccode = new DataTable();
             con.sda.Fill(dtsuggeststulistccode);
@@ -123,7 +126,7 @@ namespace University_Management_System
         AutoCompleteStringCollection colly = new AutoCompleteStringCollection();
         public void Auto_Couesestulistsemester()
         {
-            con.dataGet("Select tsemester from Teacher_Course where id='" + tchcode + "' and ccode = '" + tchCcode.Text + "'"); //  '" select tsemester from t_c where id=tchcode, ccode=textboxname and +  +"'
+            con.dataGet("Select tsemester from Teacher_Course where id='" + tchcode + "'"); //  '" select tsemester from t_c where id=tchcode, ccode=textboxname and +  +"'
                                                                                                                                  //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggeststulistccode = new DataTable();
             con.sda.Fill(dtsuggeststulistccode);
@@ -174,7 +177,7 @@ namespace University_Management_System
         public void Auto_Insertmarkssemester()
         {
             coll.Clear();
-            con.dataGet("Select tsemester from Teacher_Course where id= '"+ tchcode +"' and ccode = '"+ insertMarksccode.Text + "' "); //  '" +  +"'
+            con.dataGet("Select tsemester from Teacher_Course where id= '"+ tchcode +"'"); //  '" +  +"'
                                                                                                                                            //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestMarksInsert = new DataTable();
             con.sda.Fill(dtsuggestMarksInsert);

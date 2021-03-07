@@ -40,7 +40,9 @@ namespace University_Management_System
             Auto_modcourse_dismisstchcode();
             Auto_modcourse_cmodccode();
             Auto_resultstuid();
-
+            Auto_modcourse_dissccode();
+            Auto_modcourse_disssemester();
+            Auto_resultstusemester();
 
 
         }
@@ -169,7 +171,7 @@ namespace University_Management_System
         public void Auto_modcourse_dissccode()
         {
             collecca.Clear();
-            con.dataGet("Select ccode from Teacher_Course where id='"+ modTchcode.Text+ "'"); //  '" +  +"'
+            con.dataGet("Select Distinct ccode from Teacher_Course"); //  '" +  +"'
                                                      //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestccode = new DataTable();
             con.sda.Fill(dtsuggestccode);
@@ -195,7 +197,7 @@ namespace University_Management_System
         public void Auto_modcourse_disssemester()
         {
             semester.Clear();
-            con.dataGet("Select tsemester from Teacher_Course where id='" + modTchcode.Text + "' and ccode='"+modCcode.Text+"'"); //  '" +  +"'
+            con.dataGet("Select Distinct tsemester from Teacher_Course"); //  '" +  +"'
                                                                                                 //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestccode = new DataTable();
             con.sda.Fill(dtsuggestccode);
@@ -266,7 +268,7 @@ namespace University_Management_System
         AutoCompleteStringCollection ssemester = new AutoCompleteStringCollection();
         public void Auto_resultstusemester()
         {
-            con.dataGet("Select ssemester from Student_Course where id='"+res_srchId.Text+"'"); //  '" +  +"'
+            con.dataGet("Select Distinct ssemester from Student_Course"); //  '" +  +"'
                                                           //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestmodstuid = new DataTable();
             con.sda.Fill(dtsuggestmodstuid);
@@ -1137,6 +1139,7 @@ namespace University_Management_System
             DataTable cmax = new DataTable();
             con.sda.Fill(cmax);
             res_totalResultgrid.Rows.Clear();
+            res_totalResultgrid.Columns.Clear();
             if (cmax.Rows.Count > 0)
             {
                 //int Max2;
@@ -1302,6 +1305,10 @@ namespace University_Management_System
         private void ResRefresh_Click(object sender, EventArgs e)
         {
             res_totalResultgrid.Columns.Clear();
+            res_totalDept.SelectedIndex = -1;
+            res_totalIntake.Clear();
+            res_totalSection.Clear();
+            res_totalSemester.Clear();
         }
 
         private void modCcode_TextChanged(object sender, EventArgs e)
@@ -1311,12 +1318,13 @@ namespace University_Management_System
 
         private void modSemester_TextChanged(object sender, EventArgs e)
         {
-           // Auto_modcourse_disssemester();
+            //Auto_modcourse_disssemester();
         }
 
         private void res_srchSemester_TextChanged(object sender, EventArgs e)
         {
-            /*if (res_srchSemester.Text != "")
+            /*string s = res_srchSemester.Text;
+            if (s.Length == 1)
             {
                 Auto_resultstusemester();
             }*/

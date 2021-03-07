@@ -33,12 +33,14 @@ namespace University_Management_System
             StuCourse_LoadData();
             Stu_CurrentCourse_LoadData();
             Auto_studentResultsemester();
+            Auto_studentCourseSelectionsemester();
+            Auto_studentCourseSelectioncoursecode();
         }
 
         public void Auto_studentCourseSelectioncoursecode()
         {
             coll.Clear();
-            con.dataGet("Select Teacher_Course.ccode from Teacher_Course,Course where Teacher_Course.ccode=Course.ccode and  Course.cprogram='"+ stu_Cprogram.Text+ "' and Course.cdept='"+ stu_Cdept.Text+ "'"); //  '" +  +"'
+            con.dataGet("Select Distinct ccode from Teacher_Course"); //  '" +  +"'
                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggeststulistccode = new DataTable();
             con.sda.Fill(dtsuggeststulistccode);
@@ -65,7 +67,7 @@ namespace University_Management_System
         public void Auto_studentCourseSelectionsemester()
         {
             collcca.Clear();
-            con.dataGet("Select tsemester from Teacher_Course,Course where Course.cprogram='" + stu_Cprogram.Text + "' and Course.cdept='" + stu_Cdept.Text + "' and Teacher_Course.ccode='"+stu_Ccode.Text+"'"); //  '" +  +"'
+            con.dataGet("Select tsemester from Teacher_Course"); //  '" +  +"'
                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestsemester = new DataTable();
             con.sda.Fill(dtsuggestsemester);
