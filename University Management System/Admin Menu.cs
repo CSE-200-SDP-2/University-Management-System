@@ -26,6 +26,7 @@ namespace University_Management_System
         {
             mainForm = callingForm as Home_Page;
             InitializeComponent();
+
         }
 
         private void Admin_Menu_Load(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace University_Management_System
             Auto_modcourse_dismisstchcode();
             Auto_modcourse_cmodccode();
             Auto_resultstuid();
+
 
 
         }
@@ -264,7 +266,6 @@ namespace University_Management_System
         AutoCompleteStringCollection ssemester = new AutoCompleteStringCollection();
         public void Auto_resultstusemester()
         {
-            ssemester.Clear();
             con.dataGet("Select ssemester from Student_Course where id='"+res_srchId.Text+"'"); //  '" +  +"'
                                                           //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestmodstuid = new DataTable();
@@ -279,7 +280,7 @@ namespace University_Management_System
            
             res_srchSemester.AutoCompleteMode = AutoCompleteMode.Suggest;
             res_srchSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            res_srchSemester.AutoCompleteCustomSource = ssemester;
+            res_srchSemester.AutoCompleteCustomSource = ssemester; 
         }
 
         private void stuRegbtn_Click(object sender, EventArgs e)
@@ -730,6 +731,7 @@ namespace University_Management_System
         }
         private void res_srchbtn_Click(object sender, EventArgs e)
         {
+            ssemester.Clear();
             string id = res_srchId.Text;
             string semester = res_srchSemester.Text;
             con.dataGet("select * from Student where id = '" + id + "'");
@@ -1284,6 +1286,8 @@ namespace University_Management_System
 
         private void res_srchClearbtn_Click(object sender, EventArgs e)
         {
+            //ssemester.Clear();
+            ssemester.Clear();
             res_srchStuid.Text = "ID";
             res_srchStuname.Text = "Name";
             res_srchStuintake.Text = "Intake";
@@ -1302,17 +1306,25 @@ namespace University_Management_System
 
         private void modCcode_TextChanged(object sender, EventArgs e)
         {
-            Auto_modcourse_dissccode();
+            //Auto_modcourse_dissccode();
         }
 
         private void modSemester_TextChanged(object sender, EventArgs e)
         {
-            Auto_modcourse_disssemester();
+           // Auto_modcourse_disssemester();
         }
 
         private void res_srchSemester_TextChanged(object sender, EventArgs e)
         {
-            Auto_resultstusemester();
+            /*if (res_srchSemester.Text != "")
+            {
+                Auto_resultstusemester();
+            }*/
+        }
+
+        private void res_srchSemester_Enter(object sender, EventArgs e)
+        {
+           
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)

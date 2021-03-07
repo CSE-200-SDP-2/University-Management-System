@@ -752,17 +752,17 @@ namespace University_Management_System
 
         private void res_semester_TextChanged(object sender, EventArgs e)
         {
-            Auto_Resultsemester();
+            //Auto_Resultsemester();
         }
 
         private void insertMarktsemester_TextChanged(object sender, EventArgs e)
         {
-            Auto_Insertmarkssemester();
+            //Auto_Insertmarkssemester();
         }
 
         private void tchCsemester_TextChanged(object sender, EventArgs e)
         {
-            Auto_Couesestulistsemester();
+            //Auto_Couesestulistsemester();
         }
 
         private void mod_Marksclearbtn_Click(object sender, EventArgs e)

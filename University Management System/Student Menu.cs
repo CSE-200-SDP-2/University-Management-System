@@ -491,12 +491,12 @@ namespace University_Management_System
 
         private void Ccode_TextChanged(object sender, EventArgs e)
         {
-            Auto_studentCourseSelectioncoursecode();
+            //Auto_studentCourseSelectioncoursecode();
         }
 
         private void stu_Csemester_TextChanged(object sender, EventArgs e)
         {
-            Auto_studentCourseSelectionsemester();
+            //Auto_studentCourseSelectionsemester();
         }
     }
 }
