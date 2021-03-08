@@ -29,6 +29,7 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.stumenuinfopanel = new System.Windows.Forms.Panel();
             this.stuIntake = new System.Windows.Forms.Label();
             this.stuSection = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.StudentToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.stumenuinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -481,6 +483,7 @@ namespace University_Management_System
             this.stu_Deletebtn.TabIndex = 45;
             this.stu_Deletebtn.UseVisualStyleBackColor = true;
             this.stu_Deletebtn.Click += new System.EventHandler(this.stu_Deletebtn_Click);
+            this.stu_Deletebtn.MouseHover += new System.EventHandler(this.stu_Deletebtn_MouseHover);
             // 
             // stu_CSelectbtn
             // 
@@ -497,6 +500,7 @@ namespace University_Management_System
             this.stu_CSelectbtn.TabIndex = 46;
             this.stu_CSelectbtn.UseVisualStyleBackColor = true;
             this.stu_CSelectbtn.Click += new System.EventHandler(this.stu_CSelectbtn_Click);
+            this.stu_CSelectbtn.MouseHover += new System.EventHandler(this.stu_CSelectbtn_MouseHover);
             // 
             // stu_Srchbtn
             // 
@@ -513,6 +517,7 @@ namespace University_Management_System
             this.stu_Srchbtn.TabIndex = 46;
             this.stu_Srchbtn.UseVisualStyleBackColor = true;
             this.stu_Srchbtn.Click += new System.EventHandler(this.stu_Srchbtn_Click);
+            this.stu_Srchbtn.MouseHover += new System.EventHandler(this.stu_Srchbtn_MouseHover);
             // 
             // stu_Ccode
             // 
@@ -1057,6 +1062,14 @@ namespace University_Management_System
             this.panel2.Size = new System.Drawing.Size(1334, 416);
             this.panel2.TabIndex = 2;
             // 
+            // StudentToolTip
+            // 
+            this.StudentToolTip.AutomaticDelay = 100;
+            this.StudentToolTip.AutoPopDelay = 10000;
+            this.StudentToolTip.BackColor = System.Drawing.SystemColors.Highlight;
+            this.StudentToolTip.InitialDelay = 100;
+            this.StudentToolTip.ReshowDelay = 20;
+            // 
             // Student_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1189,5 +1202,6 @@ namespace University_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCAcreditgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn stuCAtypegrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgsemestergrid;
+        public System.Windows.Forms.ToolTip StudentToolTip;
     }
 }

@@ -500,5 +500,20 @@ namespace University_Management_System
         {
             //Auto_studentCourseSelectionsemester();
         }
+
+        private void stu_Srchbtn_MouseHover(object sender, EventArgs e)
+        {
+            StudentToolTip.Show("Search Available Courses",stu_Srchbtn);
+        }
+
+        private void stu_CSelectbtn_MouseHover(object sender, EventArgs e)
+        {
+            StudentToolTip.Show("Select Course", stu_CSelectbtn);
+        }
+
+        private void stu_Deletebtn_MouseHover(object sender, EventArgs e)
+        {
+            StudentToolTip.Show("Remove Course", stu_Deletebtn);
+        }
     }
 }

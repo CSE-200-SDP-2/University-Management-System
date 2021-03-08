@@ -288,6 +288,23 @@ namespace University_Management_System
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            if (tabControl1.SelectedIndex == 0 && tabControl3.SelectedIndex == 1)
+            {
+                tchstuGrid.Rows.Clear();
+            }
+            if (tabControl1.SelectedIndex==1 && tabControl2.SelectedIndex == 0)
+            {
+                marksListgrid.Rows.Clear();
+                marksStulistgrid.Rows.Clear();
+            }
+            if (tabControl1.SelectedIndex==1 && tabControl2.SelectedIndex == 1)
+            {
+                mod_Markslist.Rows.Clear();
+            }
+            if(tabControl1.SelectedIndex==2)
+            {
+                res_Grid.Rows.Clear();
+            }
         }
 
         private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
@@ -298,6 +315,10 @@ namespace University_Management_System
                 {
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+            if(tabControl3.SelectedIndex==1)
+            {
+                tchstuGrid.Rows.Clear();
             }
         }
 
@@ -393,6 +414,7 @@ namespace University_Management_System
                 MessageBox.Show("Marks Successfully Inserted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 marksListgrid_LoadData();
             }
+         
 
         }
 
@@ -766,6 +788,59 @@ namespace University_Management_System
         private void tchCsemester_TextChanged(object sender, EventArgs e)
         {
             //Auto_Couesestulistsemester();
+        }
+
+        private void tchName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tchstulistSrchbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Search Student List", tchstulistSrchbtn);
+        }
+
+        private void marksSrchbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Search Student List", marksSrchbtn);
+        }
+
+        private void markInsertbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Insert Marks", markInsertbtn);
+        }
+
+        private void mod_Markssrchbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Search Student", mod_Markssrchbtn);
+        }
+
+        private void mod_Marksclearbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Clear Selection",mod_Marksclearbtn);
+        }
+
+        private void mod_Marksinsert_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Modify Marks", mod_Marksinsert);
+        }
+
+        private void res_Srchbtn_MouseHover(object sender, EventArgs e)
+        {
+            TeacherToolTip.Show("Search Student Result", res_Srchbtn);
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl2.SelectedIndex==0)
+            {
+                marksListgrid.Rows.Clear();
+                marksStulistgrid.Rows.Clear();
+            }
+            if(tabControl2.SelectedIndex==1)
+            {
+                mod_Markslist.Rows.Clear();
+            }
         }
 
         private void mod_Marksclearbtn_Click(object sender, EventArgs e)

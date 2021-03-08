@@ -29,6 +29,7 @@ namespace University_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tchinfopanel = new System.Windows.Forms.Panel();
             this.tchPosition = new System.Windows.Forms.Label();
             this.tchDept = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@ namespace University_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TeacherToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tchinfopanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.course.SuspendLayout();
@@ -268,6 +270,7 @@ namespace University_Management_System
             this.tchName.Size = new System.Drawing.Size(63, 23);
             this.tchName.TabIndex = 4;
             this.tchName.Text = "Name";
+            this.tchName.Click += new System.EventHandler(this.tchName_Click);
             // 
             // tabControl1
             // 
@@ -546,6 +549,7 @@ namespace University_Management_System
             this.tchstulistSrchbtn.TabIndex = 40;
             this.tchstulistSrchbtn.UseVisualStyleBackColor = true;
             this.tchstulistSrchbtn.Click += new System.EventHandler(this.tchstulistSrchbtn_Click);
+            this.tchstulistSrchbtn.MouseHover += new System.EventHandler(this.tchstulistSrchbtn_MouseHover);
             // 
             // tchCcode
             // 
@@ -590,6 +594,7 @@ namespace University_Management_System
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1276, 427);
             this.tabControl2.TabIndex = 0;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // insertmarks
             // 
@@ -662,6 +667,7 @@ namespace University_Management_System
             this.markInsertbtn.TabIndex = 2;
             this.markInsertbtn.UseVisualStyleBackColor = true;
             this.markInsertbtn.Click += new System.EventHandler(this.markInsertbtn_Click);
+            this.markInsertbtn.MouseHover += new System.EventHandler(this.markInsertbtn_MouseHover);
             // 
             // insertMarksstuatten
             // 
@@ -953,6 +959,7 @@ namespace University_Management_System
             this.marksSrchbtn.TabIndex = 44;
             this.marksSrchbtn.UseVisualStyleBackColor = true;
             this.marksSrchbtn.Click += new System.EventHandler(this.marksSrchbtn_Click);
+            this.marksSrchbtn.MouseHover += new System.EventHandler(this.marksSrchbtn_MouseHover);
             // 
             // insertMarktsemester
             // 
@@ -1145,6 +1152,7 @@ namespace University_Management_System
             this.mod_Marksclearbtn.TabIndex = 45;
             this.mod_Marksclearbtn.UseVisualStyleBackColor = true;
             this.mod_Marksclearbtn.Click += new System.EventHandler(this.mod_Marksclearbtn_Click);
+            this.mod_Marksclearbtn.MouseHover += new System.EventHandler(this.mod_Marksclearbtn_MouseHover);
             // 
             // mod_Markssrchbtn
             // 
@@ -1161,6 +1169,7 @@ namespace University_Management_System
             this.mod_Markssrchbtn.TabIndex = 46;
             this.mod_Markssrchbtn.UseVisualStyleBackColor = true;
             this.mod_Markssrchbtn.Click += new System.EventHandler(this.mod_Markssrchbtn_Click);
+            this.mod_Markssrchbtn.MouseHover += new System.EventHandler(this.mod_Markssrchbtn_MouseHover);
             // 
             // mod_Markssemester
             // 
@@ -1211,6 +1220,7 @@ namespace University_Management_System
             this.mod_Marksinsert.TabIndex = 13;
             this.mod_Marksinsert.UseVisualStyleBackColor = true;
             this.mod_Marksinsert.Click += new System.EventHandler(this.mod_Marksinsert_Click);
+            this.mod_Marksinsert.MouseHover += new System.EventHandler(this.mod_Marksinsert_MouseHover);
             // 
             // mod_Marksattendence
             // 
@@ -1458,6 +1468,7 @@ namespace University_Management_System
             this.res_Srchbtn.TabIndex = 48;
             this.res_Srchbtn.UseVisualStyleBackColor = true;
             this.res_Srchbtn.Click += new System.EventHandler(this.res_Srchbtn_Click);
+            this.res_Srchbtn.MouseHover += new System.EventHandler(this.res_Srchbtn_MouseHover);
             // 
             // res_Ccode
             // 
@@ -1643,6 +1654,14 @@ namespace University_Management_System
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1284, 461);
             this.panel2.TabIndex = 0;
+            // 
+            // TeacherToolTip
+            // 
+            this.TeacherToolTip.AutomaticDelay = 100;
+            this.TeacherToolTip.AutoPopDelay = 10000;
+            this.TeacherToolTip.BackColor = System.Drawing.SystemColors.Highlight;
+            this.TeacherToolTip.InitialDelay = 100;
+            this.TeacherToolTip.ReshowDelay = 20;
             // 
             // Teacher_Menu
             // 
@@ -1847,5 +1866,6 @@ namespace University_Management_System
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.DataGridView tchClist;
         public System.Windows.Forms.DataGridView mod_Markslist;
+        public System.Windows.Forms.ToolTip TeacherToolTip;
     }
 }

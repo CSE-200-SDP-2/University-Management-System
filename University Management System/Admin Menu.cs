@@ -268,7 +268,8 @@ namespace University_Management_System
         AutoCompleteStringCollection ssemester = new AutoCompleteStringCollection();
         public void Auto_resultstusemester()
         {
-            con.dataGet("Select Distinct ssemester from Student_Course"); //  '" +  +"'
+            ssemester.Clear();
+            con.dataGet("Select distinct ssemester from Student_Course"); //  '" +  +"'
                                                           //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestmodstuid = new DataTable();
             con.sda.Fill(dtsuggestmodstuid);
@@ -279,7 +280,7 @@ namespace University_Management_System
                     ssemester.Add(dtsuggestmodstuid.Rows[i]["ssemester"].ToString());
                 }
             }
-           
+
             res_srchSemester.AutoCompleteMode = AutoCompleteMode.Suggest;
             res_srchSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
             res_srchSemester.AutoCompleteCustomSource = ssemester; 
@@ -498,6 +499,7 @@ namespace University_Management_System
             srch_stuIntake.Clear();
             srch_stuSection.Clear();
         }
+        
         private void srch_stubtn_Click(object sender, EventArgs e)
         {
             string id, name, intake, section;
@@ -614,16 +616,61 @@ namespace University_Management_System
                 mod_tchGrid.Rows.Clear();
                 modtch_ClearData();
             }
+            if(tabControl1.SelectedIndex==1 && tabControl3.SelectedIndex==0)
+            {
+                Clear_Studata();
+                srch_stuGrid.Rows.Clear();
+            }
+            if(tabControl1.SelectedIndex==1 && tabControl3.SelectedIndex==1)
+            {
+                Clear_Tchdata();
+                srch_tchGrid.Rows.Clear();
+            }
+            if(tabControl1.SelectedIndex==2 && tabControl4.SelectedIndex==2 && tabControl7.SelectedIndex==1)
+            {
+                modCoursegrid.Rows.Clear();
+            }
+            if ( tabControl1.SelectedIndex==3  && tabControl5.SelectedIndex == 0)
+            {
+                res_totalResultgrid.Rows.Clear();
+                res_totalResultgrid.Columns.Clear();
+                res_totalResultgrid.Columns.Clear();
+                res_totalDept.SelectedIndex = -1;
+                res_totalIntake.Clear();
+                res_totalSection.Clear();
+                res_totalSemester.Clear();
+            }
+            if (tabControl1.SelectedIndex == 3 && tabControl5.SelectedIndex == 1)
+            {
+                res_srchGrid.Rows.Clear();
+                ssemester.Clear();
+                res_srchStuid.Text = "ID";
+                res_srchStuname.Text = "Name";
+                res_srchStuintake.Text = "Intake";
+                res_srchStusection.Text = "Section";
+                res_srchGrid.Rows.Clear();
+                rsgpa.Text = "SGPA : ";
+                res_srchId.Clear();
+                res_srchSemester.Clear();
+            }
         }
         public void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl4.SelectedIndex == 0)
             {
                 MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mod_stuGrid.Rows.Clear();
+                Modstu_ClearData();
             }
             if (tabControl4.SelectedIndex == 1)
             {
                 MessageBox.Show("Please Enter only Teacher Code and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mod_tchGrid.Rows.Clear();
+                modtch_ClearData();
+            }
+            if(tabControl4.SelectedIndex==2 && tabControl7.SelectedIndex==1)
+            {
+                modCoursegrid.Rows.Clear();
             }
         }
         public void Clear_Tchdata()
@@ -633,6 +680,9 @@ namespace University_Management_System
             srch_tchPosition.SelectedIndex = -1;
             srch_tchDept.SelectedIndex = -1;
         }
+
+        // Tooltips
+        
         private void srch_tchSrchbtn_Click(object sender, EventArgs e)
         {
             string id, name, position, department;
@@ -1333,6 +1383,85 @@ namespace University_Management_System
         private void res_srchSemester_Enter(object sender, EventArgs e)
         {
            
+        }
+
+        private void srch_stubtn_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Search Student Information", srch_stubtn);
+        }
+
+        private void srch_tchSrchbtn_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Search Teacher Information", srch_tchSrchbtn);
+        }
+
+        private void res_totalSrchbtn_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Search Total Result",res_totalSrchbtn);
+        }
+
+        private void ResRefresh_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Clear Selection", ResRefresh);
+        }
+
+        private void res_srchbtn_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Search Student Result", res_srchbtn);
+        }
+
+        private void res_srchClearbtn_MouseHover(object sender, EventArgs e)
+        {
+            AdminToolTip.Show("Clear Selection",res_srchClearbtn);
+        }
+
+        private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl3.SelectedIndex == 0)
+            {
+                Clear_Studata();
+                srch_stuGrid.Rows.Clear();
+            }
+            if(tabControl3.SelectedIndex==1)
+            {
+                Clear_Tchdata();
+                srch_tchGrid.Rows.Clear();
+            }
+        }
+
+        private void tabControl7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl7.SelectedIndex==1)
+            {
+                modCoursegrid.Rows.Clear();
+            }
+        }
+
+        private void tabControl5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl5.SelectedIndex==0)
+            {
+                res_totalResultgrid.Rows.Clear();
+                res_totalResultgrid.Columns.Clear();
+                res_totalResultgrid.Columns.Clear();
+                res_totalDept.SelectedIndex = -1;
+                res_totalIntake.Clear();
+                res_totalSection.Clear();
+                res_totalSemester.Clear();
+            }
+            if(tabControl5.SelectedIndex==1)
+            {
+                res_srchGrid.Rows.Clear();
+                ssemester.Clear();
+                res_srchStuid.Text = "ID";
+                res_srchStuname.Text = "Name";
+                res_srchStuintake.Text = "Intake";
+                res_srchStusection.Text = "Section";
+                res_srchGrid.Rows.Clear();
+                rsgpa.Text = "SGPA : ";
+                res_srchId.Clear();
+                res_srchSemester.Clear();
+            }
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)
