@@ -21,14 +21,15 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
+        // overloaded Function for point previous parent Form
         public Home_Page mainForm = null;
         public Admin_Menu(Form callingForm)
         {
             mainForm = callingForm as Home_Page;
             InitializeComponent();
-
         }
 
+        //Calling all the require functions at the time of load this Form
         private void Admin_Menu_Load(object sender, EventArgs e)
         { 
             Course_LoadData();
@@ -43,9 +44,10 @@ namespace University_Management_System
             Auto_modcourse_dissccode();
             Auto_modcourse_disssemester();
             Auto_resultstusemester();
-
-
         }
+
+        
+        // This Section is for Auto complete suggestion for the text boxes.
         AutoCompleteStringCollection collc = new AutoCompleteStringCollection();
         public void Auto_ccode()
         {
@@ -285,7 +287,11 @@ namespace University_Management_System
             res_srchSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
             res_srchSemester.AutoCompleteCustomSource = ssemester; 
         }
+        //
+        //
+        //
 
+        // Student Registration Function
         private void stuRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Student.id from Student where Student.id='" + stuId.Text + "'");                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -324,6 +330,8 @@ namespace University_Management_System
             stuDept.SelectedIndex = -1;
             stuMobile.Clear();
         }
+
+        // Teacher Registration Function
         private void tchRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Teacher.id from Teacher where Teacher.id='" + tchCode.Text + "'");                                                                                                                                                        //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -360,6 +368,8 @@ namespace University_Management_System
             tchDept.SelectedIndex = -1;
             tchMobile.Clear();
         }
+
+        // Course Registration Funtion
         private void cRegbtn_Click(object sender, EventArgs e)
         {
             con.dataGet("Select Course.ccode from Course where Course.ccode='" + cCode.Text + "'"); //  '" +  +"'                                                                                                                                                              //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
@@ -408,26 +418,8 @@ namespace University_Management_System
                 cReggrid.Rows[n].Cells["cdeptgrid"].Value = row["cdept"].ToString();
             }
         }
-        private void cReggrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /* DataGridViewRow row = cReggrid.Rows[e.RowIndex];
-             sn = row.Cells[1].Value.ToString();
-             //cCode.Text = cReggrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-             cCode.Text = row.Cells[1].Value.ToString();
-             cTitle.Text = row.Cells[2].Value.ToString();
-             cType.Text = row.Cells[3].Value.ToString();
-             cCredit.Text = row.Cells[4].Value.ToString();
-             cProgram.Text = row.Cells[5].Value.ToString();
-             cDept.Text = row.Cells[6].Value.ToString();  */
-        }
-        private void Admin_Menu_Activated(object sender, EventArgs e)
-        {
-            //Course_LoadData();
-        }
-        private void label71_Click(object sender, EventArgs e)
-        {
 
-        }
+        // Course Assign Function
         private void cAssignbtn_Click(object sender, EventArgs e)
         {
             //string check;
@@ -500,6 +492,7 @@ namespace University_Management_System
             srch_stuSection.Clear();
         }
         
+        // Student Information Search Function
         private void srch_stubtn_Click(object sender, EventArgs e)
         {
             string id, name, intake, section;
@@ -602,8 +595,12 @@ namespace University_Management_System
 
         }
 
+        // Tabcontrol All box Clear function..
         public void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Course_ClearData();
+            Teacher_ClearData();
+            Student_ClearData();
             if (tabControl1.SelectedIndex == 2 && tabControl4.SelectedIndex == 0)
             {
                 MessageBox.Show("Please Enter only Student ID and click Search.", "Tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -632,8 +629,6 @@ namespace University_Management_System
             }
             if ( tabControl1.SelectedIndex==3  && tabControl5.SelectedIndex == 0)
             {
-                res_totalResultgrid.Rows.Clear();
-                res_totalResultgrid.Columns.Clear();
                 res_totalResultgrid.Columns.Clear();
                 res_totalDept.SelectedIndex = -1;
                 res_totalIntake.Clear();
@@ -681,8 +676,8 @@ namespace University_Management_System
             srch_tchDept.SelectedIndex = -1;
         }
 
-        // Tooltips
-        
+       
+        // Teacher Information Search Function
         private void srch_tchSrchbtn_Click(object sender, EventArgs e)
         {
             string id, name, position, department;
@@ -781,6 +776,8 @@ namespace University_Management_System
                 MessageBox.Show("Teacher Information doesn't Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // Result Function
         private void res_srchbtn_Click(object sender, EventArgs e)
         {
             ssemester.Clear();
@@ -902,6 +899,8 @@ namespace University_Management_System
                 MessageBox.Show("The Result isn't publish yet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // Student Information Modify Functions
         private void mod_stuSrchbtn_Click(object sender, EventArgs e)
         {
             Modstu_LoadData();
@@ -1010,6 +1009,8 @@ namespace University_Management_System
                 Modstu_ClearData();
             }
         }
+
+        // Teacher information Modify Functions
         private void mod_tchSrchbtn_Click(object sender, EventArgs e)
         {
             modtch_LoadData();
@@ -1109,6 +1110,8 @@ namespace University_Management_System
             mod_tchMobile.Text = row.Cells[12].Value.ToString();
         }
 
+        // Course Modification Functions-----------
+        //1. Removing a Teacher from a course
         private void modTchremove_Click(object sender, EventArgs e)
         {
             DialogResult del = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1137,6 +1140,7 @@ namespace University_Management_System
 
         }
 
+        //2.Course Information Change
         private void modCsrch_Click(object sender, EventArgs e)
         {
             mod_Course_LoadData();
@@ -1331,7 +1335,7 @@ namespace University_Management_System
             }
             else
             {
-                // Pore lekhmu ne
+                MessageBox.Show("There is no result available from this semester", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             
@@ -1361,30 +1365,7 @@ namespace University_Management_System
             res_totalSemester.Clear();
         }
 
-        private void modCcode_TextChanged(object sender, EventArgs e)
-        {
-            //Auto_modcourse_dissccode();
-        }
-
-        private void modSemester_TextChanged(object sender, EventArgs e)
-        {
-            //Auto_modcourse_disssemester();
-        }
-
-        private void res_srchSemester_TextChanged(object sender, EventArgs e)
-        {
-            /*string s = res_srchSemester.Text;
-            if (s.Length == 1)
-            {
-                Auto_resultstusemester();
-            }*/
-        }
-
-        private void res_srchSemester_Enter(object sender, EventArgs e)
-        {
-           
-        }
-
+        // Tooltips For the buttons
         private void srch_stubtn_MouseHover(object sender, EventArgs e)
         {
             AdminToolTip.Show("Search Student Information", srch_stubtn);
@@ -1462,6 +1443,20 @@ namespace University_Management_System
                 res_srchId.Clear();
                 res_srchSemester.Clear();
             }
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Student_ClearData();
+            Teacher_ClearData();
+            Course_ClearData();
+            Assign_ClearData();
+        }
+
+        private void tabControl6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Course_ClearData();
+            Assign_ClearData();
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)

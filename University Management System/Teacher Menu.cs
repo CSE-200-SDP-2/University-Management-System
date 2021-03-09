@@ -288,23 +288,28 @@ namespace University_Management_System
                     MessageBox.Show("You haven't been Assigned to any course yet", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            if (tabControl1.SelectedIndex == 0 && tabControl3.SelectedIndex == 1)
-            {
-                tchstuGrid.Rows.Clear();
-            }
-            if (tabControl1.SelectedIndex==1 && tabControl2.SelectedIndex == 0)
-            {
-                marksListgrid.Rows.Clear();
-                marksStulistgrid.Rows.Clear();
-            }
-            if (tabControl1.SelectedIndex==1 && tabControl2.SelectedIndex == 1)
-            {
-                mod_Markslist.Rows.Clear();
-            }
-            if(tabControl1.SelectedIndex==2)
-            {
-                res_Grid.Rows.Clear();
-            }
+            tchstuGrid.Rows.Clear();
+            // Insert Mark
+            marksStulistgrid.Rows.Clear();
+            marksListgrid.Rows.Clear();
+            insertMarkClear();
+            insertMarktsemester.Clear();
+            insertMarksccode.Clear();
+            //Modify mark
+            mod_Markslist.Rows.Clear();
+            mod_Marksmid.Clear();
+            mod_Marksfinal.Clear();
+            mod_Marksoutof25.Clear();
+            mod_Marksattendence.Clear();
+            mod_Marksid.Clear();
+            mod_Markssemester.Clear();
+            // Result 
+            res_Grid.Rows.Clear();
+            //Setting
+            set_Oldpass.Clear();
+            set_Newpass.Clear();
+            set_Conpass.Clear();
+
         }
 
         private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
@@ -413,9 +418,18 @@ namespace University_Management_System
                 con.dataSend("INSERT into Result(" + var + ") values(" + val + ")");
                 MessageBox.Show("Marks Successfully Inserted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 marksListgrid_LoadData();
+                insertMarkClear();
             }
          
 
+        }
+        private void insertMarkClear()
+        {
+            insertMarksstuid.Clear();
+            insertMarksstumid.Clear();
+            insertMarksstufinal.Clear();
+            insertMarksstuct.Clear();
+            insertMarksstuatten.Clear();
         }
 
         private void marksListgrid_LoadData()
@@ -832,15 +846,20 @@ namespace University_Management_System
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl2.SelectedIndex==0)
-            {
-                marksListgrid.Rows.Clear();
-                marksStulistgrid.Rows.Clear();
-            }
-            if(tabControl2.SelectedIndex==1)
-            {
-                mod_Markslist.Rows.Clear();
-            }
+            // Insert Mark
+            marksStulistgrid.Rows.Clear();
+            marksListgrid.Rows.Clear();
+            insertMarkClear();
+            insertMarktsemester.Clear();
+            insertMarksccode.Clear();
+            // Modify Mark
+            mod_Markslist.Rows.Clear();
+            mod_Marksmid.Clear();
+            mod_Marksfinal.Clear();
+            mod_Marksoutof25.Clear();
+            mod_Marksattendence.Clear();
+            mod_Marksid.Clear();
+            mod_Markssemester.Clear();
         }
 
         private void mod_Marksclearbtn_Click(object sender, EventArgs e)

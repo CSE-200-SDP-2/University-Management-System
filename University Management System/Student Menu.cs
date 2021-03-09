@@ -12,6 +12,7 @@ namespace University_Management_System
 {
     public partial class Student_Menu : Form
     {
+        // Some Global Variable or object for use
         AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
         DBAccess con = new DBAccess();
         string studentid = UserName.username;
@@ -22,12 +23,14 @@ namespace University_Management_System
             
         }
 
+        // Oveloaded functions for this form
         public Home_Page mainForm = null;
         public Student_Menu(Form callingForm)
         {
             mainForm = callingForm as Home_Page;
             InitializeComponent();
         }
+        //The initial Components or Function Call for this form
         private void Student_Menu_Load(object sender, EventArgs e)
         {
             StuCourse_LoadData();
@@ -37,6 +40,7 @@ namespace University_Management_System
             Auto_studentCourseSelectioncoursecode();
         }
 
+        // Auto Complete Functions.
         public void Auto_studentCourseSelectioncoursecode()
         {
             coll.Clear();
@@ -117,11 +121,6 @@ namespace University_Management_System
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void stumenuinfopanel_Paint(object sender, PaintEventArgs e)
         {
             con.dataGet("select * from Student where id = '" + studentid + "'");
@@ -180,6 +179,8 @@ namespace University_Management_System
         {
             stu_Ccode.Clear();
             stu_Csemester.Clear();
+            stu_Cdept.SelectedIndex = -1;
+            stu_Cprogram.SelectedIndex = -1;
         }
         string coursecode="";
         public void stu_Availablegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -514,6 +515,21 @@ namespace University_Management_System
         private void stu_Deletebtn_MouseHover(object sender, EventArgs e)
         {
             StudentToolTip.Show("Remove Course", stu_Deletebtn);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Course Selection
+            stu_Availablegrid.Rows.Clear();
+            Stu_ClearData();
+            //Result
+            stu_Viewresgrid.Rows.Clear();
+            Sturesbox.Clear();
+            //Setting
+            stu_Oldpass.Clear();
+            stu_Newpass.Clear();
+            stu_Conpass.Clear();
+
         }
     }
 }
