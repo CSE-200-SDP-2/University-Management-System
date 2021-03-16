@@ -46,7 +46,7 @@ namespace University_Management_System
         private void bubtlogo_Click(object sender, EventArgs e)
         {
             
-            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login").ToArray();
+            Form[] formsList = Application.OpenForms.Cast<Form>().Where(x => x.Name == "Login" || x.Name == "Change_Password" || x.Name == "Forget_password").ToArray();
             foreach (Form openForm in formsList)
             {
                 openForm.Close();
