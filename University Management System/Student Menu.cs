@@ -196,14 +196,24 @@ namespace University_Management_System
         {
             if (coursecode != "")
             {
-                string variables = "id,ccode,ssemester,tid";
-                string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + teacherid + "'";
-                con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
-                stu_SelectedCgrid.Rows.Clear();
-                coursecode = "";
-                StuCourse_LoadData();
-                stu_ViewCgrid.Rows.Clear();
-                Stu_CurrentCourse_LoadData();
+                con.dataGet("Select * from Student_Course where id='" + studentid + "' and ccode='" + coursecode + "' and ssemester='" + semester + "' and tid='" + teacherid + "'");
+                DataTable check = new DataTable();
+                con.sda.Fill(check);
+                if (check.Rows.Count > 0)
+                {
+                    MessageBox.Show("Course Already Taken!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string variables = "id,ccode,ssemester,tid";
+                    string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + teacherid + "'";
+                    con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
+                    stu_SelectedCgrid.Rows.Clear();
+                    coursecode = "";
+                    StuCourse_LoadData();
+                    stu_ViewCgrid.Rows.Clear();
+                    Stu_CurrentCourse_LoadData();
+                }
             }
         }
 
