@@ -16,7 +16,7 @@ namespace University_Management_System
         AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
         DBAccess con = new DBAccess();
         string studentid = UserName.username;
-        string teacherid = TeacherCode.teachercode;
+        string teacherids = TeacherCode.teachercode;
         public Student_Menu()
         {
             InitializeComponent();
@@ -183,11 +183,12 @@ namespace University_Management_System
             stu_Cprogram.SelectedIndex = -1;
         }
         string coursecode="";
+        string tchid = "";
         public void stu_Availablegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
             coursecode = stu_Availablegrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-            teacherid = stu_Availablegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tchid = stu_Availablegrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             //MessageBox.Show(String.Format(semester), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //MessageBox.Show(String.Format(teacherid),"Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
@@ -196,7 +197,7 @@ namespace University_Management_System
         {
             if (coursecode != "")
             {
-                con.dataGet("Select * from Student_Course where id='" + studentid + "' and ccode='" + coursecode + "' and ssemester='" + semester + "' and tid='" + teacherid + "'");
+                con.dataGet("Select * from Student_Course where id='" + studentid + "' and ccode='" + coursecode + "' and ssemester='" + semester + "' "); //and tid='" + tchid + "'
                 DataTable check = new DataTable();
                 con.sda.Fill(check);
                 if (check.Rows.Count > 0)
@@ -206,7 +207,7 @@ namespace University_Management_System
                 else
                 {
                     string variables = "id,ccode,ssemester,tid";
-                    string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + teacherid + "'";
+                    string values = "'" + studentid + "','" + coursecode + "','" + semester + "','" + tchid + "'";
                     con.dataSend("Insert into Student_Course(" + variables + ")values(" + values + ")");
                     stu_SelectedCgrid.Rows.Clear();
                     coursecode = "";

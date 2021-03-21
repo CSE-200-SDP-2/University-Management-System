@@ -1005,6 +1005,7 @@ namespace University_Management_System
             if(dl == DialogResult.Yes)
             {
                 con.dataSend("Delete From Student Where id = '" + mod_stuId.Text + "'");
+                con.dataSend("Delete from Student_Course where Student_Course.id='" + mod_stuId.Text + "'");
                 mod_stuGrid.Rows.Clear();
                 Modstu_ClearData();
             }
@@ -1039,6 +1040,8 @@ namespace University_Management_System
             if (dl == DialogResult.Yes)
             {
                 con.dataSend("Delete From Teacher Where id = '" + mod_tchCode.Text + "'");
+                con.dataSend("Delete from Teacher_Course where Teacher_Course.id='" + mod_tchCode.Text + "'");
+                con.dataSend("Delete from Student_Course where Student_Course.tid='" + mod_tchCode.Text + "'");
                 mod_tchGrid.Rows.Clear();
                 modtch_ClearData();
             }
