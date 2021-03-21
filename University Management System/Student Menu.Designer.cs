@@ -676,6 +676,7 @@ namespace University_Management_System
             this.stu_ViewCgrid.ReadOnly = true;
             this.stu_ViewCgrid.Size = new System.Drawing.Size(1268, 348);
             this.stu_ViewCgrid.TabIndex = 0;
+            //this.stu_ViewCgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stu_ViewCgrid_CellContentClick);
             // 
             // stuCserialnogrid
             // 

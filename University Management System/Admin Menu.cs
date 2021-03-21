@@ -267,11 +267,11 @@ namespace University_Management_System
             res_srchId.AutoCompleteCustomSource = resultt;
         }
 
-        AutoCompleteStringCollection ssemester = new AutoCompleteStringCollection();
+        AutoCompleteStringCollection Tsemester = new AutoCompleteStringCollection();
         public void Auto_resultstusemester()
         {
-            ssemester.Clear();
-            con.dataGet("Select distinct ssemester from Student_Course"); //  '" +  +"'
+            Tsemester.Clear();
+            con.dataGet("Select ssemester from Student_Course"); //  '" +  +"'
                                                           //}                                                                               //con.dataGet("Select * from Admin where id='" + aname.Text + "' and pass='" + apass.Text + "'"); //  '" +  +"'
             DataTable dtsuggestmodstuid = new DataTable();
             con.sda.Fill(dtsuggestmodstuid);
@@ -279,13 +279,13 @@ namespace University_Management_System
             {
                 for (int i = 0; i < dtsuggestmodstuid.Rows.Count; i++)
                 {
-                    ssemester.Add(dtsuggestmodstuid.Rows[i]["ssemester"].ToString());
+                    Tsemester.Add(dtsuggestmodstuid.Rows[i]["ssemester"].ToString());
                 }
             }
 
             res_srchSemester.AutoCompleteMode = AutoCompleteMode.Suggest;
             res_srchSemester.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            res_srchSemester.AutoCompleteCustomSource = ssemester; 
+            res_srchSemester.AutoCompleteCustomSource = Tsemester; 
         }
         //
         //
@@ -638,7 +638,7 @@ namespace University_Management_System
             if (tabControl1.SelectedIndex == 3 && tabControl5.SelectedIndex == 1)
             {
                 res_srchGrid.Rows.Clear();
-                ssemester.Clear();
+                //ssemester.Clear();
                 res_srchStuid.Text = "ID";
                 res_srchStuname.Text = "Name";
                 res_srchStuintake.Text = "Intake";
@@ -780,7 +780,7 @@ namespace University_Management_System
         // Result Function
         private void res_srchbtn_Click(object sender, EventArgs e)
         {
-            ssemester.Clear();
+            //ssemester.Clear();
             string id = res_srchId.Text;
             string semester = res_srchSemester.Text;
             con.dataGet("select * from Student where id = '" + id + "'");
@@ -1347,7 +1347,7 @@ namespace University_Management_System
         private void res_srchClearbtn_Click(object sender, EventArgs e)
         {
             //ssemester.Clear();
-            ssemester.Clear();
+            //ssemester.Clear();
             res_srchStuid.Text = "ID";
             res_srchStuname.Text = "Name";
             res_srchStuintake.Text = "Intake";
@@ -1436,7 +1436,7 @@ namespace University_Management_System
             if(tabControl5.SelectedIndex==1)
             {
                 res_srchGrid.Rows.Clear();
-                ssemester.Clear();
+                //ssemester.Clear();
                 res_srchStuid.Text = "ID";
                 res_srchStuname.Text = "Name";
                 res_srchStuintake.Text = "Intake";
@@ -1460,6 +1460,11 @@ namespace University_Management_System
         {
             Course_ClearData();
             Assign_ClearData();
+        }
+
+        private void res_totalResultgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void modUpdate_Course_Click(object sender, EventArgs e)
