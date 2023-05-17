@@ -1,2 +1,2 @@
-# Main-project
-Only master branch (University Management System)
+# Software Development II
+University Management System (DotNet Application)
